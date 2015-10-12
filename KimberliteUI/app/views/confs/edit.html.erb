@@ -1,0 +1,72 @@
+
+<div class="row">
+<div class="span9">
+
+
+<h1>Configuration for <%=h @instance.human_name %></h1>
+
+
+<div class="form form-inline">
+<%= form_for(@conf, :url => {:action => 'update', :id => @instance.id}) do |f| %>
+<% if @conf.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@conf.errors.count, "error") %>
+    prohibited this product from being saved:</h2>
+    <ul>
+    <% @conf.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <div>
+    <%= f.label :log_location %><br />
+    <%= f.text_field :log_location %>
+  </div>
+  <div>
+    <%= f.label :error_log %><br />
+    <%= f.text_field :error_log %>
+  </div>
+  <div>
+    <%= f.label :denyfile_location %><br />
+    <%= f.text_field :denyfile_location %>
+  </div>
+  <div>
+    <%= f.label :ban_duration %><br />
+    <%= f.text_field :ban_duration %>
+  </div>
+  <div>
+    <%= f.label :pcap_filter %><br />
+    <%= f.text_field :pcap_filter %>
+  </div>
+  <div>
+    <%= f.label :pcap_location %><br />
+    <%= f.text_field :pcap_location %>
+  </div>
+
+  <div>
+    <%= f.label :pcap_interface %><br />
+    <%= f.text_field :pcap_interface %>
+  </div>
+  <div>
+    <%= f.label :retry %><br />
+    <%= f.text_field :retry %>
+  </div>
+
+  <div>
+    <%= hidden_field_tag :machine_id, @machine.id %>
+    <%= hidden_field_tag :instance_id, @instance.id %>
+    <%= f.submit "Update", :class => 'btn' %>
+  </div>
+<% end %>
+</div>
+
+
+<%= link_to  'Show', instance_path(id: @instance.id, machine_id: @machine.id) %> |
+<!-- #	{:controller => 'instances', :action => 'show', :id => @instance.id, :machine_id => @machine.id } -->
+<%= link_to 'Back', instances_path(machine_id: @machine.id)  %>
+
+
+</div>
+</div>

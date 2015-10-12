@@ -1,0 +1,26 @@
+<h1>SSH Aggregation Database</h1>
+<table>
+  <tr>
+    <th>IP</th>
+    <th>Duration</th>
+    <th>Reason</th>
+    <th>Location</th>
+    <th>Host Lookup</th>
+    <th>Last Seen</th>
+    <th>First Seen</th>
+  </tr>
+
+<% for shagg in @shaggDBDump %>
+  <tr>
+    <td><%=h shagg.ip %></td>
+    <td><%=h shagg.duration %></td>
+    <td><%=h shagg.reason%></td>
+    <td><%=h shagg.location%></td>
+    <td><%=h shagg.host_lookup%></td>
+    <td><%=h shagg.last_seen%></td>
+    <td><%=h shagg.first_seen%></td>
+  </tr>
+<% end %>
+</table>
+
+

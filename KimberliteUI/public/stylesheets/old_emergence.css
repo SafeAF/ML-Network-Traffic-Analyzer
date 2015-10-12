@@ -1,0 +1,270 @@
+html {
+	background: #333333; 
+
+}
+
+body {
+
+	padding: 0;
+	margin: 0;
+	font: 85%/100% Georgia, "Times New Roman", Times, serif;
+	color: #949494;
+	word-wrap: break-word;
+
+	/*
+background-color: #858585;
+*/
+}
+
+
+#txt{
+color: 6d0101;
+color: c5c5c5;
+
+/*		
+Primary Colors:
+4E5359	3D3F43	19283A	9CA3AC	A0A5AC			
+Secondary Colors A:
+888475	66635B	584D26	C3BFB0	C3C0B5
+Secondary Colors B:
+887C75	665F5B	583926	C3B7B0	C3BAB5
+*/
+
+}
+
+#header
+{
+	height: 112px;
+	position: relative;
+
+
+	margin-bottom: 10px;
+
+
+
+}
+
+
+#header p {
+	margin: 0;
+}
+
+#header #logo a {
+	background: #333333 url(../images/logo3.png) no-repeat;
+
+	/*
+background: url(../images/emergence.png) no-repeat;
+*/
+	width: 274px;
+	height: 103px;
+	text-indent: -9000em;
+	display: block;
+	position: absolute;
+	left: 20px;
+	top: 1px;
+
+}
+
+#header #logo span {
+
+	width: 154px;
+	height: 52px;
+	position: absolute;
+	top: -39px;
+	left: 35px;
+	display: none;
+}
+
+#header #logo a:hover span {
+	display: block;
+}
+
+
+#nav
+{
+/*
+	border: solid 2px #6d0101;
+*/
+	background: #333333;
+	float: left;
+	width: 38%;
+	margin-left: 43%; 
+	padding-top: 17px;
+
+
+}
+
+
+#nav a{
+	color: #c5c5c5;
+}
+
+#nav_txt{
+	padding: 0px 0px 0px 20px;
+
+}
+
+#nav li {
+
+	margin: 0 5px 0 0;
+	padding: 0;
+	font: small-caps 120%/100% Helvetica, "Times New Roman", Times, serif;
+	float: left;
+
+}
+#nav ul {
+	margin: 2px 0 0;
+	padding: 0;
+	list-style: none;
+
+}
+#nav ul li {
+
+	margin: 0 0 2px -14px;
+	padding: 0;
+	font: bold normal 75%/100% Georgia, "Times New Roman", Times, serif;
+	text-transform: lowercase;
+	float: none;
+}
+
+
+/*		
+Primary Colors:
+BluGr   Gr      Blu     Lb      Silv
+4E5359	3D3F43	19283A	9CA3AC	A0A5AC	
+		
+Secondary Colors A:
+Beige   DrkBei  YlwBeig Ofwhit  Ofwhit2
+888475	66635B	584D26	C3BFB0	C3C0B5
+
+Secondary Colors B:
+                Brown
+887C75	665F5B	583926	C3B7B0	C3BAB5
+*/
+
+#content
+{
+	font: normal 90%/100% Georgia, "Times New Roman", Times, serif;
+	
+border: solid 4px #19283A;
+
+	float: center;
+	width: 70%;
+	margin-left: 3%;
+	background: #888475;
+	color: #19283A;
+
+}
+
+#content_text {
+color: #66635b;
+margin: 15px;
+padding 15px;
+}
+
+#content table {
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+
+	border: solid 1px #c5c5c5;
+}
+
+#content table th {
+	border-bottom: solid 1px #000;
+
+}
+
+#content table td {
+	padding-top: 5px;
+	color: #583926;
+
+}
+
+#content a {
+	color: #0D8800;	
+	text-decoration: underline;
+	outline: none;
+}
+#content a:hover {
+	text-decoration: none;
+	color: #A30008;
+}
+
+#content a:visited {
+color: #A64800;
+
+}
+
+
+
+#content h4 {
+	font: bold normal 75%/100% Georgia, "Times New Roman", Times, serif;
+}
+
+.content_heading {
+	font: bold normal 160%/100% "Times New Roman", Times, serif;
+	text-align: center;
+	color: #03436A;
+	border-bottom: dotted 2px #00665E;
+	padding: 10px;
+
+
+}
+
+
+#sidebar
+{
+	border: solid 2px #BF3030;
+	background: #e1d89c url(../images/brown_paper.jpg) repeat;
+	float: left;
+	width: 13%;
+	margin-left: 3%;
+
+}
+#sidebar h5 {
+	font: bold normal 75%/100% Georgia, "Times New Roman", Times, serif;
+	color: #FF8607;
+}
+
+#sidebar p {
+	color: #3E8B32;
+	font: bold normal 75%/100% Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+}
+
+.greeting {
+	padding-top: 20px;
+	text-align: center;
+	font: bold normal 75%/100% Georgia, "Times New Roman", Times, serif;
+	color: #106F01;
+}
+
+
+
+
+
+#footer
+{
+	clear: both;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	width: 80%;
+	margin: 0px auto;
+
+
+	text-align: center;
+	padding: 2px;
+	color: black;
+
+
+}
+
+#footer p {
+	float: center;
+	top: 20px;
+	padding: 50px;
+	font: bold normal 75%/100% Georgia, "Times New Roman", Times, serif;	
+}

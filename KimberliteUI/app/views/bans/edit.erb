@@ -1,0 +1,35 @@
+<h2>Edit Ban Entry</h2>
+<p>
+ <% if flash[:notice] %>
+<p style="color: red;"><%= flash[:notice] %></p>
+<% end %>
+</p>
+
+
+<% form_for(@ban, :url => {:action => 'update', :id => @instance.id}) do |f| %>
+  <%= f.error_messages %>
+
+
+  <p>
+    <%= f.hidden_field :id , :value => @ban.id %>
+  </p>
+	
+
+  <p>
+    <%= f.label :ip %><br />
+    <%= f.text_field :ip %>
+  </p>
+  <p>
+    <%= f.label :duration %><br />
+    <%= f.text_field :duration %>
+  </p>
+
+
+ <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+
+<%= link_to  'Show', {:controller => 'instances', :action => 'show', :id => @instance.id} %> |
+<%= link_to 'Back', {:controller => 'bans', :action => 'manage', :id => @instance.id} %>
