@@ -1,0 +1,11 @@
+/home/vishnu/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20150922-4207-180ehob.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 debug_inspector.so ./.gem.20150922-4207-ihf3hf

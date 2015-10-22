@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMN -> Silicon Tooling Dashboard</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'silicon', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="skin-black sidebar-mini">
+  <div class="wrapper">
+    <%= render partial: 'shared/header' %>
+    <%= render partial: 'shared/sidebar' %>
+
+
+    <div class="content-wrapper">
+      <section class="content">
+        <%= yield %>
+      </section>
+    </div>
+
+    <%= render partial: 'shared/footer' %>
+  </div>
+</body>
+</html>

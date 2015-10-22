@@ -1,0 +1,61 @@
+<h1>Editing Instance</h1>
+
+<p>
+ <% if flash[:notice] %>
+<p style="color: red;"><%= flash[:notice] %></p>
+<% end %>
+</p>
+
+<div class="form form-inline">
+<%= form_for(@instance, :url => { :controller => 'instances', 
+		:action => 'update', :id => @instance.id, 
+		:machine_id => @machine.id }, :html => { :class => "form-horizontal" }) do |f| %>
+<% if @instance.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@instance.errors.count, "error") %>
+    prohibited this product from being saved:</h2>
+    <ul>
+    <% @instance.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+ <div>
+    <%= f.label 'Instance Name' %><br />
+    <%= f.text_field :human_name %>
+  </div>
+  <div>
+<!-- Create a table with instance types, make this load dynamically -->
+    <%= f.label 'Service to Monitor' %>:<br />
+    <%= f.select :instance_type, @types %>
+  </div>
+ <div>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+<div>
+    <%= f.label :aggregation %><br />
+    <%= f.text_field :aggregation %>
+  </div>
+
+<div>
+    <%= f.label :subscribed %><br />
+    <%= f.text_field :subscribed %>
+  </div>
+
+<div>
+    <%= f.label :installed %><br />
+    <%= f.text_field :installed %>
+  </div>
+
+  <div>
+    <%= f.submit "Update", :class => 'btn' %>
+  </div>
+<% end %>
+</div>
+<%= link_to  'Show', {:action => 'show', :id => @instance.id, 
+	:machine_id => @machine.id } %> |
+<%= link_to 'Back', {:action => 'index', :machine_id => @machine.id } %>

@@ -1,0 +1,30 @@
+
+
+<h1>Statistics and Analysis Framework</h1>
+<h2>Silicon Tooling Login</h2>
+
+
+<div class="form">
+  <%= form_tag do %>
+    <fieldset>
+      <legend>Please Log In</legend>
+      <div>
+        <label for="name">Username:</label>
+        <%= text_field_tag :name, params[:name] %>
+      </div>
+
+      <div>
+        <label for="password">Password: </label>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+  
+      <div>
+        <%= submit_tag "Login", :class => 'btn btn-primary btn-large' %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
+
+
+
+
