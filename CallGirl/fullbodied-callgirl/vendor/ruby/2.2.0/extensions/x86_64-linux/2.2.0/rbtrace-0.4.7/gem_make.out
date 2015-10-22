@@ -1,0 +1,103 @@
+/home/vishnu/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20151007-21917-1ld68vh.rb extconf.rb 
+  -- tar zxvf msgpack-0.5.7.tar.gz
+  -- ./configure --disable-dependency-tracking --disable-shared --with-pic --prefix=/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/ --libdir=/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib
+  -- make install
+checking for main() in -lmsgpackc_ext... yes
+checking for msgpack.h... yes
+checking for rb_during_gc() in ruby.h... yes
+checking for rb_gc_add_event_hook() in ruby.h,node.h... no
+checking for rb_postponed_job_register_one() in ruby.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling rbtrace.c
+In file included from /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/object.h:21:0,
+                 from /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack.h:23,
+                 from rbtrace.c:23:
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/zone.h: In function ‘msgpack_zone_malloc_no_align’:
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/zone.h:99:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  char* ptr = cl->ptr;
+  ^
+In file included from /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/pack.h:116:0,
+                 from /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack.h:25,
+                 from rbtrace.c:23:
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/pack_template.h: In function ‘msgpack_pack_float’:
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/pack_template.h:639:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  unsigned char buf[5];
+  ^
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/pack_template.h: In function ‘msgpack_pack_double’:
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/pack_template.h:648:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  unsigned char buf[9];
+  ^
+In file included from /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack.h:27:0,
+                 from rbtrace.c:23:
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/sbuffer.h: In function ‘msgpack_sbuffer_write’:
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/sbuffer.h:77:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   void* tmp = realloc(sbuf->data, nsize);
+   ^
+rbtrace.c: In function ‘rbtrace__send_event’:
+rbtrace.c:180:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int n;
+   ^
+rbtrace.c:183:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   msgpack_packer *pk = rbtracer.msgpacker;
+   ^
+rbtrace.c:253:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int ret = -1;
+   ^
+rbtrace.c:264:5: warning: passing argument 5 of ‘sendto’ from incompatible pointer type [enabled by default]
+     );
+     ^
+In file included from rbtrace.c:15:0:
+/usr/include/x86_64-linux-gnu/sys/socket.h:163:16: note: expected ‘const struct sockaddr *’ but argument is of type ‘struct sockaddr_un *’
+ extern ssize_t sendto (int __fd, const void *__buf, size_t __n,
+                ^
+rbtrace.c: In function ‘event_hook’:
+rbtrace.c:353:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   rbtracer_t *tracer = NULL;
+   ^
+rbtrace.c:361:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0, n=0; i<MAX_TRACERS && n<rbtracer.num; i++) {
+                                      ^
+rbtrace.c: In function ‘rbtracer_detach’:
+rbtrace.c:637:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int i;
+   ^
+rbtrace.c: In function ‘rbtracer_add’:
+rbtrace.c:676:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   size_t
+   ^
+rbtrace.c: In function ‘rbtrace__process_event’:
+rbtrace.c:873:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   static int last_tracer_id = -1; // hax
+   ^
+rbtrace.c:899:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     pid_t pid = (pid_t) ary.ptr[1].via.u64;
+     ^
+rbtrace.c:924:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int msec = ary.ptr[1].via.u64;
+     ^
+rbtrace.c:977:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+       pid_t inner = fork();
+       ^
+rbtrace.c: In function ‘rbtrace__receive’:
+rbtrace.c:1043:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   event_msg_t msg;
+   ^
+rbtrace.c: In function ‘sigurg’:
+rbtrace.c:1083:3: warning: implicit declaration of function ‘rb_postponed_job_register_one’ [-Wimplicit-function-declaration]
+   rb_postponed_job_register_one(0, rbtrace__receive, 0);
+   ^
+rbtrace.c: At top level:
+rbtrace.c:1077:23: warning: ‘signal_handler_proc’ defined but not used [-Wunused-variable]
+ static VALUE gc_hook, signal_handler_proc;
+                       ^
+rbtrace.c:1090:1: warning: ‘signal_handler_wrapper’ defined but not used [-Wunused-function]
+ signal_handler_wrapper(VALUE arg, VALUE ctx)
+ ^
+linking shared-object rbtrace.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 rbtrace.so ./.gem.20151007-21917-obtzme

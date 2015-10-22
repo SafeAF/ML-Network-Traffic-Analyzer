@@ -1,0 +1,521 @@
+/home/vishnu/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20151006-17729-1l6jbuu.rb extconf.rb 
+checking for doublefann.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling ruby_fann.c
+In file included from ruby_fann.c:5:0:
+fann_augment.h: In function ‘fann_create_train_from_rb_ary’:
+fann_augment.h:71:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE inputs_i, outputs_i;
+   ^
+In file included from /home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby.h:33:0,
+                 from ruby_fann.c:1:
+/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/ruby.h:1088:30: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long int’ [-Wformat=]
+ #define RARRAY(obj)  (R_CAST(RArray)(obj))
+                              ^
+/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/ruby.h:1081:30: note: in definition of macro ‘R_CAST’
+ #define R_CAST(st)   (struct st*)
+                              ^
+/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/ruby.h:902:6: note: in expansion of macro ‘RARRAY’
+      RARRAY(a)->as.heap.len)
+      ^
+fann_augment.h:85:9: note: in expansion of macro ‘RARRAY_LEN’
+      i, RARRAY_LEN(inputs_i), num_input);
+         ^
+/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/ruby.h:1088:30: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long int’ [-Wformat=]
+ #define RARRAY(obj)  (R_CAST(RArray)(obj))
+                              ^
+/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/ruby.h:1081:30: note: in definition of macro ‘R_CAST’
+ #define R_CAST(st)   (struct st*)
+                              ^
+/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/ruby.h:902:6: note: in expansion of macro ‘RARRAY’
+      RARRAY(a)->as.heap.len)
+      ^
+fann_augment.h:93:9: note: in expansion of macro ‘RARRAY_LEN’
+      i, RARRAY_LEN(outputs_i), num_output);
+         ^
+ruby_fann.c: In function ‘fann_training_callback’:
+ruby_fann.c:214:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     VALUE callback = rb_funcall(self, rb_intern("training_callback"), 1, args);
+     ^
+ruby_fann.c:221:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int status = NUM2INT(callback);   
+     ^
+ruby_fann.c: In function ‘fann_initialize’:
+ruby_fann.c:281:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+         unsigned int num_layers=RARRAY_LEN(hidden_neurons) + 2; 
+         ^
+ruby_fann.c:289:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+         int i;
+         ^
+ruby_fann.c:290:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (i=1; i<=num_layers-2; i++) {
+                    ^
+ruby_fann.c:307:9: warning: passing argument 2 of ‘fann_set_user_data’ makes pointer from integer without a cast [enabled by default]
+         fann_set_user_data(ann, self);
+         ^
+In file included from doublefann.h:31:0,
+                 from ruby_fann.c:3:
+fann.h:544:29: note: expected ‘void *’ but argument is of type ‘VALUE’
+ FANN_EXTERNAL void FANN_API fann_set_user_data(struct fann *ann, void *user_data);
+                             ^
+ruby_fann.c: In function ‘fann_train_data_initialize’:
+ruby_fann.c:337:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     VALUE filename = rb_hash_aref(hash, ID2SYM(rb_intern("filename")));
+     ^
+ruby_fann.c: In function ‘training_save’:
+ruby_fann.c:387:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann_train_data* t;
+     ^
+ruby_fann.c: In function ‘set_activation_function’:
+ruby_fann.c:426:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘set_activation_function_hidden’:
+ruby_fann.c:442:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘set_activation_function_layer’:
+ruby_fann.c:463:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘get_activation_function’:
+ruby_fann.c:480:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c:482:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     fann_type val = fann_get_activation_function(f, NUM2INT(layer), NUM2INT(neuron));
+     ^
+ruby_fann.c: In function ‘set_activation_function_output’:
+ruby_fann.c:497:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘get_activation_steepness’:
+ruby_fann.c:511:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c:513:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     fann_type val = fann_get_activation_steepness(f, NUM2INT(layer), NUM2INT(neuron));
+     ^
+ruby_fann.c: In function ‘set_activation_steepness’:
+ruby_fann.c:527:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘set_activation_steepness_hidden’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:538:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(steepness, fann_set_activation_steepness_hidden);
+     ^
+ruby_fann.c: In function ‘set_activation_steepness_layer’:
+ruby_fann.c:550:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘set_activation_steepness_output’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:561:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(steepness, fann_set_activation_steepness_output);
+     ^
+ruby_fann.c: In function ‘set_bit_fail_limit’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:575:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(bit_fail_limit, fann_set_bit_fail_limit);
+     ^
+ruby_fann.c: In function ‘get_quickprop_decay’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:583:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_quickprop_decay);
+     ^
+ruby_fann.c: In function ‘set_quickprop_decay’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:591:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(quickprop_decay, fann_set_quickprop_decay);
+     ^
+ruby_fann.c: In function ‘get_quickprop_mu’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:599:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_quickprop_mu);
+     ^
+ruby_fann.c: In function ‘set_quickprop_mu’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:607:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(quickprop_mu, fann_set_quickprop_mu);
+     ^
+ruby_fann.c: In function ‘get_rprop_increase_factor’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:614:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_rprop_increase_factor);
+     ^
+ruby_fann.c: In function ‘set_rprop_increase_factor’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:622:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(rprop_increase_factor, fann_set_rprop_increase_factor);
+     ^
+ruby_fann.c: In function ‘get_rprop_decrease_factor’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:628:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_rprop_decrease_factor);
+     ^
+ruby_fann.c: In function ‘set_rprop_decrease_factor’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:636:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(rprop_decrease_factor, fann_set_rprop_decrease_factor);
+     ^
+ruby_fann.c: In function ‘get_rprop_delta_min’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:642:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_rprop_delta_min);
+     ^
+ruby_fann.c: In function ‘set_rprop_delta_min’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:650:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(rprop_delta_min, fann_set_rprop_delta_min);
+     ^
+ruby_fann.c: In function ‘get_rprop_delta_max’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:656:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_rprop_delta_max);
+     ^
+ruby_fann.c: In function ‘set_rprop_delta_max’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:664:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(rprop_delta_max, fann_set_rprop_delta_max);
+     ^
+ruby_fann.c: In function ‘get_rprop_delta_zero’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:670:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_rprop_delta_zero);
+     ^
+ruby_fann.c: In function ‘set_rprop_delta_zero’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:678:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(rprop_delta_zero, fann_set_rprop_delta_zero);
+     ^
+ruby_fann.c: In function ‘get_bias_array’:
+ruby_fann.c:688:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int layers[num_layers];
+     ^
+ruby_fann.c:692:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     VALUE arr;
+     ^
+ruby_fann.c:694:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i;
+     ^
+ruby_fann.c:695:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<num_layers; i++)
+                ^
+ruby_fann.c: In function ‘get_neurons’:
+ruby_fann.c:741:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     VALUE neuron_array = rb_ary_new();
+     ^
+ruby_fann.c:758:13: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+             VALUE connection_array = rb_ary_new();
+             ^
+ruby_fann.c:763:13: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+             VALUE neuron = rb_hash_new();
+             ^
+ruby_fann.c: In function ‘get_layer_array’:
+ruby_fann.c:800:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int layers[num_layers];
+     ^
+ruby_fann.c:804:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     VALUE arr;
+     ^
+ruby_fann.c:806:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i;
+     ^
+ruby_fann.c:807:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<num_layers; i++)
+                ^
+ruby_fann.c: In function ‘set_train_error_function’:
+ruby_fann.c:890:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     ID id=SYM2ID(train_error_function);
+     ^
+ruby_fann.c:901:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘set_training_algorithm’:
+ruby_fann.c:937:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     ID id=SYM2ID(train_error_function);
+     ^
+ruby_fann.c:952:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘set_train_stop_function’:
+ruby_fann.c:988:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     ID id=SYM2ID(train_stop_function);
+     ^
+ruby_fann.c:999:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘randomize_weights’:
+ruby_fann.c:1054:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘run’:
+ruby_fann.c:1068:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   struct fann* f;
+   ^
+ruby_fann.c:1075:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<len; i++)
+                ^
+ruby_fann.c:1086:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     VALUE arr;
+     ^
+ruby_fann.c:1088:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int output_len=fann_get_num_output(f);
+     ^
+ruby_fann.c:1089:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<output_len; i++)
+                ^
+ruby_fann.c: In function ‘init_weights’:
+ruby_fann.c:1105:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘train’:
+ruby_fann.c:1124:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c:1127:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int num_input = RARRAY_LEN(input);
+     ^
+ruby_fann.c:1134:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i = 0; i < num_input; i++) {
+                   ^
+ruby_fann.c:1138:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i = 0; i < num_output; i++) {
+                   ^
+ruby_fann.c: In function ‘train_on_data’:
+ruby_fann.c:1161:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c:1166:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int fann_max_epochs = NUM2INT(max_epochs);
+     ^
+ruby_fann.c: In function ‘train_epoch’:
+ruby_fann.c:1179:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘test_data’:
+ruby_fann.c:1192:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c: In function ‘cascadetrain_on_data’:
+ruby_fann.c:1232:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c:1237:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int fann_max_neurons = NUM2INT(max_neurons);
+     ^
+ruby_fann.c: In function ‘get_cascade_output_change_fraction’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:1248:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_cascade_output_change_fraction);
+     ^
+ruby_fann.c: In function ‘set_cascade_output_change_fraction’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1256:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(cascade_output_change_fraction, fann_set_cascade_output_change_fraction);
+     ^
+ruby_fann.c: In function ‘set_cascade_output_stagnation_epochs’:
+ruby_fann.c:19:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1272:5: note: in expansion of macro ‘SET_FANN_INT’
+     SET_FANN_INT(cascade_output_stagnation_epochs, fann_set_cascade_output_stagnation_epochs);
+     ^
+ruby_fann.c: In function ‘get_cascade_candidate_change_fraction’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:1278:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_cascade_candidate_change_fraction);
+     ^
+ruby_fann.c: In function ‘set_cascade_candidate_change_fraction’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1286:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(cascade_candidate_change_fraction, fann_set_cascade_candidate_change_fraction);
+     ^
+ruby_fann.c: In function ‘set_cascade_candidate_stagnation_epochs’:
+ruby_fann.c:31:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1302:5: note: in expansion of macro ‘SET_FANN_UINT’
+     SET_FANN_UINT(cascade_candidate_stagnation_epochs, fann_set_cascade_candidate_stagnation_epochs);
+     ^
+ruby_fann.c: In function ‘set_cascade_weight_multiplier’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:56:22: note: in expansion of macro ‘SET_FANN_FLT’
+ #define SET_FANN_DBL SET_FANN_FLT
+                      ^
+ruby_fann.c:1320:5: note: in expansion of macro ‘SET_FANN_DBL’
+     SET_FANN_DBL(cascade_weight_multiplier, fann_set_cascade_weight_multiplier);
+     ^
+ruby_fann.c: In function ‘set_cascade_candidate_limit’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:56:22: note: in expansion of macro ‘SET_FANN_FLT’
+ #define SET_FANN_DBL SET_FANN_FLT
+                      ^
+ruby_fann.c:1336:5: note: in expansion of macro ‘SET_FANN_DBL’
+     SET_FANN_DBL(cascade_candidate_limit, fann_set_cascade_candidate_limit);
+     ^
+ruby_fann.c: In function ‘set_cascade_max_out_epochs’:
+ruby_fann.c:31:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1352:5: note: in expansion of macro ‘SET_FANN_UINT’
+     SET_FANN_UINT(cascade_max_out_epochs, fann_set_cascade_max_out_epochs);
+     ^
+ruby_fann.c: In function ‘set_cascade_max_cand_epochs’:
+ruby_fann.c:31:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1368:5: note: in expansion of macro ‘SET_FANN_UINT’
+     SET_FANN_UINT(cascade_max_cand_epochs, fann_set_cascade_max_cand_epochs);
+     ^
+ruby_fann.c: In function ‘get_learning_rate’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:1390:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_learning_rate);
+     ^
+ruby_fann.c: In function ‘set_learning_rate’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1401:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(learning_rate, fann_set_learning_rate);
+     ^
+ruby_fann.c: In function ‘get_learning_momentum’:
+ruby_fann.c:40:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ char buffy[20]; \
+ ^
+ruby_fann.c:1407:5: note: in expansion of macro ‘RETURN_FANN_FLT’
+     RETURN_FANN_FLT(fann_get_learning_momentum);
+     ^
+ruby_fann.c: In function ‘set_learning_momentum’:
+ruby_fann.c:46:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1415:5: note: in expansion of macro ‘SET_FANN_FLT’
+     SET_FANN_FLT(learning_momentum, fann_set_learning_momentum);
+     ^
+ruby_fann.c: In function ‘set_cascade_activation_functions’:
+ruby_fann.c:1425:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c:1428:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int cnt = RARRAY_LEN(cascade_activation_functions);
+     ^
+ruby_fann.c:1431:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<cnt; i++)
+                ^
+ruby_fann.c: In function ‘get_cascade_activation_functions’:
+ruby_fann.c:1446:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int cnt = fann_get_cascade_activation_functions_count(f);
+     ^
+ruby_fann.c:1452:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i;
+     ^
+ruby_fann.c:1453:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<cnt; i++)
+                ^
+ruby_fann.c: In function ‘set_cascade_num_candidate_groups’:
+ruby_fann.c:31:1: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ struct fann* f; \
+ ^
+ruby_fann.c:1480:5: note: in expansion of macro ‘SET_FANN_UINT’
+     SET_FANN_UINT(cascade_num_candidate_groups, fann_set_cascade_num_candidate_groups);
+     ^
+ruby_fann.c: In function ‘set_cascade_activation_steepnesses’:
+ruby_fann.c:1489:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     struct fann* f;
+     ^
+ruby_fann.c:1492:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     unsigned int cnt = RARRAY_LEN(cascade_activation_steepnesses);
+     ^
+ruby_fann.c:1495:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<cnt; i++)
+                ^
+ruby_fann.c: In function ‘get_cascade_activation_steepnesses’:
+ruby_fann.c:1510:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     fann_type* fann_steepnesses = fann_get_cascade_activation_steepnesses(f);
+     ^
+ruby_fann.c:1516:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int i;
+     ^
+ruby_fann.c:1517:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (i=0; i<cnt; i++)
+                ^
+ruby_fann.c: In function ‘nn_save’:
+ruby_fann.c:1532:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     int status = fann_save(f, StringValuePtr(filename));
+     ^
+ruby_fann.c: In function ‘get_training_algorithm’:
+ruby_fann.c:978:5: warning: ‘ret_val’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     return ret_val;
+     ^
+ruby_fann.c: In function ‘get_network_type’:
+ruby_fann.c:849:5: warning: ‘ret_val’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     return ret_val;
+     ^
+ruby_fann.c: In function ‘get_train_stop_function’:
+ruby_fann.c:1024:5: warning: ‘ret_val’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     return ret_val;
+     ^
+ruby_fann.c: In function ‘get_train_error_function’:
+ruby_fann.c:926:5: warning: ‘ret_val’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     return ret_val;
+     ^
+compiling doublefann.c
+linking shared-object ruby_fann.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ruby_fann.so ./.gem.20151006-17729-1oy34bk

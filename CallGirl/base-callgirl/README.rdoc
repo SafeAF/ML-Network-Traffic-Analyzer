@@ -1,0 +1,89 @@
+== CaLLGiRL README
+
+Generic Rails App for BareMetal web based user interfaces. Soon will have single
+app support via rails websockets and also sinatra and neato backbone.js, angular.js views
+for rails.
+
+=== Components of CallGirl
+Bootstrap 4
+Rails 4.2
+AdminLTE-Rails, -Generator
+Jquery
+
+
+
+=== Development Process
+
+==== Gems
+Check out awesome_print for printing ugly objects
+And Better_errors for rails errors
+
+=== Deployment
+
+* Ruby version -> 2.2.1 Preferred although anything over 1.9.0 is compatiable
+at the sourcecode level
+
+* System dependencies -> libmysqlclient-dev libmysqlclient18 nodejs
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+=== Database
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: callgirl
+  host: datastore2
+  password: githerdunnottoofastmyson
+  #socket: /var/run/mysqld/mysqld.sock
+  url: "mysql2://callgirl:githerdunnottoofastmyson@datastore2"
+
+development:
+  <<: *default
+  database: hooker_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: hooker_test
+
+# As with config/secrets.yml, you never want to store sensitive information,
+# like your database password, in your source code. If your source code is
+# ever seen by anyone, they now have access to your database.
+#
+# Instead, provide the password as a unix environment variable when you boot
+# the app. Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
+# for a full rundown on how to provide these environment variables in a
+# production deployment.
+#
+# On Heroku and other platform providers, you may have a full connection URL
+# available as an environment variable. For example:
+#
+#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
+#
+# You can use this database configuration with:
+#
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
+production:
+  <<: *default
+  database: hooker_production
+#  username: webui
+#  password: <%= ENV['WEBUI_DATABASE_PASSWORD'] %>
