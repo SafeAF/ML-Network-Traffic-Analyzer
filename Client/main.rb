@@ -14,6 +14,7 @@ require 'json'
 ### Run bundle install --path vendor --binstubs to carry cems around in vendor/
 ### use rvm no apt-get ruby/ ruby gems
 ## apt-get install libpcap0.8 and -dev
+## Gem install RubyInline
 
 
 #FATAL:	an unhandleable error that results in a program crash
@@ -548,15 +549,17 @@ end
 
 def handle_config_parcel(parcel)
 	c = Hash.new
-	parcel.split(/::/).each do |item|
-		item.gsub!(/[\\\"]*/, '')
-		key, value = item.split(/==/)
-		next if key.nil?
-		next if value.nil?
-		key.downcase!
-		symbol = :"#{key}"
-		c[symbol] = value
-	end
+	# FIXME I have swapped this  out for JSON.parse, should be drop-in
+	c = JSON.parse(parcel)
+	# parcel.split(/::/).each do |item|
+	# 	item.gsub!(/[\\\"]*/, '')
+	# 	key, value = item.split(/==/)
+	# 	next if key.nil?
+	# 	next if value.nil?
+	# 	key.downcase!
+	# 	symbol = :"#{key}"
+	# 	c[symbol] = value
+	# end
 	return c
 end
 
@@ -588,10 +591,13 @@ def send_logs_to_server(instance, options)
 			else
 				features = payload
 			end
+			# FIXME replace crappy serialization technique with json
+			# FIXME look into using messagepack
 			pcap_logfile.push headers + "~~" + features + "\n"
 		}
 	}
 	return if pcap_logfile == []
+	jlog_pcap = JSON.generate(pcap_logfile)
 	begin
 		uri = URI.parse('https://' + options[:host] + ':' +
 				                options[:port] + '/submit')
@@ -618,7 +624,7 @@ def send_logs_to_server(instance, options)
 				                  'retry' => options[:retry],
 				                  'delay' => options[:delay],
 				                  'log' => logfile,
-				                  'pcap_log' => pcap_logfile,
+				                  'pcap_log' => jlog_pcap,
 				                  'pcap_filter' => instance.pcap_filter,
 				                  'pcap_interface' => instance.pcap_interface,
 				                  'stats_pcap' => instance.stats_pcap,
