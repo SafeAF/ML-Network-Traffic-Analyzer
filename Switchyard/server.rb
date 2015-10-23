@@ -6,7 +6,7 @@
 # Put our local lib in first place
 BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
 $:.unshift File.join(BASE_PATH, 'lib')
-$VERSION = '0.2.0'
+$VERSION = '0.2.1'
 $DATE = '07/15/15'
 require 'rubygems'
 require 'thin'
