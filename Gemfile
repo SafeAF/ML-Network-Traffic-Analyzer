@@ -44,4 +44,5 @@ gem 'clearance'
 ## Testing
 gem 'rspec'
 gem 'minitest'
+gem 'better_errors'
 

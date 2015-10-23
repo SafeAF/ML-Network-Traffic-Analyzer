@@ -6,7 +6,7 @@
 # Put our local lib in first place
 BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
 $:.unshift File.join(BASE_PATH, 'lib')
-$VERSION = '1.0.0'
+$VERSION = '0.2.0'
 $DATE = '07/15/15'
 require 'rubygems'
 require 'thin'
@@ -21,10 +21,14 @@ require 'active_record'
 require 'mysql2'
 require 'pp'
 
+#### Installation
+## apt-get install libmyslclient18 libmysqlclient18-dev
+## Gem install mysql2
+## gem install hiredis
 
 ROOT = File.join(File.dirname(__FILE__), '..')
 
-['../app/models/' '../lib', '../db'].each do |folder|
+['../app/models/' '../lib', '../db', 'lib/*'].each do |folder|
   $:.unshift File.join(ROOT, folder)
 end
 
@@ -44,13 +48,13 @@ p "#{Time.now}:#{self.class}:IP##{__LINE__}: Booting Switchyard Middleware: #{Fi
 ### Required for ActiveRecord magick -- Include ALL models
 ### Don't forget to include app/models/user from kimberlite to
 ### lend user model and authorize functions
-require '../app/models/instance.rb'
-require '../app/models/user.rb'
-require '../app/models/machine.rb'
+# require '../app/models/instance.rb'
+# require '../app/models/user.rb'
+# require '../app/models/machine.rb'
 # rvm use '1.9.3'
 
 
-$logger = Logger.new('log/switchyard.log', 'w')
+$logger = Logger.new('switchyard.log', 'w')
 
 $options = Hash.new
 $options[:host] = '10.0.1.17'
@@ -60,7 +64,7 @@ $options[:table] = 5
 #ActiveRecord::Base.$logger = Logger.new('log/db.log')
 #ActiveRecord::Base.configurations = YAML::load(IO.read('../config/database.yml'))
 #end
-ActiveRecord::Base.logger = Logger.new('log/db.log')
+ActiveRecord::Base.logger = Logger.new('db.log')
 #ActiveRecord::Base.establish_connection(:development)
 ActiveRecord::Base.establish_connection(
                       :adapter => 'mysql2',

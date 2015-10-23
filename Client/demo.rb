@@ -2,7 +2,7 @@
 
 
 class String
-	def to_hex
+	def self.to_hex
 		return if self.nil?
 		ret = ""
 		for i in (0..self.length)
@@ -12,11 +12,13 @@ class String
 		end
 		ret
 	end
+
+	def self.splitify( pat)
+		self.split(/#{pat}/)
+	end
 end
 
-def splitify(str, pat)
-	str.split(/#{pat}/)
-end
+
 
 def timebox
 	a = Time.now.to_s.split(/ /)
