@@ -1,0 +1,44 @@
+/home/vishnu/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20151019-24530-j5ihe5.rb extconf.rb 
+checking for ffi_call() in -lffi... yes
+checking for ffi_prep_closure()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... yes
+creating extconf.h
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling Function.c
+compiling Buffer.c
+compiling MappedType.c
+compiling StructByValue.c
+compiling ffi.c
+compiling LastError.c
+compiling AbstractMemory.c
+compiling Variadic.c
+compiling LongDouble.c
+compiling Platform.c
+compiling StructLayout.c
+compiling MemoryPointer.c
+compiling StructByReference.c
+compiling ClosurePool.c
+compiling Struct.c
+compiling FunctionInfo.c
+compiling Type.c
+compiling Types.c
+compiling Pointer.c
+compiling ArrayType.c
+compiling DataConverter.c
+compiling MethodHandle.c
+compiling Call.c
+compiling DynamicLibrary.c
+compiling Thread.c
+linking shared-object ffi_c.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ffi_c.so ./.gem.20151019-24530-11pqp9n

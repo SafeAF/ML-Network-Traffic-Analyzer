@@ -1,0 +1,45 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    RubyInline (3.12.4)
+      ZenTest (~> 4.3)
+    ZenTest (4.11.0)
+    addressable (2.3.8)
+    crypt (2.2.1)
+    drydock (0.6.9)
+    fastimage (1.7.0)
+      addressable (~> 2.3, >= 2.3.5)
+    ferret (0.11.8.6)
+    ffi (1.9.10)
+    highline (1.7.8)
+    inline (0.1.0)
+      highline (>= 1.4.0)
+    irb-benchmark (0.1.2)
+    json (1.8.3)
+    ruby-progressbar (1.7.5)
+    stackprof (0.2.7)
+    storable (0.8.9)
+    sys-filesystem (1.1.4)
+      ffi
+    sysinfo (0.8.1)
+      drydock
+      storable
+    thread_safe (0.3.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  RubyInline
+  crypt
+  fastimage
+  ferret
+  ffi
+  inline
+  irb-benchmark
+  json
+  ruby-progressbar
+  stackprof
+  sys-filesystem
+  sysinfo
+  thread_safe

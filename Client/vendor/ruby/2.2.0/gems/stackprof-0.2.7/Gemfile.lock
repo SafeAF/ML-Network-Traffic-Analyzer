@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    stackprof (0.2.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    metaclass (0.0.1)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
+    rake (10.1.0)
+    rake-compiler (0.9.1)
+      rake
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mocha (~> 0.14)
+  rake-compiler (~> 0.9)
+  stackprof!
