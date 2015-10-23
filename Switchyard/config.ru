@@ -1,4 +1,4 @@
-require File.expand_path '../server.rb', __FILE__
+require File.expand_path '../demoserver.rb', __FILE__
 
 # app = proc do |env|
 #   body = ['hi']
@@ -14,5 +14,10 @@ require File.expand_path '../server.rb', __FILE__
 #                          '/logs' => Protected,
 #                      })
 #set :port, 3001
-
-run Switchyard
+#
+# configure do
+# 	set :server, :thin
+# 	set :port, 3000
+# 	set :environment, :production
+# end
+run DemoAPI

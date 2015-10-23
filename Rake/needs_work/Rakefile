@@ -3,35 +3,12 @@
 
 require 'rubygems'
 require 'bundler'
-require 'activerecord'
-require 'rake'
-
-#Bundler.setup
-
-
-
+#require 'rake'
+Bundler.setup
 
 Dir["Rake/*.rake"].sort.each { |ext| load ext }
 
-namespace :development do
-	desc 'Development repo tasks'
-task :default =>[Rails.env] do
 
-end
-end
-
-
-
-	namespace :database do
-		desc 'create all the databases for the major projects'
-		task :create => [:load_config] do
-			if ENV['DATABASE_URL']
-				ActiveRecord::Tasks::DatabaseTasks.create_database_url
-			else
-				ActiveRecord::Tasks::DatabaseTasks.create_current
-			end
-		end
-	end
 #RSpec::Core::RakeTask.new
 
 # task :compile do

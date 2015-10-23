@@ -43,9 +43,9 @@ end
 p "######################## ADI ##########################"
 p "#          ADAPTIVE DEFENSE INFRASTRUCTURE            #"
 p "#######################################################"
-p "##########  Switchyard RESTful API Server  ############"
+p "##########  SwitchDEMO RESTful API Server  ############"
 p "#######################################################"
-p "#v#{$VERSION} Codename: She's Thin, With A Great Rack!#"
+p "#v#{$VERSION} Codename:Learn You a Ruby For Very Good!#"
 p "#######################################################"
 
 p "#{Time.now}:#{self.class}:IP##{__LINE__}: Booting Switchyard Middleware: #{File.basename(__FILE__)}"
@@ -72,26 +72,23 @@ $options[:table] = 5
 #ActiveRecord::Base.$logger = Logger.new('log/db.log')
 #ActiveRecord::Base.configurations = YAML::load(IO.read('../config/database.yml'))
 #end
-ActiveRecord::Base.logger = Logger.new('db.log')
-#ActiveRecord::Base.establish_connection(:development)
-ActiveRecord::Base.establish_connection(
-		:adapter => 'mysql2',
-		:database => 'emergence',
-		:username => 'emergence',
-		:password => '#GDU3im=86jDFAipJ(f7*rTKuc',
-		:host => 'datastore2')
+# ActiveRecord::Base.logger = Logger.new('db.log')
+# #ActiveRecord::Base.establish_connection(:development)
+# ActiveRecord::Base.establish_connection(
+# 		:adapter => 'mysql2',
+# 		:database => 'emergence',
+# 		:username => 'emergence',
+# 		:password => '#GDU3im=86jDFAipJ(f7*rTKuc',
+# 		:host => 'datastore2')
 
-Redis::Objects.redis = ConnectionPool.new(size: 10, timeout: 5) {
-	Redis.new({host: $options[:host], port: $options[:port], db: $options[:table]})
-}
-
-$SHM = Redis::List.new('e:switchyard', :marshall => true)
 
 $TITLE = 'Emergence'
 
 
-class SwitchyardSSH
-	def initialize
+module Emergence
+
+	class SwitchyardSSH
+		def initialize
 # Notes:
 #
 #   "Failed \S+ for .*? from <HOST>..." failregex uses non-greedy catch-all because
@@ -100,222 +97,303 @@ class SwitchyardSSH
 #   matched away first.
 ## Borrowed from Authors: Cyril Jaquier, Yaroslav Halchenko, Petr Voralek, Daniel Black
 
-		failregex =[
-				%q{^%(__prefix_line)s(?:error: PAM: )?[aA]uthentication (?:failure|error) for .* from <HOST>( via \S+)?\s*$},
-				%q{^%(__prefix_line)s(?:error: PAM: )?User not known to the underlying authentication module for .* from <HOST>\s*$},
-				%q{^%(__prefix_line)sFailed \S+ for .*? from <HOST>(?: port \d*)?(?: ssh\d*)?(: (ruser .*|(\S+ ID \S+ \(serial \d+\) CA )?\S+ %(__md5hex)s(, client user ".*", client host ".*")?))?\s*$},
-				%q{ ^%(__prefix_line)sROOT LOGIN REFUSED.* FROM <HOST>\s*$},
-				%q{    ^%(__prefix_line)s[iI](?:llegal|nvalid) user .* from <HOST>\s*$},
-				%q{ ^%(__prefix_line)sUser .+ from <HOST> not allowed because not listed in AllowUsers\s*$},
-				%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because listed in DenyUsers\s*$} ,
-				%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because not in any group\s*$} ,
-				%q{ ^%(__prefix_line)srefused connect from \S+ \(<HOST>\)\s*$},
-				%q{ ^%(__prefix_line)sUser .+ from <HOST> not allowed because a group is listed in DenyGroups\s*$},
-				%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because none of user's groups are listed in AllowGroups\s*$},
-		]
-	end
-end
-
-class SwitchyardAPI < Sinatra::Base
-	#attr_reader :user_obj
-
-	def initialize
-		p "#{Time.now}:#{self.class}:IP##{__LINE__} Handling request: RESTFUL API: Class #{self.class}" if $DBG
+			failregex =[
+					%q{^%(__prefix_line)s(?:error: PAM: )?[aA]uthentication (?:failure|error) for .* from <HOST>( via \S+)?\s*$},
+					%q{^%(__prefix_line)s(?:error: PAM: )?User not known to the underlying authentication module for .* from <HOST>\s*$},
+					%q{^%(__prefix_line)sFailed \S+ for .*? from <HOST>(?: port \d*)?(?: ssh\d*)?(: (ruser .*|(\S+ ID \S+ \(serial \d+\) CA )?\S+ %(__md5hex)s(, client user ".*", client host ".*")?))?\s*$},
+					%q{ ^%(__prefix_line)sROOT LOGIN REFUSED.* FROM <HOST>\s*$},
+					%q{    ^%(__prefix_line)s[iI](?:llegal|nvalid) user .* from <HOST>\s*$},
+					%q{ ^%(__prefix_line)sUser .+ from <HOST> not allowed because not listed in AllowUsers\s*$},
+					%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because listed in DenyUsers\s*$} ,
+					%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because not in any group\s*$} ,
+					%q{ ^%(__prefix_line)srefused connect from \S+ \(<HOST>\)\s*$},
+					%q{ ^%(__prefix_line)sUser .+ from <HOST> not allowed because a group is listed in DenyGroups\s*$},
+					%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because none of user's groups are listed in AllowGroups\s*$},
+			]
+		end
 	end
 
-	def demo(request)
-		query = request.query
+	class SwitchyardAPI < Sinatra::Base
+		#attr_reader :user_obj
 
-		if query
-			pcap = query[:pcap_log] if query[:pcap_log]
-			#pcap_inputs = pcap.split("\n")
-			pcap_inputs = JSON.parse(pcap)
-			logs = query[:log] if query[:log]
+		def initialize
+			p "#{Time.now}:#{self.class}:IP##{__LINE__} Handling request: RESTFUL API: Class #{self.class}" if $DBG
+		end
 
-			pcap_inputs.each do |packet|
-				header, features = packet.split("~~")
-				features_str = features.to_s
-				red = Hash.new
-				red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
-				red[:features] = features_str
-				$logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
+		def demo(request)
+			query = request.query
+
+			if query
+				pcap = query[:pcap_log] if query[:pcap_log]
+				#pcap_inputs = pcap.split("\n")
+				pcap_inputs = JSON.parse(pcap)
+				logs = query[:log] if query[:log]
+
+				pcap_inputs.each do |packet|
+					header, features = packet.split("~~")
+					features_str = features.to_s
+					red = Hash.new
+					red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
+					red[:features] = features_str
+					$logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
 DST:#{red[:dst]}:#{red[:dport]}"
-				$SHM.push(red)
-			end
-		end
-	end
-
-
-	def handle_log_submit(request)
-		query = request.query## FIXME
-		gucid = params[:gucid]
-		cid = params[:cid]
-
-		ret = ''
-		# dont post if gucid of default
-		return post_err[:default] if gucid.is_default?
-
-		if machine = @user_obj.machines.find_by_cid(cid)
-
-			if instance = machine.instances.find_by_gucid(gucid)
-
-				return not_subbed_err if instance.subscribed == false
-
-				blood_inputs = []
-				pcap = query['pcap_log'] # FIXME
-				pcap_inputs = pcap.split("\n")
-
-				result = case query[:instance_type]
-					         when /SSH/i then
-						         $ssh_module_result = ''
-						         Thread.new{
-							         ssh = SwitchyardSSH.new()
-							         if ssh.parse
-								         Ban.new(query[:src], :reason => ssh.parse)
-							         end
-						         }
-					         #p post_err[:no_mod] + ' ' + result
-					         #   return 200, "text/plain", 'Success'
-
-					         when /APACHE/i then
-						         # begin
-						         blood_inputs = []
-						         pcap = query[:pcap_log] if query[:pcap_log]
-						         #pcap_inputs = pcap.split("\n")
-						         pcap_inputs = JSON.parse(pcap)
-						         logs = query[:log] if query[:log]
-
-						         pcap_inputs.each do |packet|
-							         #header, features = packet.split("~~~")
-							         header, features = packet.split("~~")
-							         features_str = features.to_s
-							         red = Hash.new
-							         red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
-							         red[:features] = features_str
-							         $logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
-DST:#{red[:dst]}:#{red[:dport]}"
-							         $SHM.push(red)
-							         #     return 200, "text/plain", 'Success'
-
-							         #   rescue => err
-							         #   $logger.error "#{Time.now} - Error in Apache module #{err.inspect}"
-							         # end
-							         #
-						         end
-
-					         else
-						         $logger.warn("Bad submission from #{query[:gucid]} cid: #{query[:cid]}")
-
-				         end
-			else
-				return no_subs_found_err('foo')
-			end
-		else
-			return create_a_machine_err
-		end
-	end
-
-	#  return 200, "text/plain", response
-	def get_bans
-		bans = Ban.find(:all, :conditions =>
-				["last_seen > ?", (Time.now - (60 * 60 * 24)).to_s])
-
-	end
-
-	def check_update_flag(request)
-		cid = request[:cid] || params[:cid]
-		gucid = request[:gucid] || params[:cid]
-		update_flag = 0
-
-		unless gucid.include? 'default'
-			machine = @user_obj.machines.find_by_cid(cid)
-
-			if machine
-				instance = machine.instances.find_by_gucid(gucid)
-				if instance.conf.update_flag == 1
-					update_flag = 1
-					machine.just_seen(request.peeraddr[3])
-					# FIXME: this is a hack
-					instance.conf.update_flag = 0
+					$SHM.push(red)
 				end
-			else  # if no machine found with that cid
-
-
 			end
-			response = update_flag
 		end
 
-		return 200, "text/plain", response.to_s
-	end
 
-	##########################################
+		def handle_log_submit(request)
+			query = request.query## FIXME
+			gucid = params[:gucid]
+			cid = params[:cid]
 
-	def get_bans
-		bans = Ban.find(:all, :conditions =>
-				["last_seen > ?", (Time.now - (60 * 60 * 24)).to_s])
+			ret = ''
+			# dont post if gucid of default
+			return post_err[:default] if gucid.is_default?
 
-
-	end
-
-	def get_config(request, user_obj)
-		cid = request[:cid]  || params[:cid]
-
-		gucid = request[:gucid] || params[:cid]
-		#	return invalid_cid_err unless cid.is_valid_cid?
-
-		# machine found
-		if machine = user_obj.machines.find_by_cid(cid)
-			machine.just_seen(request.peeraddr[3])
-
-			if gucid.is_default?
-
-				if instance = machine.sub_instance_avail?
-					instance.just_seen(request.peeraddr[3])
-					return instance.return_conf_json
-
-				else
-					return no_subs_found_err(gucid)
-				end
-
-			elsif gucid.is_valid_gucid?
+			if machine = @user_obj.machines.find_by_cid(cid)
 
 				if instance = machine.instances.find_by_gucid(gucid)
+
 					return not_subbed_err if instance.subscribed == false
-					instance.just_seen(request.peeraddr[3])
-					return instance.return_conf_json
-				end
 
-			else
-				return invalid_gucid_err(gucid)
-			end
+					blood_inputs = []
+					pcap = query['pcap_log'] # FIXME
+					pcap_inputs = pcap.split("\n")
 
-			#no machine found
-		else
-			if machine = @user_obj.machine_avail?
-				machine.cid = cid
-				machine.just_seen(request.peeraddr[3])
+					result = case query[:instance_type]
+						         when /SSH/i then
+							         $ssh_module_result = ''
+							         Thread.new{
+								         ssh = SwitchyardSSH.new()
+								         if ssh.parse
+									         Ban.new(query[:src], :reason => ssh.parse)
+								         end
+							         }
+						         #p post_err[:no_mod] + ' ' + result
+						         #   return 200, "text/plain", 'Success'
 
-				if instance = machine.sub_instance_avail?
-					instance.just_seen
-					return instance.return_conf_json
+						         when /APACHE/i then
+							         # begin
+							         blood_inputs = []
+							         pcap = query[:pcap_log] if query[:pcap_log]
+							         #pcap_inputs = pcap.split("\n")
+							         pcap_inputs = JSON.parse(pcap)
+							         logs = query[:log] if query[:log]
+
+							         pcap_inputs.each do |packet|
+								         #header, features = packet.split("~~~")
+								         header, features = packet.split("~~")
+								         features_str = features.to_s
+								         red = Hash.new
+								         red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
+								         red[:features] = features_str
+								         $logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
+DST:#{red[:dst]}:#{red[:dport]}"
+								         $SHM.push(red)
+								         #     return 200, "text/plain", 'Success'
+
+								         #   rescue => err
+								         #   $logger.error "#{Time.now} - Error in Apache module #{err.inspect}"
+								         # end
+								         #
+							         end
+
+						         else
+							         $logger.warn("Bad submission from #{query[:gucid]} cid: #{query[:cid]}")
+
+					         end
 				else
-					return no_subs_found_err(gucid)
+					return no_subs_found_err('foo')
 				end
 			else
 				return create_a_machine_err
 			end
 		end
+
+		#  return 200, "text/plain", response
+		def get_bans
+			bans = Ban.find(:all, :conditions =>
+					["last_seen > ?", (Time.now - (60 * 60 * 24)).to_s])
+
+		end
+
+		def check_update_flag(request)
+			cid = request[:cid] || params[:cid]
+			gucid = request[:gucid] || params[:cid]
+			update_flag = 0
+
+			unless gucid.include? 'default'
+				machine = @user_obj.machines.find_by_cid(cid)
+
+				if machine
+					instance = machine.instances.find_by_gucid(gucid)
+					if instance.conf.update_flag == 1
+						update_flag = 1
+						machine.just_seen(request.peeraddr[3])
+						# FIXME: this is a hack
+						instance.conf.update_flag = 0
+					end
+				else  # if no machine found with that cid
+
+
+				end
+				response = update_flag
+			end
+
+			return 200, "text/plain", response.to_s
+		end
+
+		##########################################
+
+		def get_bans
+			bans = Ban.find(:all, :conditions =>
+					["last_seen > ?", (Time.now - (60 * 60 * 24)).to_s])
+
+
+		end
+
+		def get_config(request, user_obj)
+			cid = request[:cid]  || params[:cid]
+
+			gucid = request[:gucid] || params[:cid]
+			#	return invalid_cid_err unless cid.is_valid_cid?
+
+			# machine found
+			if machine = user_obj.machines.find_by_cid(cid)
+				machine.just_seen(request.peeraddr[3])
+
+				if gucid.is_default?
+
+					if instance = machine.sub_instance_avail?
+						instance.just_seen(request.peeraddr[3])
+						return instance.return_conf_json
+
+					else
+						return no_subs_found_err(gucid)
+					end
+
+				elsif gucid.is_valid_gucid?
+
+					if instance = machine.instances.find_by_gucid(gucid)
+						return not_subbed_err if instance.subscribed == false
+						instance.just_seen(request.peeraddr[3])
+						return instance.return_conf_json
+					end
+
+				else
+					return invalid_gucid_err(gucid)
+				end
+
+				#no machine found
+			else
+				if machine = @user_obj.machine_avail?
+					machine.cid = cid
+					machine.just_seen(request.peeraddr[3])
+
+					if instance = machine.sub_instance_avail?
+						instance.just_seen
+						return instance.return_conf_json
+					else
+						return no_subs_found_err(gucid)
+					end
+				else
+					return create_a_machine_err
+				end
+			end
+		end
+	end
+
+end
+## 700 is switchyard return code space
+
+
+
+class Bloodlust
+	attr_accessor :bloodlust
+
+	def train_nn
+		dataset_location = '../datasets/training-01.dat'
+
+		dataset = []
+		desired_outputs = []
+		raw_dataset = load_training_data(dataset_location)
+
+		lambda_prepro = Proc.new { |x| normalize_dataset(x, x.mean, x.std) }
+
+		raw_dataset.each do |dim|
+			data, raw_desired_outputs = format_dataset(dim)
+			normalized_data = lambda_prepro.call(data)
+			dataset.push(normalized_data)
+			desired_outputs.push(raw_desired_outputs)
+		end
+
+		training_data = RubyFann::TrainData.new(
+				:inputs => dataset,
+				:desired_outputs => desired_outputs)
+
+		@bloodlust = RubyFann::Standard.new(
+				:num_inputs => 12,
+				:hidden_neurons => [80], # investigate this
+				:num_outputs => 1)
+
+		@bloodlust.train_on_data(training_data, 10, 1, 0.01)
+		#@bloodlust.train_on_data(training_data, 10, 1, 0.01)
+	end
+
+
+
+	def run_blood(input)
+		input_ary = input.split(',')
+		input_ary.collect! {|i| i.to_f}
+		output = @bloodlust.run(input_ary)
 	end
 end
 
-## 700 is switchyard return code space
+begin
+	logger = Logger.new('bloodlust.log', 'w')
+	classifier = Bloodlust.new
+	classifier.train_nn
+	loopiter = 0
+	while true
+		loopiter +=1
+		p "Looping #{loopiter}"
+		redi =  $SHM.shift
+		if not redi.empty?
+			blood_output = classifier.run_blood(redi[:features_str])
+			blood_output = blood_output[0]
+			logger.info "NEURAL OUTPUT: #{blood_output}"
+			# do if ml output suggests a ban
+			if blood_output > 0.5
+				ban = Ban.find_by_ip(redi[:src]) || Ban.new
+				if ban
+					ban.reason = blood_output
+					ban.last_seen = redi[:time]
+					ban.ip = redi[:src]
+				end
+			end
+		end
+		sleep 1
+	end
+
+rescue => err
+	sleep 0.1
+	retry
+end
+
+
+
 
 begin
 	### Switchyard is the protected class
-	class Switchyard < Sinatra::Base
+	class DemoAPI < Sinatra::Base
 		attr_accessor :user_obj
+		configure do
 		set :server, :thin
+		set :port, 3000
 		set :environment, :production
+		end
 		#before do ; expires 300, :public, :must_revalidate ;end # before filter use instead of in method, protip
 
 		def initialize
@@ -331,8 +409,10 @@ begin
 			pp env if $DBG
 			#cache_control :public; "cache it"
 			ret = {}
-			sw = SwitchyardAPI.new
-			ret[:body] = sw.get_config(params, @user_obj)
+			ret[:body] = 'config/ route'
+			#sw = SwitchyardAPI.new
+			#ret[:body] = sw.get_config(params, @user_obj)
+
 			#if params.has_key?('gucid')foo
 			#'Hey there'
 			#  status, response = generate_response(params)
@@ -344,16 +424,18 @@ begin
 			$DBG = false
 			pp env if $DBG
 			ret = {}
-			sw = SwitchyardAPI.new
-			ret[:body] = sw.handle_log_submit(request)
+		#	@sw = SwitchyardAPI.new
+		#	ret[:body] = sw.handle_log_submit(request)
+			ret[:body] = 'logs/ submit'
 		end
 
 		post '/check_update' do
 			$DBG = false
 			pp env if $DBG
 			ret = {}
-			sw = SwitchyardAPI.new
-			ret[:body] = sw.check_update_flag(request)
+			ret[:body] = 'foo'
+		#	sw = SwitchyardAPI.new
+		#	ret[:body] = sw.check_update_flag(request)
 		end
 
 		def self.new(*)
@@ -391,6 +473,8 @@ Signal.trap("INT"){
 Signal.trap("TERM") {
 	raise "PID #{Process.pid} Caught Sigterm"
 }
+
+
 
 
 __END__

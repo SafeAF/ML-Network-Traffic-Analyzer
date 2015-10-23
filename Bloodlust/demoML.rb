@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby -w
+require 'rubygems'
+require 'ruby_fann'
+require 'drb'
+require './liblust'
+require './libenum'
+require 'drb/acl'
+#require 'drb/ssl'
+require 'redis'
+require 'redis-objects'
+require 'connection_pool'
+require 'logger'
+require 'active_record'
