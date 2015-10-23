@@ -812,6 +812,8 @@ def clean(array)
 	return array
 end
 
+
+## Extensions to class string -beware of monkey patching -SJK
 class String
 	def to_hex
 		return if self.nil?

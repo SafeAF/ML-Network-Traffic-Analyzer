@@ -27,8 +27,8 @@ class Instance < Core
 	              :pcap_thread_flag, :message, :stats_log, :stats_pcap,
 	              :monitor_log, :monitor_pcap, :sniffer_thread
 
-	def initialize(ins_conf)
-		@gucid = ins_conf[:gucid]
+	def initialize())
+		@gucid = 'APACHE::395u353535353535353535'
 		@pcap_thread_flag = 0
 #		@hostname = Socket.gethostname
 		@message = ""

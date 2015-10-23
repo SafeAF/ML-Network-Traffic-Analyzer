@@ -105,11 +105,34 @@ failregex =[
 end
 
 class SwitchyardAPI < Sinatra::Base
-  #attr_reader :user_objgem
+  #attr_reader :user_obj
 
   def initialize
     p "#{Time.now}:#{self.class}:IP##{__LINE__} Handling request: RESTFUL API: Class #{self.class}" if $DBG
   end
+
+  def demo(request)
+	  query = request.query
+
+	  if query
+		  pcap = query[:pcap_log] if query[:pcap_log]
+		  #pcap_inputs = pcap.split("\n")
+		  pcap_inputs = JSON.parse(pcap)
+		  logs = query[:log] if query[:log]
+
+		  pcap_inputs.each do |packet|
+			  header, features = packet.split("~~")
+			  features_str = features.to_s
+			  red = Hash.new
+			  red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
+			  red[:features] = features_str
+			  $logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
+DST:#{red[:dst]}:#{red[:dport]}"
+			  $SHM.push(red)
+		  end
+	  end
+  end
+
 
   def handle_log_submit(request)
     query = request.query## FIXME
