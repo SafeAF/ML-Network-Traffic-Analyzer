@@ -5,6 +5,24 @@ Generic Rails App for BareMetal web based user interfaces. Soon will have single
 app support via rails websockets and also sinatra and neato backbone.js, angular.js views
 for rails.
 
+redis caching: 
+redis models:
+mongoid models:
+alt sql db models:
+
+serialization:
+--------------
+MessagePack & JSON & BSON (mongo)
+
+
+
+Changelist
+----------
+10/01/15 [v0.1.0] - Initial Release
+10/19/15 [v0.2.0] - Extending app models, added 'phrasing' gem. MessagePack
+
+
+
 ### Further Investigation Needed 
 
 Check out a process monitoring/overlord like foreman or bluepill or god

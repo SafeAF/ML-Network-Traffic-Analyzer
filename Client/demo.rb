@@ -1,6 +1,9 @@
 
 
 
+
+
+__END__
 class String
 	def self.to_hex
 		return if self.nil?

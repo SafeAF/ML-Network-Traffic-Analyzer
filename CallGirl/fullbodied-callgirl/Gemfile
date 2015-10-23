@@ -13,8 +13,11 @@ gem 'redis-objects'
 gem 'redis-namespace'
 gem 'redis-rails'
 gem 'redis-rack-cache'
+#gem 'msgpack'
+gem 'msgpack_rails'
 
 gem 'bootstrap-sass', '~> 3.3.5'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -86,7 +89,7 @@ end
 ### OPTIONAL GEMS ###
 
 gem 'rails-simple-search'
-
+gem 'phrasing'
 #gem 'ransack' ## advanced/complicated seraching
 ## for jruby
 #gem 'jdbc-mysql',      '~> 5.1.28', :platform => :jruby
@@ -123,6 +126,9 @@ gem 'pdf-reader'
 gem 'chartjs-ror'
 
 
+#https://infinum.co/the-capsized-eight/articles/progress-bar-in-rails
+#gem 'delayed_job_active_record'
+#gem 'progress_job'
 
 ## realtime rails log entries -> web ui /rubyception
 # add to config/routes.rb

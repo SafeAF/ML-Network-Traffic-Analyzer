@@ -178,6 +178,7 @@ DST:#{red[:dst]}:#{red[:dport]}"
                      logs = query[:log] if query[:log]
 
                      pcap_inputs.each do |packet|
+	                     #header, features = packet.split("~~~")
                        header, features = packet.split("~~")
                        features_str = features.to_s
                        red = Hash.new
