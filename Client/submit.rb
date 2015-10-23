@@ -1,4 +1,8 @@
 
+require 'uri'
+require 'net/http'
+require 'json'
+
 options = Hash.new
 options[:host] = 'clusterforge.us'
 options[:port] = '7000'
@@ -15,7 +19,8 @@ class Instance
 	              :instance_type, :status, :gucid, :ban_duration,
 	              :hostname, :pcap_port, :pcap_filter, :pcap_interface,
 	              :pcap_thread_flag, :message, :stats_log, :stats_pcap,
-	              :monitor_log, :monitor_pcap, :sniffer_thread
+	              :monitor_log, :monitor_pcap, :sniffer_thread, :uri,
+	              :http, :req, :response
 
 	def initialize()
 		@gucid = 'APACHE_fdfakljlkrj3r34304835rklj'
@@ -29,29 +34,29 @@ class Instance
 		def submit_to_switchyard(logfile=nil, pcapfile, options )
 
 			begin
-				uri = URI.parse('https://' + options[:host] + ':' +
+				@uri = URI.parse('https://' + options[:host] + ':' +
 						                options[:port] + '/demo')
 
-				http = Net::HTTP.new(uri.host, uri.port)
-				req = Net::HTTP::Post.new(uri.path)
-				http.use_ssl = true
-				req.basic_auth options[:user], options[:pass]
-				req.set_form_data({
+				@http = Net::HTTP.new(@uri.host, @uri.port)
+				@req = Net::HTTP::Post.new(@uri.path)
+				@http.use_ssl = true
+				@req.basic_auth options[:user], options[:pass]
+				@req.set_form_data({
 						                  'user' => options[:user],
 						                  'pass' => options[:pass],
 						                  #				'instances_installed' => @instances.keys.join('--'),
 						                  'platform' => RUBY_PLATFORM,
-						                  'instance_type' => instance.instance_type,
-						                  'hostname' => instance.hostname,
+						                  'instance_type' => self.instance_type,
+						                  'hostname' => self.hostname,
 						                  'client_version' => options[:version],
-						                  'gucid' => instance.gucid,
+						                  'gucid' => self.gucid,
 						                  'cid' => options[:cid],
 
 						                  'log' => logfile,
 						                  'pcap_log' => pcapfile,
 				                  } )
-				response = http.request(req)
-				return response.body
+				@response = @http.request(@req)
+				return @response.body
 
 			rescue Exception => err
 				print "[#{Time.now}] Error: Exception #{err.inspect}"
