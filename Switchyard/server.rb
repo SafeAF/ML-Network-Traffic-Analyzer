@@ -1,11 +1,20 @@
 =begin
-#### ADAPTIVE DEFENSE INFRASTRUCTURE -- ADI ####
-#### SWITCHYARD MIDDLEWARE ####
-#### Copyright (C) 2010-2015 BareMetal Networks Corporation
+##################################################################
+#### ADAPTIVE DEFENSE INFRASTRUCTURE -- ADI v0.2.0 10-23-15   ####
+#### SWITCHDEMO  MIDDLEWARE                                   ####
+#### Copyright (C) 2010-2015 BareMetal Networks Corporation   ####
+##################################################################
+
+###############################################################################
+#### Switchyard is the API of Emergence and the only component that is exposed
+#### to the internet, client daemons connect and upload logfiles and download
+#### configurations and ban lists
+###############################################################################
 =end
-# Put our local lib in first place
+
 BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
 $:.unshift File.join(BASE_PATH, 'lib')
+
 $VERSION = '0.2.1'
 $DATE = '07/15/15'
 require 'rubygems'

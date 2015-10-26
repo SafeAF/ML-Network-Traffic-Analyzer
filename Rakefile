@@ -1,69 +1,31 @@
-#require "bundler/gem_tasks"
-#require "rspec/core/rake_task"
 
+require "rspec/core/rake_task"
 require 'rubygems'
 require 'bundler'
-require 'activerecord'
+
 require 'rake'
+#require 'bundler/gem_tasks'
+require 'rake/testtask'
+
+
+Rake::TestTask.new(:testClient) do |t|
+	sh "date"
+	t.libs << "test" # "test-unit"
+#	t.libs << "test-unit" # "test-unit"
+	t.test_files = FileList['Client/tests/test*.rb']
+	t.verbose = true
+end
 
 #Bundler.setup
 
 
+task :default => [:foo, :test]
 
 
-Dir["Rake/*.rake"].sort.each { |ext| load ext }
 
-namespace :development do
-	desc 'Development repo tasks'
-task :default =>[Rails.env] do
-
-end
+	task :foo do
+	p Time.now
+	p "foo"
 end
 
-
-
-	namespace :database do
-		desc 'create all the databases for the major projects'
-		task :create => [:load_config] do
-			if ENV['DATABASE_URL']
-				ActiveRecord::Tasks::DatabaseTasks.create_database_url
-			else
-				ActiveRecord::Tasks::DatabaseTasks.create_current
-			end
-		end
-	end
-#RSpec::Core::RakeTask.new
-
-# task :compile do
-# 	symlink_bundle_path = File.absolute_path "lib/rbkit_server.#{RbConfig::MAKEFILE_CONFIG['DLEXT']}"
-# 	original_bundle_path = File.absolute_path "ext/rbkit_server.#{RbConfig::MAKEFILE_CONFIG['DLEXT']}"
-# 	Dir.chdir 'ext' do
-# 		if !system("#{Gem.ruby} extconf.rb") || !system("make")
-# 			fail "Cannot compile rbkit"
-# 		end
-# 		File.delete(symlink_bundle_path) if File.symlink? symlink_bundle_path
-# 		File.symlink(original_bundle_path, symlink_bundle_path)
-# 	end
-# end
-
-# desc "Run each spec in isolated process"
-# task :run_specs_in_separate_processes => [:compile] do
-# 	command_output = []
-# 	threads = []
-# 	pub_port = 6666
-# 	req_port = 8888
-# 	Dir["spec/*_spec.rb"].each do |file|
-# 		threads << Thread.new(pub_port+=1, req_port+=1) do |pub_port, req_port|
-# 			puts "Running #{file}.."
-# 			command_output << system("RBKIT_PUB_PORT=#{pub_port} RBKIT_REQ_PORT=#{req_port} bundle exec rspec #{file}")
-# 		end
-# 	end
-# 	threads.each(&:join)
-# 	if command_output.all?
-# 		exit(0)
-# 	else
-# 		exit(-1)
-# 	end
-# end
-#
-# task :default => [:run_specs_in_separate_processes]
+#Dir["Rake/*.rake"].sort.each { |ext| load ext }

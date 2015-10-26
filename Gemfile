@@ -46,3 +46,6 @@ gem 'rspec'
 gem 'minitest'
 gem 'better_errors'
 
+## Development
+gem 'rake-hooks'
+
