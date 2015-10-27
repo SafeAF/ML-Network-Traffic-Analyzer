@@ -415,6 +415,22 @@ ActiveRecord::Schema.define(version: 20150925004729) do
     t.string   "role",            limit: 255
   end
 
+  create_table "domains", force: :cascade do |t|
+	  t.datetime "created_at",                 null: false
+	  t.datetime "updated_at",                 null: false
+	  t.integer  "ip_id",          limit: 4
+	  t.string   "cname",          limit: 255
+	  t.string   "aname",          limit: 255
+	  t.string   "mx",             limit: 255
+	  t.string   "mx2",            limit: 255
+	  t.string   "mx3",            limit: 255
+	  t.string   "mx4",            limit: 255
+	  t.string   "hostname",       limit: 255
+	  t.string   "reverse_lookup", limit: 255
+	  t.string   "location",       limit: 255
+	  t.string   "isp",            limit: 255
+  end
+
   create_table "domainnamesystem", force: :cascade do |t|
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
@@ -1235,6 +1251,15 @@ ActiveRecord::Schema.define(version: 20150925004729) do
     t.integer  "page_number", limit: 4
     t.string   "description", limit: 255
     t.string   "app_name",    limit: 255
+  end
+
+  create_table "pdfs", force: :cascade do |t|
+	  t.integer "webpage_id"
+	  t.string "url"
+
+	  t.binary "document"
+	  t.string "description"
+	  t.string "filetype"
   end
 
   create_table "pgpkeys", force: :cascade do |t|
