@@ -1,0 +1,14 @@
+/home/vishnu/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20151022-19807-1s8wt9w.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling algor.cpp
+compiling dict.cpp
+compiling memory.cpp
+compiling rmmseg.cpp
+linking shared-object rmmseg.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rmmseg.so ./.gem.20151022-19807-1ll9xzq

@@ -1,0 +1,21 @@
+== 0.2.9 / 2011-09-10
+
+* Fix GC-related bugs in Ruby C extension.
+
+== 0.2.8 / 2010-03-22
+
+* Minor release, fixed building bugs in Ruby 1.9.
+
+== 0.2.7 / 2008-09-17
+
+* Fix various stupid bugs (typo) that cause problems under MacOSX.
+
+== 0.2.6 / 2008-08-14
+
+* Fix the problem that hang up when required (OS: MacOSX-Leopard)
+
+== 0.2.5 / 2008-06-07
+
+* Created homepage on Rubyforge.
+* Gem can be installed directly from Rubyforge now.
+* Added rdoc for native extensions.

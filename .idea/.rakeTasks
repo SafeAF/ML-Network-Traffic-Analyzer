@@ -4,4 +4,4 @@ You are allowed to:
 1. Remove rake task
 2. Add existing rake tasks
 To add existing rake tasks automatically delete this file and reload the project.
---><RakeGroup description="" fullCmd="" taksId="rake"><RakeGroup description="" fullCmd="" taksId="development"><RakeTask description="Development repo tasks" fullCmd="development:default" taksId="default" /><RakeTask description="" fullCmd="development:display" taksId="display" /></RakeGroup><RakeTask description="Run tests for testClient" fullCmd="testClient" taksId="testClient" /><RakeTask description="" fullCmd="default" taksId="default" /><RakeTask description="" fullCmd="foo" taksId="foo" /></RakeGroup></Settings>
+--><RakeGroup description="" fullCmd="" taksId="rake"><RakeGroup description="" fullCmd="" taksId="dev"><RakeTask description="rails update via delete bin stubs and update bin rake task + add to git" fullCmd="dev:update" taksId="update" /></RakeGroup><RakeTask description="Run tests for testClient" fullCmd="testClient" taksId="testClient" /><RakeTask description="" fullCmd="default" taksId="default" /><RakeTask description="" fullCmd="foo" taksId="foo" /></RakeGroup></Settings>

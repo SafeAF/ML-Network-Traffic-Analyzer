@@ -16,6 +16,17 @@ Rake::TestTask.new(:testClient) do |t|
 	t.verbose = true
 end
 
+
+#bundle config --delete bin    # Turn off Bundler's stub generator
+#rake rails:update:bin         # Use the new Rails 4 executables
+#git add bin                   # Add bin/ to source control
+
+namespace :dev do
+	desc 'rails update via delete bin stubs and update bin rake task + add to git '
+	task :update do
+		bundle
+	end
+end
 #Bundler.setup
 
 
