@@ -106,7 +106,55 @@ ActiveRecord::Schema.define(version: 20150925004729) do
     t.integer  "gid",             limit: 4
   end
 
-  create_table "bans", force: :cascade do |t|
+  create_table "alerts", force: :cascade do |t|
+	  t.integer "msgque_id"
+	  t.timestamps
+	  t.string "heading"
+	  t.string "title"
+	  t.string "content"
+	  t.text "body"
+	  t.integer "priority"
+	  t.string "facility"
+	  t.string "hostname"
+	  t.string "service"
+  end
+
+  create_table "msgques", force: :cascade do |t|
+	  t.integer "quemanager_id"
+
+  end
+  create_table "quemanagers", force: :cascade do |t|
+		t.integer "server_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+	  t.integer "joblists"
+	  t.string "title"
+	  t.text "body"
+	  t.integer "priority"
+	  t.timestamps
+  end
+
+  create_table "joblists", force: :cascade do |t|
+	  t.integer "msgque"
+	  t.string "title"
+	  t.string "type"
+  end
+
+  create_table "snippets", force: :cascade do |t|
+	  t.integer "project_id"
+	  t.string "heading"
+	  t.string "title"
+	  t.text "body"
+  end
+
+
+
+
+
+
+
+	  create_table "bans", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "ip",                       limit: 255
