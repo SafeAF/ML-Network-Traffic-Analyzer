@@ -19,13 +19,13 @@ end
 #Bundler.setup
 
 
-task :default => [:foo, :test]
+task :default => [:foo] #, :test]
 
 
 
 	task :foo do
-	p Time.now
-	p "foo"
+#	p Time.now
+#	p "foo"
 end
 
 #Dir["Rake/*.rake"].sort.each { |ext| load ext }
