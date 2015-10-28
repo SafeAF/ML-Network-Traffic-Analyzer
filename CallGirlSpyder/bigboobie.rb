@@ -11,15 +11,6 @@ $FULLSTACK = []
 
 	# Use grok pure to match on these and extend or fuzzy match
 
-	FOCUS = %w[tits bigtits hugetits boobs bigboobs niceboobs nice latina fuck
-sex titties ass girls hot sexy women babes bangbros gf]
-	FOCUS.push "big tits", "huge tits", "nice tits", "big boobs", "huge boobs"
-	FOCUS.push "latina big tits", "nice latina tits", "sexy latina", "milf"
-	FOCUS.push "milf latina", "milf video", "milf porn", "latina video"
-	FOCUS.push "latina porn", "latina milf", "latin big tits", "latina fucked"
-	BANNED = %w[hairy gay trans transexual fag homo cock cocks penis guys men
-child children kids kid wierd tranny suprise fetish bdsm pain hurt boys boy
-squirt dick dicks bondage torture maim injure ugly fugly butterface]
 #end
 
 
@@ -56,19 +47,37 @@ module Groper
 
 end
 class BigBoobs
-	attr_accessor :stack, :baseurl, :boobsbase,  :currenturl, :agent, :boobsg
+	attr_accessor :stack, :baseurl,  :currenturl, :boobcrawler,
+	              :banLinks, :allLinks, :filteredLinks, :allstack, :boobfactory
+
+
+	FOCUS = %w[tits bigtits hugetits boobs bigboobs niceboobs nice latina fuck
+sex titties ass girls hot sexy women babes bangbros gf]
+	FOCUS.push "big tits", "huge tits", "nice tits", "big boobs", "huge boobs"
+	FOCUS.push "latina big tits", "nice latina tits", "sexy latina", "milf"
+	FOCUS.push "milf latina", "milf video", "milf porn", "latina video"
+	FOCUS.push "latina porn", "latina milf", "latin big tits", "latina fucked"
+
+	BANNED = %w[hairy gay trans transexual fag homo cock cocks penis guys men
+child children kids kid wierd tranny suprise fetish bdsm pain hurt boys boy
+squirt dick dicks bondage torture maim injure ugly fugly butterface]
 
 	def initialize(baseurl)
 		@baseurl = baseurl.to_s
-		@stack = Array.new
-		@boobsg = Mechanize.new
-		@boobsbase = lambda {@boobsg.get('http://sublimedirectory.org')}
+		@currenturl = ''
 
+		@stack = Array.new
+		@allstack = Array.new
+		@banLinks = Array.new
+		@allLinks = Array.new
+		@filteredLinks = Array.new
+
+		@boobcrawler = Mechanize.new
+		@boobfactory = lambda {@boobsg.get('http://sublimedirectory.org')}
+    @boobcrawler.user_agent_alias = 'Windows Firefox'
+		@boobcrawler.follow_meta_refresh = true
 
 	end
-
-
-end
 
 
 def get_page(url)
@@ -78,6 +87,13 @@ end
 def get_links(page)
 	page.links
 end
+
+	def get_image(url)
+		#system("wget -P ./images -A jpeg,jpg,bmp,gif,png #{link}")
+		file = @boobcrawler.get(url)
+		file.save
+
+	end
 
 # take a page, a return a list of links that have been filtered by FOCUS array
 def focus_filter_links(page)
@@ -108,8 +124,14 @@ end
 page = get_page(url)
 focusLinks = focus_filter_links(page)
 banLinks = produce_links_to_ban(page)
+allLinks = page.links - banLinks
+
 filteredLinks = ban_filter_links(focusLinks, banLinks)
 images = page.images
+	@boobcrawler.download()
+
+
+end
 
 
 
