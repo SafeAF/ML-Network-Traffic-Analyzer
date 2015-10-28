@@ -1,4 +1,8 @@
+module Org
 class Infrastructure  < ActiveRecord::Base
+	attr_accessor :status
+
+	belongs_to :organization
 	 has_many :clusters
    has_many :operations
 	has_many :networks
@@ -6,3 +10,4 @@ class Infrastructure  < ActiveRecord::Base
 	has_many :machines
 	has_many :servers
 end
+	end

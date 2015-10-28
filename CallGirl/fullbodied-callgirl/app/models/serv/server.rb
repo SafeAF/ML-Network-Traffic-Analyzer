@@ -1,5 +1,5 @@
 
-module Server
+module Serv
 class Server <  ActiveRecord::Base
 	include Redis::Objects
 

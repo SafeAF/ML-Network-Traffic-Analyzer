@@ -1,3 +1,6 @@
+module Serv
 class Harddrive < ActiveRecord::Base
-	belongs_to :machine
+	belongs_to :server
+end
+
 end

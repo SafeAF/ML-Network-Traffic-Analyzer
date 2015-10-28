@@ -1,3 +1,5 @@
+module Org
+
 class Account < ActiveRecord::Base
 	ROLES = %w[admin guest]
 
@@ -38,3 +40,5 @@ class Account < ActiveRecord::Base
 		Rails.cache.delete("account:#{id}")
 	end
 end
+
+	end
