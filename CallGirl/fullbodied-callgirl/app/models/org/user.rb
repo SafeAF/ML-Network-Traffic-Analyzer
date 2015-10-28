@@ -1,5 +1,6 @@
 require 'digest/sha1'
 
+module Org
 class User < ActiveRecord::Base
 	include Redis::Objects
 
@@ -10,6 +11,12 @@ class User < ActiveRecord::Base
 	#       :confirmable, :lockable, :timeoutable
 
 
+	belongs_to :organization
+	belongs_to :operation
+	belongs_to :infrastructure
+	belongs_to :network
+	belongs_to :manager
+	has_one :admin
  has_and_belongs_to_many :roles
  has_many :machines
 	has_and_belongs_to_many :clusters
@@ -185,5 +192,6 @@ private
   
 end
 
+	end
 
 
