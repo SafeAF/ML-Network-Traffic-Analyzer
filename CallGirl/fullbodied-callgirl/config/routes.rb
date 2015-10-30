@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'adminhome/index'
+
   resources :snippets
   resources :departments
   resources :products
