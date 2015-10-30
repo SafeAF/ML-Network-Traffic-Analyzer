@@ -7,6 +7,7 @@ gem 'font-awesome-rails', '~> 4.3.0'
 gem 'bson'
 gem 'bson_ext'
 
+gem 'sqlite3'
 gem 'connection_pool'
 gem 'redis'
 gem 'redis-objects'
