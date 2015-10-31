@@ -106,55 +106,7 @@ ActiveRecord::Schema.define(version: 20150925004729) do
     t.integer  "gid",             limit: 4
   end
 
-  create_table "alerts", force: :cascade do |t|
-	  t.integer "msgque_id"
-	  t.timestamps
-	  t.string "heading"
-	  t.string "title"
-	  t.string "content"
-	  t.text "body"
-	  t.integer "priority"
-	  t.string "facility"
-	  t.string "hostname"
-	  t.string "service"
-  end
-
-  create_table "msgques", force: :cascade do |t|
-	  t.integer "quemanager_id"
-
-  end
-  create_table "quemanagers", force: :cascade do |t|
-		t.integer "server_id"
-  end
-
-  create_table "jobs", force: :cascade do |t|
-	  t.integer "joblists"
-	  t.string "title"
-	  t.text "body"
-	  t.integer "priority"
-	  t.timestamps
-  end
-
-  create_table "joblists", force: :cascade do |t|
-	  t.integer "msgque"
-	  t.string "title"
-	  t.string "type"
-  end
-
-  create_table "snippets", force: :cascade do |t|
-	  t.integer "project_id"
-	  t.string "heading"
-	  t.string "title"
-	  t.text "body"
-  end
-
-
-
-
-
-
-
-	  create_table "bans", force: :cascade do |t|
+  create_table "bans", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "ip",                       limit: 255
@@ -413,22 +365,6 @@ ActiveRecord::Schema.define(version: 20150925004729) do
     t.integer  "harddrive_id",    limit: 4
     t.string   "houses",          limit: 255
     t.string   "role",            limit: 255
-  end
-
-  create_table "domains", force: :cascade do |t|
-	  t.datetime "created_at",                 null: false
-	  t.datetime "updated_at",                 null: false
-	  t.integer  "ip_id",          limit: 4
-	  t.string   "cname",          limit: 255
-	  t.string   "aname",          limit: 255
-	  t.string   "mx",             limit: 255
-	  t.string   "mx2",            limit: 255
-	  t.string   "mx3",            limit: 255
-	  t.string   "mx4",            limit: 255
-	  t.string   "hostname",       limit: 255
-	  t.string   "reverse_lookup", limit: 255
-	  t.string   "location",       limit: 255
-	  t.string   "isp",            limit: 255
   end
 
   create_table "domainnamesystem", force: :cascade do |t|
@@ -1251,15 +1187,6 @@ ActiveRecord::Schema.define(version: 20150925004729) do
     t.integer  "page_number", limit: 4
     t.string   "description", limit: 255
     t.string   "app_name",    limit: 255
-  end
-
-  create_table "pdfs", force: :cascade do |t|
-	  t.integer "webpage_id"
-	  t.string "url"
-
-	  t.binary "document"
-	  t.string "description"
-	  t.string "filetype"
   end
 
   create_table "pgpkeys", force: :cascade do |t|

@@ -28,6 +28,7 @@ require 'connection_pool'
 require 'active_record'
 require 'mysql2'
 require 'pp'
+require 'ruby-fann'
 
 #### Installation
 ## apt-get install libmyslclient18 libmysqlclient18-dev
@@ -62,7 +63,7 @@ p "#{Time.now}:#{self.class}:IP##{__LINE__}: Booting Switchyard Middleware: #{Fi
 # rvm use '1.9.3'
 
 
-$logger = Logger.new('switchyard.log', 'w')
+$logger = Logger.new('switchyard.log', 'w+')
 
 $options = Hash.new
 $options[:host] = '10.0.1.17'
@@ -84,130 +85,93 @@ $options[:table] = 5
 
 $TITLE = 'Emergence'
 
-
-module Emergence
-
-
-
-	class SwitchyardAPI < Sinatra::Base
-		#attr_reader :user_obj
-
-		def initialize
-			p "#{Time.now}:#{self.class}:IP##{__LINE__} Handling request: RESTFUL API: Class #{self.class}" if $DBG
-		end
-
-		def demo(request)
-			query = request.query
-
-			@bloodlust = Bloodlust.new()
-			@bloodlust.train_nn
-			# @bloodlust.run_blood()
-			if query
-				pcap = query[:pcap_log] if query[:pcap_log]
-				#pcap_inputs = pcap.split("\n")
-				pcap_inputs = JSON.parse(pcap)
-				logs = query[:log] if query[:log]
-
-				pcap_inputs.each do |packet|
-					header, features = packet.split("~~")
-					features_str = features.to_s
-					red = Hash.new
-					red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
-					red[:features] = features_str
-					$logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
-DST:#{red[:dst]}:#{red[:dport]}"
-					$SHM.push(red)
-				end
-			end
-		end
-
-
-		def handle_log_submit(request)
-			query = request.query## FIXME
-			gucid = params[:gucid]
-			cid = params[:cid]
-
-			ret = ''
-			# dont post if gucid of default
-			return post_err[:default] if gucid.is_default?
-
-			if machine = @user_obj.machines.find_by_cid(cid)
-
-				if instance = machine.instances.find_by_gucid(gucid)
-
-					return not_subbed_err if instance.subscribed == false
-
-					blood_inputs = []
-					pcap = query['pcap_log'] # FIXME
-					pcap_inputs = pcap.split("\n")
-
-					result = case query[:instance_type]
-						         when /SSH/i then
-							         $ssh_module_result = ''
-							         Thread.new{
-								         ssh = SwitchyardSSH.new()
-								         if ssh.parse
-									         Ban.new(query[:src], :reason => ssh.parse)
-								         end
-							         }
-						         #p post_err[:no_mod] + ' ' + result
-						         #   return 200, "text/plain", 'Success'
-
-						         when /APACHE/i then
-							         # begin
-							         blood_inputs = []
-							         pcap = query[:pcap_log] if query[:pcap_log]
-							         #pcap_inputs = pcap.split("\n")
-							         pcap_inputs = JSON.parse(pcap)
-							         logs = query[:log] if query[:log]
-
-							         pcap_inputs.each do |packet|
-								         #header, features = packet.split("~~~")
-								         header, features = packet.split("~~")
-								         features_str = features.to_s
-								         red = Hash.new
-								         red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
-								         red[:features] = features_str
-								         $logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
-DST:#{red[:dst]}:#{red[:dport]}"
-								         $SHM.push(red)
-								         #     return 200, "text/plain", 'Success'
-
-								         #   rescue => err
-								         #   $logger.error "#{Time.now} - Error in Apache module #{err.inspect}"
-								         # end
-								         #
-							         end
-
-						         else
-							         $logger.warn("Bad submission from #{query[:gucid]} cid: #{query[:cid]}")
-
-					         end
-				else
-					return no_subs_found_err('foo')
-				end
-			else
-				return create_a_machine_err
-			end
-		end
-
-
-
-	############
-
-
-	end
-
-end
-## 700 is switchyard return code space
-
-
+#  Add methods to Enumerable, available in Array
+module Enumerable
+ 
+  def sum
+    return self.inject(0){|acc,i|acc +i}
+  end
+ 
+  def mean
+    return self.sum/self.length.to_f
+  end
+ 
+  def variance
+    avg=self.mean
+    sum=self.inject(0){|acc,i| acc + (i-avg)**2}
+    return sum/(self.length - 1).to_f
+  end
+ 
+  def std
+    return Math.sqrt(self.variance)
+  end
+ 
+end  #  module Enumerable
 
 class Bloodlust
 	attr_accessor :bloodlust
 
+	def normalize_dataset(raw_data, mean, std)
+	 raw_data.map! { |entry| Math.atan(((entry - mean)).abs / std) }
+	end
+
+	def format_dataset(input_data)
+	 dataset = []
+	 desired_output = []
+	#p input_data
+	 # chop off the numerical data elements 9-13
+	 #TODO  check to make sure this is right!
+	 dataset = input_data.slice(9,12)
+
+	 raw_desired_output = input_data.pop
+	 dataset.map! {|x| x.to_f}
+
+	 desired_output.push raw_desired_output.to_i
+	 return dataset, desired_output
+	end
+
+	#make configurable
+	def train_bloodlust(inputs, desired_outputs) 
+	 p "[NEURAL] - Training now"
+	 training_data = RubyFann::TrainData.new(
+		:inputs => inputs,
+		:desired_outputs => desired_outputs)
+
+	 p "[NEURAL] - Training complete"
+
+	 bloodlust = RubyFann::Standard.new(
+		:num_inputs => 13,
+		:hidden_neurons => [80], # investigate this
+		:num_outputs => 1)
+
+	 bloodlust.train_on_data(training_data, 1000, 1, 0.01)
+	 return bloodlust
+	end
+
+
+	def format_for_neural(formattee)
+	 formatted = []
+	  formattee.each  do |entry|
+	   	temp = []
+	 	entry.each { |y| temp.push y.to_f }
+		 formatted.push(temp)
+	  end
+	 formatted
+	end
+
+	def load_training_data(filename)
+	 raw_data = []
+	 file = File.open(filename)
+	 while(line = file.gets) do
+	 	line.chomp!
+		ary = line.split(',')
+		raw_data.push(ary)
+	 end
+	 return raw_data
+	end
+
 	def train_nn
-		dataset_location = '../datasets/training-01.dat'
+		dataset_location = '../../datasets/training-01.dat'
 
 		dataset = []
 		desired_outputs = []
@@ -245,6 +209,62 @@ class Bloodlust
 end
 
 
+module Emergence
+
+
+
+	class SwitchyardAPI < Sinatra::Base
+		#attr_reader :user_obj
+		attr_accessor :bloodlust
+
+		def initialize
+			p "#{Time.now}:#{self.class}:IP##{__LINE__} Handling request: RESTFUL API: Class #{self.class}" if $DBG
+
+			@bloodlust = Bloodlust.new()
+			@bloodlust.train_nn
+		end
+
+		def machine_learning_demo(request)
+			query = request.query
+
+			# @bloodlust.run_blood()
+			if query
+				pcap = query[:pcap_log] if query[:pcap_log]
+				#pcap_inputs = pcap.split("\n")
+				pcap_inputs = JSON.parse(pcap)
+				logs = query[:log] if query[:log]
+
+				pcap_inputs.each do |packet|
+					header, features = packet.split("~~")
+					features_str = features.to_s
+					red = Hash.new
+					red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
+					red[:features] = features_str
+					$logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
+DST:#{red[:dst]}:#{red[:dport]}"
+					@blood = Bloodlust.new
+					@blood.train_nn
+					@returns = @blood.run_blood(red[:features])
+				end
+
+	         @returns
+			end
+		end
+
+
+
+
+	############
+
+
+	end
+
+end
+## 700 is switchyard return code space
+
+
+
+
 begin
 	### Switchyard is the protected class
 	class DemoAPI < Sinatra::Base
@@ -261,12 +281,15 @@ begin
 		end
 
 		get '/' do
-			'Emergence API'
+			p 'Emergence API'
+			$logger.info "Got request"
 		end
 
-		post 'demo' do
-			p 'Posted' + "#{params[:pcap_log]}"
-
+		post '/demo' do
+		#	p 'Posted' + "#{params[:pcap_log]}"
+		#	p request
+		nn = Emergence::SwitchyardAPI.new
+		nn.machine_learning_demo(request)
 		end
 
 		get '/config' do
@@ -294,19 +317,7 @@ begin
 			ret[:body] = 'logs/ submit'
 		end
 
-		def self.new(*)
 
-			app = Rack::Auth::Digest::MD5.new(super) do |username, password|
-				$logger.info "Authentication Request: #{username}:#{password}"
-				{'foo'=> 'bar'}[username]
-
-				# @user_obj = User.authenticate(username, password)
-			end
-
-			app.realm = "Emergence"
-			app.opaque = "eikjalkjalosdfjSecret3pij398323543klhj2lh4tkth4858674"
-			app
-		end
 
 	end
 

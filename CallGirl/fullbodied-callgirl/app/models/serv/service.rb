@@ -1,3 +1,4 @@
+module Serv
 class Service <  ActiveRecord::Base
 
 	belongs_to :machine
@@ -19,3 +20,4 @@ has_many :messages
 has_many :notifications
 
 	end
+end

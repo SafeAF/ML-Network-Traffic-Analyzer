@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :applications
+  resources :servers
+  resources :serv_services
+  resources :clusterbots
+  resources :nodes
+  resources :nodes
   get 'adminhome/index'
 
   resources :snippets
