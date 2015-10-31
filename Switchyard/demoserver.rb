@@ -87,31 +87,7 @@ $TITLE = 'Emergence'
 
 module Emergence
 
-	class SwitchyardSSH
-		def initialize
-# Notes:
-#
-#   "Failed \S+ for .*? from <HOST>..." failregex uses non-greedy catch-all because
-#   it is coming before use of <HOST> which is not hard-anchored at the end as well,
-#   and later catch-all's could contain user-provided input, which need to be greedily
-#   matched away first.
-## Borrowed from Authors: Cyril Jaquier, Yaroslav Halchenko, Petr Voralek, Daniel Black
 
-			failregex =[
-					%q{^%(__prefix_line)s(?:error: PAM: )?[aA]uthentication (?:failure|error) for .* from <HOST>( via \S+)?\s*$},
-					%q{^%(__prefix_line)s(?:error: PAM: )?User not known to the underlying authentication module for .* from <HOST>\s*$},
-					%q{^%(__prefix_line)sFailed \S+ for .*? from <HOST>(?: port \d*)?(?: ssh\d*)?(: (ruser .*|(\S+ ID \S+ \(serial \d+\) CA )?\S+ %(__md5hex)s(, client user ".*", client host ".*")?))?\s*$},
-					%q{ ^%(__prefix_line)sROOT LOGIN REFUSED.* FROM <HOST>\s*$},
-					%q{    ^%(__prefix_line)s[iI](?:llegal|nvalid) user .* from <HOST>\s*$},
-					%q{ ^%(__prefix_line)sUser .+ from <HOST> not allowed because not listed in AllowUsers\s*$},
-					%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because listed in DenyUsers\s*$} ,
-					%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because not in any group\s*$} ,
-					%q{ ^%(__prefix_line)srefused connect from \S+ \(<HOST>\)\s*$},
-					%q{ ^%(__prefix_line)sUser .+ from <HOST> not allowed because a group is listed in DenyGroups\s*$},
-					%q{^%(__prefix_line)sUser .+ from <HOST> not allowed because none of user's groups are listed in AllowGroups\s*$},
-			]
-		end
-	end
 
 	class SwitchyardAPI < Sinatra::Base
 		#attr_reader :user_obj
@@ -123,6 +99,9 @@ module Emergence
 		def demo(request)
 			query = request.query
 
+			@bloodlust = Bloodlust.new()
+			@bloodlust.train_nn
+			# @bloodlust.run_blood()
 			if query
 				pcap = query[:pcap_log] if query[:pcap_log]
 				#pcap_inputs = pcap.split("\n")
@@ -212,97 +191,11 @@ DST:#{red[:dst]}:#{red[:dport]}"
 			end
 		end
 
-		#  return 200, "text/plain", response
-		def get_bans
-			bans = Ban.find(:all, :conditions =>
-					["last_seen > ?", (Time.now - (60 * 60 * 24)).to_s])
-
-		end
-
-		def check_update_flag(request)
-			cid = request[:cid] || params[:cid]
-			gucid = request[:gucid] || params[:cid]
-			update_flag = 0
-
-			unless gucid.include? 'default'
-				machine = @user_obj.machines.find_by_cid(cid)
-
-				if machine
-					instance = machine.instances.find_by_gucid(gucid)
-					if instance.conf.update_flag == 1
-						update_flag = 1
-						machine.just_seen(request.peeraddr[3])
-						# FIXME: this is a hack
-						instance.conf.update_flag = 0
-					end
-				else  # if no machine found with that cid
 
 
-				end
-				response = update_flag
-			end
-
-			return 200, "text/plain", response.to_s
-		end
-
-		##########################################
-
-		def get_bans
-			bans = Ban.find(:all, :conditions =>
-					["last_seen > ?", (Time.now - (60 * 60 * 24)).to_s])
+	############
 
 
-		end
-
-		def get_config(request, user_obj)
-			cid = request[:cid]  || params[:cid]
-
-			gucid = request[:gucid] || params[:cid]
-			#	return invalid_cid_err unless cid.is_valid_cid?
-
-			# machine found
-			if machine = user_obj.machines.find_by_cid(cid)
-				machine.just_seen(request.peeraddr[3])
-
-				if gucid.is_default?
-
-					if instance = machine.sub_instance_avail?
-						instance.just_seen(request.peeraddr[3])
-						return instance.return_conf_json
-
-					else
-						return no_subs_found_err(gucid)
-					end
-
-				elsif gucid.is_valid_gucid?
-
-					if instance = machine.instances.find_by_gucid(gucid)
-						return not_subbed_err if instance.subscribed == false
-						instance.just_seen(request.peeraddr[3])
-						return instance.return_conf_json
-					end
-
-				else
-					return invalid_gucid_err(gucid)
-				end
-
-				#no machine found
-			else
-				if machine = @user_obj.machine_avail?
-					machine.cid = cid
-					machine.just_seen(request.peeraddr[3])
-
-					if instance = machine.sub_instance_avail?
-						instance.just_seen
-						return instance.return_conf_json
-					else
-						return no_subs_found_err(gucid)
-					end
-				else
-					return create_a_machine_err
-				end
-			end
-		end
 	end
 
 end
@@ -351,39 +244,6 @@ class Bloodlust
 	end
 end
 
-begin
-	logger = Logger.new('bloodlust.log', 'w')
-	classifier = Bloodlust.new
-	classifier.train_nn
-	loopiter = 0
-	while true
-		loopiter +=1
-		p "Looping #{loopiter}"
-		redi =  $SHM.shift
-		if not redi.empty?
-			blood_output = classifier.run_blood(redi[:features_str])
-			blood_output = blood_output[0]
-			logger.info "NEURAL OUTPUT: #{blood_output}"
-			# do if ml output suggests a ban
-			if blood_output > 0.5
-				ban = Ban.find_by_ip(redi[:src]) || Ban.new
-				if ban
-					ban.reason = blood_output
-					ban.last_seen = redi[:time]
-					ban.ip = redi[:src]
-				end
-			end
-		end
-		sleep 1
-	end
-
-rescue => err
-	sleep 0.1
-	retry
-end
-
-
-
 
 begin
 	### Switchyard is the protected class
@@ -402,6 +262,11 @@ begin
 
 		get '/' do
 			'Emergence API'
+		end
+
+		post 'demo' do
+			p 'Posted' + "#{params[:pcap_log]}"
+
 		end
 
 		get '/config' do
@@ -427,15 +292,6 @@ begin
 		#	@sw = SwitchyardAPI.new
 		#	ret[:body] = sw.handle_log_submit(request)
 			ret[:body] = 'logs/ submit'
-		end
-
-		post '/check_update' do
-			$DBG = false
-			pp env if $DBG
-			ret = {}
-			ret[:body] = 'foo'
-		#	sw = SwitchyardAPI.new
-		#	ret[:body] = sw.check_update_flag(request)
 		end
 
 		def self.new(*)
