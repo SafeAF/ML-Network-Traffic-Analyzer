@@ -1,11 +1,14 @@
 
-require "rspec/core/rake_task"
+#require "rspec/core/rake_task"
 require 'rubygems'
 require 'bundler'
 
 require 'rake'
 #require 'bundler/gem_tasks'
 require 'rake/testtask'
+	require 'rake'
+require 'find'
+
 
 
 Rake::TestTask.new(:testClient) do |t|
@@ -26,6 +29,18 @@ namespace :dev do
 	task :update do
 		bundle
 	end
+
+ desc 'cleans up logfiles'
+ task :delog do 
+ file_paths = []
+ dir = Dir.getwd
+  Find.find(dir).select {|path| /.*\.log$/ =~ path }
+  
+  p file_paths
+p "hello"
+end
+
+
 end
 #Bundler.setup
 

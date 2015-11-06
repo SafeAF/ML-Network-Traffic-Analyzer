@@ -26,7 +26,7 @@ require '../app/models/machine.rb'
 #logger = Logger.new('log/switchyard.log', 'w')
 
 $options = Hash.new
-$options[:host] = '10.0.1.17'
+$options[:host] = 'localhost' #'10.0.1.17'
 $options[:port] = '6379'
 $options[:table] = 5
 #if ARGV[1].include? '--db-config'

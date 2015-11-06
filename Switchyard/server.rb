@@ -66,7 +66,7 @@ p "#{Time.now}:#{self.class}:IP##{__LINE__}: Booting Switchyard Middleware: #{Fi
 $logger = Logger.new('switchyard.log', 'w')
 
 $options = Hash.new
-$options[:host] = '10.0.1.17'
+$options[:host] = 'localhost'# '10.0.1.17'
 $options[:port] = '6379'
 $options[:table] = 5
 #if ARGV[1].? '--db-config'
@@ -104,7 +104,7 @@ def initialize
 failregex =[
 %q{^%(__prefix_line)s(?:error: PAM: )?[aA]uthentication (?:failure|error) for .* from <HOST>( via \S+)?\s*$},
  %q{^%(__prefix_line)s(?:error: PAM: )?User not known to the underlying authentication module for .* from <HOST>\s*$},
- %q{^%(__prefix_line)sFailed \S+ for .*? from <HOST>(?: port \d*)?(?: ssh\d*)?(: (ruser .*|(\S+ ID \S+ \(serial \d+\) CA )?\S+ %(__md5hex)s(, client user ".*", client host ".*")?))?\s*$},
+ %q{^%(__prefx_line)sFailed \S+ for .*? from <HOST>(?: port \d*)?(?: ssh\d*)?(: (ruser .*|(\S+ ID \S+ \(serial \d+\) CA )?\S+ %(__md5hex)s(, client user ".*", client host ".*")?))?\s*$},
  %q{ ^%(__prefix_line)sROOT LOGIN REFUSED.* FROM <HOST>\s*$},
  %q{    ^%(__prefix_line)s[iI](?:llegal|nvalid) user .* from <HOST>\s*$},
  %q{ ^%(__prefix_line)sUser .+ from <HOST> not allowed because not listed in AllowUsers\s*$},
@@ -378,154 +378,7 @@ rescue => err
 end
 
 
-def shut_down
-  $logger.info "Shutdown in progress please wait"
-  sleep 1
-  exit
-end
-
-Signal.trap("INT"){
-  $logger.info "PID #{Process.pid} Caught Sigint"
-  shutdown
-}
-
-Signal.trap("TERM") {
-  raise "PID #{Process.pid} Caught Sigterm"
-}
 
 
 __END__
 
-
-
-class DeferrableBody
-  include EventMachine::Deferrable
-
-  def call(body)
-    body.each do |chunk|
-      @body_callback.call(chunk)
-    end
-  end
-
-  def each &blk
-    @body_callback = blk
-  end
-
-end
-
-class AsyncApp
-
-  # This is a template async response. N.B. Can't use string for body on 1.9
-  AsyncResponse = [-1, {}, []].freeze
-
-  def call(env)
-
-    body = DeferrableBody.new
-
-    # Get the headers out there asap, let the client know we're alive...
-    EventMachine::next_tick { env['async.callback'].call [200, {'Content-Type' => 'text/plain'}, body] }
-
-
-    # Semi-emulate a long db request, instead of a timer, in reality we'd be
-    # waiting for the response data. Whilst this happens, other connections
-    # can be serviced.
-    # This could be any callback based thing though, a deferrable waiting on
-    # IO data, a db request, an http request, an smtp send, whatever.
-    EventMachine::add_timer(1) {
-      body.call ["Woah, async!\n"]
-
-      EventMachine::next_tick {
-        # This could actually happen any time, you could spawn off to new
-        # threads, pause as a good looking lady walks by, whatever.
-        # Just shows off how we can defer chunks of data in the body, you can
-        # even call this many times.
-        body.call ["Cheers then!"]
-        body.succeed
-      }
-    }
-
-    # throw :async # Still works for supporting non-async frameworks...
-
-    AsyncResponse # May end up in Rack :-)
-  end
-
-  # The additions to env for async.connection and async.callback absolutely
-  # destroy the speed of the request if Lint is doing it's checks on env.
-  # It is also important to note that an async response will not pass through
-  # any further middleware, as the async response notification has been passed
-  # right up to the webserver, and the callback goes directly there too.
-  # Middleware could possibly catch :async, and also provide a different
-  # async.connection and async.callback.
-
-end
-
-## TODO ##
-# Migrate training out of here back to bloodlust, this is horrible design, tight coupling like they are humping
-# Ditch webrick for thin cluster
-# Ditch drb for redis queque
-
-  #use Rack::Auth::Basic, $TITLE  do |user, pass|
-  #  @usar = User.authenticate(user, pass)
-    # user == 'foo' && password == 'bar'
-
-
-
-
-if $0 == __FILE__ then
-p "[+] Starting Distrubted Ruby Service"
-DRb.start_service
-$apache_mod = DRbObject.new nil, 'druby://localhost:11000'
-p "[+] Training the Neural Network..."
-$apache_mod.train_nn
-p "[+] Training complete"
-
-ROOT = Dir.getwd
-class Server
-  def default_options
-    super.merge({
-  :port         => "7000",
-  :ip           => "0.0.0.0",
-  :environment  => (ENV['RAILS_ENV'] || "development").dup,
-  :daemonize => true,
-  :daemonize => true,
-  :pid => File.absolute_path("/tmp/pids/sw0.pid"),
-  :config => File.expand_path("config/switch.yaml"),
-  :SSLEnable => true,
-  :ssl => true,
-  "ssl-verify" => true,
-  "ssl-key-file" => File.expand_path("config/certs/server.key"),
-  "ssl-cert-file" => File.expand_path("config/certs/server.crt"),
-
-})
-#  :server_root  => File.expand_path(ROOT + "/public/"),
-#  :pkey         => OpenSSL::PKey::RSA.new(
-#                      File.open(ROOT + "/config/certs/server.key").read),
-#  :cert         => OpenSSL::X509::Certificate.new(
-#                      File.open(ROOT + "/config/certs/server.crt").read),
-#  :server_type  => WEBrick::SimpleServer,
-#  :charset      => "UTF-8",
-#  :mime_types   => WEBrick::HTTPUtils::DefaultMimeTypes,
- # :debugger     => false
-
-
-#ENV["RAILS_ENV"] = OPTIONS[:environment]
-#RAILS_ENV.replace(OPTIONS[:environment]) if defined?(RAILS_ENV)
-
-  server = WEBrick::HTTPServer.new(
-      :Port             => options[:port].to_i,
-      :ServerType       => options[:server_type],
-      :BindAddress      => options[:ip],
-      :SSLEnable        => true,
-      :SSLVerifyClient  => OpenSSL::SSL::VERIFY_NONE,
-      :SSLCertificate   => options[:cert],
-      :SSLPrivateKey    => options[:pkey],
-      :SSLCertName      => [ [ "CN", WEBrick::Utils::getservername ] ]
-
-    )
-
-
-
-server.mount "/submit", HandlePost, options
-server.mount "/retrieve", HandleGet, options
-server.mount "/chkupdate", CheckUpdate, options
-server.mount "/getbans", GetBans, options
