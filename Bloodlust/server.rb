@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby -w
-require 'rubygems'
+#require 'rubygems'
 require 'ruby_fann'
-require 'drb'
+#require 'drb'
 require './liblust'
 require './libenum'
-require 'drb/acl'
+#require 'drb/acl'
 #require 'drb/ssl'
 require 'redis'
 require 'redis-objects'
@@ -12,6 +12,14 @@ require 'connection_pool'
 require 'logger'
 require 'active_record'
 
+BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
+$:.unshift File.join(BASE_PATH, 'lib')
+
+ROOT = File.join(File.dirname(__FILE__), '..')
+# load in directories with modules and lbis etc
+['../Lib/models/*' '../lib', '../db', 'lib/*'].each do |folder|
+	$:.unshift File.join(ROOT, folder)
+end
 #$SAFE = 1
 
 ### Required for ActiveRecord magick -- Include ALL models

@@ -12,8 +12,7 @@
 ###############################################################################
 =end
 
-BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
-$:.unshift File.join(BASE_PATH, 'lib')
+
 $VERSION = '0.2.1'
 $DATE = '07/15/15'
 require 'rubygems'
@@ -34,6 +33,8 @@ require 'ruby-fann'
 ## apt-get install libmyslclient18 libmysqlclient18-dev
 ## Gem install mysql2
 ## gem install hiredis
+BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
+$:.unshift File.join(BASE_PATH, 'lib')
 
 ROOT = File.join(File.dirname(__FILE__), '..')
 
