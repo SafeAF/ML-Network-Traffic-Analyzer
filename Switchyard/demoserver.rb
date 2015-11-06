@@ -28,6 +28,7 @@ require 'active_record'
 require 'mysql2'
 require 'pp'
 require 'ruby-fann'
+require 'json'
 
 #### Installation
 ## apt-get install libmyslclient18 libmysqlclient18-dev
@@ -95,27 +96,27 @@ begin
 		end
 
 		post '/demo' do
-			p 'Posted' + "#{params[:pcap_log]}"
+	#		p 'Posted' + "#{params[:pcap_log]}"
+			query = request.query
 
-		#	p request
-
+			if query
+				pcap = query[:pcap_log] if query[:pcap_log]
+				#pcap_inputs = pcap.split("\n")
+				pcap_inputs = JSON.parse(pcap)
+				logs = query[:log] if query[:log]
+				p 'Posted' + pcap_inputs
+				pcap_inputs.each do |packet|
+					header, features = packet.split("~~")
+					features_str = features.to_s
+					red = Hash.new
+					red[:time], red[:src], red[:dst], red[:sport], red[:dport] = header.split('::')
+					red[:features] = features_str
+					$logger.info "#{Time.now} - Pushing packet SRC:#{red[:src]}:#{red[:sport]}
+DST:#{red[:dst]}:#{red[:dport]}"
+					$SHM.push(red)
+				end
 		end
 
-		get '/config' do
-			$DBG = false
-			pp env if $DBG
-			#cache_control :public; "cache it"
-			ret = {}
-			ret[:body] = 'config/ route'
-			#sw = SwitchyardAPI.new
-			#ret[:body] = sw.get_config(params, @user_obj)
-
-			#if params.has_key?('gucid')foo
-			#'Hey there'
-			#  status, response = generate_response(params)
-			#  if
-			#end
-		end
 
 		post '/logs' do
 			$DBG = false

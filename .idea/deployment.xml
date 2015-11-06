@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" autoUpload="On explicit save action" promptOnRemoteOverwrite="CHECK_TIMESTAMP" serverName="Legendary" createEmptyFolders="true" autoUploadExternalChanges="true" notifyRemoteChanges="true">
     <serverData>
-      <paths name="Prod-1-0-0">
+      <paths name="Prod-1">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="clusterforge.us">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/srv/prod/www" />
+            <mapping local="" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>
-

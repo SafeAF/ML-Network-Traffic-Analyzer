@@ -30,6 +30,10 @@ require 'active_record'
 require 'mysql2'
 require 'pp'
 
+#### TODO
+# message pack
+# api key/pw
+
 #### Installation
 ## apt-get install libmyslclient18 libmysqlclient18-dev
 ## Gem install mysql2
@@ -130,7 +134,7 @@ class SwitchyardAPI < Sinatra::Base
 	  if query
 		  pcap = query[:pcap_log] if query[:pcap_log]
 		  #pcap_inputs = pcap.split("\n")
-		  pcap_inputs = JSON.parse(pcap)
+		  pcap_inputs = JSON.parse(pcap) ## look into using message pack ehre
 		  logs = query[:log] if query[:log]
 
 		  pcap_inputs.each do |packet|
