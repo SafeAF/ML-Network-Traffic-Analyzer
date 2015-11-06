@@ -42,12 +42,25 @@ $options[:table] = 5
 #	ActiveRecord::Base.configurations = YAML::load(IO.read('../config/database.yml'))
 #end
 #ActiveRecord::Base.establish_connection('development')
+begin
 ActiveRecord::Base.establish_connection(
 		:adapter => 'mysql2',
 		:database => 'emergence',
 		:username => 'emergence',
 		:password => '#GDU3im=86jDFAipJ(f7*rTKuc',
-		:host => 'datastore2')
+		:host => 'datastore2',
+		:timeout => 1000,
+		:pool => 5)
+rescue => err
+	ActiveRecord::Base.establish_connection(
+			:adapter => 'sqlite3',
+			:database => 'emergence.db',
+			:timeout => 1000,
+    	:pool => 5)
+end
+
+
+
 
 Redis::Objects.redis = ConnectionPool.new(size: 5, timeout: 5) {
 	Redis.new({host: $options[:host], port: $options[:port], db: $options[:table]})
