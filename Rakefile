@@ -24,6 +24,7 @@ end
 #rake rails:update:bin         # Use the new Rails 4 executables
 #git add bin                   # Add bin/ to source control
 
+
 namespace :dev do
 	desc 'rails update via delete bin stubs and update bin rake task + add to git '
 	task :update do
@@ -38,10 +39,21 @@ namespace :dev do
   
   p file_paths
 p "hello"
+	end
+
+desc 'populates new rails app with supermodels, pick which sets'
+  task :supermodels
+
+end
+
+desc 'startup Emergence/Attrition backend'
+task :emerge
+
+end
 end
 
 
-end
+
 #Bundler.setup
 
 

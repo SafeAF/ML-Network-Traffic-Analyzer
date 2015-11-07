@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Development.iml" filepath="$PROJECT_DIR$/.idea/Development.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Production/.idea/Production.iml" filepath="$PROJECT_DIR$/../Production/.idea/Production.iml" />
+      <module fileurl="file://$USER_HOME$/RubymineProjects/Supermodels/.idea/Supermodels.iml" filepath="$USER_HOME$/RubymineProjects/Supermodels/.idea/Supermodels.iml" />
     </modules>
   </component>
 </project>

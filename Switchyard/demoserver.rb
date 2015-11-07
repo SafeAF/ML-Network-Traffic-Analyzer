@@ -61,6 +61,22 @@ $options[:table] = 5
 
 
 $TITLE = 'Emergence'
+# begin
+# 	ActiveRecord::Base.establish_connection(
+# 			:adapter => 'mysql2',
+# 			:database => 'emergence',
+# 			:username => 'emergence',
+# 			:password => '#GDU3im=86jDFAipJ(f7*rTKuc',
+# 			:host => 'datastore2',
+# 			:timeout => 1000,
+# 			:pool => 5)
+# rescue => err
+	ActiveRecord::Base.establish_connection(
+			:adapter => 'sqlite3',
+			:database => 'emergence.db',
+			:timeout => 1000,
+			:pool => 5)
+#end
 
 
 
@@ -133,7 +149,8 @@ DST:#{red[:dst]}:#{red[:dport]}"
 
 rescue => err
 	pp err.inspect
-end
+	end
+  end
 
 
 

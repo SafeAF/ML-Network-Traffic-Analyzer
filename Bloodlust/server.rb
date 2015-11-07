@@ -12,7 +12,17 @@ require 'connection_pool'
 require 'logger'
 require 'active_record'
 
-BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
+$FAILURES = 0
+$FAILURES_CLOCK_START = Time.now
+$FAILURES_CLOCK_END = Time.now
+$FAILURE_RATE = 0.0
+def calc_failure_rate
+	timed = $FAILURES_CLOCK_START - $FAILURES_CLOCK_END
+	integerSeconds = timed.to_f
+	$FAILURE_RATE = $FAILURES / integerSeconds
+	end
+
+sBASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
 $:.unshift File.join(BASE_PATH, 'lib')
 
 ROOT = File.join(File.dirname(__FILE__), '..')
@@ -136,7 +146,7 @@ begin
 	end
 
 rescue => err
-	sleep 0.1
+	sleep 1.0
 	retry
 end
 
