@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="CallGirl" pattern="file[Development]:CallGirl//*||file[Development]:CallGirlHotlineAPI//*||file[Development]:CallGirlSpyder//*||file[Development]:Fixins//*" />
+</component>

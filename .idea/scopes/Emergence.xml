@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Emergence" pattern="file[Development]:Bloodlust//*||file[Development]:Client//*||file[Development]:Switchyard//*||file[Development]:SiliconTooling//*||file[Development]:KimberliteUI//*" />
+</component>
