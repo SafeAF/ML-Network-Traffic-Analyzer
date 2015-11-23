@@ -1,10 +1,7 @@
-
+#!/usr/bin/env ruby
 require 'uri'
 require 'net/http'
 require 'json'
-
-
-
 
 options = Hash.new
 options[:host] = 'localhost'
@@ -34,9 +31,7 @@ class Instance
 
 		end
 
-		def submit_to_switchyard(logfile=nil, pcapfile, options )
-
-			begin
+		def submit_to_switchyard(logfile=nil, pcapfile, options ); begin
 				@uri = URI.parse('http://' + options[:host] + ':' +
 						                options[:port] + '/demo')
 
@@ -82,5 +77,5 @@ logfile = nil
 
 
 rescue => err
-	   p "err #{err.inspect}, #{err.backtrace}"
+	   p "Error #{err.inspect}, #{err.backtrace}"
 	end
