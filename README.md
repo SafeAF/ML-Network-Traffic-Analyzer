@@ -24,3 +24,9 @@ Writeup on available infrastrucutre, dbs servers etc and why and when you should
 ### Edit Systectl.conf #21 ###
 
 vm.swappiness=1
+Vm.dirty.bg centisecs
+And other vm controlling stuff
+
+### ruby garbage collection optimizations
++Find out the best and or optimal settings.for ruby gc
++Upping some.values.iirc need.to search for posts on.the subject.ine.in.particular shud b bookmarked.
