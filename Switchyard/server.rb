@@ -38,6 +38,8 @@ require 'pp'
 ## apt-get install libmyslclient18 libmysqlclient18-dev
 ## Gem install mysql2
 ## gem install hiredis
+## gem install rspec rspec-core shoulda-matchers shoulda mongoid mongo redis
+
 
 ROOT = File.join(File.dirname(__FILE__), '..')
 
