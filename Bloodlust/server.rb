@@ -1,16 +1,21 @@
 #!/usr/bin/env ruby -w
-#require 'rubygems'
+require 'rubygems'
 require 'ruby_fann'
-#require 'drb'
-#require './liblust'
-##require './libenum'
-#require 'drb/acl'
-#require 'drb/ssl'
 require 'redis'
 require 'redis-objects'
 require 'connection_pool'
 require 'logger'
 require 'active_record'
+
+BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
+$:.unshift File.join(BASE_PATH, 'lib')
+
+ROOT = File.join(File.dirname(__FILE__), '..')
+# load in directories with modules and lbis etc
+['../Lib/models/*' '../lib', '../db', 'lib/*'].each do |folder|
+	$:.unshift File.join(ROOT, folder)
+end
+
 
 #  Add methods to Enumerable, available in Array
 module Enumerable
@@ -87,7 +92,7 @@ def train_bloodlust(inputs, desired_outputs)
 	return bloodlust
 end
 
-
+## Produces an array of arrays composed of floats
 def format_for_neural(formattee)
 	formatted = []
 	formattee.each  do |entry|
@@ -98,30 +103,16 @@ def format_for_neural(formattee)
 	formatted
 end
 
-
-
-
-
-
-
 $FAILURES = 0
 $FAILURES_CLOCK_START = Time.now
 $FAILURES_CLOCK_END = Time.now
 $FAILURE_RATE = 0.0
-def calc_failure_rate
+	def calc_failure_rate
 	timed = $FAILURES_CLOCK_START - $FAILURES_CLOCK_END
 	integerSeconds = timed.to_f
 	$FAILURE_RATE = $FAILURES / integerSeconds
 	end
 
-sBASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
-$:.unshift File.join(BASE_PATH, 'lib')
-
-ROOT = File.join(File.dirname(__FILE__), '..')
-# load in directories with modules and lbis etc
-['../Lib/models/*' '../lib', '../db', 'lib/*'].each do |folder|
-	$:.unshift File.join(ROOT, folder)
-end
 #$SAFE = 1
 
 ### Required for ActiveRecord magick -- Include ALL models

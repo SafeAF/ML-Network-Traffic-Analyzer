@@ -1,4 +1,12 @@
-require File.expand_path '../demoserver.rb', __FILE__
+require 'sinatra'
+require 'mongoid'
+
+require File.expand_path '../server.rb', __FILE__
+
+Dir["models/*.rb"].each do |file|
+ require "./models/#{File.basename(file, '.rb')}"
+end
+
 
 # app = proc do |env|
 #   body = ['hi']
@@ -20,4 +28,4 @@ require File.expand_path '../demoserver.rb', __FILE__
 # 	set :port, 3000
 # 	set :environment, :production
 # end
-run DemoAPI
+run Switchyard
