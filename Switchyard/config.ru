@@ -7,6 +7,12 @@ Dir["models/*.rb"].each do |file|
  require "./models/#{File.basename(file, '.rb')}"
 end
 
+configure do 
+ set :server, :thin
+ set :port, 3000
+ set :environment, :production
+ end
+
 
 # app = proc do |env|
 #   body = ['hi']
