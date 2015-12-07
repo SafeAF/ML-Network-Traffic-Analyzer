@@ -2,7 +2,25 @@
 
 ## Style Guide
 + 2 space indendations, not 4
-+ 
+
+
+
++ Use StringIO to Concat Large Amounts of Text Together vs Append with \n
+__Bad__
+
+
+       s = ''
+       s << "\n" << "some text on a new line"
+       s << "\nthis is pretty awkward"
+       s = "#{s}\neven more ugly!"
+
+__Good__
+
+      s = StringIO.open do |s|
+        s.puts 'adding newlines with puts is easy...'
+        s.puts 'and simple'
+        s.string
+      end
 
 # Gotchas to Look Out for and/or Guard Against
 
