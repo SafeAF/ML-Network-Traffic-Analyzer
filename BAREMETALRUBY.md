@@ -2,6 +2,15 @@
 
 ## Style Guide
 + 2 space indendations, not 4
++ 
+
+# Gotchas to Look Out for and/or Guard Against
+
++ if you use any Unicode characters in your Ruby source files then you need to add
+
+      # encoding: utf-8
+
+
 
 ## Depracations to take note of in ruby >2.0.0
 
