@@ -1,0 +1,12 @@
+require 'rubygems'
+require 'bundler/setup'
+require 'rakeup'
+
+RakeUp::ServerTask.new do |t|
+	t.port = 7000
+	t.pid_file = 'server.pid'
+	t.rackup_file = 'config.ru'
+	t.server = :thin
+	#t.host = '0.0.0.0'
+  #  t.env = 'production'
+end
