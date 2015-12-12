@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @clusterbot.name %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @clusterbot.hostname %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @clusterbot.ip %>
+</p>
+
+<p>
+  <strong>Cluster:</strong>
+  <%= @clusterbot.cluster_id %>
+</p>
+
+<p>
+  <strong>Uptime:</strong>
+  <%= @clusterbot.uptime %>
+</p>
+
+<p>
+  <strong>Configuration:</strong>
+  <%= @clusterbot.configuration %>
+</p>
+
+<%= link_to 'Edit', edit_clusterbot_path(@clusterbot) %> |
+<%= link_to 'Back', clusterbots_path %>

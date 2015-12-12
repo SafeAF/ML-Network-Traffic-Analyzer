@@ -1,0 +1,28 @@
+/*---------------------------------------------------------------------------*/
+/* Grid Settings
+/*---------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*GLOBAL WRAPPER-------------------------------------------------------------*/
+/*GLOBAL SHAPES--------------------------------------------------------------*/
+/*GENERAL HELPERS------------------------------------------------------------*/
+.container {
+  zoom: 1;
+  max-width: 978px;
+  margin-left: auto;
+  margin-right: auto; }
+  .container:before, .container:after {
+    content: "";
+    display: table; }
+  .container:after {
+    clear: both; }
+  .container .details {
+    display: block;
+    float: left;
+    margin-right: 2.99897%;
+    width: 100%; }
+    .container .details:last-child {
+      margin-right: 0; }

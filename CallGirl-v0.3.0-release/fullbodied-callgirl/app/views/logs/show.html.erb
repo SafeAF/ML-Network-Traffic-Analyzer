@@ -1,0 +1,56 @@
+
+
+<div class="box box-solid box-danger">
+	<div class="box-header with-border">
+		<h3 class="box-title">Log Entry: <%= @logEntryID %></h3>
+		<div class="box-tools pull-right">
+			<!-- Buttons, labels, and many other things can be placed here! -->
+			<!-- Here is a label for example -->
+			<span class="label label-danger"><%= @showlog.FromHost %></span>
+			<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button class="btn btn-box-tool" data-widget="expandable"><i class="fa fa-plus"></i></button>
+			<button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+		</div><!-- /.box-tools -->
+	</div><!-- /.box-header -->
+	<div class="box-body">
+		<p>Received From Host: <%= @showlog.FromHost %></p>
+		<p>At: <%= @showlog.DeviceReportedTime %></p>
+		<p>Log Entry: <%= @showlog.Message %></p>
+		<p>Facility: <%= @showlog.Facility %></p>
+		<p>Tagged: <%= @showlog.SysLogTag %></p>
+		<p>Priority: <%= @showlog.Priority %></p>
+
+	</div><!-- /.box-body -->
+	<div class="box-footer">
+		Infrastructure: <%= @topLevelName %> --> Central Syslog Server:	<%=
+			@centralLogRepo %>
+	</div><!-- box-footer -->
+</div><!-- /.box -->
+
+<div class="box box-solid box-danger">
+	<div class="box-header with-border">
+		<h3 class="box-title">Log Entry: <%= (@logEntryID.to_i - 1).to_s %></h3>
+		<div class="box-tools pull-right">
+			<!-- Buttons, labels, and many other things can be placed here! -->
+			<!-- Here is a label for example -->
+			<span class="label label-danger"><%= @showlog.FromHost %></span>
+			<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button class="btn btn-box-tool" data-widget="expandable"><i class="fa fa-plus"></i></button>
+			<button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+		</div><!-- /.box-tools -->
+	</div><!-- /.box-header -->
+	<div class="box-body">
+		<p>Received From Host: <%= @showlogPrev.FromHost %></p>
+		<p>At: <%= @showlogPrev.DeviceReportedTime %></p>
+		<p>Log Entry: <%= @showlogPrev.Message %></p>
+		<p>Facility: <%= @showlogPrev.Facility %></p>
+		<p>Tagged: <%= @showlogPrev.SysLogTag %></p>
+		<p>Priority: <%= @showlogPrev.Priority %></p>
+
+	</div><!-- /.box-body -->
+	<div class="box-footer">
+		Infrastructure: <%= @topLevelName %> --> Central Syslog Server:	<%=
+			@centralLogRepo %>
+	</div><!-- box-footer -->
+</div><!-- /.box -->
+

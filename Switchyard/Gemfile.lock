@@ -17,6 +17,7 @@ GEM
     arel (6.0.3)
     bson (3.2.6)
     builder (3.2.2)
+    concurrent-ruby (1.0.0)
     connection_pool (2.2.0)
     daemons (1.2.3)
     diff-lcs (1.2.5)
@@ -57,6 +58,11 @@ GEM
     shoulda (2.11.3)
     shoulda-matchers (3.0.1)
       activesupport (>= 4.0.0)
+    sidekiq (4.0.1)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      json (~> 1.0)
+      redis (~> 3.2, >= 3.2.1)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -89,6 +95,7 @@ DEPENDENCIES
   ruby-fann
   shoulda
   shoulda-matchers
+  sidekiq
   sinatra
   sqlite3
   thin

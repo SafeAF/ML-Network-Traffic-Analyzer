@@ -42,12 +42,12 @@ p "hello"
 	end
 
 desc 'populates new rails app with supermodels, pick which sets'
-  task :supermodels
+  task :supermodels do
 
 end
 
 desc 'startup Emergence/Attrition backend'
-task :emerge
+task :emerge do
 
 end
 end
@@ -57,34 +57,25 @@ end
 #Bundler.setup
 
 
-task :default => [:foo] #, :test]
+task :default => [:foo] do #, :test] 
 
+end
 
 
 	task :foo do
 #	p Time.now
 #	p "foo"
 end
+
+
 require "rubygems"
-require "rake/gempackagetask"
-require "rake/rdoctask"
+require "rubygems/package_task"
+require "rdoc/task"
 
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "net-http-spy"
-    gemspec.summary = "Ever wondered what HTTP requests the Ruby gem you are using to connect to a third party API is making? Use HTTP Spy to see what is going on behind the scenes."
-    gemspec.email = "martin@beyondthetype.com"
-    gemspec.homepage = "http://github.com/martinbtt/net-http-spy"
-    gemspec.description = "Ever wondered what HTTP requests the Ruby gem you are using to connect to a third party API is making? Use HTTP Spy to see what is going on behind the scenes."
-    gemspec.authors = ["Martin Sadler"]
-    gemspec.files.include Dir["examples/*.rb"] + ["readme.markdown"]
-  end
-rescue LoadError
-  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+
+task :default => :spec do
+
 end
-
-task :default => :spec
 
 require "spec"
 require "spec/rake/spectask"

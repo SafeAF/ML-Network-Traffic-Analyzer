@@ -1,4 +1,4 @@
 source "https://rubygems.org"
-
-gem 'ruby-pcap'
-
+gem 'net-http-persistent'
+#gem 'ruby-pcap'
+gem 'RubyInline'

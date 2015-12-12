@@ -1,0 +1,7 @@
+.sass-cache
+*.swp
+public/assets
+log
+config/database.yml
+.bundle
+Gemfile.lock

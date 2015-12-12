@@ -1,0 +1,35 @@
+/*GLOBAL WRAPPER-------------------------------------------------------------*/
+@mixin containerElement { @include outer-container; }
+
+/*GLOBAL SHAPES--------------------------------------------------------------*/
+@mixin square($w, $h:$w){
+  width: $w; height: $h;
+  display: inline-block;
+}
+
+@mixin circle($w, $h:$w){
+  width: $w; height: $h;
+  display: inline-block;
+  @include border-radius(50%);
+}
+
+@mixin triangle($sideBorder, $topBorder: $triangleFactor*$sideBorder, $color:$defaultTriangleColor) {
+  width: 0; height: 0;
+  border-left: $sideBorder solid transparent;
+  border-right: $sideBorder solid transparent;
+  border-top: $topBorder solid $color;
+  cursor: pointer;
+  display: block;
+}
+
+/*GENERAL HELPERS------------------------------------------------------------*/
+@mixin buttonStyle($bgcolor, $w, $h) {
+  background-color: $bgcolor;
+  width: $w; height: $h;
+  @include borderColorPicker($bgcolor, $pct:10%);
+  cursor: pointer;
+}
+
+@mixin borderColorPicker ($color, $pct) {
+  border: 1px solid darken($color, $pct);
+}

@@ -1,0 +1,12 @@
+/*---------------------------------------------------------------------------*/
+/* Grid Settings
+/*---------------------------------------------------------------------------*/
+$column: 54px;
+$gutter: 29px;
+$grid-columns: 12;
+$max-width: 978px;
+$border-box-sizing: true;
+
+// Define breakpoints
+$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(max-width 768px 8);

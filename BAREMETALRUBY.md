@@ -1,5 +1,39 @@
 # BareMetal Ruby And Ruby At BareMetal
 
+
+# Installing Ruby
+
+curl -L get.rvm.io | bash -s stable --rails
+
+# Current Master Version List
+
++ Ruby-2.2.1
++ Rails-4.2.x
++ Jruby 1.x
++ RVM (Latest stable from get.rvm.io)
+
+
+# Writing BareMetal Apps With <3Ruby
+
+For rails apps, follow the standard directory structure, people expect it. Because they expect it they will be able to find particular code chunks when they need to with relative ease.
+
+For non-rails apps
+
+
+## Rake
+
+Rake comes bundled with a few off the shelf tasks comprised of
+
+Rake::GemPackageTask 
+Rake::PackageTask
+Rake::RDocTask
+Rake::TestTask
+
+Rake::TestTask.new do |t|
+t.libs << 'lib'
+t.pattern = 'test/*.test.rb'
+test.verbose = false
+
 ## Style Guide
 + 2 space indendations, not 4
 
@@ -22,13 +56,25 @@ __Good__
         s.string
       end
 
-# Gotchas to Look Out for and/or Guard Against
+## Gotchas to Look Out for and/or Guard Against
 
 + if you use any Unicode characters in your Ruby source files then you need to add
 
       # encoding: utf-8
 
 
+
+# Ruby Syntax
+
+# Beginning Ruby
+
+# Intermediate Ruby
+
+# Advanced Ruby
+
+# Mind Melting Ruby
+
+# Psychedelic Cloud Castles 
 
 ## Depracations to take note of in ruby >2.0.0
 

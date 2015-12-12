@@ -1,0 +1,13 @@
+
+
+## capfile
+
+require 'bundler/capistrano'      # vendor all gems to
+# appname/shared/bundle
+
+load 'deploy/assets' # precomiple assets
+
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require "rvm/capistrano"
+set :rvm_ruby_string, 'ruby-2.2.1-head@rail@4.2'
+set :rvm_type, :user
