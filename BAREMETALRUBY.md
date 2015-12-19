@@ -76,6 +76,29 @@ __Good__
 
 # Psychedelic Cloud Castles 
 
+__Debugging Ruby Processes with GDB__
+
+ Ruby processes are just regular processes. They can be debugged with gdb.
+
+              define redirect_stdout
+                call rb_eval_string("$_old_stdout, $stdout = $stdout,
+                  File.open('/tmp/ruby-debug.' + Process.pid.to_s, 'a'); $stdout.sync = true")
+              end
+
+              define ruby_eval
+                call(rb_p(rb_eval_string_protect($arg0,(int*)0)))
+              end
+
+How to use these:
+
+    Start up gdb by running gdb /path/to/ruby PID, where /path/to/ruby is the full path to the actual ruby binary and PID is the process ID of the ruby you want to check out.
+    Paste those functions above into the gdb prompt (you might also want to store them in ~/.gdbinit for later).
+    Run redirect_stdout, which will put all the ruby output into a file called /tmp/ruby-debug.PID where PID in this case if the process id of gdb – not terribly important, but a differentiator in case you do this a lot.
+    Run commands via ruby_eval('Kernel.caller') and object_id and things like that. You should be able to get local variables from wherever you broke into the program.
+
+These ruby_eval commands will output into the tempfile that redirect_stdout created, so you’ll need to tail -f that file in a different console. Now, with that small headache over with, you can see exactly where your program is and if there is a stupid loop where you forgot to check a boundary condition, or what thing you’re doing with a regular expression on where you should have just used String#index.
+
+
 ## Depracations to take note of in ruby >2.0.0
 
     Dir.exists? is a deprecated name, use Dir.exist? instead
