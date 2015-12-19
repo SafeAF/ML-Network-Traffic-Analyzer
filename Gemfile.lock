@@ -275,6 +275,3 @@ DEPENDENCIES
   sys-filesystem
   thin
   vmstat
-
-BUNDLED WITH
-   1.10.6
