@@ -70,6 +70,21 @@ __Good__
 
 # Intermediate Ruby
 
+## Modifying Paths for i.e. Loading Files
+
+
++ ROOT = File.join(File.dirname(__FILE__), '..')
+
+
++ ['../app/models/' '../lib', '../db'].each { |f| $:.unshift File.join(ROOT, folder) }
+
+
++ BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..'); $:.unshift File.join(BASE_PATH, 'lib')
+
+
++ Dir[File.dirname(__FILE__) + '../lib*.rb'].each { |file| require File.basename(file, File.extname(file)) }
+
+
 # Advanced Ruby
 
 # Mind Melting Ruby
