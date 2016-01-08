@@ -1,3 +1,3 @@
 <component name="DependencyValidationManager">
-  <scope name="Emergence" pattern="file[Development]:Bloodlust//*||file[Development]:Client//*||file[Development]:Switchyard//*||file[Development]:SiliconTooling//*||file[Development]:KimberliteUI//*" />
+  <scope name="Emergence" pattern="(file[Development]:Bloodlust//*||file[Development]:Client//*||file[Development]:Switchyard//*||file[Development]:SiliconTooling//*||file[Development]:KimberliteUI//*)&amp;&amp;!file[Development]:CallGirl-0.4.0/versions/*&amp;&amp;!file[Development]:shared/*&amp;&amp;!file[Development]:shared//*&amp;&amp;!file[Development]:vendor//*" />
 </component>

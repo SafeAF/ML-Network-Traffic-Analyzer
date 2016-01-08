@@ -1,10 +1,10 @@
-#!/usr/bin/env ruby
+  #!/usr/bin/env ruby
 require 'pp'
 #require 'hiredis'
 require 'redis'
 require 'json'
 require 'daemons'
-
+require 'gmail'
 require 'redis-objects'
 #require 'activerecord'
 require 'connection_pool'
@@ -22,22 +22,32 @@ end
 
 BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
 $:.unshift File.join(BASE_PATH, 'lib')
-$VERSION = '1.0.0'
-$DATE = '07/15/15'
+$VERSION = '1.0.1'
+$DATE = '12/15/15'
 
+#  require File.expand_path(File.dirname(__FILE__) + '/liblust')
 
 Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
   require File.basename(file, File.extname(file))
 end
-
+$operatorWorkstationURI = ' vishnu@10.0.1.8 '
+$notifySend = true
 $options = {}
-$options[:host] = '10.0.1.17'
+$options[:host] = '10.0.1.75'
 $options[:db] = 10
 $options[:port] = '6379'
 $messagehub = 'system:messages'
 $alerthub = 'system:alerts'
 $notifyhub = 'system:notifcations'
 $emailhub = 'system:email'
+$notifysend = ARGV[0] || 'ssh vishnu@10.0.1.8 notify-send '
+
+username = 'support@baremetalnetworks.com'
+password = 'todkjw29347@'
+
+api = Gmail.new(username, password)
+
+
 #ActiveRecord::Base.logger = Logger.new('log/db.log')
 #	ActiveRecord::Base.configurations = YAML::load(IO.read('../config/database.yml'))
 #end
@@ -105,9 +115,14 @@ module Statistics
    end
 
  end
-
-
 end
+
+ def send_desktop_notification(header, body)
+
+   `ssh #{$operatorWorkstationURI} notifysend  "#{body}"`
+
+ end
+
 
 module Parser
   attr_accessor :message
@@ -145,18 +160,39 @@ begin
       "<br/>Also show graphs or something of shit thats been processed. This should easily fork into a dash for powersaw".to_json
     end
 
-    post '/notification' do
+    post '/alarm.json' do
+
+      bod = JSON.parse(request.params[:body])
+      header = JSON.parse(request.params[:header])
+      $alarm.push(request.params[:header] + request.params[:bod])
+      send_desktop_notification(header, bod)
+      "#{Time.now} Success!".to_json
+    end
+
+    post '/alarm' do
+      bod = params[:body].to_s
+      header = params[:header].to_s
+
+      $alerts.push([header, bod].join(" ").to_json)
+     # send_desktop_notification(header, bod)
+      `notify-send \'#{header}\'  \'#{bod}\'`
+      "#{Time.now} Success!".to_json
+    end
+
+
+    post '/notification.json' do
       $DBG = false
       pp env if $DBG
       ret = {}
 
       msg = {}
-      msg[:header] = request.params[:header]
+      msg[:header] = JSON.parse(request.params[:header])
       msg[:body] = request.params[:body]
       msg[:date] = Time.now
       $notification.push(msg.to_json)
       Statistics::Notifications.total += 1
-      ret[:body] = "#{msg[:date]} Your notification was received, we hope. Thank you for your submission"
+      send_desktop_notification(msg) if $notifySend
+      ret[:body] = "#{msg[:date]} Your notification was received, we hope. Maybe. Keep sending them this is /dev/null baby"
     end
 
     post '/message.json' do
@@ -195,7 +231,7 @@ begin
       $message.push(msg.to_json)
       parser = MessageParser.new
      actioned = parser.parse(msg).map{ |actionable| if actionable.action.include? 'email'; send_email(actionable); end}
-
+      send_desktop_notification(msg) if $notifysend
       elapsed = "#{msg[:hubReceivedAt] - Time.now}"
       p "#{Time.now} Processed #{msg[:Message]} in #{elapsed}s"
       ret[:body] = "#{elapsed}s elapsed processing your crummy message. Your notification was received, we hope." # Syslog doesn't listen so it probalby doesnt matter
@@ -204,19 +240,19 @@ begin
 
 
 
-    def self.new(*)
-
-      app = Rack::Auth::Digest::MD5.new(super) do |username, password|
-        $logger.info "Authentication Request: #{username}:#{password}"
-        {'foo'=> 'bar'}[username]
-
-        # @user_obj = User.authenticate(username, password)
-      end
-
-      app.realm = "TitanGlobal Message Hub"
-      app.opaque = "eikjalkjalosdfjSecret3pij398323543klhj2lh4tkth4858674"
-      app
-    end
+    # def self.new(*)
+    #
+    #   app = Rack::Auth::Digest::MD5.new(super) do |username, password|
+    #     $logger.info "Authentication Request: #{username}:#{password}"
+    #     {'foo'=> 'bar'}[username]
+    #
+    #     # @user_obj = User.authenticate(username, password)
+    #   end
+    #
+    #   app.realm = "TitanGlobal Message Hub"
+    #   app.opaque = "eikjalkjalosdfjSecret3pij398323543klhj2lh4tkth4858674"
+    #   app
+    # end
 
   end
 
