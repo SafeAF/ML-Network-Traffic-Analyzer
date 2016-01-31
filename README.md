@@ -12,6 +12,20 @@ Writeup dev tools section, what ones are preferrred and how to install and confi
 Gemlists which are prefrerred and why
 Which gems are stable which are pessimistic and which are fragile -> how you should speicfiy version in Gemfile
 Writeup on available infrastrucutre, dbs servers etc and why and when you should use which over another etc
+Document all the api keys we use and how to get from various services.
+
+
+### API Keys
+
+#### Rubygems
+
+API ACCESS
+
+Your API key is xxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+
+If you want to use gem commands from the command line, you'll need a ~/.gem/credentials file, which you can generate using the following command:
+
+curl -u YOurUserNAME https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; chmod 0600 ~/.gem/credentials
 
 ## 3) Tuning Your Dev Rig to The Max
 
