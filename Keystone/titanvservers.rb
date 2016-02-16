@@ -6,7 +6,7 @@ require 'sidekiq'
 require 'mongoid'
 require 'nmap/program'
 require 'nmap/xml'
-require_relative './Credibility/user'
+require_relative 'user'
 # require 'acts_as_api'
 
 # Datetime Array BigDecimal Boolean Date DateTime Float Hash Integer
@@ -88,6 +88,20 @@ class Supercluster
   include Mongoid::Document
 
   field :name, type: String
+  field :members, type: Hash
+  field :public_ip, type: String
+  field :ip, type: String
+  field :version, type: String
+
+  field :services, type: Hash
+  field :processes, type: Hash
+  field :connections, type: Hash
+  field :openPorts, type: Hash
+
+  field :mem, type: Hash
+  field :load, type: Hash
+  field :disk, type: Hash
+
 # autosave on relationional associations (embedded dont need)
   # cascade_callbacks  #fire any vserver callbacks on persist
   has_many :vservers , autosave: true#, cascade_callbacks: true op
@@ -99,6 +113,7 @@ class Vservers
 
   # value :box
   # hash_key :statistics
+  field :ip, type: String
   field :address, type: String
   field  :hostname, type: String
   field :up, type: Boolean
@@ -107,6 +122,15 @@ class Vservers
   field :users, type: Hash # embed user with key value
   field :lastSeen, type: DateTime
   field :firstSeen, type: DateTime
+
+  field :services, type: Hash
+  field :processes, type: Hash
+  field :connections, type: Hash
+  field :openPorts, type: Hash
+
+  field :mem, type: Hash
+  field :load, type: Hash
+  field :disk, type: Hash
 
   belongs_to :supercluster
  # embeds_many :diskdrives
@@ -179,6 +203,13 @@ end
     end
   end
 
+
+
+
+Vservers.all.each {|x| p x}
+
+
+__END__
   netscan()
   netscan_parse()
 # class VserverWorker

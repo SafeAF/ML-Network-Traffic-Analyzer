@@ -1,13 +1,19 @@
 require 'mongoid'
 
+class Admin
+  include Mongoid::Document
+  include Mongoid::Timestamps
+end
+
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
 
   # new columns need to be added here to be writable through mass assignment
-  attr_protected :password_hash, :password_salt
+#  attr_protected :password_hash, :password_salt
   attr_accessor :password, :password_confirmation
 
+  field :username, type: String
   field :email, :type => String
   field :first_name, :type => String
   field :last_name, :type => String
@@ -16,12 +22,13 @@ class User
   field :password_salt, :type => String
   field :ssh_id_rsa, :type => String
   field :ssh_id_rsa_pub, :type => String
+  field :remote_login, type: String
 
   before_save :prepare_password
 
-  validates_presence_of :first_name, :last_name
-  validates_uniqueness_of :email, :allow_blank => true
-  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
+ # validates_presence_of :first_name, :last_name
+ # validates_uniqueness_of :email, :allow_blank => true
+ # validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
   validate :check_password, :on => :create
 
   def to_json

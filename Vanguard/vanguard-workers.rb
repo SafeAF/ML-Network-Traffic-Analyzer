@@ -27,8 +27,14 @@ class TitanStatusSpy
   include Sidekiq::Worker
   def perform(ip, service='ssh')
     ret = check_server_availability(ip, service)
-    if ret ; $SHM[ip] = Time.now
-    else ; $SHM[ip] = false ; end
+    if ret
+      $SHM[ip] =  Time.now
+      vs=Vservers.new(ip: ip, up: true, lastSeen: Time.now)
+      vs.upsert
+    else
+      $SHM[ip] = false ;#  Vservers.find_by(ip: ip) { |serv| serv.up = false}
+    end
+
   end
 end
 
