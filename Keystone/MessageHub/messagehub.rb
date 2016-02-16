@@ -14,6 +14,37 @@ require 'sinatra/base'
 # require 'sinatra/contrib'
 # require 'sinatra/contrib/all'
 
+  ####################################
+  ## Notes
+
+  ## thin start -p 3001 -e production —threaded
+  ## thin install
+  ##   sudo /usr/sbin/update-rc.d -f thin defaults
+  ## thin restart -C /etc/thin/app.yml <-- to start stop individual thin apps
+  #################
+
+  ## Thin Config
+  #
+  # ---
+  # user: www-data
+  # group: www-data
+  # pid: tmp/pids/thin.pid
+  # timeout: 30
+  # wait: 30
+  # log: log/thin.log
+  # max_conns: 1024
+  # require: []
+  # environment: production
+  # max_persistent_conns: 512
+  # servers: 1
+  # threaded: true
+  # no-epoll: true
+  # daemonize: true
+  # socket: tmp/sockets/thin.sock
+  # chdir: /path/to/your/apps/root
+  # tag: a-name-to-show-up-in-ps aux
+
+  #####################################
 ROOT = File.join(File.dirname(__FILE__), '..')
 
 ['../app/models/' '../lib', '../db'].each do |folder|

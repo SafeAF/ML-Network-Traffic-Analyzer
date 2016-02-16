@@ -1,0 +1,8 @@
+source 'https://rubygem.org'
+
+gem 'rye'
+gem 'net/ssh'
+gem 'redis-objects'
+gem 'redis'
+gem 'mongoid'
+gem 'sidekiq'

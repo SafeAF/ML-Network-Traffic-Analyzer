@@ -6,6 +6,9 @@ require 'sidekiq'
 require 'mongoid'
 require 'nmap/program'
 require 'nmap/xml'
+require_relative './Credibility/user'
+# require 'acts_as_api'
+
 # Datetime Array BigDecimal Boolean Date DateTime Float Hash Integer
 # BSON::Binary BSON::OBjectId Range Regexp String Symbol Time TimeWithZone
 
@@ -26,6 +29,12 @@ $logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level 
 $logger.info  "Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
 
 $logger.info "Connecting to Redis @ #{$options[:redhost]}, using database: #{$options[:redtable]}"
+
+# Attach ourselves to Mongoid
+# if defined?(Mongoid::Document)
+#   Mongoid::Document.send :include, ActsAsApi::Adapters::Mongoid
+# end
+
 
 def check_server_availability(ip, service='ssh')
   ping = Net::Ping::TCP.new(ip, service)
@@ -57,6 +66,23 @@ Mongoid.load!('mongoid.yml', :development)
 #
 #   embedded_in :vserver
 # end
+#
+# class User
+#   include Mongoid::Document
+#
+#   field :first_name, :type => String
+#   field :last_name, :type => String
+#   field :age, :type => Integer
+#   field :active, :type => Boolean
+#
+#   acts_as_api
+#
+#   api_accessible :name_only do |template|
+#     template.add :first_name
+#     template.add :last_name
+#   end
+#
+# end
 
 class Supercluster
   include Mongoid::Document
@@ -85,6 +111,14 @@ class Vservers
   belongs_to :supercluster
  # embeds_many :diskdrives
   embeds_many :scanresults
+
+    # acts_as_api
+    #
+    # api_accessible :name_only do |template|
+    #   template.add :first_name
+    #   template.add :last_name
+    # end
+
  # vserver.supercluster_attributes = { name: "Flood" }
   # has_many :diskdrives
   #  embeds_many :ServerStatistics
@@ -167,3 +201,7 @@ app0.upsert
 p app0.up
 
  Vservers.all.each{|x| p x}
+
+require 'ipaddr'
+
+ips = IPAddr.new("10.0.1.0/24").to_range
