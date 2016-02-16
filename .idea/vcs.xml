@@ -7,6 +7,7 @@
     <mapping directory="$PROJECT_DIR$/../Engineering" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Gems" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Production" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Production" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../ghi" vcs="Git" />
   </component>
 </project>

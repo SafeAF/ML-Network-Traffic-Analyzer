@@ -186,7 +186,8 @@ begin
     end
 
     get '/' do
-      "MessageHub v#{$VERSION}. MessageHub Needs a minimal dashboard, include bootstrappus-maxiumus" +
+      "MessageHub v#{$VERSION}. MessageHub Needs a minimal dashboard, include bootstrappus-maxiumus<br/>" +
+      "Notifications#{Statistics::Notifications.total}"
        "<br/>Dashboard should show messages sitting in their redis lists and msgs waiting to process." +
       "<br/>Also show graphs or something of shit thats been processed. This should easily fork into a dash for powersaw".to_json
     end
