@@ -1,0 +1,17 @@
+# Logfile created on 2016-02-05 00:52:03 -0800 by logger.rb/47272
+I, [2016-02-08T14:12:25.130605 #17807]  INFO -- : Entities-in-transit queue: 24
+I, [2016-02-08T14:12:25.130697 #17807]  INFO -- : changed by 1. Log up, len: 81
+I, [2016-02-08T16:08:32.336810 #19830]  INFO -- : Entities-in-transit queue: 29
+I, [2016-02-08T16:08:32.337042 #19830]  INFO -- : changed by 1. Log up, len: 81
+I, [2016-02-08T16:09:54.488390 #19886]  INFO -- : Entities-in-transit queue: 30
+I, [2016-02-08T16:09:54.488582 #19886]  INFO -- : changed by 1. Log up, len: 81
+I, [2016-02-08T16:09:55.859042 #19886]  INFO -- : Entities-in-transit queue: 31
+I, [2016-02-08T16:09:55.859232 #19886]  INFO -- : changed by 1. Log up, len: 81
+I, [2016-02-08T16:09:57.368416 #19886]  INFO -- : Entities-in-transit queue: 32
+I, [2016-02-08T16:09:57.368581 #19886]  INFO -- : changed by 1. Log up, len: 81
+I, [2016-02-08T16:09:58.184570 #19886]  INFO -- : Entities-in-transit queue: 33
+I, [2016-02-08T16:09:58.184869 #19886]  INFO -- : changed by 1. Log up, len: 81
+I, [2016-02-08T16:09:59.012118 #19886]  INFO -- : Entities-in-transit queue: 34
+I, [2016-02-08T16:09:59.012263 #19886]  INFO -- : changed by 1. Log up, len: 81
+I, [2016-02-08T16:10:39.839468 #19886]  INFO -- : Entities-in-transit queue: 35
+I, [2016-02-08T16:10:39.839948 #19886]  INFO -- : changed by 1. Log up, len: 81

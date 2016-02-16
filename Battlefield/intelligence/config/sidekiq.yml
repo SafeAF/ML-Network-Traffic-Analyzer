@@ -1,0 +1,20 @@
+---
+:concurrency: 5
+:pidfile: tmp/pids/sidekiq.pid
+development:
+  :concurrency: 15
+staging:
+  :concurrency: 10
+production:
+  :concurrency: 30
+:queues:
+  - default
+  - [myqueue, 2]
+  - switchyard
+  - bloodlust
+  - banlist
+  - riot
+  - credibility
+:pidfile: "<%= ENV['RUN_STATE_PATH'] %>/sidekiq.pid"
+:logfile: "<%= ENV['LOG_FILE'] %>"
+

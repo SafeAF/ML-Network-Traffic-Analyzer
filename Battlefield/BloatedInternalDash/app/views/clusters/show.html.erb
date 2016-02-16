@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cluster.user %>
+</p>
+
+<p>
+  <strong>Infrastructure:</strong>
+  <%= @cluster.infrastructure %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cluster.name %>
+</p>
+
+<p>
+  <strong>Cluster type:</strong>
+  <%= @cluster.cluster_type %>
+</p>
+
+<p>
+  <strong>Members:</strong>
+  <%= @cluster.members %>
+</p>
+
+<p>
+  <strong>Resource manager:</strong>
+  <%= @cluster.resource_manager %>
+</p>
+
+<p>
+  <strong>Information:</strong>
+  <%= @cluster.information %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cluster.status %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @cluster.details %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @cluster.organization %>
+</p>
+
+<%= link_to 'Edit', edit_cluster_path(@cluster) %> |
+<%= link_to 'Back', clusters_path %>

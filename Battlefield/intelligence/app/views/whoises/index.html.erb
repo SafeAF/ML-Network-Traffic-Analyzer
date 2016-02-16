@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Whoises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Hostname</th>
+      <th>Ip</th>
+      <th>Ip</th>
+      <th>Content</th>
+      <th>Last crawled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whoises.each do |whoise| %>
+      <tr>
+        <td><%= whoise.url %></td>
+        <td><%= whoise.hostname %></td>
+        <td><%= whoise.ip %></td>
+        <td><%= whoise.ip %></td>
+        <td><%= whoise.content %></td>
+        <td><%= whoise.last_crawled %></td>
+        <td><%= link_to 'Show', whoise %></td>
+        <td><%= link_to 'Edit', edit_whoise_path(whoise) %></td>
+        <td><%= link_to 'Destroy', whoise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Whoise', new_whoise_path %>

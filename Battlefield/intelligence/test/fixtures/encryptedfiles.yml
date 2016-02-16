@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  user_id: 
+  server_id: 
+  path: MyString
+  vfilesystem_id: 
+  privkey: 1
+  pubkey: 1
+
+two:
+  name: MyString
+  user_id: 
+  server_id: 
+  path: MyString
+  vfilesystem_id: 
+  privkey: 1
+  pubkey: 1

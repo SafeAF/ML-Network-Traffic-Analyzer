@@ -1,0 +1,7 @@
+<% provide(:title, Component.model_name.human.pluralize) %>
+<h1><%= Component.model_name.human.pluralize %></h1>
+<div class="row">
+  <%= link_to t("basic.create.type", type: Component.model_name.human ), new_component_path, class: "btn btn-success pull-right" %>
+</div>
+
+<div id="components"><%= render 'components' %></div>

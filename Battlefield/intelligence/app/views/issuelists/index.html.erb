@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Issuelists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Project</th>
+      <th>Department</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @issuelists.each do |issuelist| %>
+      <tr>
+        <td><%= issuelist.name %></td>
+        <td><%= issuelist.description %></td>
+        <td><%= issuelist.project %></td>
+        <td><%= issuelist.department %></td>
+        <td><%= link_to 'Show', issuelist %></td>
+        <td><%= link_to 'Edit', edit_issuelist_path(issuelist) %></td>
+        <td><%= link_to 'Destroy', issuelist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Issuelist', new_issuelist_path %>

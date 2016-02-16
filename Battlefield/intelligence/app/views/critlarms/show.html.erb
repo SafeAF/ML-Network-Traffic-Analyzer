@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @critlarm.name %>
+</p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @critlarm.heading %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @critlarm.content %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @critlarm.body %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @critlarm.source %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @critlarm.destination %>
+</p>
+
+<p>
+  <strong>Pos in queque:</strong>
+  <%= @critlarm.pos_in_queque %>
+</p>
+
+<p>
+  <strong>Tied to ui component:</strong>
+  <%= @critlarm.tied_to_ui_component %>
+</p>
+
+<p>
+  <strong>Populates widget:</strong>
+  <%= @critlarm.populates_widget %>
+</p>
+
+<%= link_to 'Edit', edit_critlarm_path(@critlarm) %> |
+<%= link_to 'Back', critlarms_path %>

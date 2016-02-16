@@ -1,0 +1,41 @@
+<%= form_for(@openport) do |f| %>
+  <% if @openport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@openport.errors.count, "error") %> prohibited this openport from being saved:</h2>
+
+      <ul>
+      <% @openport.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :port %><br>
+    <%= f.number_field :port %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_id %><br>
+    <%= f.text_field :ip_id %>
+  </div>
+  <div class="field">
+    <%= f.label :service_id %><br>
+    <%= f.text_field :service_id %>
+  </div>
+  <div class="field">
+    <%= f.label :network_id %><br>
+    <%= f.text_field :network_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

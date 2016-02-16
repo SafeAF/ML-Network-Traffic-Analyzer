@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hostname: MyString
+  cluster: MyString
+  type: 
+  dbserver: MyString
+  db: MyString
+  count: 1
+  user: MyString
+  password: MyString
+  connection_string: MyString
+  server_id: 
+  machine_id: 
+  cluster_id: 
+  service_id: 
+  application_id: 
+  infrastructure_id: 
+  status: MyString
+  purpose: MyString
+  criticality: 1
+  priority: 1
+  network_id: 
+  devops_id: 
+
+two:
+  name: MyString
+  hostname: MyString
+  cluster: MyString
+  type: 
+  dbserver: MyString
+  db: MyString
+  count: 1
+  user: MyString
+  password: MyString
+  connection_string: MyString
+  server_id: 
+  machine_id: 
+  cluster_id: 
+  service_id: 
+  application_id: 
+  infrastructure_id: 
+  status: MyString
+  purpose: MyString
+  criticality: 1
+  priority: 1
+  network_id: 
+  devops_id: 

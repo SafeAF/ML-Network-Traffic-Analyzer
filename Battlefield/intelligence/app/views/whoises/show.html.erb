@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @whoise.url %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @whoise.hostname %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @whoise.ip %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @whoise.ip %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @whoise.content %>
+</p>
+
+<p>
+  <strong>Last crawled:</strong>
+  <%= @whoise.last_crawled %>
+</p>
+
+<%= link_to 'Edit', edit_whoise_path(@whoise) %> |
+<%= link_to 'Back', whoises_path %>

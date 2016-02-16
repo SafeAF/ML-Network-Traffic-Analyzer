@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Logfiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Machine</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Size</th>
+      <th>Entries</th>
+      <th>Entries per sec</th>
+      <th>Location</th>
+      <th>Path</th>
+      <th>Basename</th>
+      <th>Service</th>
+      <th>Service</th>
+      <th>Server</th>
+      <th>Criticality</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logfiles.each do |logfile| %>
+      <tr>
+        <td><%= logfile.machine %></td>
+        <td><%= logfile.name %></td>
+        <td><%= logfile.description %></td>
+        <td><%= logfile.size %></td>
+        <td><%= logfile.entries %></td>
+        <td><%= logfile.entries_per_sec %></td>
+        <td><%= logfile.location %></td>
+        <td><%= logfile.path %></td>
+        <td><%= logfile.basename %></td>
+        <td><%= logfile.service %></td>
+        <td><%= logfile.service %></td>
+        <td><%= logfile.server %></td>
+        <td><%= logfile.criticality %></td>
+        <td><%= link_to 'Show', logfile %></td>
+        <td><%= link_to 'Edit', edit_logfile_path(logfile) %></td>
+        <td><%= link_to 'Destroy', logfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Logfile', new_logfile_path %>

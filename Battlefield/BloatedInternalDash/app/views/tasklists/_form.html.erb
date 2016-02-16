@@ -1,0 +1,33 @@
+<%= form_for(@tasklist) do |f| %>
+  <% if @tasklist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tasklist.errors.count, "error") %> prohibited this tasklist from being saved:</h2>
+
+      <ul>
+      <% @tasklist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :total_tasks %><br>
+    <%= f.number_field :total_tasks %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br>
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

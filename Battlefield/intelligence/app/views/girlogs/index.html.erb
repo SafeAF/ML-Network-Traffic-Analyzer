@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Girlogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+      <th>Context</th>
+      <th>Component</th>
+      <th>Originator</th>
+      <th>Body</th>
+      <th>Generated at</th>
+      <th>Application</th>
+      <th>Facility</th>
+      <th>Priority</th>
+      <th>Criticality</th>
+      <th>Error</th>
+      <th>Error count</th>
+      <th>Response time</th>
+      <th>Latency</th>
+      <th>Db latency</th>
+      <th>Query time</th>
+      <th>Query</th>
+      <th>Rows count</th>
+      <th>Response code</th>
+      <th>Http code</th>
+      <th>Client</th>
+      <th>User</th>
+      <th>Hostname</th>
+      <th>Pid</th>
+      <th>Program</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @girlogs.each do |girlog| %>
+      <tr>
+        <td><%= girlog.name %></td>
+        <td><%= girlog.desc %></td>
+        <td><%= girlog.context %></td>
+        <td><%= girlog.component %></td>
+        <td><%= girlog.originator %></td>
+        <td><%= girlog.body %></td>
+        <td><%= girlog.generated_at %></td>
+        <td><%= girlog.application %></td>
+        <td><%= girlog.facility %></td>
+        <td><%= girlog.priority %></td>
+        <td><%= girlog.criticality %></td>
+        <td><%= girlog.error %></td>
+        <td><%= girlog.error_count %></td>
+        <td><%= girlog.response_time %></td>
+        <td><%= girlog.latency %></td>
+        <td><%= girlog.db_latency %></td>
+        <td><%= girlog.query_time %></td>
+        <td><%= girlog.query %></td>
+        <td><%= girlog.rows_count %></td>
+        <td><%= girlog.response_code %></td>
+        <td><%= girlog.http_code %></td>
+        <td><%= girlog.client %></td>
+        <td><%= girlog.user %></td>
+        <td><%= girlog.hostname %></td>
+        <td><%= girlog.pid %></td>
+        <td><%= girlog.program %></td>
+        <td><%= link_to 'Show', girlog %></td>
+        <td><%= link_to 'Edit', edit_girlog_path(girlog) %></td>
+        <td><%= link_to 'Destroy', girlog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Girlog', new_girlog_path %>

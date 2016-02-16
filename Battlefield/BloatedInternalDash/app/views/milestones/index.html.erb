@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Milestones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Heading</th>
+      <th>Body</th>
+      <th>Duedate</th>
+      <th>Complete</th>
+      <th>Open</th>
+      <th>Closed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @milestones.each do |milestone| %>
+      <tr>
+        <td><%= milestone.name %></td>
+        <td><%= milestone.heading %></td>
+        <td><%= milestone.body %></td>
+        <td><%= milestone.duedate %></td>
+        <td><%= milestone.complete %></td>
+        <td><%= milestone.open %></td>
+        <td><%= milestone.closed %></td>
+        <td><%= link_to 'Show', milestone %></td>
+        <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
+        <td><%= link_to 'Destroy', milestone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Milestone', new_milestone_path %>

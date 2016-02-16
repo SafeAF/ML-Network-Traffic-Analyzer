@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Queques</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Critlarm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @queques.each do |queque| %>
+      <tr>
+        <td><%= queque.name %></td>
+        <td><%= queque.critlarm %></td>
+        <td><%= link_to 'Show', queque %></td>
+        <td><%= link_to 'Edit', edit_queque_path(queque) %></td>
+        <td><%= link_to 'Destroy', queque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Queque', new_queque_path %>

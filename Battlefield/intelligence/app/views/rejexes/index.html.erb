@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rejexes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Body</th>
+      <th>Flag</th>
+      <th>Flag2</th>
+      <th>Flag3</th>
+      <th>Flag4</th>
+      <th>Flag5</th>
+      <th>Flag6</th>
+      <th>Pattern</th>
+      <th>Pattern2</th>
+      <th>Substitute</th>
+      <th>Return field</th>
+      <th>Return field1</th>
+      <th>Return field2</th>
+      <th>Return field3</th>
+      <th>Return field4</th>
+      <th>Serialized</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rejexes.each do |rejex| %>
+      <tr>
+        <td><%= rejex.name %></td>
+        <td><%= rejex.description %></td>
+        <td><%= rejex.body %></td>
+        <td><%= rejex.flag %></td>
+        <td><%= rejex.flag2 %></td>
+        <td><%= rejex.flag3 %></td>
+        <td><%= rejex.flag4 %></td>
+        <td><%= rejex.flag5 %></td>
+        <td><%= rejex.flag6 %></td>
+        <td><%= rejex.pattern %></td>
+        <td><%= rejex.pattern2 %></td>
+        <td><%= rejex.substitute %></td>
+        <td><%= rejex.return_field %></td>
+        <td><%= rejex.return_field1 %></td>
+        <td><%= rejex.return_field2 %></td>
+        <td><%= rejex.return_field3 %></td>
+        <td><%= rejex.return_field4 %></td>
+        <td><%= rejex.serialized %></td>
+        <td><%= link_to 'Show', rejex %></td>
+        <td><%= link_to 'Edit', edit_rejex_path(rejex) %></td>
+        <td><%= link_to 'Destroy', rejex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rejex', new_rejex_path %>

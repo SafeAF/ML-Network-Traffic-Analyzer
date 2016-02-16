@@ -1,0 +1,152 @@
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+
+#require File.expand_path('../config/application', __FILE__)
+
+#Rails.application.load_tasks
+
+require File.expand_path('../config/application', __FILE__)
+
+Rails.application.load_tasks
+
+
+
+#require "rspec/core/rake_task"
+#require 'rubygems'
+#require 'bundler'
+
+require 'rake'
+#require 'bundler/gem_tasks'
+#require 'rake/testtask'
+
+#require 'find'
+
+
+# require 'bundler/setup'
+# require 'bundler/gem_tasks'
+# require 'rspec/core/rake_task'
+#
+# RSpec::Core::RakeTask.new :spec
+#
+# task :default => :spec
+#
+# #bundle config --delete bin    # Turn off Bundler's stub generator
+# #rake rails:update:bin         # Use the new Rails 4 executables
+# #git add bin                   # Add bin/ to source control
+#
+# require File.expand_path('../config/application', __FILE__)
+#
+# Myapp::Application.load_tasks
+#
+# task :load_jobs => :environment do
+#   require 'sidekiq/api'
+#   Sidekiq::Queue.new.clear
+#
+#   50_000.times do |x|
+#     EmptyWorker.perform_async
+#   end
+# end
+#
+# namespace :dev do
+#   desc 'rails update via delete bin stubs and update bin rake task + add to git '
+#   task :update do
+#   #  bundle
+#   end
+#
+#   desc 'cleans up logfiles'
+#   task :delog do
+#     file_paths = []
+#     dir = Dir.getwd
+#     Find.find(dir).select {|path| /.*\.log$/ =~ path }
+#
+#     p file_paths
+#     p "hello"
+#   end
+#
+#   desc 'populates new rails app with supermodels, pick which sets'
+#   task :supermodels do
+#
+#   end
+#
+#   desc 'startup Emergence/Attrition backend'
+#   task :emerge do
+#
+#   end
+# end
+#
+#
+
+#Bundler.setup
+
+
+
+
+task :default => [:foo] do #, :test]
+
+end
+
+
+task :foo do
+#	p Time.now
+  sh 'date'
+#	p "foo"
+end
+
+namespace :db do
+  namespace :populate do
+  desc 'populate ip table'
+  task :ips do
+sh 'date'
+    end
+  end
+end
+
+
+#
+#
+# require "rubygems"
+# require "rubygems/package_task"
+# require "rdoc/task"
+#
+#
+# ###########################
+# # Spec / Rake / Spectask  #
+# ###########################
+# require "spec"
+# require "spec/rake/spectask"
+# Spec::Rake::SpecTask.new do |t|
+#   t.spec_opts = %w(--format specdoc --colour)
+#   t.libs = ["spec"]
+# end
+#
+#
+# task :speckle => :spec do
+#
+# end
+# ############################
+# # Generate documentation   #
+# ############################
+# Rake::RDocTask.new do |rd|
+#   rd.main = "readme.markdown"
+#   rd.rdoc_files.include("readme.markdown", "lib/**/*.rb")
+#   rd.rdoc_dir = "rdoc"
+# end
+#
+# desc 'Clear out RDoc and generated packages'
+# task :clean => [:clobber_rdoc, :clobber_package] do
+#   rm "#{spec.name}.gemspec"
+# end
+
+#######################
+# For Test::Unit      #
+#######################
+#Dir["Rake/*.rake"].sort.each { |ext| load ext }
+
+# For Test::Unit i think we are using rspec
+# Rake::TestTask.new(:testClient) do |t|
+#   sh "date"
+#   t.libs << "test" # "test-unit"
+# #	t.libs << "test-unit" # "test-unit"
+#   t.test_files = FileList['Client/tests/test*.rb']
+#   t.verbose = true
+# end

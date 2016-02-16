@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @ip.address %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @ip.hostname %>
+</p>
+
+<p>
+  <strong>Dns:</strong>
+  <%= @ip.dns %>
+</p>
+
+<p>
+  <strong>Isp:</strong>
+  <%= @ip.isp %>
+</p>
+
+<p>
+  <strong>Netblock:</strong>
+  <%= @ip.netblock %>
+</p>
+
+<p>
+  <strong>Subnet:</strong>
+  <%= @ip.subnet %>
+</p>
+
+<p>
+  <strong>Network:</strong>
+  <%= @ip.network %>
+</p>
+
+<p>
+  <strong>Reputation:</strong>
+  <%= @ip.reputation %>
+</p>
+
+<p>
+  <strong>Dns:</strong>
+  <%= @ip.dns %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @ip.organization %>
+</p>
+
+<%= link_to 'Edit', edit_ip_path(@ip) %> |
+<%= link_to 'Back', ips_path %>

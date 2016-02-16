@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @domainname.ip %>
+</p>
+
+<p>
+  <strong>Cname:</strong>
+  <%= @domainname.cname %>
+</p>
+
+<p>
+  <strong>Aname:</strong>
+  <%= @domainname.aname %>
+</p>
+
+<p>
+  <strong>Mx:</strong>
+  <%= @domainname.mx %>
+</p>
+
+<p>
+  <strong>Mx2:</strong>
+  <%= @domainname.mx2 %>
+</p>
+
+<p>
+  <strong>Mx3:</strong>
+  <%= @domainname.mx3 %>
+</p>
+
+<p>
+  <strong>Mx4:</strong>
+  <%= @domainname.mx4 %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @domainname.hostname %>
+</p>
+
+<p>
+  <strong>Reverse lookup:</strong>
+  <%= @domainname.reverse_lookup %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @domainname.location %>
+</p>
+
+<p>
+  <strong>Isp:</strong>
+  <%= @domainname.isp %>
+</p>
+
+<p>
+  <strong>Organisation:</strong>
+  <%= @domainname.organisation %>
+</p>
+
+<p>
+  <strong>Network:</strong>
+  <%= @domainname.network %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @domainname.server %>
+</p>
+
+<p>
+  <strong>Nameserver1:</strong>
+  <%= @domainname.nameserver1 %>
+</p>
+
+<p>
+  <strong>Nameserver2:</strong>
+  <%= @domainname.nameserver2 %>
+</p>
+
+<%= link_to 'Edit', edit_domainname_path(@domainname) %> |
+<%= link_to 'Back', domainnames_path %>

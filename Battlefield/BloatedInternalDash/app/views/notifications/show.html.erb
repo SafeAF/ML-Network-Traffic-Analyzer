@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @notification.machine %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @notification.user %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @notification.server %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @notification.message %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @notification.priority %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @notification.source %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @notification.destination %>
+</p>
+
+<p>
+  <strong>Cluster:</strong>
+  <%= @notification.cluster %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @notification.service %>
+</p>
+
+<p>
+  <strong>Application:</strong>
+  <%= @notification.application %>
+</p>
+
+<%= link_to 'Edit', edit_notification_path(@notification) %> |
+<%= link_to 'Back', notifications_path %>

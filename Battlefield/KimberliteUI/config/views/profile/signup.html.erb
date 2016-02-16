@@ -1,0 +1,132 @@
+
+ <div class="row">
+ <div class="span6">
+
+
+<div class="well form-horizontal form-inline">
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %>
+    prevented your new account from being saved:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+  <fieldset>
+  <legend>Enter User Details</legend>
+
+  <div class="control-group">
+    <div class="control-label">
+		<%= f.label :name, 'Username', class: :label %>
+	</div>
+    <div class="controls">
+		<%= f.text_field :name, :size => 40 %>
+	</div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">
+		<%= f.label :password, 'Password', class: :label %>
+	</div>
+    <div class="controls">
+		<%= f.password_field :password, :size => 40 %>
+	</div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">
+		<%= f.label :password_confirmation, 'Confirm', class: :label %>
+	</div>
+    <div class="controls">
+		<%= f.password_field :password_confirmation, :size => 40 %>
+	</div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">
+		<%= f.label :fullname, class: :label %>
+	</div>
+    <div class="controls">
+		<%= f.text_field :fullname %>
+	</div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">
+		<%= f.label :email, class: :label %>
+	</div>
+    <div class="controls">
+		<%= f.text_field :email %>
+	</div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">
+      <%= f.label :company, class: :label %>
+    </div>
+    <div class="controls">
+      <%= f.text_field :company %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label"><%= f.label :address1, class: :label %></div>
+    <div class="controls"><%= f.text_field :address1 %></div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label"><%= f.label :address2, class: :label %>*</div>
+    <div class="controls"><%= f.text_field :address2 %></div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label"><%= f.label :city, class: :label %></div>
+    <div class="controls"><%= f.text_field :city %></div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label"><%= f.label :state, class: :label %></div>
+    <div class="controls"><%= f.collection_select :state, User::STATES, :to_s, :to_s,
+           :include_blank => true %></div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label"><%= f.label :zip, class: :label %></div>
+    <div class="controls"><%= f.text_field :zip %></div>
+  </div>
+
+  <div class="control-group">
+     <div class="control-label"><%= f.label :country, class: :label %></div>
+     <div class="controls"><%= f.collection_select :country, User::COUNTRIES, :to_s, :to_s,
+          :include_blank => true %></div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label"><%= f.label :phone, class: :label %></div>
+    <div class="controls"><%= f.text_field :phone %></div>
+  </div>
+
+  <div class="control-group">
+	<%= f.simple_captcha :label => 'Please enter the validation code shown above', :distortion => 'high' %>
+  </div>
+
+
+  <div class="form-actions">
+    <%= f.submit "Signup", :class => "btn btn-primary btn-large" %>
+  </div>
+
+  </fieldset>
+<% end %>
+</div>
+
+<h6>* Indicates an optional field</h6>
+
+</div>
+</div>
+

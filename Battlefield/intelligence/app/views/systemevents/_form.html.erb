@@ -1,0 +1,45 @@
+<%= form_for(@systemevent) do |f| %>
+  <% if @systemevent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@systemevent.errors.count, "error") %> prohibited this systemevent from being saved:</h2>
+
+      <ul>
+      <% @systemevent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Message %><br>
+    <%= f.text_area :Message %>
+  </div>
+  <div class="field">
+    <%= f.label :Facility %><br>
+    <%= f.number_field :Facility %>
+  </div>
+  <div class="field">
+    <%= f.label :FromHost %><br>
+    <%= f.text_field :FromHost %>
+  </div>
+  <div class="field">
+    <%= f.label :DeviceReportedTime %><br>
+    <%= f.datetime_select :DeviceReportedTime %>
+  </div>
+  <div class="field">
+    <%= f.label :ReceivedAt %><br>
+    <%= f.datetime_select :ReceivedAt %>
+  </div>
+  <div class="field">
+    <%= f.label :InfoUnitID %><br>
+    <%= f.number_field :InfoUnitID %>
+  </div>
+  <div class="field">
+    <%= f.label :SysLogTag %><br>
+    <%= f.text_field :SysLogTag %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

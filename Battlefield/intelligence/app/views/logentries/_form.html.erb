@@ -1,0 +1,53 @@
+<%= form_for(@logentry) do |f| %>
+  <% if @logentry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@logentry.errors.count, "error") %> prohibited this logentry from being saved:</h2>
+
+      <ul>
+      <% @logentry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :logfile_id %><br>
+    <%= f.text_field :logfile_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="field">
+    <%= f.label :facility %><br>
+    <%= f.text_field :facility %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :logged_at %><br>
+    <%= f.datetime_select :logged_at %>
+  </div>
+  <div class="field">
+    <%= f.label :service %><br>
+    <%= f.text_field :service %>
+  </div>
+  <div class="field">
+    <%= f.label :service_id %><br>
+    <%= f.text_field :service_id %>
+  </div>
+  <div class="field">
+    <%= f.label :logentry_id %><br>
+    <%= f.text_field :logentry_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

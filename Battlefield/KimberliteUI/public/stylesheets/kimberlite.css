@@ -1,0 +1,224 @@
+
+
+html {
+	background: #0e0e11 url(../images/bg.jpg) repeat
+
+}
+
+
+body {
+
+	padding: 0;
+	margin: 0;
+	font: 100%/130% Georgia, "Times New Roman", Times, serif;
+	color: #45526a;
+	
+	word-wrap: break-word;
+	/*
+background-color: #858585;
+*/
+}
+
+
+/* wrapper 
+-----------------------------------------------------*/
+#header_bg {
+background: #0e0e11 url(../images/bg.jpg) repeat
+/*	
+background: #858585 url(../images/header.jpg) no-repeat center top;
+*/
+}
+.wrapper {
+	width: 980px;
+	margin: 0 auto;
+}
+
+
+/* header 
+-----------------------------------------------------*/
+#header {
+	height: 112px;
+	position: relative;
+	border-bottom: dotted 2px #fff
+}
+
+#header p {
+	margin: 0;
+}
+
+#header #logo a {
+	background: url(../images/emergence.png) no-repeat;
+	width: 400px;
+	height: 103px;
+	text-indent: -9000em;
+	display: block;
+	position: absolute;
+	left: 50px;
+	top: 1px;
+
+}
+
+#header #logo span {
+
+	width: 154px;
+	height: 52px;
+	position: absolute;
+	top: -39px;
+	left: 35px;
+	display: none;
+}
+
+#header #logo a:hover span {
+	display: block;
+}
+
+
+/* put icons next to these */
+#machine_name {
+	font: bold  normal 85%/100% Arial, "Times New Roman", Times, serif;
+	right: 25%;
+	position: absolute;
+	top: 62px;
+	margin: 0;
+	padding: 0;	
+	color: #DD8282;
+	
+
+}
+
+/* put icons next to these */
+#instance_name {
+	
+	font: bold normal 79%/100% Arial, "Times New Roman", Times, serif;
+	right: 25%;
+	position: absolute;
+	top: 75px;
+	margin: 0;
+	padding: 0;
+	color: #DD8282;
+}
+
+/* nav 
+-----------------------------------------------------*/
+#nav {
+	
+	position: absolute;
+	left: 490px;
+	top: 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#nav li {
+
+	margin: 0 5px 0 0;
+	padding: 0;
+	font: small-caps 120%/100% Helvetica, "Times New Roman", Times, serif;
+	float: left;
+	white-space: nowrap;
+}
+#nav ul {
+	margin: 2px 0 0;
+	padding: 0;
+	list-style: none;
+}
+#nav ul li {
+
+	margin: 0 0 2px -14px;
+	padding: 0;
+	font: bold normal 75%/100% Georgia, "Times New Roman", Times, serif;
+	text-transform: lowercase;
+	float: none;
+}
+
+#nav #nav_profile {
+	width: 73px;
+}
+#nav #nav_machine {
+	width: 83px;
+}
+#nav #nav_instance {
+	width: 80px;
+}
+#nav #nav_ban {
+	width: 60px;
+}
+#nav #nav_conf {
+	width: 65px;
+}
+#nav a {
+	text-decoration: none;
+	color: #fff;
+}
+#nav a:hover {
+	text-decoration: underline;
+}
+#nav ul a {
+	padding-left: 16px;
+	background: url(img/nav-icons.png) no-repeat -20px 0;
+}
+#nav ul a:hover {
+	text-decoration: underline;
+}
+#nav .new_mach a:hover {
+	background-position: 0 5px;
+}
+#nav .man_mach a:hover {
+	background-position: 0 -54px;
+}
+#nav .press a:hover {
+	background-position: 0 -114px;
+}
+#nav .contact a:hover {
+	background-position: 0 -172px;
+}
+#nav .web a:hover {
+	background-position: 0 -233px;
+}
+#nav .illustration a:hover {
+	background-position: 0 -295px;
+}
+#nav .themes a:hover {
+	background-position: 0 -352px;
+}
+#nav .wallpapers a:hover {
+	background-position: 0 -414px;
+}
+#nav .tutorials a:hover {
+	background-position: 0 -474px;
+}
+
+
+/* content 
+-----------------------------------------------------*/
+#content {
+background-color: #0e0e11;
+border: solid 2px #fff;
+/*	
+background-color: #858585;
+ */
+	width: 50%;
+	float: left;
+	margin-left: 5%;
+	left: 20%;
+	position: relative;
+}
+
+.blog_title {
+	width: 278px;
+	height: 8px;
+	display: block;
+	background: url(img/blog-over.gif) no-repeat 0 -300px;
+	text-indent: -9000em;
+	position: absolute;
+	top: -127px;
+	left: 1px;
+	font: italic 100%/100% "Times New Roman", Times, serif;
+	text-decoration: none;
+	padding: 100px 0 0;
+}
+a.blog_title:hover {
+	background-position: 0 0;
+	text-indent: 0;
+}
+

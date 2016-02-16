@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @encryptedfile.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @encryptedfile.user %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @encryptedfile.server %>
+</p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @encryptedfile.path %>
+</p>
+
+<p>
+  <strong>Vfilesystem:</strong>
+  <%= @encryptedfile.vfilesystem %>
+</p>
+
+<p>
+  <strong>Privkey:</strong>
+  <%= @encryptedfile.privkey %>
+</p>
+
+<p>
+  <strong>Pubkey:</strong>
+  <%= @encryptedfile.pubkey %>
+</p>
+
+<%= link_to 'Edit', edit_encryptedfile_path(@encryptedfile) %> |
+<%= link_to 'Back', encryptedfiles_path %>

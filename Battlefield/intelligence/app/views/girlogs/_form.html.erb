@@ -1,0 +1,121 @@
+<%= form_for(@girlog) do |f| %>
+  <% if @girlog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@girlog.errors.count, "error") %> prohibited this girlog from being saved:</h2>
+
+      <ul>
+      <% @girlog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :context %><br>
+    <%= f.text_field :context %>
+  </div>
+  <div class="field">
+    <%= f.label :component %><br>
+    <%= f.text_field :component %>
+  </div>
+  <div class="field">
+    <%= f.label :originator %><br>
+    <%= f.text_field :originator %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :generated_at %><br>
+    <%= f.datetime_select :generated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :application %><br>
+    <%= f.text_field :application %>
+  </div>
+  <div class="field">
+    <%= f.label :facility %><br>
+    <%= f.number_field :facility %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :criticality %><br>
+    <%= f.text_field :criticality %>
+  </div>
+  <div class="field">
+    <%= f.label :error %><br>
+    <%= f.text_field :error %>
+  </div>
+  <div class="field">
+    <%= f.label :error_count %><br>
+    <%= f.number_field :error_count %>
+  </div>
+  <div class="field">
+    <%= f.label :response_time %><br>
+    <%= f.text_field :response_time %>
+  </div>
+  <div class="field">
+    <%= f.label :latency %><br>
+    <%= f.text_field :latency %>
+  </div>
+  <div class="field">
+    <%= f.label :db_latency %><br>
+    <%= f.text_field :db_latency %>
+  </div>
+  <div class="field">
+    <%= f.label :query_time %><br>
+    <%= f.text_field :query_time %>
+  </div>
+  <div class="field">
+    <%= f.label :query %><br>
+    <%= f.text_field :query %>
+  </div>
+  <div class="field">
+    <%= f.label :rows_count %><br>
+    <%= f.number_field :rows_count %>
+  </div>
+  <div class="field">
+    <%= f.label :response_code %><br>
+    <%= f.text_field :response_code %>
+  </div>
+  <div class="field">
+    <%= f.label :http_code %><br>
+    <%= f.number_field :http_code %>
+  </div>
+  <div class="field">
+    <%= f.label :client %><br>
+    <%= f.text_field :client %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :hostname %><br>
+    <%= f.text_field :hostname %>
+  </div>
+  <div class="field">
+    <%= f.label :pid %><br>
+    <%= f.number_field :pid %>
+  </div>
+  <div class="field">
+    <%= f.label :program %><br>
+    <%= f.text_field :program %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

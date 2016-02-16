@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @logfile.machine %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @logfile.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @logfile.description %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @logfile.size %>
+</p>
+
+<p>
+  <strong>Entries:</strong>
+  <%= @logfile.entries %>
+</p>
+
+<p>
+  <strong>Entries per sec:</strong>
+  <%= @logfile.entries_per_sec %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @logfile.location %>
+</p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @logfile.path %>
+</p>
+
+<p>
+  <strong>Basename:</strong>
+  <%= @logfile.basename %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @logfile.service %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @logfile.service %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @logfile.server %>
+</p>
+
+<p>
+  <strong>Criticality:</strong>
+  <%= @logfile.criticality %>
+</p>
+
+<%= link_to 'Edit', edit_logfile_path(@logfile) %> |
+<%= link_to 'Back', logfiles_path %>

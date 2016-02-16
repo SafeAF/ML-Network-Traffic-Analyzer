@@ -1,0 +1,111 @@
+<%= form_for(@server) do |f| %>
+  <% if @server.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@server.errors.count, "error") %> prohibited this server from being saved:</h2>
+
+      <ul>
+      <% @server.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :privkey %><br>
+    <%= f.text_area :privkey %>
+  </div>
+  <div class="field">
+    <%= f.label :pubkey %><br>
+    <%= f.text_area :pubkey %>
+  </div>
+  <div class="field">
+    <%= f.label :key %><br>
+    <%= f.text_area :key %>
+  </div>
+  <div class="field">
+    <%= f.label :ip %><br>
+    <%= f.text_field :ip %>
+  </div>
+  <div class="field">
+    <%= f.label :hostname %><br>
+    <%= f.text_field :hostname %>
+  </div>
+  <div class="field">
+    <%= f.label :cluster %><br>
+    <%= f.text_field :cluster %>
+  </div>
+  <div class="field">
+    <%= f.label :ipaddr %><br>
+    <%= f.number_field :ipaddr %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :virtual? %><br>
+    <%= f.check_box :virtual? %>
+  </div>
+  <div class="field">
+    <%= f.label :up? %><br>
+    <%= f.check_box :up? %>
+  </div>
+  <div class="field">
+    <%= f.label :criticality %><br>
+    <%= f.number_field :criticality %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :network_id %><br>
+    <%= f.number_field :network_id %>
+  </div>
+  <div class="field">
+    <%= f.label :manager_id %><br>
+    <%= f.number_field :manager_id %>
+  </div>
+  <div class="field">
+    <%= f.label :os %><br>
+    <%= f.text_field :os %>
+  </div>
+  <div class="field">
+    <%= f.label :devops_id %><br>
+    <%= f.number_field :devops_id %>
+  </div>
+  <div class="field">
+    <%= f.label :uptime %><br>
+    <%= f.number_field :uptime %>
+  </div>
+  <div class="field">
+    <%= f.label :system_id %><br>
+    <%= f.number_field :system_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :configuration %><br>
+    <%= f.text_area :configuration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Network Boxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Hostname</th>
+      <th>Ip</th>
+      <th>Type</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Router</th>
+      <th>Gateway</th>
+      <th>Network</th>
+      <th>Infrastructure</th>
+      <th>Gateway ip</th>
+      <th>Os</th>
+      <th>Operations</th>
+      <th>Configuration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @network_boxes.each do |network_box| %>
+      <tr>
+        <td><%= network_box.name %></td>
+        <td><%= network_box.hostname %></td>
+        <td><%= network_box.ip %></td>
+        <td><%= network_box.type %></td>
+        <td><%= network_box.manufacturer %></td>
+        <td><%= network_box.model %></td>
+        <td><%= network_box.router %></td>
+        <td><%= network_box.gateway %></td>
+        <td><%= network_box.network %></td>
+        <td><%= network_box.infrastructure %></td>
+        <td><%= network_box.gateway_ip %></td>
+        <td><%= network_box.os %></td>
+        <td><%= network_box.operations %></td>
+        <td><%= network_box.configuration %></td>
+        <td><%= link_to 'Show', network_box %></td>
+        <td><%= link_to 'Edit', edit_network_box_path(network_box) %></td>
+        <td><%= link_to 'Destroy', network_box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Network box', new_network_box_path %>

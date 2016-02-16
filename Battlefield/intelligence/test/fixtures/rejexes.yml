@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  body: MyString
+  flag: MyString
+  flag2: MyString
+  flag3: MyString
+  flag4: MyString
+  flag5: MyString
+  flag6: MyString
+  pattern: MyString
+  pattern2: MyString
+  substitute: MyString
+  return_field: MyString
+  return_field1: MyString
+  return_field2: MyString
+  return_field3: MyString
+  return_field4: MyString
+  serialized: MyString
+
+two:
+  name: MyString
+  description: MyString
+  body: MyString
+  flag: MyString
+  flag2: MyString
+  flag3: MyString
+  flag4: MyString
+  flag5: MyString
+  flag6: MyString
+  pattern: MyString
+  pattern2: MyString
+  substitute: MyString
+  return_field: MyString
+  return_field1: MyString
+  return_field2: MyString
+  return_field3: MyString
+  return_field4: MyString
+  serialized: MyString

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @reputation.ip %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @reputation.domain %>
+</p>
+
+<p>
+  <strong>Confidence:</strong>
+  <%= @reputation.confidence %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @reputation.description %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @reputation.value %>
+</p>
+
+<%= link_to 'Edit', edit_reputation_path(@reputation) %> |
+<%= link_to 'Back', reputations_path %>

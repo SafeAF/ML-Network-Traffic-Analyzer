@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Domainnames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip</th>
+      <th>Cname</th>
+      <th>Aname</th>
+      <th>Mx</th>
+      <th>Mx2</th>
+      <th>Mx3</th>
+      <th>Mx4</th>
+      <th>Hostname</th>
+      <th>Reverse lookup</th>
+      <th>Location</th>
+      <th>Isp</th>
+      <th>Organisation</th>
+      <th>Network</th>
+      <th>Server</th>
+      <th>Nameserver1</th>
+      <th>Nameserver2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @domainnames.each do |domainname| %>
+      <tr>
+        <td><%= domainname.ip %></td>
+        <td><%= domainname.cname %></td>
+        <td><%= domainname.aname %></td>
+        <td><%= domainname.mx %></td>
+        <td><%= domainname.mx2 %></td>
+        <td><%= domainname.mx3 %></td>
+        <td><%= domainname.mx4 %></td>
+        <td><%= domainname.hostname %></td>
+        <td><%= domainname.reverse_lookup %></td>
+        <td><%= domainname.location %></td>
+        <td><%= domainname.isp %></td>
+        <td><%= domainname.organisation %></td>
+        <td><%= domainname.network %></td>
+        <td><%= domainname.server %></td>
+        <td><%= domainname.nameserver1 %></td>
+        <td><%= domainname.nameserver2 %></td>
+        <td><%= link_to 'Show', domainname %></td>
+        <td><%= link_to 'Edit', edit_domainname_path(domainname) %></td>
+        <td><%= link_to 'Destroy', domainname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Domainname', new_domainname_path %>

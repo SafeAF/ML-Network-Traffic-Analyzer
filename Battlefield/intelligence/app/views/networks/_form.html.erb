@@ -1,0 +1,149 @@
+<%= form_for(@network) do |f| %>
+  <% if @network.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@network.errors.count, "error") %> prohibited this network from being saved:</h2>
+
+      <ul>
+      <% @network.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :purpose %><br>
+    <%= f.text_field :purpose %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br>
+    <%= f.number_field :speed %>
+  </div>
+  <div class="field">
+    <%= f.label :infrastructure_id %><br>
+    <%= f.text_field :infrastructure_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ownership %><br>
+    <%= f.text_field :ownership %>
+  </div>
+  <div class="field">
+    <%= f.label :netmask %><br>
+    <%= f.text_field :netmask %>
+  </div>
+  <div class="field">
+    <%= f.label :network %><br>
+    <%= f.text_field :network %>
+  </div>
+  <div class="field">
+    <%= f.label :subnet %><br>
+    <%= f.text_field :subnet %>
+  </div>
+  <div class="field">
+    <%= f.label :usernames_id %><br>
+    <%= f.text_field :usernames_id %>
+  </div>
+  <div class="field">
+    <%= f.label :total_nodes %><br>
+    <%= f.number_field :total_nodes %>
+  </div>
+  <div class="field">
+    <%= f.label :nodes_alive %><br>
+    <%= f.number_field :nodes_alive %>
+  </div>
+  <div class="field">
+    <%= f.label :average_latency %><br>
+    <%= f.text_field :average_latency %>
+  </div>
+  <div class="field">
+    <%= f.label :health %><br>
+    <%= f.text_field :health %>
+  </div>
+  <div class="field">
+    <%= f.label :netadmin %><br>
+    <%= f.text_field :netadmin %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cluster_id %><br>
+    <%= f.text_field :cluster_id %>
+  </div>
+  <div class="field">
+    <%= f.label :gateway_ip %><br>
+    <%= f.text_field :gateway_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :ping %><br>
+    <%= f.text_field :ping %>
+  </div>
+  <div class="field">
+    <%= f.label :hops %><br>
+    <%= f.number_field :hops %>
+  </div>
+  <div class="field">
+    <%= f.label :latency %><br>
+    <%= f.text_field :latency %>
+  </div>
+  <div class="field">
+    <%= f.label :router_ip %><br>
+    <%= f.text_field :router_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :broadcast %><br>
+    <%= f.text_field :broadcast %>
+  </div>
+  <div class="field">
+    <%= f.label :address_space %><br>
+    <%= f.text_field :address_space %>
+  </div>
+  <div class="field">
+    <%= f.label :dns %><br>
+    <%= f.text_field :dns %>
+  </div>
+  <div class="field">
+    <%= f.label :ptr_record %><br>
+    <%= f.text_field :ptr_record %>
+  </div>
+  <div class="field">
+    <%= f.label :a_record %><br>
+    <%= f.text_field :a_record %>
+  </div>
+  <div class="field">
+    <%= f.label :reverse_address %><br>
+    <%= f.text_field :reverse_address %>
+  </div>
+  <div class="field">
+    <%= f.label :network_box %><br>
+    <%= f.number_field :network_box %>
+  </div>
+  <div class="field">
+    <%= f.label :operations_id %><br>
+    <%= f.text_field :operations_id %>
+  </div>
+  <div class="field">
+    <%= f.label :wifi_ssid %><br>
+    <%= f.text_field :wifi_ssid %>
+  </div>
+  <div class="field">
+    <%= f.label :wan_ip %><br>
+    <%= f.text_field :wan_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :lan_ip %><br>
+    <%= f.text_field :lan_ip %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

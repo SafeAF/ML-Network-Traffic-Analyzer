@@ -1,0 +1,91 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Infrastructures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Purpose</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Effectiveness</th>
+      <th>Utilization</th>
+      <th>Return on assets</th>
+      <th>Manhours per unit production</th>
+      <th>Revenue per employee</th>
+      <th>Organizational unit</th>
+      <th>Total klocs</th>
+      <th>Klocs ytd</th>
+      <th>Total manhours</th>
+      <th>Manhours this month</th>
+      <th>Manhours last month</th>
+      <th>Average manhours</th>
+      <th>Bugs this month</th>
+      <th>Bugs last month</th>
+      <th>Average bugs month</th>
+      <th>Klocs this month</th>
+      <th>Klocs last month</th>
+      <th>Average klocs month</th>
+      <th>Klocs per manhour</th>
+      <th>Bugs per kloc</th>
+      <th>Defect removal rate</th>
+      <th>Service</th>
+      <th>Application</th>
+      <th>Cluster</th>
+      <th>User</th>
+      <th>Criticality</th>
+      <th>Network</th>
+      <th>Admin</th>
+      <th>Operations</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @infrastructures.each do |infrastructure| %>
+      <tr>
+        <td><%= infrastructure.name %></td>
+        <td><%= infrastructure.purpose %></td>
+        <td><%= infrastructure.description %></td>
+        <td><%= infrastructure.type %></td>
+        <td><%= infrastructure.effectiveness %></td>
+        <td><%= infrastructure.utilization %></td>
+        <td><%= infrastructure.return_on_assets %></td>
+        <td><%= infrastructure.manhours_per_unit_production %></td>
+        <td><%= infrastructure.revenue_per_employee %></td>
+        <td><%= infrastructure.organizational_unit %></td>
+        <td><%= infrastructure.total_klocs %></td>
+        <td><%= infrastructure.klocs_ytd %></td>
+        <td><%= infrastructure.total_manhours %></td>
+        <td><%= infrastructure.manhours_this_month %></td>
+        <td><%= infrastructure.manhours_last_month %></td>
+        <td><%= infrastructure.average_manhours %></td>
+        <td><%= infrastructure.bugs_this_month %></td>
+        <td><%= infrastructure.bugs_last_month %></td>
+        <td><%= infrastructure.average_bugs_month %></td>
+        <td><%= infrastructure.klocs_this_month %></td>
+        <td><%= infrastructure.klocs_last_month %></td>
+        <td><%= infrastructure.average_klocs_month %></td>
+        <td><%= infrastructure.klocs_per_manhour %></td>
+        <td><%= infrastructure.bugs_per_kloc %></td>
+        <td><%= infrastructure.defect_removal_rate %></td>
+        <td><%= infrastructure.service %></td>
+        <td><%= infrastructure.application %></td>
+        <td><%= infrastructure.cluster %></td>
+        <td><%= infrastructure.user %></td>
+        <td><%= infrastructure.criticality %></td>
+        <td><%= infrastructure.network %></td>
+        <td><%= infrastructure.admin %></td>
+        <td><%= infrastructure.operations %></td>
+        <td><%= link_to 'Show', infrastructure %></td>
+        <td><%= link_to 'Edit', edit_infrastructure_path(infrastructure) %></td>
+        <td><%= link_to 'Destroy', infrastructure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Infrastructure', new_infrastructure_path %>

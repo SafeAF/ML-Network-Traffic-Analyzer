@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Vfilesystem:</strong>
+  <%= @group.vfilesystem %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @group.user %>
+</p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @group.machine %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @group.server %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @group.purpose %>
+</p>
+
+<p>
+  <strong>Incept date:</strong>
+  <%= @group.incept_date %>
+</p>
+
+<p>
+  <strong>Access level:</strong>
+  <%= @group.access_level %>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

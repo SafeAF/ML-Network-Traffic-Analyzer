@@ -1,0 +1,14 @@
+---
+:concurrency: 25
+:pidfile: tmp/pids/sidekiq.pid
+staging:
+  :concurrency: 15
+production:
+  :concurrency: 35
+:queues:
+  - database
+  - [bloodlust, 2]
+  - [logpreprocess, 2]
+  - banlist
+  - powerplant
+  - generic

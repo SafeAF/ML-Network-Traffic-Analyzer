@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong></strong>
+  <%= @project.name %></h1>
+<h3> <%= @project.description %> - <%= @project.completion_percentage %>% Complete</h3>
+
+<p>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+</p>
+
+<div id="detailsbox">
+<p>
+  <strong>Details:</strong>
+  <%= @project.details %>
+</p>
+</div>
+
+<p>
+  <strong>Projected completion:</strong>
+  <%= @project.projected_completion %>
+</p>
+
+
+<p>
+  <strong>Manhours:</strong>
+  <%= @project.manhours %>
+</p>
+
+<p>
+  <strong>Eta:</strong>
+  <%= @project.eta %>
+</p>
+
+
+
+<h3>Project Issues</h3>
+
+<p><h4>Search Issues</h4>
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
+
+  <%= f.submit %>
+<% end %>
+
+</p>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Assignee</th>
+
+    <th>Label</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @issues.each do |issue| %>
+    <tr>
+      <td><%= issue.name %></td>
+      <td><%= issue.author %></td>
+      <td><%= issue.assignee %></td>
+      <td><%= issue.label %></td>
+      <td><%= link_to 'Show', issue %></td>
+      <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
+      <td><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

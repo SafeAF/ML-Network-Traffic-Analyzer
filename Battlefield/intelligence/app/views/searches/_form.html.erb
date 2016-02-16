@@ -1,0 +1,45 @@
+<%= form_for(@search) do |f| %>
+  <% if @search.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@search.errors.count, "error") %> prohibited this search from being saved:</h2>
+
+      <ul>
+      <% @search.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :field %><br>
+    <%= f.text_field :field %>
+  </div>
+  <div class="field">
+    <%= f.label :field2 %><br>
+    <%= f.text_field :field2 %>
+  </div>
+  <div class="field">
+    <%= f.label :field3 %><br>
+    <%= f.text_field :field3 %>
+  </div>
+  <div class="field">
+    <%= f.label :field4 %><br>
+    <%= f.text_field :field4 %>
+  </div>
+  <div class="field">
+    <%= f.label :field5 %><br>
+    <%= f.text_field :field5 %>
+  </div>
+  <div class="field">
+    <%= f.label :field6 %><br>
+    <%= f.text_field :field6 %>
+  </div>
+  <div class="field">
+    <%= f.label :field7 %><br>
+    <%= f.text_field :field7 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

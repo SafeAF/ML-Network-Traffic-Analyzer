@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @network_box.name %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @network_box.hostname %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @network_box.ip %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @network_box.type %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @network_box.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @network_box.model %>
+</p>
+
+<p>
+  <strong>Router:</strong>
+  <%= @network_box.router %>
+</p>
+
+<p>
+  <strong>Gateway:</strong>
+  <%= @network_box.gateway %>
+</p>
+
+<p>
+  <strong>Network:</strong>
+  <%= @network_box.network %>
+</p>
+
+<p>
+  <strong>Infrastructure:</strong>
+  <%= @network_box.infrastructure %>
+</p>
+
+<p>
+  <strong>Gateway ip:</strong>
+  <%= @network_box.gateway_ip %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @network_box.os %>
+</p>
+
+<p>
+  <strong>Operations:</strong>
+  <%= @network_box.operations %>
+</p>
+
+<p>
+  <strong>Configuration:</strong>
+  <%= @network_box.configuration %>
+</p>
+
+<%= link_to 'Edit', edit_network_box_path(@network_box) %> |
+<%= link_to 'Back', network_boxes_path %>

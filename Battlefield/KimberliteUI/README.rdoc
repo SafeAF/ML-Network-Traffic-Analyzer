@@ -1,0 +1,43 @@
+== Kimberlite v4.0 README - ADI->[E]mergence
+
+Deployment and Domain knowledge for the web user interface for emergence, part
+of ADI product line we are developing.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+## Post Build Development Tasks
+-One should be to automate these tasks
+-Run rake doc:app after a build
+-Write documentation and keep updated
+
+## Kimberlite Deployment
+-Install rvm and run bundle install in kimberlite dir or on ADI global gemfile
+-Run any rake tasks
+-Ensure MySQL database  adi:adi:hotforgedluckyrabbitfoot
+-Rackup the server or rails s -b 0.0.0.0 -p 6000
+
+### Database Setup
+-run rake db:schema:load after creating user + db etc
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

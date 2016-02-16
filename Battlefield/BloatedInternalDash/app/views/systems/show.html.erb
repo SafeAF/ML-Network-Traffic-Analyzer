@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @system.name %>
+</p>
+
+<p>
+  <strong>Cluster:</strong>
+  <%= @system.cluster %>
+</p>
+
+<p>
+  <strong>Infrastructure:</strong>
+  <%= @system.infrastructure %>
+</p>
+
+<p>
+  <strong>Criticality:</strong>
+  <%= @system.criticality %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @system.description %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @system.version %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @system.body %>
+</p>
+
+<%= link_to 'Edit', edit_system_path(@system) %> |
+<%= link_to 'Back', systems_path %>

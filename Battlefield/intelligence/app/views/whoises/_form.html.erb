@@ -1,0 +1,41 @@
+<%= form_for(@whoise) do |f| %>
+  <% if @whoise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@whoise.errors.count, "error") %> prohibited this whoise from being saved:</h2>
+
+      <ul>
+      <% @whoise.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url_id %><br>
+    <%= f.text_field :url_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hostname %><br>
+    <%= f.text_field :hostname %>
+  </div>
+  <div class="field">
+    <%= f.label :ip %><br>
+    <%= f.text_field :ip %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_id %><br>
+    <%= f.text_field :ip_id %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :last_crawled %><br>
+    <%= f.datetime_select :last_crawled %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

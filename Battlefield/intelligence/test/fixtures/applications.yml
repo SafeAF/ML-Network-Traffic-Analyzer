@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  purpose: MyString
+  description: MyString
+  hostname: MyString
+  parent_process: MyString
+  process_id: 
+  service: MyString
+  notice: MyString
+  node_id: 
+  criticality: 1
+  priority: 1
+  machine_id: 
+  server_id: 
+  user_id: 
+  network: MyString
+  network_id: 
+  manager_id: 
+  status: MyString
+  developer_id: 
+  pubserver_id: 
+
+two:
+  name: MyString
+  purpose: MyString
+  description: MyString
+  hostname: MyString
+  parent_process: MyString
+  process_id: 
+  service: MyString
+  notice: MyString
+  node_id: 
+  criticality: 1
+  priority: 1
+  machine_id: 
+  server_id: 
+  user_id: 
+  network: MyString
+  network_id: 
+  manager_id: 
+  status: MyString
+  developer_id: 
+  pubserver_id: 

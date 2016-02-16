@@ -1,0 +1,14 @@
+---
+:concurrency: 35
+:pidfile: tmp/pids/sidekiq.pid
+staging:
+  :concurrency: 10
+production:
+  :concurrency: 40
+:queues:
+  - [default, 2]
+  - [high, 3]
+  - [low, 1]
+  - [bloodlust, 5]
+  - [switchyard, 5]
+  - [database, 4

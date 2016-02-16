@@ -1,0 +1,43 @@
+
+vishnu@MKUltra:~/source/Alpha/Battlefield/Credibility$ sidekiq -r /home/vishnu/source/Alpha/Battlefield/Credibility/main.rb
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb: In function ‘calc_unigrams’:
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:30:5: warning: implicit declaration of function ‘STR2CSTR’ [-Wimplicit-function-declaration]
+     char unigram[2];
+     ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:30:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+     char unigram[2];
+                  ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:34:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (NIL_P(rb_hash_aref(unigram_hash,
+                   ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb: In function ‘calc_bigrams’:
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:56:5: warning: implicit declaration of function ‘STR2CSTR’ [-Wimplicit-function-declaration]
+     for (i = 0; i <= strlen(data) - 1; i++) {
+     ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:56:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+     for (i = 0; i <= strlen(data) - 1; i++) {
+                  ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:58:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       snprintf(bigram, sizeof(bigram), "%1c%1c",
+                   ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:59:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         data[i], data[i+1]);
+            ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb: In function ‘calc_stats’:
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:81:5: warning: implicit declaration of function ‘STR2CSTR’ [-Wimplicit-function-declaration]
+     int i, total_chars = 0, count_zero = 0;
+     ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:81:19: warning: initialization makes pointer from integer without a cast [enabled by default]
+     int i, total_chars = 0, count_zero = 0;
+                   ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:90:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      total_chars++;
+                   ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:93:6: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+      else if (data[i] < 32 || data[i] > 128)
+      ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:95:6: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+      if (data[i] == 48) count_zero++;
+      ^
+/home/vishnu/source/Alpha/Battlefield/Credibility/main.rb:86:9: warning: unused variable ‘count_bigrams’ [-Wunused-variable]
+     double prop_nonvisible = 0;

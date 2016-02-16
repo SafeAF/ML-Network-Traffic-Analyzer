@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hardware.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @hardware.user %>
+</p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @hardware.machine %>
+</p>
+
+<p>
+  <strong>Inventory:</strong>
+  <%= @hardware.inventory %>
+</p>
+
+<p>
+  <strong>Operations:</strong>
+  <%= @hardware.operations %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @hardware.type %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @hardware.purpose %>
+</p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @hardware.identifier %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @hardware.size %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hardware.description %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @hardware.details %>
+</p>
+
+<%= link_to 'Edit', edit_hardware_path(@hardware) %> |
+<%= link_to 'Back', hardwares_path %>

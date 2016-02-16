@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Message: MyText
+  Facility: 1
+  FromHost: MyString
+  DeviceReportedTime: 2016-02-08 15:18:40
+  ReceivedAt: 2016-02-08 15:18:40
+  InfoUnitID: 1
+  SysLogTag: MyString
+
+two:
+  Message: MyText
+  Facility: 1
+  FromHost: MyString
+  DeviceReportedTime: 2016-02-08 15:18:40
+  ReceivedAt: 2016-02-08 15:18:40
+  InfoUnitID: 1
+  SysLogTag: MyString

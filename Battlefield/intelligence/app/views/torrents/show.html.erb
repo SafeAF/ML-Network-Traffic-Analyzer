@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @torrent.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @torrent.url %>
+</p>
+
+<p>
+  <strong>Tracker:</strong>
+  <%= @torrent.tracker %>
+</p>
+
+<p>
+  <strong>Torrentfile:</strong>
+  <%= @torrent.torrentfile %>
+</p>
+
+<p>
+  <strong>Torrent:</strong>
+  <%= @torrent.torrent %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @torrent.location %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @torrent.server %>
+</p>
+
+<p>
+  <strong>Application:</strong>
+  <%= @torrent.application %>
+</p>
+
+<p>
+  <strong>Torrentsite:</strong>
+  <%= @torrent.torrentsite %>
+</p>
+
+<%= link_to 'Edit', edit_torrent_path(@torrent) %> |
+<%= link_to 'Back', torrents_path %>

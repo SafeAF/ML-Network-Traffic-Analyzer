@@ -1,0 +1,114 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @database.name %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @database.hostname %>
+</p>
+
+<p>
+  <strong>Cluster:</strong>
+  <%= @database.cluster %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @database.type %>
+</p>
+
+<p>
+  <strong>Dbserver:</strong>
+  <%= @database.dbserver %>
+</p>
+
+<p>
+  <strong>Db:</strong>
+  <%= @database.db %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @database.count %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @database.user %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @database.password %>
+</p>
+
+<p>
+  <strong>Connection string:</strong>
+  <%= @database.connection_string %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @database.server %>
+</p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @database.machine %>
+</p>
+
+<p>
+  <strong>Cluster:</strong>
+  <%= @database.cluster %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @database.service %>
+</p>
+
+<p>
+  <strong>Application:</strong>
+  <%= @database.application %>
+</p>
+
+<p>
+  <strong>Infrastructure:</strong>
+  <%= @database.infrastructure %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @database.status %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @database.purpose %>
+</p>
+
+<p>
+  <strong>Criticality:</strong>
+  <%= @database.criticality %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @database.priority %>
+</p>
+
+<p>
+  <strong>Network:</strong>
+  <%= @database.network %>
+</p>
+
+<p>
+  <strong>Devops:</strong>
+  <%= @database.devops %>
+</p>
+
+<%= link_to 'Edit', edit_database_path(@database) %> |
+<%= link_to 'Back', databases_path %>

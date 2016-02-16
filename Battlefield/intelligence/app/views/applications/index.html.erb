@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Purpose</th>
+      <th>Description</th>
+      <th>Hostname</th>
+      <th>Parent process</th>
+      <th>Process</th>
+      <th>Service</th>
+      <th>Notice</th>
+      <th>Node</th>
+      <th>Criticality</th>
+      <th>Priority</th>
+      <th>Machine</th>
+      <th>Server</th>
+      <th>User</th>
+      <th>Network</th>
+      <th>Network</th>
+      <th>Manager</th>
+      <th>Status</th>
+      <th>Developer</th>
+      <th>Pubserver</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @applications.each do |application| %>
+      <tr>
+        <td><%= application.name %></td>
+        <td><%= application.purpose %></td>
+        <td><%= application.description %></td>
+        <td><%= application.hostname %></td>
+        <td><%= application.parent_process %></td>
+        <td><%= application.process %></td>
+        <td><%= application.service %></td>
+        <td><%= application.notice %></td>
+        <td><%= application.node %></td>
+        <td><%= application.criticality %></td>
+        <td><%= application.priority %></td>
+        <td><%= application.machine %></td>
+        <td><%= application.server %></td>
+        <td><%= application.user %></td>
+        <td><%= application.network %></td>
+        <td><%= application.network %></td>
+        <td><%= application.manager %></td>
+        <td><%= application.status %></td>
+        <td><%= application.developer %></td>
+        <td><%= application.pubserver %></td>
+        <td><%= link_to 'Show', application %></td>
+        <td><%= link_to 'Edit', edit_application_path(application) %></td>
+        <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Application', new_application_path %>

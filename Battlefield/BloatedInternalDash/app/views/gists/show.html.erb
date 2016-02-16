@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @gist.owner %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @gist.user %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @gist.member %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gist.name %>
+</p>
+
+<p>
+  <strong>Total files:</strong>
+  <%= @gist.total_files %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @gist.description %>
+</p>
+
+<p>
+  <strong>Total size:</strong>
+  <%= @gist.total_size %>
+</p>
+
+<p>
+  <strong>Github:</strong>
+  <%= @gist.github %>
+</p>
+
+<p>
+  <strong>Git:</strong>
+  <%= @gist.git %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @gist.project %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @gist.content %>
+</p>
+
+<%= link_to 'Edit', edit_gist_path(@gist) %> |
+<%= link_to 'Back', gists_path %>

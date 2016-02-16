@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logfile:</strong>
+  <%= @logentry.logfile %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @logentry.name %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @logentry.message %>
+</p>
+
+<p>
+  <strong>Facility:</strong>
+  <%= @logentry.facility %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @logentry.priority %>
+</p>
+
+<p>
+  <strong>Logged at:</strong>
+  <%= @logentry.logged_at %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @logentry.service %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @logentry.service %>
+</p>
+
+<p>
+  <strong>Logentry:</strong>
+  <%= @logentry.logentry %>
+</p>
+
+<%= link_to 'Edit', edit_logentry_path(@logentry) %> |
+<%= link_to 'Back', logentries_path %>

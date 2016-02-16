@@ -1,0 +1,10 @@
+address: 0.0.0.0
+port: 5000
+servers: 5
+max_conns: 10240
+max_persistent_conns: 5000
+timeout: 30
+environment: production
+pid: /tmp/thin.pid
+log: production.log
+daemonize: true

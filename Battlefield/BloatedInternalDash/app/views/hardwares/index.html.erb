@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hardwares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>Machine</th>
+      <th>Inventory</th>
+      <th>Operations</th>
+      <th>Type</th>
+      <th>Purpose</th>
+      <th>Identifier</th>
+      <th>Size</th>
+      <th>Description</th>
+      <th>Details</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hardwares.each do |hardware| %>
+      <tr>
+        <td><%= hardware.name %></td>
+        <td><%= hardware.user %></td>
+        <td><%= hardware.machine %></td>
+        <td><%= hardware.inventory %></td>
+        <td><%= hardware.operations %></td>
+        <td><%= hardware.type %></td>
+        <td><%= hardware.purpose %></td>
+        <td><%= hardware.identifier %></td>
+        <td><%= hardware.size %></td>
+        <td><%= hardware.description %></td>
+        <td><%= hardware.details %></td>
+        <td><%= link_to 'Show', hardware %></td>
+        <td><%= link_to 'Edit', edit_hardware_path(hardware) %></td>
+        <td><%= link_to 'Destroy', hardware, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hardware', new_hardware_path %>

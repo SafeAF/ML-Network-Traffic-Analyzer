@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Hostname</th>
+      <th>Dns</th>
+      <th>Isp</th>
+      <th>Netblock</th>
+      <th>Subnet</th>
+      <th>Network</th>
+      <th>Reputation</th>
+      <th>Domainname</th>
+      <th>Organization</th>
+      <th>Credibility</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ips.each do |ip| %>
+      <tr>
+        <td><%= ip.address %></td>
+        <td><%= ip.hostname %></td>
+        <td><%= ip.dns %></td>
+        <td><%= ip.isp %></td>
+        <td><%= ip.netblock %></td>
+        <td><%= ip.subnet %></td>
+        <td><%= ip.network %></td>
+        <td><%= ip.reputation %></td>
+        <td><%= ip.domainname %></td>
+        <td><%= ip.organization %></td>
+        <td><%= ip.credibility %></td>
+        <td><%= link_to 'Show', ip %></td>
+        <td><%= link_to 'Edit', edit_ip_path(ip) %></td>
+        <td><%= link_to 'Destroy', ip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ip', new_ip_path %>

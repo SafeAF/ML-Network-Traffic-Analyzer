@@ -1,0 +1,73 @@
+<%= form_for(@network_box) do |f| %>
+  <% if @network_box.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@network_box.errors.count, "error") %> prohibited this network_box from being saved:</h2>
+
+      <ul>
+      <% @network_box.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :hostname %><br>
+    <%= f.text_field :hostname %>
+  </div>
+  <div class="field">
+    <%= f.label :ip %><br>
+    <%= f.text_field :ip %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :router %><br>
+    <%= f.text_field :router %>
+  </div>
+  <div class="field">
+    <%= f.label :gateway %><br>
+    <%= f.text_field :gateway %>
+  </div>
+  <div class="field">
+    <%= f.label :network_id %><br>
+    <%= f.text_field :network_id %>
+  </div>
+  <div class="field">
+    <%= f.label :infrastructure_id %><br>
+    <%= f.text_field :infrastructure_id %>
+  </div>
+  <div class="field">
+    <%= f.label :gateway_ip %><br>
+    <%= f.text_field :gateway_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :os %><br>
+    <%= f.text_field :os %>
+  </div>
+  <div class="field">
+    <%= f.label :operations_id %><br>
+    <%= f.text_field :operations_id %>
+  </div>
+  <div class="field">
+    <%= f.label :configuration %><br>
+    <%= f.text_area :configuration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

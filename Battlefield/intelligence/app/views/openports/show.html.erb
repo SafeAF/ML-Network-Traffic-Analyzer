@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @openport.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @openport.desc %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @openport.port %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @openport.ip %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @openport.service %>
+</p>
+
+<p>
+  <strong>Network:</strong>
+  <%= @openport.network %>
+</p>
+
+<%= link_to 'Edit', edit_openport_path(@openport) %> |
+<%= link_to 'Back', openports_path %>

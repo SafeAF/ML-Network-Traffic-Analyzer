@@ -1,0 +1,149 @@
+<%= form_for(@infrastructure) do |f| %>
+  <% if @infrastructure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@infrastructure.errors.count, "error") %> prohibited this infrastructure from being saved:</h2>
+
+      <ul>
+      <% @infrastructure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :purpose %><br>
+    <%= f.text_field :purpose %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :effectiveness %><br>
+    <%= f.text_field :effectiveness %>
+  </div>
+  <div class="field">
+    <%= f.label :utilization %><br>
+    <%= f.text_field :utilization %>
+  </div>
+  <div class="field">
+    <%= f.label :return_on_assets %><br>
+    <%= f.text_field :return_on_assets %>
+  </div>
+  <div class="field">
+    <%= f.label :manhours_per_unit_production %><br>
+    <%= f.text_field :manhours_per_unit_production %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue_per_employee %><br>
+    <%= f.text_field :revenue_per_employee %>
+  </div>
+  <div class="field">
+    <%= f.label :organizational_unit %><br>
+    <%= f.text_field :organizational_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :total_klocs %><br>
+    <%= f.text_field :total_klocs %>
+  </div>
+  <div class="field">
+    <%= f.label :klocs_ytd %><br>
+    <%= f.text_field :klocs_ytd %>
+  </div>
+  <div class="field">
+    <%= f.label :total_manhours %><br>
+    <%= f.text_field :total_manhours %>
+  </div>
+  <div class="field">
+    <%= f.label :manhours_this_month %><br>
+    <%= f.text_field :manhours_this_month %>
+  </div>
+  <div class="field">
+    <%= f.label :manhours_last_month %><br>
+    <%= f.text_field :manhours_last_month %>
+  </div>
+  <div class="field">
+    <%= f.label :average_manhours %><br>
+    <%= f.text_field :average_manhours %>
+  </div>
+  <div class="field">
+    <%= f.label :bugs_this_month %><br>
+    <%= f.text_field :bugs_this_month %>
+  </div>
+  <div class="field">
+    <%= f.label :bugs_last_month %><br>
+    <%= f.text_field :bugs_last_month %>
+  </div>
+  <div class="field">
+    <%= f.label :average_bugs_month %><br>
+    <%= f.text_field :average_bugs_month %>
+  </div>
+  <div class="field">
+    <%= f.label :klocs_this_month %><br>
+    <%= f.text_field :klocs_this_month %>
+  </div>
+  <div class="field">
+    <%= f.label :klocs_last_month %><br>
+    <%= f.text_field :klocs_last_month %>
+  </div>
+  <div class="field">
+    <%= f.label :average_klocs_month %><br>
+    <%= f.text_field :average_klocs_month %>
+  </div>
+  <div class="field">
+    <%= f.label :klocs_per_manhour %><br>
+    <%= f.text_field :klocs_per_manhour %>
+  </div>
+  <div class="field">
+    <%= f.label :bugs_per_kloc %><br>
+    <%= f.text_field :bugs_per_kloc %>
+  </div>
+  <div class="field">
+    <%= f.label :defect_removal_rate %><br>
+    <%= f.text_field :defect_removal_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :service %><br>
+    <%= f.text_field :service %>
+  </div>
+  <div class="field">
+    <%= f.label :application %><br>
+    <%= f.text_field :application %>
+  </div>
+  <div class="field">
+    <%= f.label :cluster_id %><br>
+    <%= f.text_field :cluster_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :criticality %><br>
+    <%= f.number_field :criticality %>
+  </div>
+  <div class="field">
+    <%= f.label :network %><br>
+    <%= f.text_field :network %>
+  </div>
+  <div class="field">
+    <%= f.label :admin_id %><br>
+    <%= f.text_field :admin_id %>
+  </div>
+  <div class="field">
+    <%= f.label :operations_id %><br>
+    <%= f.text_field :operations_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

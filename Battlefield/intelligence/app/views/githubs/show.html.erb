@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @github.owner %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @github.member %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @github.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @github.password %>
+</p>
+
+<p>
+  <strong>Apikey:</strong>
+  <%= @github.apikey %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @github.user %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @github.url %>
+</p>
+
+<p>
+  <strong>Membership:</strong>
+  <%= @github.membership %>
+</p>
+
+<%= link_to 'Edit', edit_github_path(@github) %> |
+<%= link_to 'Back', githubs_path %>

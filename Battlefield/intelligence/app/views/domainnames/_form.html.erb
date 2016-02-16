@@ -1,0 +1,81 @@
+<%= form_for(@domainname) do |f| %>
+  <% if @domainname.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@domainname.errors.count, "error") %> prohibited this domainname from being saved:</h2>
+
+      <ul>
+      <% @domainname.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ip_id %><br>
+    <%= f.text_field :ip_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cname %><br>
+    <%= f.text_field :cname %>
+  </div>
+  <div class="field">
+    <%= f.label :aname %><br>
+    <%= f.text_field :aname %>
+  </div>
+  <div class="field">
+    <%= f.label :mx %><br>
+    <%= f.text_field :mx %>
+  </div>
+  <div class="field">
+    <%= f.label :mx2 %><br>
+    <%= f.text_field :mx2 %>
+  </div>
+  <div class="field">
+    <%= f.label :mx3 %><br>
+    <%= f.text_field :mx3 %>
+  </div>
+  <div class="field">
+    <%= f.label :mx4 %><br>
+    <%= f.text_field :mx4 %>
+  </div>
+  <div class="field">
+    <%= f.label :hostname %><br>
+    <%= f.text_field :hostname %>
+  </div>
+  <div class="field">
+    <%= f.label :reverse_lookup %><br>
+    <%= f.text_field :reverse_lookup %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :isp %><br>
+    <%= f.text_field :isp %>
+  </div>
+  <div class="field">
+    <%= f.label :organisation_id %><br>
+    <%= f.text_field :organisation_id %>
+  </div>
+  <div class="field">
+    <%= f.label :network_id %><br>
+    <%= f.text_field :network_id %>
+  </div>
+  <div class="field">
+    <%= f.label :server_id %><br>
+    <%= f.text_field :server_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nameserver1 %><br>
+    <%= f.text_field :nameserver1 %>
+  </div>
+  <div class="field">
+    <%= f.label :nameserver2 %><br>
+    <%= f.text_field :nameserver2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
