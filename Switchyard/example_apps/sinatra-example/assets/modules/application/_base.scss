@@ -1,6 +1,0 @@
-.container {
-  @include containerElement;
-  .details {
-    @include span-columns(12);
-  }
-}

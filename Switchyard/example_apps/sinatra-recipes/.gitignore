@@ -1,8 +1,0 @@
-Gemfile.lock
-.sass-cache
-.rvmrc
-config/database.yml
-.ruby-version
-bin
-.bundle
-*.swp

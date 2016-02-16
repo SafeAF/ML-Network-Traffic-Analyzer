@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-Dir[File.dirname(__FILE__) + '../webui/app/models/*.rb'].each do |file|
-	require File.basename(file, File.extname(file))
-end
-

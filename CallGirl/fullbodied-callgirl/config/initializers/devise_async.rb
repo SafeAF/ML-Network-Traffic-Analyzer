@@ -1,1 +1,0 @@
-# Devis::Async.backend = :sidekiq

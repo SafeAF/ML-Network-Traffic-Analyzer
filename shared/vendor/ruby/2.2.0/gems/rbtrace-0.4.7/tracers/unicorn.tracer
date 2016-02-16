@@ -1,1 +1,0 @@
-Unicorn::App::OldRails#call(env['PATH_INFO'])
