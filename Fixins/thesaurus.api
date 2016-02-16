@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'mechanize'
+
+
+# <div class="source-box"
+# http://dictionary.reference.com/browse/foo?s=t
+#
+# div class relevancy-list and class: synonym-description
+# #//*[@id="filters-0"]/div[3]/div <--- xpath for rel list
+# http://www.thesaurus.com/browse/bar?s=t
+
+# div class target-area-container
+# http://translate.reference.com/english/german/bar/tYmFy
+word = 'foo'
+agent = Mechanize.new
+#page = agent.get("http://dictionary.reference.com/browse/#{word}?s=t")
+#pp page
+syns = agent.get("http://dictionary.reference.com/browse/#{word}?s=t").search()
+pp syns

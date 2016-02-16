@@ -1,0 +1,14 @@
+source 'https://rubygems.org'
+
+gem 'mechanize'
+gem 'pry-byebug'
+gem 'nokogiri'
+
+gem 'activerecord'
+gem 'mongoid'
+gem 'mongo'
+gem 'redis'
+gem 'redis-objects'
+gem 'rye'
+
+

@@ -1,0 +1,1 @@
+curl -F 'repository[name]=API_Hotness' -F 'login=defunkt' -F 'token=6ef8395fecf207165f1a82178ae1b984' http://github.com/repositories
