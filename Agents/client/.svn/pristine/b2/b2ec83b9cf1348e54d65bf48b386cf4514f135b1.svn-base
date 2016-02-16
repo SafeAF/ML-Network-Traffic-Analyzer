@@ -1,0 +1,8 @@
+#!/bin/bash
+# BareMetal Networks: Emergence Uninstaller
+
+dir=/etc/emergence
+userdel emergence
+rm -rf $dir
+rm /etc/init.d/emergence
+echo "Uninstall completed."
