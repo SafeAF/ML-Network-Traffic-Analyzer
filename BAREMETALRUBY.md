@@ -87,6 +87,24 @@ __Good__
 
 # Advanced Ruby
 
+## Auto create a ruby file in ruby and autoload a list of files and execute
+
+
+                         lib/ghi/commands/status.rb
+                  bin/ghi
+                )
+                files = FileList[*manifest]
+                File.open 'ghi', 'w' do |f|
+                  f.puts '#!/usr/bin/env ruby'
+                  f.puts '# encoding: utf-8'
+                  files.each { |file| f << File.read(file).gsub(/^\s+autoload.+$\n+/, '') }
+                  f.chmod 0755
+                end
+                system './ghi 1>/dev/null'
+              	puts "ghi succesfully built!"
+              end
+
+
 # Mind Melting Ruby
 
 # Psychedelic Cloud Castles 

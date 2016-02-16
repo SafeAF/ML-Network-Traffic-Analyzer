@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @topLevelName %> Logs</h1>
+<p>View logs from the centralized syslog repository</p>
+
+<%= render 'ajax_search_form' %>
+
+
+<div class="box box-solid box-primary">
+	<div class="box-header with-border">
+		<h3 class="box-title">Aggregate Logs from <%= @centralLogRepo %></h3>
+		<div class="box-tools pull-right">
+			<!-- Buttons, labels, and many other things can be placed here! -->
+			<!-- Here is a label for example -->
+			<span class="label label-primary">System Logs: All</span>
+			<div class="has-feedback">
+
+
+				<span class="glyphicon glyphicon-search form-control-feedback"></span>
+			</div>
+			<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			<button class="btn btn-box-tool" data-widget="expandable"><i class="fa fa-plus"></i></button>
+			<button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+		</div><!-- /.box-tools -->
+	</div><!-- /.box-header -->
+	<div class="box-body">
+
+		<table>
+			<thead>
+			<tr>
+				<th>ID</th>
+				<th>DeviceReportedTime</th>
+				<th>FromHost</th>
+				<th>Message</th>
+				<th>SysLogTag</th>
+				<th>Facility</th>
+				<th>Priority</th>
+				<th colspan="2"></th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<% @logs.each do |log| %>
+				<% next if log.Facility =~ /cron|CRON/ %>
+				<tr>
+
+					<td><%=log.id %></td>
+					<td><%=log.DeviceReportedTime %></td>
+					<td><%=log.FromHost %></td>
+					<td><%=log.Message %></td>
+					<td><%=log.SysLogTag %></td>
+					<td><%=log.Facility %></td>
+					<td><%=log.Priority %></td>
+					<td><%= link_to 'Show',log, :class => 'btn' %></td>
+
+					<td><%= link_to 'Destroy',log, :class => 'btn',  method: :delete,
+													data: {
+																	confirm: 'Are you sure?' } %></td>
+				</tr>
+			<% end %>
+			</tbody>
+		</table>
+
+
+
+	</div><!-- /.box-body -->
+	<div class="box-footer">
+		<%= will_paginate @logs, :container => false %>
+	</div><!-- box-footer -->
+</div><!-- /.box -->
+
+

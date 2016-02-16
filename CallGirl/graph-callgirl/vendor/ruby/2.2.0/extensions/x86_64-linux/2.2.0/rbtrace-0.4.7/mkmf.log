@@ -1,0 +1,472 @@
+Building msgpack
+"tar zxvf msgpack-0.5.7.tar.gz"
+msgpack-0.5.7/
+msgpack-0.5.7/ac/
+msgpack-0.5.7/aclocal.m4
+msgpack-0.5.7/AUTHORS
+msgpack-0.5.7/ChangeLog
+msgpack-0.5.7/config.h.in
+msgpack-0.5.7/configure
+msgpack-0.5.7/configure.in
+msgpack-0.5.7/COPYING
+msgpack-0.5.7/INSTALL
+msgpack-0.5.7/LICENSE
+msgpack-0.5.7/Makefile.am
+msgpack-0.5.7/Makefile.in
+msgpack-0.5.7/msgpack_vc.postbuild.bat
+msgpack-0.5.7/msgpack_vc2008.sln
+msgpack-0.5.7/msgpack_vc2008.vcproj
+msgpack-0.5.7/msgpack_vc8.sln
+msgpack-0.5.7/msgpack_vc8.vcproj
+msgpack-0.5.7/NEWS
+msgpack-0.5.7/NOTICE
+msgpack-0.5.7/README
+msgpack-0.5.7/README.md
+msgpack-0.5.7/src/
+msgpack-0.5.7/test/
+msgpack-0.5.7/test/buffer.cc
+msgpack-0.5.7/test/cases.cc
+msgpack-0.5.7/test/cases.mpac
+msgpack-0.5.7/test/cases_compact.mpac
+msgpack-0.5.7/test/convert.cc
+msgpack-0.5.7/test/fixint.cc
+msgpack-0.5.7/test/fixint_c.cc
+msgpack-0.5.7/test/Makefile.am
+msgpack-0.5.7/test/Makefile.in
+msgpack-0.5.7/test/msgpack_test.cpp
+msgpack-0.5.7/test/msgpackc_test.cpp
+msgpack-0.5.7/test/object.cc
+msgpack-0.5.7/test/pack_unpack.cc
+msgpack-0.5.7/test/pack_unpack_c.cc
+msgpack-0.5.7/test/streaming.cc
+msgpack-0.5.7/test/streaming_c.cc
+msgpack-0.5.7/test/version.cc
+msgpack-0.5.7/test/zone.cc
+msgpack-0.5.7/src/gcc_atomic.cpp
+msgpack-0.5.7/src/Makefile.am
+msgpack-0.5.7/src/Makefile.in
+msgpack-0.5.7/src/msgpack/
+msgpack-0.5.7/src/msgpack.h
+msgpack-0.5.7/src/msgpack.hpp
+msgpack-0.5.7/src/object.cpp
+msgpack-0.5.7/src/objectc.c
+msgpack-0.5.7/src/unpack.c
+msgpack-0.5.7/src/version.c
+msgpack-0.5.7/src/vrefbuffer.c
+msgpack-0.5.7/src/zone.c
+msgpack-0.5.7/src/msgpack/object.h
+msgpack-0.5.7/src/msgpack/object.hpp
+msgpack-0.5.7/src/msgpack/pack.h
+msgpack-0.5.7/src/msgpack/pack.hpp
+msgpack-0.5.7/src/msgpack/pack_define.h
+msgpack-0.5.7/src/msgpack/pack_template.h
+msgpack-0.5.7/src/msgpack/sbuffer.h
+msgpack-0.5.7/src/msgpack/sbuffer.hpp
+msgpack-0.5.7/src/msgpack/sysdep.h
+msgpack-0.5.7/src/msgpack/type/
+msgpack-0.5.7/src/msgpack/type.hpp
+msgpack-0.5.7/src/msgpack/unpack.h
+msgpack-0.5.7/src/msgpack/unpack.hpp
+msgpack-0.5.7/src/msgpack/unpack_define.h
+msgpack-0.5.7/src/msgpack/unpack_template.h
+msgpack-0.5.7/src/msgpack/version.h
+msgpack-0.5.7/src/msgpack/version.h.in
+msgpack-0.5.7/src/msgpack/vrefbuffer.h
+msgpack-0.5.7/src/msgpack/vrefbuffer.hpp
+msgpack-0.5.7/src/msgpack/zbuffer.h
+msgpack-0.5.7/src/msgpack/zbuffer.hpp
+msgpack-0.5.7/src/msgpack/zone.h
+msgpack-0.5.7/src/msgpack/zone.hpp
+msgpack-0.5.7/src/msgpack/zone.hpp.erb
+msgpack-0.5.7/src/msgpack/type/bool.hpp
+msgpack-0.5.7/src/msgpack/type/define.hpp
+msgpack-0.5.7/src/msgpack/type/define.hpp.erb
+msgpack-0.5.7/src/msgpack/type/deque.hpp
+msgpack-0.5.7/src/msgpack/type/fixint.hpp
+msgpack-0.5.7/src/msgpack/type/float.hpp
+msgpack-0.5.7/src/msgpack/type/int.hpp
+msgpack-0.5.7/src/msgpack/type/list.hpp
+msgpack-0.5.7/src/msgpack/type/map.hpp
+msgpack-0.5.7/src/msgpack/type/nil.hpp
+msgpack-0.5.7/src/msgpack/type/pair.hpp
+msgpack-0.5.7/src/msgpack/type/raw.hpp
+msgpack-0.5.7/src/msgpack/type/set.hpp
+msgpack-0.5.7/src/msgpack/type/string.hpp
+msgpack-0.5.7/src/msgpack/type/tr1/
+msgpack-0.5.7/src/msgpack/type/tuple.hpp
+msgpack-0.5.7/src/msgpack/type/tuple.hpp.erb
+msgpack-0.5.7/src/msgpack/type/vector.hpp
+msgpack-0.5.7/src/msgpack/type/tr1/unordered_map.hpp
+msgpack-0.5.7/src/msgpack/type/tr1/unordered_set.hpp
+msgpack-0.5.7/ac/compile
+msgpack-0.5.7/ac/config.guess
+msgpack-0.5.7/ac/config.sub
+msgpack-0.5.7/ac/depcomp
+msgpack-0.5.7/ac/install-sh
+msgpack-0.5.7/ac/ltmain.sh
+msgpack-0.5.7/ac/missing
+"./configure --disable-dependency-tracking --disable-shared --with-pic --prefix=/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/ --libdir=/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib"
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking if C++ API is enabled... 
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking whether gcc and cc understand -c and -o together... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking dependency style of gcc... none
+checking if debug option is enabled... 
+checking for __sync_* atomic operations... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/msgpack/version.h
+config.status: creating test/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+"make install"
+Making install in src
+make[1]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/src'
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -O3 -Wall  -g -c -o unpack.lo unpack.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -O3 -Wall -g -c unpack.c  -fPIC -DPIC -o unpack.o
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -O3 -Wall  -g -c -o objectc.lo objectc.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -O3 -Wall -g -c objectc.c  -fPIC -DPIC -o objectc.o
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -O3 -Wall  -g -c -o version.lo version.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -O3 -Wall -g -c version.c  -fPIC -DPIC -o version.o
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -O3 -Wall  -g -c -o vrefbuffer.lo vrefbuffer.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -O3 -Wall -g -c vrefbuffer.c  -fPIC -DPIC -o vrefbuffer.o
+/bin/bash ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -O3 -Wall  -g -c -o zone.lo zone.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -O3 -Wall -g -c zone.c  -fPIC -DPIC -o zone.o
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I..     -O3 -Wall  -g -c -o object.lo object.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I.. -O3 -Wall -g -c object.cpp  -fPIC -DPIC -o object.o
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall  -g -version-info 3:0:0  -o libmsgpack.la -rpath /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib unpack.lo objectc.lo version.lo vrefbuffer.lo zone.lo object.lo   
+libtool: link: ar cru .libs/libmsgpack.a  unpack.o objectc.o version.o vrefbuffer.o zone.o object.o
+libtool: link: ranlib .libs/libmsgpack.a
+libtool: link: ( cd ".libs" && rm -f "libmsgpack.la" && ln -s "../libmsgpack.la" "libmsgpack.la" )
+/bin/bash ../libtool --tag=CC   --mode=link gcc  -O3 -Wall  -g -version-info 2:0:0  -o libmsgpackc.la -rpath /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib unpack.lo objectc.lo version.lo vrefbuffer.lo zone.lo  
+libtool: link: ar cru .libs/libmsgpackc.a  unpack.o objectc.o version.o vrefbuffer.o zone.o
+libtool: link: ranlib .libs/libmsgpackc.a
+libtool: link: ( cd ".libs" && rm -f "libmsgpackc.la" && ln -s "../libmsgpackc.la" "libmsgpackc.la" )
+make[2]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/src'
+test -z "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib" || /bin/mkdir -p "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib"
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libmsgpack.la libmsgpackc.la '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib'
+libtool: install: /usr/bin/install -c .libs/libmsgpack.lai /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpack.la
+libtool: install: /usr/bin/install -c .libs/libmsgpackc.lai /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpackc.la
+libtool: install: /usr/bin/install -c .libs/libmsgpack.a /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpack.a
+libtool: install: chmod 644 /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpack.a
+libtool: install: ranlib /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpack.a
+libtool: install: /usr/bin/install -c .libs/libmsgpackc.a /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpackc.a
+libtool: install: chmod 644 /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpackc.a
+libtool: install: ranlib /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib/libmsgpackc.a
+libtool: finish: PATH="/home/vishnu/.rvm/gems/ruby-2.2.1/bin:/home/vishnu/.rvm/gems/ruby-2.2.1@global/bin:/home/vishnu/.rvm/rubies/ruby-2.2.1/bin:/home/vishnu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vishnu/.rvm/bin:/sbin" ldconfig -n /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+test -z "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include" || /bin/mkdir -p "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include"
+/bin/mkdir -p '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack'
+ /usr/bin/install -c -m 644  msgpack/pack_define.h msgpack/pack_template.h msgpack/unpack_define.h msgpack/unpack_template.h msgpack/sysdep.h msgpack/sbuffer.h msgpack/version.h msgpack/vrefbuffer.h msgpack/zbuffer.h msgpack/pack.h msgpack/unpack.h msgpack/object.h msgpack/zone.h msgpack/sbuffer.hpp msgpack/vrefbuffer.hpp msgpack/zbuffer.hpp msgpack/pack.hpp msgpack/unpack.hpp msgpack/object.hpp msgpack/zone.hpp msgpack/type.hpp '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack'
+/bin/mkdir -p '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/type/tr1'
+ /usr/bin/install -c -m 644  msgpack/type/tr1/unordered_map.hpp msgpack/type/tr1/unordered_set.hpp '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/type/tr1'
+ /usr/bin/install -c -m 644  msgpack.h msgpack.hpp '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/.'
+/bin/mkdir -p '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/type'
+ /usr/bin/install -c -m 644  msgpack/type/bool.hpp msgpack/type/deque.hpp msgpack/type/float.hpp msgpack/type/fixint.hpp msgpack/type/int.hpp msgpack/type/list.hpp msgpack/type/map.hpp msgpack/type/nil.hpp msgpack/type/pair.hpp msgpack/type/raw.hpp msgpack/type/set.hpp msgpack/type/string.hpp msgpack/type/vector.hpp msgpack/type/tuple.hpp msgpack/type/define.hpp '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include/msgpack/type'
+make[2]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/src'
+make[1]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/src'
+Making install in test
+make[1]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/test'
+make[2]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/test'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/test'
+make[1]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7/test'
+make[1]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7'
+make[2]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7'
+make[1]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/src/msgpack-0.5.7'
+have_library: checking for main() in -lmsgpackc_ext... -------------------- yes
+
+"gcc -o conftest -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L. -L/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -Wl,-R/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L. -L/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -Wl,-R/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby -lmsgpackc_ext  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for msgpack.h... -------------------- yes
+
+"gcc -E -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <msgpack.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_during_gc() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L. -L/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -Wl,-R/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lmsgpackc_ext  -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby -lmsgpackc_ext  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_during_gc; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_during_gc; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_add_event_hook() in ruby.h,node.h... -------------------- no
+
+"gcc -o conftest -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L. -L/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -Wl,-R/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lmsgpackc_ext  -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby -lmsgpackc_ext  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c:4:18: fatal error: node.h: No such file or directory
+ #include <node.h>
+                  ^
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: #include <node.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_add_event_hook; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L. -L/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -Wl,-R/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lmsgpackc_ext  -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby -lmsgpackc_ext  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c:4:18: fatal error: node.h: No such file or directory
+ #include <node.h>
+                  ^
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: #include <node.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+16: int t(void) { rb_gc_add_event_hook(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_postponed_job_register_one() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L. -L/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -Wl,-R/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lmsgpackc_ext  -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby -lmsgpackc_ext  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:57: error: ‘rb_postponed_job_register_one’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_postponed_job_register_one; return 0; }
+                                                         ^
+conftest.c:15:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_postponed_job_register_one; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_postponed_job_register_one; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbtrace-0.4.7/ext/dst/include -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/x86_64-linux -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0/ruby/backward -I/home/vishnu/.rvm/rubies/ruby-2.2.1/include/ruby-2.2.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC conftest.c  -L. -L/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -Wl,-R/home/vishnu/.rvm/rubies/ruby-2.2.1/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lmsgpackc_ext  -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby -lmsgpackc_ext  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:1: warning: implicit declaration of function ‘rb_postponed_job_register_one’ [-Wimplicit-function-declaration]
+ int t(void) { rb_postponed_job_register_one(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { rb_postponed_job_register_one(); return 0; }
+/* end */
+
+--------------------
+

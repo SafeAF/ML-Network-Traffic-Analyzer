@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    yahoo-finance (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  yahoo-finance
+
+BUNDLED WITH
+   1.11.2

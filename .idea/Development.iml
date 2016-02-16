@@ -3,9 +3,54 @@
   <component name="DBNavigator.Module.ConnectionManager">
     <connections />
   </component>
+  <component name="ModuleRunConfigurationManager">
+    <configuration default="false" name="server" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="Development" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/Bloodlust" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/Bloodlust/server.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="quoteserv.api" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="Development" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/QuoteServ" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/QuoteServ/quoteserv.api.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+  </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/Bloodlust/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/CallGirlHotlineAPI/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/CallGirlSpyder/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/Client/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/Switchyard/vendor" />
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.2.1" jdkType="RUBY_SDK" />
@@ -28,6 +73,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.3.5.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bson (v3.2.6, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.11.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano (v3.4.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano-passenger (v0.1.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="clearance (v1.11.0, RVM: ruby-2.2.1) [gem]" level="application" />

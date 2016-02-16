@@ -1,0 +1,837 @@
+/home/vishnu/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20151007-16756-1xq0mtq.rb extconf.rb 
+checking for rb_postponed_job_register_one()... yes
+checking for rb_profile_frames()... yes
+checking for rb_tracepoint_new()... yes
+checking for RUBY_INTERNAL_EVENT_NEWOBJ... yes
+checking for main() in -lzmq... no
+checking for libtool... yes
+checking for autoconf... yes
+checking for automake... yes
+[32mDownloading and installing zeromq from source[0m
+checking for curl... yes
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  1 2099k    1 33060    0     0  47633      0  0:00:45 --:--:--  0:00:45 47636  7 2099k    7  166k    0     0   103k      0  0:00:20  0:00:01  0:00:19  103k 19 2099k   19  404k    0     0   151k      0  0:00:13  0:00:02  0:00:11  151k 32 2099k   32  691k    0     0   193k      0  0:00:10  0:00:03  0:00:07  193k 54 2099k   54 1143k    0     0   251k      0  0:00:08  0:00:04  0:00:04  251k100 2099k  100 2099k    0     0   382k      0  0:00:05  0:00:05 --:--:--  431k
+zeromq-4.0.4/
+zeromq-4.0.4/COPYING.LESSER
+zeromq-4.0.4/autogen.sh
+zeromq-4.0.4/Makefile.in
+zeromq-4.0.4/COPYING
+zeromq-4.0.4/acinclude.m4
+zeromq-4.0.4/foreign/
+zeromq-4.0.4/foreign/openpgm/
+zeromq-4.0.4/foreign/openpgm/Makefile.in
+zeromq-4.0.4/foreign/openpgm/Makefile.am
+zeromq-4.0.4/foreign/openpgm/libpgm-5.2.122~dfsg.tar.gz
+zeromq-4.0.4/perf/
+zeromq-4.0.4/perf/Makefile.in
+zeromq-4.0.4/perf/Makefile.am
+zeromq-4.0.4/perf/inproc_thr.cpp
+zeromq-4.0.4/perf/local_thr.cpp
+zeromq-4.0.4/perf/remote_lat.cpp
+zeromq-4.0.4/perf/remote_thr.cpp
+zeromq-4.0.4/perf/inproc_lat.cpp
+zeromq-4.0.4/perf/local_lat.cpp
+zeromq-4.0.4/INSTALL
+zeromq-4.0.4/Makefile.am
+zeromq-4.0.4/version.sh
+zeromq-4.0.4/ChangeLog
+zeromq-4.0.4/include/
+zeromq-4.0.4/include/zmq_utils.h
+zeromq-4.0.4/include/zmq.h
+zeromq-4.0.4/aclocal.m4
+zeromq-4.0.4/tools/
+zeromq-4.0.4/tools/Makefile.in
+zeromq-4.0.4/tools/Makefile.am
+zeromq-4.0.4/tools/curve_keygen.c
+zeromq-4.0.4/tests/
+zeromq-4.0.4/tests/test_last_endpoint.cpp
+zeromq-4.0.4/tests/Makefile.in
+zeromq-4.0.4/tests/test_sub_forward.cpp
+zeromq-4.0.4/tests/test_shutdown_stress.cpp
+zeromq-4.0.4/tests/test_spec_dealer.cpp
+zeromq-4.0.4/tests/test_many_sockets.cpp
+zeromq-4.0.4/tests/test_issue_566.cpp
+zeromq-4.0.4/tests/test_req_relaxed.cpp
+zeromq-4.0.4/tests/test_connect_resolve.cpp
+zeromq-4.0.4/tests/test_conflate.cpp
+zeromq-4.0.4/tests/test_spec_rep.cpp
+zeromq-4.0.4/tests/Makefile.am
+zeromq-4.0.4/tests/test_hwm.cpp
+zeromq-4.0.4/tests/test_invalid_rep.cpp
+zeromq-4.0.4/tests/test_reqrep_ipc.cpp
+zeromq-4.0.4/tests/test_security_plain.cpp
+zeromq-4.0.4/tests/test_stream.cpp
+zeromq-4.0.4/tests/test_spec_req.cpp
+zeromq-4.0.4/tests/test_term_endpoint.cpp
+zeromq-4.0.4/tests/test_timeo.cpp
+zeromq-4.0.4/tests/test_pair_ipc.cpp
+zeromq-4.0.4/tests/test_system.cpp
+zeromq-4.0.4/tests/test_req_correlate.cpp
+zeromq-4.0.4/tests/test_security_null.cpp
+zeromq-4.0.4/tests/test_spec_router.cpp
+zeromq-4.0.4/tests/test_msg_flags.cpp
+zeromq-4.0.4/tests/test_inproc_connect.cpp
+zeromq-4.0.4/tests/test_reqrep_tcp.cpp
+zeromq-4.0.4/tests/test_fork.cpp
+zeromq-4.0.4/tests/test_immediate.cpp
+zeromq-4.0.4/tests/test_reqrep_inproc.cpp
+zeromq-4.0.4/tests/test_disconnect_inproc.cpp
+zeromq-4.0.4/tests/test_router_mandatory.cpp
+zeromq-4.0.4/tests/test_monitor.cpp
+zeromq-4.0.4/tests/test_spec_pushpull.cpp
+zeromq-4.0.4/tests/test_ctx_destroy.cpp
+zeromq-4.0.4/tests/test_pair_inproc.cpp
+zeromq-4.0.4/tests/test_probe_router.cpp
+zeromq-4.0.4/tests/testutil.hpp
+zeromq-4.0.4/tests/test_pair_tcp.cpp
+zeromq-4.0.4/tests/test_router_raw_empty.cpp
+zeromq-4.0.4/tests/test_ctx_options.cpp
+zeromq-4.0.4/tests/test_security_curve.cpp
+zeromq-4.0.4/tests/test_iov.cpp
+zeromq-4.0.4/tests/test_reqrep_device.cpp
+zeromq-4.0.4/tests/test_abstract_ipc.cpp
+zeromq-4.0.4/configure
+zeromq-4.0.4/src/
+zeromq-4.0.4/src/blob.hpp
+zeromq-4.0.4/src/pgm_socket.cpp
+zeromq-4.0.4/src/proxy.cpp
+zeromq-4.0.4/src/i_engine.hpp
+zeromq-4.0.4/src/trie.hpp
+zeromq-4.0.4/src/ipc_connecter.hpp
+zeromq-4.0.4/src/msg.cpp
+zeromq-4.0.4/src/Makefile.in
+zeromq-4.0.4/src/zmq.cpp
+zeromq-4.0.4/src/kqueue.hpp
+zeromq-4.0.4/src/windows.hpp
+zeromq-4.0.4/src/raw_decoder.cpp
+zeromq-4.0.4/src/fq.cpp
+zeromq-4.0.4/src/ypipe_conflate.hpp
+zeromq-4.0.4/src/own.cpp
+zeromq-4.0.4/src/proxy.hpp
+zeromq-4.0.4/src/curve_server.cpp
+zeromq-4.0.4/src/tcp_listener.cpp
+zeromq-4.0.4/src/ipc_address.hpp
+zeromq-4.0.4/src/session_base.hpp
+zeromq-4.0.4/src/io_object.hpp
+zeromq-4.0.4/src/config.hpp
+zeromq-4.0.4/src/kqueue.cpp
+zeromq-4.0.4/src/signaler.hpp
+zeromq-4.0.4/src/pipe.cpp
+zeromq-4.0.4/src/i_poll_events.hpp
+zeromq-4.0.4/src/encoder.hpp
+zeromq-4.0.4/src/ipc_listener.cpp
+zeromq-4.0.4/src/wire.hpp
+zeromq-4.0.4/src/trie.cpp
+zeromq-4.0.4/src/atomic_counter.hpp
+zeromq-4.0.4/src/v1_decoder.hpp
+zeromq-4.0.4/src/dist.hpp
+zeromq-4.0.4/src/ipc_listener.hpp
+zeromq-4.0.4/src/tcp_address.cpp
+zeromq-4.0.4/src/v2_decoder.cpp
+zeromq-4.0.4/src/tcp.cpp
+zeromq-4.0.4/src/v2_protocol.hpp
+zeromq-4.0.4/src/ipc_address.cpp
+zeromq-4.0.4/src/socket_base.cpp
+zeromq-4.0.4/src/ctx.cpp
+zeromq-4.0.4/src/mtrie.hpp
+zeromq-4.0.4/src/sub.hpp
+zeromq-4.0.4/src/fd.hpp
+zeromq-4.0.4/src/router.hpp
+zeromq-4.0.4/src/null_mechanism.cpp
+zeromq-4.0.4/src/socket_base.hpp
+zeromq-4.0.4/src/io_thread.hpp
+zeromq-4.0.4/src/xpub.hpp
+zeromq-4.0.4/src/reaper.cpp
+zeromq-4.0.4/src/Makefile.am
+zeromq-4.0.4/src/stdint.hpp
+zeromq-4.0.4/src/pgm_receiver.hpp
+zeromq-4.0.4/src/tcp.hpp
+zeromq-4.0.4/src/libzmq.vers
+zeromq-4.0.4/src/lb.cpp
+zeromq-4.0.4/src/stream.cpp
+zeromq-4.0.4/src/devpoll.hpp
+zeromq-4.0.4/src/req.hpp
+zeromq-4.0.4/src/array.hpp
+zeromq-4.0.4/src/clock.hpp
+zeromq-4.0.4/src/ip.cpp
+zeromq-4.0.4/src/curve_client.cpp
+zeromq-4.0.4/src/stream_engine.cpp
+zeromq-4.0.4/src/precompiled.hpp
+zeromq-4.0.4/src/mailbox.cpp
+zeromq-4.0.4/src/lb.hpp
+zeromq-4.0.4/src/curve_server.hpp
+zeromq-4.0.4/src/atomic_ptr.hpp
+zeromq-4.0.4/src/address.hpp
+zeromq-4.0.4/src/pgm_socket.hpp
+zeromq-4.0.4/src/libzmq.pc.in
+zeromq-4.0.4/src/mechanism.cpp
+zeromq-4.0.4/src/likely.hpp
+zeromq-4.0.4/src/tcp_connecter.cpp
+zeromq-4.0.4/src/pgm_sender.cpp
+zeromq-4.0.4/src/v2_encoder.cpp
+zeromq-4.0.4/src/poll.hpp
+zeromq-4.0.4/src/address.cpp
+zeromq-4.0.4/src/poller_base.cpp
+zeromq-4.0.4/src/xsub.cpp
+zeromq-4.0.4/src/router.cpp
+zeromq-4.0.4/src/epoll.hpp
+zeromq-4.0.4/src/pgm_receiver.cpp
+zeromq-4.0.4/src/v2_encoder.hpp
+zeromq-4.0.4/src/dist.cpp
+zeromq-4.0.4/src/yqueue.hpp
+zeromq-4.0.4/src/curve_client.hpp
+zeromq-4.0.4/src/pub.hpp
+zeromq-4.0.4/src/xpub.cpp
+zeromq-4.0.4/src/mtrie.cpp
+zeromq-4.0.4/src/pgm_sender.hpp
+zeromq-4.0.4/src/v1_encoder.hpp
+zeromq-4.0.4/src/zmq_utils.cpp
+zeromq-4.0.4/src/mutex.hpp
+zeromq-4.0.4/src/options.cpp
+zeromq-4.0.4/src/ipc_connecter.cpp
+zeromq-4.0.4/src/i_encoder.hpp
+zeromq-4.0.4/src/select.hpp
+zeromq-4.0.4/src/err.hpp
+zeromq-4.0.4/src/xsub.hpp
+zeromq-4.0.4/src/err.cpp
+zeromq-4.0.4/src/object.hpp
+zeromq-4.0.4/src/plain_mechanism.cpp
+zeromq-4.0.4/src/poll.cpp
+zeromq-4.0.4/src/own.hpp
+zeromq-4.0.4/src/io_object.cpp
+zeromq-4.0.4/src/plain_mechanism.hpp
+zeromq-4.0.4/src/pull.cpp
+zeromq-4.0.4/src/raw_encoder.cpp
+zeromq-4.0.4/src/dbuffer.hpp
+zeromq-4.0.4/src/push.hpp
+zeromq-4.0.4/src/null_mechanism.hpp
+zeromq-4.0.4/src/session_base.cpp
+zeromq-4.0.4/src/epoll.cpp
+zeromq-4.0.4/src/v1_decoder.cpp
+zeromq-4.0.4/src/pipe.hpp
+zeromq-4.0.4/src/tcp_connecter.hpp
+zeromq-4.0.4/src/dealer.hpp
+zeromq-4.0.4/src/thread.hpp
+zeromq-4.0.4/src/ypipe_base.hpp
+zeromq-4.0.4/src/object.cpp
+zeromq-4.0.4/src/decoder.hpp
+zeromq-4.0.4/src/random.hpp
+zeromq-4.0.4/src/push.cpp
+zeromq-4.0.4/src/signaler.cpp
+zeromq-4.0.4/src/raw_decoder.hpp
+zeromq-4.0.4/src/ctx.hpp
+zeromq-4.0.4/src/thread.cpp
+zeromq-4.0.4/src/options.hpp
+zeromq-4.0.4/src/mailbox.hpp
+zeromq-4.0.4/src/msg.hpp
+zeromq-4.0.4/src/pair.hpp
+zeromq-4.0.4/src/sub.cpp
+zeromq-4.0.4/src/random.cpp
+zeromq-4.0.4/src/stream_engine.hpp
+zeromq-4.0.4/src/fq.hpp
+zeromq-4.0.4/src/ip.hpp
+zeromq-4.0.4/src/tcp_address.hpp
+zeromq-4.0.4/src/command.hpp
+zeromq-4.0.4/src/pub.cpp
+zeromq-4.0.4/src/i_decoder.hpp
+zeromq-4.0.4/src/select.cpp
+zeromq-4.0.4/src/io_thread.cpp
+zeromq-4.0.4/src/ypipe.hpp
+zeromq-4.0.4/src/rep.cpp
+zeromq-4.0.4/src/tcp_listener.hpp
+zeromq-4.0.4/src/stream.hpp
+zeromq-4.0.4/src/pair.cpp
+zeromq-4.0.4/src/poller_base.hpp
+zeromq-4.0.4/src/dealer.cpp
+zeromq-4.0.4/src/mechanism.hpp
+zeromq-4.0.4/src/devpoll.cpp
+zeromq-4.0.4/src/rep.hpp
+zeromq-4.0.4/src/pull.hpp
+zeromq-4.0.4/src/reaper.hpp
+zeromq-4.0.4/src/clock.cpp
+zeromq-4.0.4/src/platform.hpp.in
+zeromq-4.0.4/src/v1_encoder.cpp
+zeromq-4.0.4/src/raw_encoder.hpp
+zeromq-4.0.4/src/req.cpp
+zeromq-4.0.4/src/poller.hpp
+zeromq-4.0.4/src/v2_decoder.hpp
+zeromq-4.0.4/src/precompiled.cpp
+zeromq-4.0.4/configure.ac
+zeromq-4.0.4/MAINTAINERS
+zeromq-4.0.4/zeromq.spec
+zeromq-4.0.4/builds/
+zeromq-4.0.4/builds/redhat/
+zeromq-4.0.4/builds/redhat/zeromq.spec.in
+zeromq-4.0.4/builds/msvc/
+zeromq-4.0.4/builds/msvc/c_remote_lat/
+zeromq-4.0.4/builds/msvc/c_remote_lat/c_remote_lat.vcproj
+zeromq-4.0.4/builds/msvc/c_remote_lat/c_remote_lat.vcxproj
+zeromq-4.0.4/builds/msvc/Makefile.in
+zeromq-4.0.4/builds/msvc/errno.cpp
+zeromq-4.0.4/builds/msvc/errno.hpp
+zeromq-4.0.4/builds/msvc/libzmq/
+zeromq-4.0.4/builds/msvc/libzmq/libzmq.vcxproj.filters
+zeromq-4.0.4/builds/msvc/libzmq/libzmq.vcproj
+zeromq-4.0.4/builds/msvc/libzmq/libzmq.vcxproj
+zeromq-4.0.4/builds/msvc/Makefile.am
+zeromq-4.0.4/builds/msvc/inproc_thr/
+zeromq-4.0.4/builds/msvc/inproc_thr/inproc_thr.vcxproj
+zeromq-4.0.4/builds/msvc/inproc_thr/inproc_thr.vcproj
+zeromq-4.0.4/builds/msvc/msvc.sln
+zeromq-4.0.4/builds/msvc/platform.hpp
+zeromq-4.0.4/builds/msvc/inproc_lat/
+zeromq-4.0.4/builds/msvc/inproc_lat/inproc_lat.vcproj
+zeromq-4.0.4/builds/msvc/inproc_lat/inproc_lat.vcxproj
+zeromq-4.0.4/builds/msvc/msvc10.sln
+zeromq-4.0.4/builds/msvc/c_local_thr/
+zeromq-4.0.4/builds/msvc/c_local_thr/c_local_thr.vcxproj
+zeromq-4.0.4/builds/msvc/c_local_thr/c_local_thr.vcproj
+zeromq-4.0.4/builds/msvc/c_local_lat/
+zeromq-4.0.4/builds/msvc/c_local_lat/c_local_lat.vcxproj
+zeromq-4.0.4/builds/msvc/c_local_lat/c_local_lat.vcproj
+zeromq-4.0.4/builds/msvc/c_remote_thr/
+zeromq-4.0.4/builds/msvc/c_remote_thr/c_remote_thr.vcproj
+zeromq-4.0.4/builds/msvc/c_remote_thr/c_remote_thr.vcxproj
+zeromq-4.0.4/builds/msvc/properties/
+zeromq-4.0.4/builds/msvc/properties/Win32_Release.props
+zeromq-4.0.4/builds/msvc/properties/Debug.props
+zeromq-4.0.4/builds/msvc/properties/Static.props
+zeromq-4.0.4/builds/msvc/properties/ZeroMQ_Static.props
+zeromq-4.0.4/builds/msvc/properties/Precompiled.props
+zeromq-4.0.4/builds/msvc/properties/Dynamic.props
+zeromq-4.0.4/builds/msvc/properties/x64.props
+zeromq-4.0.4/builds/msvc/properties/Release.props
+zeromq-4.0.4/builds/msvc/properties/Win32.props
+zeromq-4.0.4/builds/msvc/properties/Executable.props
+zeromq-4.0.4/builds/msvc/properties/Common.props
+zeromq-4.0.4/builds/msvc/properties/WithOpenPGM.props
+zeromq-4.0.4/builds/msvc/properties/ZeroMQ.props
+zeromq-4.0.4/AUTHORS
+zeromq-4.0.4/config/
+zeromq-4.0.4/config/compile
+zeromq-4.0.4/config/ltmain.sh
+zeromq-4.0.4/config/libtool.m4
+zeromq-4.0.4/config/config.sub
+zeromq-4.0.4/config/config.guess
+zeromq-4.0.4/config/depcomp
+zeromq-4.0.4/config/missing
+zeromq-4.0.4/config/lt~obsolete.m4
+zeromq-4.0.4/config/ltoptions.m4
+zeromq-4.0.4/config/ltsugar.m4
+zeromq-4.0.4/config/install-sh
+zeromq-4.0.4/config/ltversion.m4
+zeromq-4.0.4/doc/
+zeromq-4.0.4/doc/zmq.txt
+zeromq-4.0.4/doc/zmq_ctx_get.html
+zeromq-4.0.4/doc/zmq_ctx_destroy.3
+zeromq-4.0.4/doc/zmq_ctx_term.html
+zeromq-4.0.4/doc/zmq_ctx_new.3
+zeromq-4.0.4/doc/Makefile.in
+zeromq-4.0.4/doc/zmq_msg_data.3
+zeromq-4.0.4/doc/zmq_msg_init_data.txt
+zeromq-4.0.4/doc/zmq_plain.txt
+zeromq-4.0.4/doc/zmq_pgm.html
+zeromq-4.0.4/doc/zmq_msg_close.html
+zeromq-4.0.4/doc/zmq_curve.txt
+zeromq-4.0.4/doc/zmq_init.3
+zeromq-4.0.4/doc/zmq_ctx_get.txt
+zeromq-4.0.4/doc/zmq_disconnect.txt
+zeromq-4.0.4/doc/zmq_errno.txt
+zeromq-4.0.4/doc/zmq_connect.3
+zeromq-4.0.4/doc/zmq_ctx_set.3
+zeromq-4.0.4/doc/zmq_msg_init_size.3
+zeromq-4.0.4/doc/zmq_inproc.html
+zeromq-4.0.4/doc/zmq.html
+zeromq-4.0.4/doc/zmq_bind.3
+zeromq-4.0.4/doc/zmq_msg_move.html
+zeromq-4.0.4/doc/zmq_epgm.html
+zeromq-4.0.4/doc/zmq_ipc.html
+zeromq-4.0.4/doc/zmq_poll.html
+zeromq-4.0.4/doc/zmq_ctx_get.3
+zeromq-4.0.4/doc/zmq_strerror.3
+zeromq-4.0.4/doc/zmq_msg_send.3
+zeromq-4.0.4/doc/zmq_proxy.3
+zeromq-4.0.4/doc/zmq_msg_init.3
+zeromq-4.0.4/doc/zmq_socket_monitor.html
+zeromq-4.0.4/doc/zmq_ctx_set.html
+zeromq-4.0.4/doc/zmq_socket.3
+zeromq-4.0.4/doc/zmq_version.3
+zeromq-4.0.4/doc/zmq_ctx_destroy.txt
+zeromq-4.0.4/doc/zmq_plain.html
+zeromq-4.0.4/doc/zmq_proxy.txt
+zeromq-4.0.4/doc/zmq_ctx_term.3
+zeromq-4.0.4/doc/zmq_setsockopt.html
+zeromq-4.0.4/doc/zmq_pgm.txt
+zeromq-4.0.4/doc/zmq_send.html
+zeromq-4.0.4/doc/zmq_ctx_new.txt
+zeromq-4.0.4/doc/zmq_send_const.txt
+zeromq-4.0.4/doc/zmq_z85_encode.3
+zeromq-4.0.4/doc/zmq_bind.html
+zeromq-4.0.4/doc/Makefile.am
+zeromq-4.0.4/doc/asciidoc.conf
+zeromq-4.0.4/doc/zmq_connect.html
+zeromq-4.0.4/doc/zmq_z85_decode.txt
+zeromq-4.0.4/doc/zmq_msg_more.txt
+zeromq-4.0.4/doc/zmq_msg_recv.txt
+zeromq-4.0.4/doc/zmq_tcp.html
+zeromq-4.0.4/doc/zmq_inproc.7
+zeromq-4.0.4/doc/zmq_disconnect.3
+zeromq-4.0.4/doc/zmq_z85_decode.html
+zeromq-4.0.4/doc/zmq_curve.7
+zeromq-4.0.4/doc/zmq_plain.7
+zeromq-4.0.4/doc/zmq_term.html
+zeromq-4.0.4/doc/zmq_unbind.txt
+zeromq-4.0.4/doc/zmq_pgm.7
+zeromq-4.0.4/doc/zmq_msg_set.3
+zeromq-4.0.4/doc/zmq_sendmsg.html
+zeromq-4.0.4/doc/zmq_init.html
+zeromq-4.0.4/doc/zmq_send_const.html
+zeromq-4.0.4/doc/zmq_proxy.html
+zeromq-4.0.4/doc/zmq_bind.txt
+zeromq-4.0.4/doc/zmq_getsockopt.3
+zeromq-4.0.4/doc/zmq_tcp.7
+zeromq-4.0.4/doc/zmq_msg_recv.html
+zeromq-4.0.4/doc/zmq_ctx_new.html
+zeromq-4.0.4/doc/zmq_socket_monitor.3
+zeromq-4.0.4/doc/zmq_msg_size.txt
+zeromq-4.0.4/doc/zmq_msg_set.txt
+zeromq-4.0.4/doc/zmq_recvmsg.txt
+zeromq-4.0.4/doc/zmq_close.txt
+zeromq-4.0.4/doc/zmq_ctx_destroy.html
+zeromq-4.0.4/doc/zmq_send.txt
+zeromq-4.0.4/doc/zmq_unbind.3
+zeromq-4.0.4/doc/zmq_curve_keypair.3
+zeromq-4.0.4/doc/zmq_msg_get.3
+zeromq-4.0.4/doc/zmq_poll.3
+zeromq-4.0.4/doc/zmq_curve_keypair.html
+zeromq-4.0.4/doc/zmq_sendmsg.3
+zeromq-4.0.4/doc/zmq_msg_get.txt
+zeromq-4.0.4/doc/zmq_recvmsg.3
+zeromq-4.0.4/doc/zmq_curve.html
+zeromq-4.0.4/doc/zmq_msg_copy.3
+zeromq-4.0.4/doc/zmq_send.3
+zeromq-4.0.4/doc/zmq_ipc.txt
+zeromq-4.0.4/doc/zmq_recvmsg.html
+zeromq-4.0.4/doc/zmq_disconnect.html
+zeromq-4.0.4/doc/zmq_null.7
+zeromq-4.0.4/doc/zmq_msg_init_data.3
+zeromq-4.0.4/doc/zmq_getsockopt.html
+zeromq-4.0.4/doc/zmq_connect.txt
+zeromq-4.0.4/doc/zmq_msg_recv.3
+zeromq-4.0.4/doc/zmq_z85_encode.txt
+zeromq-4.0.4/doc/zmq_epgm.7
+zeromq-4.0.4/doc/zmq_msg_size.3
+zeromq-4.0.4/doc/zmq_msg_init_size.txt
+zeromq-4.0.4/doc/zmq_msg_copy.txt
+zeromq-4.0.4/doc/zmq_msg_copy.html
+zeromq-4.0.4/doc/zmq_recv.html
+zeromq-4.0.4/doc/zmq_socket.html
+zeromq-4.0.4/doc/zmq_msg_send.html
+zeromq-4.0.4/doc/zmq_version.txt
+zeromq-4.0.4/doc/zmq_msg_init.html
+zeromq-4.0.4/doc/zmq_errno.html
+zeromq-4.0.4/doc/zmq.7
+zeromq-4.0.4/doc/zmq_close.3
+zeromq-4.0.4/doc/zmq_recv.txt
+zeromq-4.0.4/doc/zmq_ctx_term.txt
+zeromq-4.0.4/doc/zmq_version.html
+zeromq-4.0.4/doc/zmq_init.txt
+zeromq-4.0.4/doc/zmq_msg_move.txt
+zeromq-4.0.4/doc/zmq_null.txt
+zeromq-4.0.4/doc/zmq_inproc.txt
+zeromq-4.0.4/doc/zmq_msg_init.txt
+zeromq-4.0.4/doc/zmq_strerror.txt
+zeromq-4.0.4/doc/zmq_socket_monitor.txt
+zeromq-4.0.4/doc/zmq_msg_more.3
+zeromq-4.0.4/doc/zmq_term.3
+zeromq-4.0.4/doc/zmq_msg_size.html
+zeromq-4.0.4/doc/zmq_msg_close.3
+zeromq-4.0.4/doc/zmq_msg_data.txt
+zeromq-4.0.4/doc/zmq_msg_more.html
+zeromq-4.0.4/doc/zmq_tcp.txt
+zeromq-4.0.4/doc/zmq_epgm.txt
+zeromq-4.0.4/doc/zmq_ipc.7
+zeromq-4.0.4/doc/zmq_close.html
+zeromq-4.0.4/doc/zmq_poll.txt
+zeromq-4.0.4/doc/zmq_send_const.3
+zeromq-4.0.4/doc/zmq_msg_close.txt
+zeromq-4.0.4/doc/zmq_setsockopt.3
+zeromq-4.0.4/doc/zmq_setsockopt.txt
+zeromq-4.0.4/doc/zmq_term.txt
+zeromq-4.0.4/doc/zmq_unbind.html
+zeromq-4.0.4/doc/zmq_msg_get.html
+zeromq-4.0.4/doc/zmq_getsockopt.txt
+zeromq-4.0.4/doc/zmq_msg_set.html
+zeromq-4.0.4/doc/zmq_msg_init_size.html
+zeromq-4.0.4/doc/zmq_recv.3
+zeromq-4.0.4/doc/zmq_strerror.html
+zeromq-4.0.4/doc/zmq_curve_keypair.txt
+zeromq-4.0.4/doc/zmq_null.html
+zeromq-4.0.4/doc/zmq_ctx_set.txt
+zeromq-4.0.4/doc/zmq_z85_decode.3
+zeromq-4.0.4/doc/zmq_socket.txt
+zeromq-4.0.4/doc/zmq_msg_send.txt
+zeromq-4.0.4/doc/zmq_msg_move.3
+zeromq-4.0.4/doc/zmq_msg_init_data.html
+zeromq-4.0.4/doc/zmq_z85_encode.html
+zeromq-4.0.4/doc/zmq_errno.3
+zeromq-4.0.4/doc/zmq_sendmsg.txt
+zeromq-4.0.4/doc/zmq_msg_data.html
+zeromq-4.0.4/NEWS
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking whether gcc -std=gnu99 and cc understand -c and -o together... yes
+checking for a sed that does not truncate output... /bin/sed
+checking for gawk... (cached) gawk
+checking for xmlto... no
+checking for asciidoc... no
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc -std=gnu99... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc -std=gnu99 object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -std=gnu99 -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc -std=gnu99 supports -fno-rtti -fno-exceptions... no
+checking for gcc -std=gnu99 option to produce PIC... -fPIC -DPIC
+checking if gcc -std=gnu99 PIC flag -fPIC -DPIC works... yes
+checking if gcc -std=gnu99 static flag -static works... yes
+checking if gcc -std=gnu99 supports -c -o file.o... yes
+checking if gcc -std=gnu99 supports -c -o file.o... (cached) yes
+checking whether the gcc -std=gnu99 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether the C compiler works... yes
+checking whether we are using Intel C compiler... no
+checking whether we are using Sun Studio C compiler... no
+checking whether we are using clang C compiler... no
+checking whether we are using gcc >= 4 C compiler... yes
+checking whether the C++ compiler works... yes
+checking whether we are using Intel C++ compiler... no
+checking whether we are using Sun Studio C++ compiler... no
+checking whether we are using clang C++ compiler... no
+checking whether we are using gcc >= 4 C++ compiler... yes
+checking whether to enable debugging information... no
+checking whether to enable code coverage... no
+checking for pthread_create in -lpthread... yes
+checking for clock_gettime in -lrt... yes
+checking for sodium_init in -lsodium... no
+configure: WARNING: libsodium is needed for CURVE security
+checking whether C++ compiler supports -fvisibility=hidden... yes
+checking whether C++ compiler supports dso visibility... yes
+checking for asciidoc... no
+checking for xmlto... no
+checking whether to build documentation... no
+checking whether to install manpages... yes
+checking for suitable polling system... using epoll
+checking for ANSI C header files... (cached) yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netinet/tcp.h usability... yes
+checking netinet/tcp.h presence... yes
+checking for netinet/tcp.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking ifaddrs.h usability... yes
+checking ifaddrs.h presence... yes
+checking for ifaddrs.h... yes
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking sys/eventfd.h usability... yes
+checking sys/eventfd.h presence... yes
+checking for sys/eventfd.h... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for size_t... yes
+checking for ssize_t... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for uint32_t... yes
+checking for working volatile... yes
+checking how to enable additional warnings for C++ compiler... -Wall
+checking how to turn warnings to errors in C++ compiler... -Werror
+checking how to enable strict standards compliance in C++ compiler... -pedantic
+checking return type of signal handlers... void
+checking for perror... yes
+checking for gettimeofday... yes
+checking for clock_gettime... yes
+checking for memset... yes
+checking for socket... yes
+checking for getifaddrs... yes
+checking for freeifaddrs... yes
+checking for fork... yes
+checking alloca.h usability... yes
+checking alloca.h presence... yes
+checking for alloca.h... yes
+checking whether SOCK_CLOEXEC is supported... yes
+checking whether SO_KEEPALIVE is supported... yes
+checking whether TCP_KEEPCNT is supported... yes
+checking whether TCP_KEEPIDLE is supported... yes
+checking whether TCP_KEEPINTVL is supported... yes
+checking whether TCP_KEEPALIVE is supported... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/libzmq.pc
+config.status: creating doc/Makefile
+config.status: creating perf/Makefile
+config.status: creating tests/Makefile
+config.status: creating tools/Makefile
+config.status: creating builds/msvc/Makefile
+config.status: creating foreign/openpgm/Makefile
+config.status: creating builds/redhat/zeromq.spec
+config.status: creating src/platform.hpp
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make  all-am
+make[1]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/src'
+  CXX    libzmq_la-address.lo
+  CXX    libzmq_la-clock.lo
+  CXX    libzmq_la-ctx.lo
+  CXX    libzmq_la-curve_client.lo
+  CXX    libzmq_la-curve_server.lo
+  CXX    libzmq_la-devpoll.lo
+  CXX    libzmq_la-dist.lo
+  CXX    libzmq_la-epoll.lo
+  CXX    libzmq_la-err.lo
+  CXX    libzmq_la-fq.lo
+  CXX    libzmq_la-io_object.lo
+  CXX    libzmq_la-io_thread.lo
+  CXX    libzmq_la-ip.lo
+  CXX    libzmq_la-ipc_address.lo
+  CXX    libzmq_la-ipc_connecter.lo
+  CXX    libzmq_la-ipc_listener.lo
+  CXX    libzmq_la-kqueue.lo
+  CXX    libzmq_la-lb.lo
+  CXX    libzmq_la-mailbox.lo
+  CXX    libzmq_la-mechanism.lo
+  CXX    libzmq_la-msg.lo
+  CXX    libzmq_la-mtrie.lo
+  CXX    libzmq_la-null_mechanism.lo
+  CXX    libzmq_la-object.lo
+  CXX    libzmq_la-options.lo
+  CXX    libzmq_la-own.lo
+  CXX    libzmq_la-pair.lo
+  CXX    libzmq_la-pgm_receiver.lo
+  CXX    libzmq_la-pgm_sender.lo
+  CXX    libzmq_la-pgm_socket.lo
+  CXX    libzmq_la-pipe.lo
+  CXX    libzmq_la-plain_mechanism.lo
+  CXX    libzmq_la-poll.lo
+  CXX    libzmq_la-poller_base.lo
+  CXX    libzmq_la-pull.lo
+  CXX    libzmq_la-push.lo
+  CXX    libzmq_la-proxy.lo
+  CXX    libzmq_la-reaper.lo
+  CXX    libzmq_la-pub.lo
+  CXX    libzmq_la-random.lo
+  CXX    libzmq_la-rep.lo
+  CXX    libzmq_la-req.lo
+  CXX    libzmq_la-select.lo
+  CXX    libzmq_la-session_base.lo
+  CXX    libzmq_la-signaler.lo
+  CXX    libzmq_la-socket_base.lo
+  CXX    libzmq_la-stream.lo
+  CXX    libzmq_la-stream_engine.lo
+  CXX    libzmq_la-sub.lo
+  CXX    libzmq_la-tcp.lo
+  CXX    libzmq_la-tcp_address.lo
+  CXX    libzmq_la-tcp_connecter.lo
+  CXX    libzmq_la-tcp_listener.lo
+  CXX    libzmq_la-thread.lo
+  CXX    libzmq_la-trie.lo
+  CXX    libzmq_la-xpub.lo
+  CXX    libzmq_la-router.lo
+  CXX    libzmq_la-dealer.lo
+  CXX    libzmq_la-v1_decoder.lo
+  CXX    libzmq_la-v1_encoder.lo
+  CXX    libzmq_la-v2_decoder.lo
+  CXX    libzmq_la-v2_encoder.lo
+  CXX    libzmq_la-xsub.lo
+  CXX    libzmq_la-zmq.lo
+  CXX    libzmq_la-zmq_utils.lo
+  CXX    libzmq_la-raw_decoder.lo
+  CXX    libzmq_la-raw_encoder.lo
+  CXXLD  libzmq.la
+.libs/libzmq_la-ipc_listener.o: In function `zmq::ipc_listener_t::set_address(char const*)':
+/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/src/ipc_listener.cpp:127: warning: the use of `tempnam' is dangerous, better use `mkstemp'
+make[1]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/src'
+make[1]: Entering directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/src'
+test -z "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib" || /bin/mkdir -p "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib"
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libzmq.la '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib'
+libtool: install: /usr/bin/install -c .libs/libzmq.so.3.1.0 /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/libzmq.so.3.1.0
+libtool: install: (cd /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib && { ln -s -f libzmq.so.3.1.0 libzmq.so.3 || { rm -f libzmq.so.3 && ln -s libzmq.so.3.1.0 libzmq.so.3; }; })
+libtool: install: (cd /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib && { ln -s -f libzmq.so.3.1.0 libzmq.so || { rm -f libzmq.so && ln -s libzmq.so.3.1.0 libzmq.so; }; })
+libtool: install: /usr/bin/install -c .libs/libzmq.lai /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/libzmq.la
+libtool: install: /usr/bin/install -c .libs/libzmq.a /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/libzmq.a
+libtool: install: chmod 644 /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/libzmq.a
+libtool: install: ranlib /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/libzmq.a
+libtool: finish: PATH="/home/vishnu/.rvm/gems/ruby-2.2.1/bin:/home/vishnu/.rvm/gems/ruby-2.2.1@global/bin:/home/vishnu/.rvm/rubies/ruby-2.2.1/bin:/home/vishnu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vishnu/.rvm/bin:/sbin" ldconfig -n /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+test -z "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/include" || /bin/mkdir -p "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/include"
+ /usr/bin/install -c -m 644 ../include/zmq.h ../include/zmq_utils.h '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/include'
+test -z "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/pkgconfig" || /bin/mkdir -p "/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/pkgconfig"
+ /usr/bin/install -c -m 644 libzmq.pc '/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/dist/lib/pkgconfig'
+make[1]: Leaving directory `/home/vishnu/source/ProductEngineering/CallGirl/clean-dashboard-callgirl/vendor/ruby/2.2.0/gems/rbkit-0.1.10/ext/zeromq-4.0.4/src'
+checking for main() in -lstdc++... yes
+checking for main() in -lzmq... yes
+checking for zmq.h... yes
+checking for main() in -lmsgpack... no
+[32mDownloading and installing msgpack from source[0m
+checking for curl... yes
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   581    0   581    0     0    915      0 --:--:-- --:--:-- --:--:--   916
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+curl: (51) SSL: no alternative certificate subject name matches target host name 'github-cloud.s3.amazonaws.com'
+tar (child): msgpack-0.5.9.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/vishnu/.rvm/rubies/ruby-2.2.1/bin/$(RUBY_BASE_NAME)
+	--with-zmqlib
+	--without-zmqlib
+	--with-stdc++lib
+	--without-stdc++lib
+	--with-zmqlib
+	--without-zmqlib
+	--with-msgpacklib
+	--without-msgpacklib
+extconf.rb:57:in `chdir': No such file or directory @ dir_chdir - msgpack-0.5.9 (Errno::ENOENT)
+	from extconf.rb:57:in `download_and_install_msgpack_from_source'
+	from extconf.rb:93:in `<main>'
+
+extconf failed, exit code 1
