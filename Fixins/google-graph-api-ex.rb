@@ -1,7 +1,7 @@
 require 'open-uri'
 
 BASE_URL = "https://chart.googleapis.com/chart?cht=p&chs=500x300"
-rows = File.open("file-analysis.txt"){|f| f.readlines.map{|p| p.strip.split("\t")} }
+rows = File.open(ARGV[0]){|f| f.readlines.map{|p| p.strip.split("\t")} }
 
 headers = rows[0]
 [1,2].each do |idx|
