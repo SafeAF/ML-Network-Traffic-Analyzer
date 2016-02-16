@@ -1,5 +1,10 @@
 require 'sidekiq'
 require 'connection_pool'
+require 'redis-objects'
+require 'mongoid'
+require 'mongo'
+p "########################################\n## Vanguard ##########################"
+p "########################################"
 #########################################################################################
 # Notes
 #########################################################################################
@@ -26,7 +31,6 @@ $SERVER_CONCURRENCY = 25
 $CLIENT_CONCURRENCY = 5
 #########################################################################################
 #########################################################################################
-
 redis_conn = proc {Redis.new(host: $SYSTEMSTACK0, port: 6379, db: 5)}
 
 Sidekiq.configure_server do |config|
@@ -42,27 +46,22 @@ Sidekiq.configure_server do |config|
     # stop_the_world
   end
 
+  Mongoid.load!('mongoid.yml', :development)
 
   database_url = ENV['DATABASE_URL']
   if database_url
     ENV['DATABASE_URL'] = "#{database_url}?pool=#{$SERVER_CONCURRENCY}"
-    ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
-
-    Mongoid.load!('mongoid.yml', :development)
-
-    # Note that as of Rails 4.1 the `establish_connection` method requires
-    # the database_url be passed in as an argument. Like this:
-    # ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+    ActiveRecord::Base.establish_connection(ENV['DATABASE_URL']) # this arg passing method req now
   end
 
-  config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
-  #config.redis = { url: 'redis://redis.example.com:7372/12', namespace: 'mynamespace' }
+  #config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
+  config.redis = { url: "redis://$SYSTEMSTACK0:6379/10", namespace: 'vanguard' }
   #  config.redis = { url: $SYSTEMSTACK0 }
 end
 
 Sidekiq.configure_client do |config|
-  config.redis = ConnectionPool.new(size: 5, &redis_conn)
-#  config.redis = { url: $SYSTEMSTACK0 }
+#  config.redis = ConnectionPool.new(size: 5, &redis_conn)
+  config.redis = { url: "redis://$SYSTEMSTACK0:6379/10", namespace: 'vanguard' }
 end
 
 

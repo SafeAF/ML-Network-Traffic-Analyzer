@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MongoConfiguration">
+    <option name="serverConfigurations">
+      <list>
+        <ServerConfiguration>
+          <option name="connectOnIdeStartup" value="true" />
+          <option name="label" value="datastore0" />
+          <option name="serverUrls">
+            <list>
+              <option value="10.0.1.30:27017" />
+            </list>
+          </option>
+        </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="label" value="datastore1" />
+          <option name="serverUrls">
+            <list>
+              <option value="10.0.1.31:27017" />
+            </list>
+          </option>
+        </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="label" value="datastore3" />
+          <option name="serverUrls">
+            <list>
+              <option value="10.0.1.33:27017" />
+            </list>
+          </option>
+        </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="label" value="datastore4" />
+          <option name="serverUrls">
+            <list>
+              <option value="10.0.1.34:27017" />
+            </list>
+          </option>
+        </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="label" value="datastore5" />
+          <option name="serverUrls">
+            <list>
+              <option value="10.0.1.35:27017" />
+            </list>
+          </option>
+        </ServerConfiguration>
+      </list>
+    </option>
+    <option name="shellPath" value="/usr/bin/mongo" />
+  </component>
+</project>

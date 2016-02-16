@@ -14,6 +14,8 @@ class User
   field :authentication_token, :type => String
   field :password_hash, :type => String
   field :password_salt, :type => String
+  field :ssh_id_rsa, :type => String
+  field :ssh_id_rsa_pub, :type => String
 
   before_save :prepare_password
 
