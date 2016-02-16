@@ -206,25 +206,24 @@ end
 
 
 
-Vservers.all.each {|x| p x}
+# Vservers.all.each {|x| p x}
 
 
-__END__
-  netscan()
-  netscan_parse()
+  # netscan()
+  # netscan_parse()
 # class VserverWorker
 #   include Sidekiq::Worker
 #
-# app0 = Vservers.create
-# app0.address = '10.0.1.60'
-# app0.up = check_server_availability(app0.address, 'ssh')
-# p app0.up
-#
-# #p Vservers.all
-# end
-# def delete(klass=Vserver)
-# klass.delete_all
-# end
+app0 = Vservers.create
+app0.address = '10.0.1.60'
+app0.up = check_server_availability(app0.address, 'ssh')
+p app0.up
+
+#p Vservers.all
+
+def delete(klass=Vserver)
+klass.delete_all
+end
 app0 = Vservers.new
 app0.address = '10.0.1.60'
 app0.up = check_server_availability(app0.address, 'ssh')

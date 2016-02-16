@@ -20,14 +20,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/Keystone/switchyard-v0.6.0/switch/.svn/pristine/b5/b52b585daec7187908dbea8b98b35146ccb079e2.svn-base" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Keystone/switchyard-v0.6.0/switch/.svn/pristine/e7/e7a4070ff4ffd4ce63b28355dbddafa313a232c7.svn-base" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Keystone/switchyard-v0.6.0/switch/.svn/wc.db" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Keystone/Credibility/user.rb" afterPath="$PROJECT_DIR$/Keystone/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Development.iml" afterPath="$PROJECT_DIR$/.idea/Development.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" afterPath="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" afterPath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Keystone/mongoid.yml" afterPath="$PROJECT_DIR$/Keystone/mongoid.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/mongoid.yml" afterPath="$PROJECT_DIR$/Vanguard/mongoid.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Keystone/titanvservers.rb" afterPath="$PROJECT_DIR$/Keystone/titanvservers.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/vanguard-workers.rb" afterPath="$PROJECT_DIR$/Vanguard/vanguard-workers.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2649d613-33fa-42eb-bcf2-ea4596f998b4" name="Failed commit: Default" comment="f" />
@@ -45,9 +41,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Dev@titanvservers.coverage" NAME="titanvservers Coverage Results" MODIFIED="1455641880307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keystone" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Dev@titanvservers.coverage" NAME="titanvservers Coverage Results" MODIFIED="1455642698067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keystone" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Development@quoteserv_api.coverage" NAME="quoteserv.api Coverage Results" MODIFIED="1452111404321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QuoteServ" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/Dev@harness_vanguard.coverage" NAME="harness-vanguard Coverage Results" MODIFIED="1455641857987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Dev@harness_vanguard.coverage" NAME="harness-vanguard Coverage Results" MODIFIED="1455642766553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@check_redis_for_results.coverage" NAME="check_redis_for_results Coverage Results" MODIFIED="1455626427691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Development@server.coverage" NAME="server Coverage Results" MODIFIED="1452099151096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bloodlust" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@vanguard.coverage" NAME="vanguard Coverage Results" MODIFIED="1455625327255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
@@ -113,7 +109,7 @@
                   <file leaf-file-name="user.rb" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/Keystone/user.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.79060405">
+                        <state vertical-scroll-proportion="0.33154362">
                           <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
                           <folding />
                         </state>
@@ -215,11 +211,11 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="harness-vanguard.rb" pinned="false" current-in-tab="true">
+              <file leaf-file-name="harness-vanguard.rb" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Vanguard/harness-vanguard.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.41342282">
-                      <caret line="88" column="1" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
                       <folding>
                         <element signature="e#3097#3470#0" expanded="true" />
                       </folding>
@@ -230,12 +226,26 @@
               <file leaf-file-name="vanguard-workers.rb" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Vanguard/vanguard-workers.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="-4.9565215">
+                    <state vertical-scroll-proportion="0.0">
                       <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
                       <folding>
                         <element signature="e#802#2946#0" expanded="true" />
                       </folding>
                     </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="datastore1/attrition_development/vservers" pinned="false" current-in-tab="true">
+                <entry file="mongo://datastore1/attrition_development/vservers">
+                  <provider selected="true" editor-type-id="MongoData">
+                    <state />
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="datastore1/attrition_development/vservers" pinned="false" current-in-tab="false">
+                <entry file="mongo://datastore1/attrition_development/vservers">
+                  <provider selected="true" editor-type-id="MongoData">
+                    <state />
                   </provider>
                 </entry>
               </file>
@@ -255,11 +265,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="titanvservers.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="titanvservers.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Keystone/titanvservers.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.48456377">
-                  <caret line="211" column="7" selection-start-line="211" selection-start-column="7" selection-end-line="211" selection-end-column="7" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -285,11 +295,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mongoid.yml" pinned="false" current-in-tab="false">
+          <file leaf-file-name="mongoid.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Keystone/mongoid.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.217391">
-                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="36" />
+                <state vertical-scroll-proportion="0.30604026">
+                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -299,7 +309,7 @@
             <entry file="file://$PROJECT_DIR$/Vanguard/mongoid.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="16" column="0" selection-start-line="16" selection-start-column="1" selection-end-line="18" selection-end-column="22" />
+                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -341,10 +351,10 @@
         <option value="$PROJECT_DIR$/Vanguard/README.md" />
         <option value="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" />
         <option value="$PROJECT_DIR$/Keystone/user.rb" />
-        <option value="$PROJECT_DIR$/Keystone/mongoid.yml" />
         <option value="$PROJECT_DIR$/Vanguard/vanguard-workers.rb" />
         <option value="$PROJECT_DIR$/Keystone/titanvservers.rb" />
         <option value="$PROJECT_DIR$/Vanguard/mongoid.yml" />
+        <option value="$PROJECT_DIR$/Keystone/mongoid.yml" />
       </list>
     </option>
   </component>
@@ -555,7 +565,7 @@
       <recent name="$PROJECT_DIR$/Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Ruby.titanvservers">
+  <component name="RunManager" selected="Ruby.harness-vanguard">
     <configuration default="false" name="quoteserv.api" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="Development" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -906,8 +916,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.titanvservers" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.harness-vanguard" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.harness-vanguard" />
+        <item index="1" class="java.lang.String" itemvalue="Ruby.titanvservers" />
         <item index="2" class="java.lang.String" itemvalue="Ruby.check_redis_for_results" />
         <item index="3" class="java.lang.String" itemvalue="Ruby.coreHypervisor" />
         <item index="4" class="java.lang.String" itemvalue="Ruby.quoteserv.api" />
@@ -959,8 +969,8 @@
     <frame x="0" y="33" width="3838" height="1047" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.49894625" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.50632244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.49789253" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.5073762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Serial Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -973,7 +983,7 @@
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.04056902" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.057692308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.49367756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.4926238" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027660696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1089,7 +1099,7 @@
     <entry file="file://$PROJECT_DIR$/sidekiq/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1166,14 +1176,14 @@
     <entry file="file://$PROJECT_DIR$/sidekiq/config.ru">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Keystone/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79060405">
+        <state vertical-scroll-proportion="0.33154362">
           <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding />
         </state>
@@ -1187,24 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/vanguard-workers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.9565215">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#802#2946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Keystone/mongoid.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.217391">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/coreHypervisor.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.295302">
@@ -1213,29 +1205,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Keystone/titanvservers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/mongoid.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="1" selection-end-line="18" selection-end-column="22" />
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keystone/mongoid.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30604026">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vanguard/vanguard-workers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#802#2946#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/harness-vanguard.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41342282">
-          <caret line="88" column="1" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
             <element signature="e#3097#3470#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Keystone/titanvservers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48456377">
-          <caret line="211" column="7" selection-start-line="211" selection-start-column="7" selection-end-line="211" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
