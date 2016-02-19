@@ -109,6 +109,7 @@ end
 
 class Vservers
   include Mongoid::Document
+  include Mongoid::Timestamps
   # include Redis::Objects
 
   # value :box
@@ -131,6 +132,10 @@ class Vservers
   field :mem, type: Hash
   field :load, type: Hash
   field :disk, type: Hash
+  field :inbound, type: Array
+  field :outbound, type: Array
+  field :listeners, type: Hash
+  field :connections, type: Hash
 
   belongs_to :supercluster
  # embeds_many :diskdrives
