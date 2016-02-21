@@ -1,1 +1,0 @@
-json.extract! @issue, :id, :name, :author, :assignee, :project_id, :description, :content, :department_id, :infrastructure_id, :operations_id, :username_id, :user_id, :labels, :label_id, :created_at, :updated_at

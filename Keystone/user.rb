@@ -3,6 +3,15 @@ require 'mongoid'
 class Admin
   include Mongoid::Document
   include Mongoid::Timestamps
+
+  field :username, type: String
+  field :authentication_token, :type => String
+  field :ssh_id_rsa, :type => String
+  field :ssh_id_rsa_pub, :type => String
+  field :remote_login, type: String
+
+  field :loginCredentials, type: Hash
+
 end
 
 class User
