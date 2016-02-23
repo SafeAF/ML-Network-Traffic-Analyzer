@@ -4,7 +4,8 @@ require 'pp'
 require 'redis'
 require 'json'
 require 'daemons'
-require 'gmail'
+#require 'gmail'
+  require 'connection_pool'
 require 'redis-objects'
 #require 'activerecord'
 require 'connection_pool'
@@ -92,6 +93,8 @@ api = Gmail.new(username, password)
 
 Redis::Objects.redis = ConnectionPool.new(size: 5, timeout: 5) {
   Redis.new({host: $options[:host], port: $options[:port], db: $options[:db]})}
+
+  $redis = Redis.current
 
 $messages = Redis::List.new($messagehub, :marshall => true)
 $notifications = Redis::List.new($notifyhub, :marshall => true)
@@ -269,7 +272,9 @@ begin
       ret[:body] = "#{elapsed}s elapsed processing your crummy message. Your notification was received, we hope." # Syslog doesn't listen so it probalby doesnt matter
     end
 
-
+    post '/pubsys' do
+     $redis.publish 'system', request.params[:message].to_json
+    end
 
 
     # def self.new(*)

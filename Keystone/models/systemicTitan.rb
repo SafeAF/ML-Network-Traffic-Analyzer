@@ -1,11 +1,10 @@
 require 'mongoid'
 require 'redis-objects'
 require 'rye'
-require 'net/ping'
+
 require 'sidekiq'
 require 'mongoid'
-require 'nmap/program'
-require 'nmap/xml'
+
 require_relative 'user'
 # require 'acts_as_api'
 
@@ -13,22 +12,22 @@ require_relative 'user'
 # BSON::Binary BSON::OBjectId Range Regexp String Symbol Time TimeWithZone
 
 # gem install ruby-nmap
-$options = {};$options[:redhost] = ARGV[0] || '10.0.1.75' ;$options[:redport] = '6379'
-$options[:redtable] = 5
-$options[:mongodb] = 'attrition'
-$options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
-
-Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
-  Redis.new({host: $options[:redhost], port: $options[:redport], db: $options[:redtable]})}
-
-Mongoid.load!('mongoid.yml', :development)
-$MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
-
-$logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
-
-$logger.info  "Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
-
-$logger.info "Connecting to Redis @ #{$options[:redhost]}, using database: #{$options[:redtable]}"
+# $options = {};$options[:redhost] = ARGV[0] || '10.0.1.75' ;$options[:redport] = '6379'
+# $options[:redtable] = 5
+# $options[:mongodb] = 'attrition'
+# $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
+#
+# Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
+#   Redis.new({host: $options[:redhost], port: $options[:redport], db: $options[:redtable]})}
+#
+# Mongoid.load!('mongoid.yml', :development)
+# $MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
+#
+# $logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
+#
+# $logger.info  "Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
+#
+# $logger.info "Connecting to Redis @ #{$options[:redhost]}, using database: #{$options[:redtable]}"
 
 # Attach ourselves to Mongoid
 # if defined?(Mongoid::Document)
@@ -36,21 +35,16 @@ $logger.info "Connecting to Redis @ #{$options[:redhost]}, using database: #{$op
 # end
 
 
-def check_server_availability(ip, service='ssh')
-  ping = Net::Ping::TCP.new(ip, service)
-  ping.ping?
-end
-
-
-module Mongoid
-  module Config
-    def load_configuration_hash(settings)
-      load_configuration(settings)
-    end
-  end
-end
-
-Mongoid.load!('mongoid.yml', :development)
+#
+# module Mongoid
+#   module Config
+#     def load_configuration_hash(settings)
+#       load_configuration(settings)
+#     end
+#   end
+# end
+#
+# Mongoid.load!('mongoid.yml', :development)
 
 #  thin -C production-thin.yml -R config.ru start
 # bundle exec sidekiq -r ./reserver.rb
@@ -157,7 +151,7 @@ class Vservers
   # end
 end
 #
-class Serverstatistics
+class Vstatistics
   include Mongoid::Document
 
   field :name, type: String
@@ -165,7 +159,7 @@ class Serverstatistics
 
 end
 
-class Connections
+class Vconnections
   include Mongoid::Document
 
   field :timeslice, type: DateTime
@@ -175,7 +169,7 @@ class Connections
   field :connections, type: Hash
 end
 
-class Scanresult
+class Vscanresult
   include Mongoid::Document
 
   field :timeslice, type: DateTime
@@ -183,32 +177,6 @@ end
 #
 #
 # #
- def netscan(targets = '10.0.1.*', ports = [20,21,22,23,25,80,110,443,512,522,8080,1080])
-  Nmap::Program.scan do |nmap|
-    nmap.syn_scan = true
-    nmap.service_scan = true
-    nmap.os_fingerprint = true
-    nmap.xml = 'scan.xml'
-    nmap.verbose = true
-
-    nmap.ports = ports
-    nmap.targets = targets
-  end
- end
-
-
-  def netscan_parse()
-    Nmap::XML.new('scan.xml') do |xml|
-      xml.each_host do |host|
-        puts "[#{host.ip}]"
-
-        host.each_port do |port|
-          puts "  #{port.number}/#{port.protocol}\t#{port.state}\t#{port.service}"
-        end
-      end
-    end
-  end
-
 
 
 

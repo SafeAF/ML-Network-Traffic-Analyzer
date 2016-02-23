@@ -8,7 +8,8 @@ require 'net/ssh'
 
 require 'rye'
 require_relative 'vanguard-workers'
-require_relative '../Keystone/titanvservers'
+require_relative '../Keystone/models/systemicAttrition'
+require_relative '../Keystone/models/titanvservers'
 #require_relative './Credibility/user'
 p "############################### Vanguard ##########################"
 
