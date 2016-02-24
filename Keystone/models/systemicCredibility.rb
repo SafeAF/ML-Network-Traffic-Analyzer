@@ -39,13 +39,15 @@ class GlobalIP
   field :geoloc, type: String
   field :whois
   field :reverselookup
+  field :changeInReputation, type: Float
+  field :valid, type: Boolean
 
-  has_one :ban
+  has_one :banStatus
 #
 
 end
 
-class Bans
+class BanStatus
   include Mongoid::Document
   include Redis::Objects
   include Mongoid::Timestamps
@@ -55,16 +57,17 @@ class Bans
   field :banned, type: Boolean
   field :banIntensity, type: Float
   field :banDuration, type: Integer
+  field :occuredAt, type: DateTime
   field :firstBan, type: DateTime
   field :prevBan, type: DateTime
   field :totalBans, type: Integer
   #field :banLocality, type: String
  # field :banevents, type: Hash
-
+ belongs_to :globalIP
   embeds_many :attacks
 end
 
-class Attacks
+class Attack
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Search

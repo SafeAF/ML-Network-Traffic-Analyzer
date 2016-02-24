@@ -39,6 +39,15 @@ class TitanStatusSpy
 end
 
 
+class TitanStatusSpy
+  include Sidekiq::Worker
+  def perform()
+
+  end
+end
+
+
+
 
 __END__
 class AttritionSuperWorker

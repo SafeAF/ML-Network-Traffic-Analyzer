@@ -35,15 +35,34 @@ module Systemic
 
   end
 
-  class Preprocessor
+  class ApacheLog
     include Mongoid::Document
+    include Redis::Objects
+    include Mongoid::Timestamps
 
     field :name
     field :type
 
   end
 
-  class
+  class SysLog
+    include Mongoid::Document
+    include Redis::Objects
+    include Mongoid::Timestamps
+
+    field :id
+    field :created
+    field :updated
+    field :logged, type: Datetime
+    field :logfileID, type: Integer
+    field :name
+    field :message
+    field :facility
+    field :priority, type: Integer
+    field :service
+    field :serviceID, type: Integer
+    field :logentryID, type: Integer
+  end
 
 end
 

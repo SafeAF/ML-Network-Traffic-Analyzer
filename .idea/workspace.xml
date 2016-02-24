@@ -2,77 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9722713f-c33d-41e9-adee-82755a12f8d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/assets/images/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/controllers/concerns/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/mailers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/models/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/models/concerns/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/lib/assets/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/lib/tasks/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/log/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/test/controllers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/test/fixtures/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/test/helpers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/test/integration/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/test/mailers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/test/models/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/vendor/assets/javascripts/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/vendor/assets/stylesheets/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/public/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/public/422.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/public/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vanguard/workers/Attrition/Preprocessors.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/README.rdoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/assets/stylesheets/application.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/views/layouts/application.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/assets/javascripts/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/application.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/controllers/application_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/app/helpers/application_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/assets.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/backtrace_silencers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/boot.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/bin/bundle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config.ru" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/cookies_serializer.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/database.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/environments/development.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/locales/en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/environment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/filter_parameter_logging.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/models/globaIntelligence.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/inflections.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/mime_types.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/environments/production.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/bin/rails" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/bin/rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/public/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Universe/Gathering/scanning.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/secrets.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/db/seeds.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/session_store.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/bin/setup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/bin/spring" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/models/systemicAttrition.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/environments/test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/test/test_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/models/user.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/config/initializers/wrap_parameters.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Keystone/user.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Keystone/models/CredibilityIntel.rb" afterPath="$PROJECT_DIR$/Keystone/models/systemicCredibility.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Keystone/models/titanvservers.rb" afterPath="$PROJECT_DIR$/Keystone/models/systemicTitan.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Development.iml" afterPath="$PROJECT_DIR$/.idea/Development.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" afterPath="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" afterPath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backbone/MessageHub/messagehub.rb" afterPath="$PROJECT_DIR$/Backbone/MessageHub/messagehub.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application-servers/puma.rb" afterPath="$PROJECT_DIR$/application-servers/puma.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Production/Deployment/Installers/vServerHostInstaller.rb" afterPath="$PROJECT_DIR$/../Production/Deployment/Installers/vServerHostInstaller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Keystone/models/systemicAttrition.rb" afterPath="$PROJECT_DIR$/Keystone/models/systemicAttrition.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Keystone/models/systemicCredibility.rb" afterPath="$PROJECT_DIR$/Keystone/models/systemicCredibility.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/vanguard-workers.rb" afterPath="$PROJECT_DIR$/Vanguard/vanguard-workers.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2649d613-33fa-42eb-bcf2-ea4596f998b4" name="Failed commit: Default" comment="f" />
@@ -168,11 +101,21 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+                  <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.23684211">
-                          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+                        <state vertical-scroll-proportion="-3.3043478">
+                          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="schema.rb" pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/Battlefield/schema.rb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state vertical-scroll-proportion="-2.7108886">
+                          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                           <folding />
                         </state>
                       </provider>
@@ -182,21 +125,21 @@
               </split-first>
               <split-second>
                 <leaf>
-                  <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+                  <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/Gemfile">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.2631579">
+                        <state vertical-scroll-proportion="-7.4347825">
                           <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+                  <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/config/routes.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="-7.4347825">
-                          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+                        <state vertical-scroll-proportion="0.85695875">
+                          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
                           <folding />
                         </state>
                       </provider>
@@ -230,21 +173,21 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="systemicAttrition.rb" pinned="false" current-in-tab="false">
+                  <file leaf-file-name="systemicAttrition.rb" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/Keystone/models/systemicAttrition.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.0">
-                          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+                        <state vertical-scroll-proportion="1.1414268">
+                          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="Preprocessors.rb" pinned="false" current-in-tab="true">
+                  <file leaf-file-name="Preprocessors.rb" pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/Vanguard/workers/Attrition/Preprocessors.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.5100671">
-                          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                        <state vertical-scroll-proportion="0.0">
+                          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
                           <folding />
                         </state>
                       </provider>
@@ -257,10 +200,10 @@
                   <file leaf-file-name="vanguard-workers.rb" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/Vanguard/vanguard-workers.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.357047">
-                          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+                        <state vertical-scroll-proportion="1.0938673">
+                          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
                           <folding>
-                            <element signature="e#802#2946#0" expanded="true" />
+                            <element signature="e#879#3023#0" expanded="true" />
                           </folding>
                         </state>
                       </provider>
@@ -327,8 +270,8 @@
           <file leaf-file-name="systemicCredibility.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Keystone/models/systemicCredibility.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.076510064">
-                  <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+                <state vertical-scroll-proportion="0.16645807">
+                  <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -367,7 +310,6 @@
         <option value="$PROJECT_DIR$/Vanguard/harness-vanguard.rb" />
         <option value="$PROJECT_DIR$/Vanguard/check_redis_for_results.rb" />
         <option value="$PROJECT_DIR$/Vanguard/README.md" />
-        <option value="$PROJECT_DIR$/Vanguard/vanguard-workers.rb" />
         <option value="$PROJECT_DIR$/Vanguard/mongoid.yml" />
         <option value="$PROJECT_DIR$/Keystone/mongoid.yml" />
         <option value="$PROJECT_DIR$/Vanguard/Gemfile" />
@@ -389,8 +331,9 @@
         <option value="$PROJECT_DIR$/Universe/Gathering/scanning.rb" />
         <option value="$PROJECT_DIR$/application-servers/puma.rb" />
         <option value="$PROJECT_DIR$/../Production/Deployment/Installers/vServerHostInstaller.rb" />
-        <option value="$PROJECT_DIR$/Keystone/models/systemicAttrition.rb" />
         <option value="$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile" />
+        <option value="$PROJECT_DIR$/Vanguard/vanguard-workers.rb" />
+        <option value="$PROJECT_DIR$/Keystone/models/systemicAttrition.rb" />
         <option value="$PROJECT_DIR$/Keystone/models/systemicCredibility.rb" />
       </list>
     </option>
@@ -1350,23 +1293,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="33" width="3836" height="1047" extended-state="4" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1462905" sideWeight="0.4947285" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.50237215" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14002089" sideWeight="0.50843436" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Serial Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05595855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14002089" sideWeight="0.49261993" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14002089" sideWeight="0.49156564" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.040021062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.061939906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="385" y="37" width="258" height="995" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.061939906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="385" y="37" width="258" height="995" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.49762782" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19644724" sideWeight="0.49762782" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027660696" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1416,13 +1359,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1719,14 +1655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4347825">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application-servers/puma.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38255033">
@@ -1739,14 +1667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="77" column="3" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Keystone/models/systemicAttrition.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1767,10 +1687,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/workers/Attrition/Preprocessors.rb">
+    <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5100671">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.4347825">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3043478">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1783,36 +1711,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/Gemfile">
+    <entry file="file://$PROJECT_DIR$/Vanguard/workers/Attrition/Preprocessors.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2631579">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/vanguard-workers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.357047">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state vertical-scroll-proportion="1.0938673">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <element signature="e#802#2946#0" expanded="true" />
+            <element signature="e#879#3023#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85695875">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keystone/models/systemicAttrition.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1414268">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Battlefield/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7108886">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Keystone/models/systemicCredibility.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076510064">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23684211">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.16645807">
+          <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
           <folding />
         </state>
       </provider>
