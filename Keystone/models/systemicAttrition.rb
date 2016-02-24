@@ -53,7 +53,7 @@ module Systemic
     field :id
     field :created
     field :updated
-    field :logged, type: Datetime
+    field :logged, type: DateTime
     field :logfileID, type: Integer
     field :name
     field :message

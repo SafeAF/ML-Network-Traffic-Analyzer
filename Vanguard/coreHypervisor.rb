@@ -9,8 +9,9 @@ require 'net/ssh'
 require 'rye'
 require_relative 'vanguard-workers'
 require_relative '../Keystone/models/systemicAttrition'
-require_relative '../Keystone/models/titanvservers'
-#require_relative './Credibility/user'
+require_relative '../Keystone/models/systemicTitan'
+require_relative '../Universe/Gathering/scanning'
+require_relative './Keystone/models/user'
 p "############################### Vanguard ##########################"
 
 #########################################################################################
@@ -67,14 +68,24 @@ Sidekiq.configure_server do |config|
     puts "Got TERM, shutting down process..."
     # stop_the_world
   end
+  $options[:mongodb] = 'attrition'
+  $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
+
+  Redis::Objects.redis = Sidekiq.redis
+  Mongoid.load!('mongoid.yml', :development)
+  $MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
+
+  $logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
+
+  $logger.info  "Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
 
   Mongoid.load!('mongoid.yml', :development)
 
-  # database_url = ENV['DATABASE_URL']
-  # if database_url
-  #   ENV['DATABASE_URL'] = "#{database_url}?pool=#{$SERVER_CONCURRENCY}"
-  #   ActiveRecord::Base.establish_connection(ENV['DATABASE_URL']) # this arg passing method req now
-  # end
+  database_url = ENV['DATABASE_URL']
+  if database_url
+    ENV['DATABASE_URL'] = "#{database_url}?pool=#{$SERVER_CONCURRENCY}"
+    ActiveRecord::Base.establish_connection(ENV['DATABASE_URL']) # this arg passing method req now
+  end
 
   #config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
   config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: 'vanguard' }

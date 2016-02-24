@@ -1,11 +1,11 @@
-require 'mongoid'
-require 'redis-objects'
-require 'rye'
+# require 'mongoid'
+# require 'redis-objects'
+# require 'rye'
+#
+# require 'sidekiq'
+# require 'mongoid'
 
-require 'sidekiq'
-require 'mongoid'
-
-require_relative 'user'
+#require_relative 'user'
 # require 'acts_as_api'
 
 # Datetime Array BigDecimal Boolean Date DateTime Float Hash Integer
@@ -188,24 +188,24 @@ end
 # class VserverWorker
 #   include Sidekiq::Worker
 #
-app0 = Vservers.create
-app0.address = '10.0.1.60'
-app0.up = check_server_availability(app0.address, 'ssh')
-p app0.up
-
-#p Vservers.all
-
-def delete(klass=Vserver)
-klass.delete_all
-end
-app0 = Vservers.new
-app0.address = '10.0.1.60'
-app0.up = check_server_availability(app0.address, 'ssh')
-app0.upsert
-p app0.up
-
- Vservers.all.each{|x| p x}
-
-require 'ipaddr'
-
-ips = IPAddr.new("10.0.1.0/24").to_range
+# app0 = Vservers.create
+# app0.address = '10.0.1.60'
+# app0.up = check_server_availability(app0.address, 'ssh')
+# p app0.up
+#
+# #p Vservers.all
+#
+# def delete(klass=Vserver)
+# klass.delete_all
+# end
+# app0 = Vservers.new
+# app0.address = '10.0.1.60'
+# app0.up = check_server_availability(app0.address, 'ssh')
+# app0.upsert
+# p app0.up
+#
+#  Vservers.all.each{|x| p x}
+#
+# require 'ipaddr'
+#
+# ips = IPAddr.new("10.0.1.0/24").to_range
