@@ -20,6 +20,14 @@ class TitanCommander
     ret.stderr
     ret.exit_status
   end
+
+  def cnacelled?
+    Sidekiq.redis {|c| c.exists("canceled-#{jid}")}
+  end
+
+  def cancel!(jid)
+    Sidekiq.redis{|c| c.setex("cancelled-#{jid}", 86400, 1)}
+  end
 end
 
 

@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  get 'home/index'
+
+  root 'home#index'
+
+  # GlobalIntelAPI::Application.routes.draw do
+
+
+    namespace :api, defaults: { format: :json} do
+  #       #contraints: { subdomain: 'api' } , # set the starting path to root in rel to subdomain
+  #          #   path: '/' do
+  #
+     end
+  # end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

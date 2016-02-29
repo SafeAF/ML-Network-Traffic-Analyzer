@@ -27,25 +27,7 @@ require 'pp'
 #
 # $logger.info "Connecting to Redis @ #{$options[:redhost]}, using database: #{$options[:redtable]}"
 
-class GlobalIP
-  include Mongoid::Document
-  include Redis::Objects
-  include Mongoid::Timestamps
 
-  field :address, type: String
-  field :organization, type: String
-  field :codename, type: String
-  field :domains, type: Array
-  field :geoloc, type: String
-  field :whois
-  field :reverselookup
-  field :changeInReputation, type: Float
-  field :valid, type: Boolean
-
-  has_one :banStatus
-#
-
-end
 
 class BanStatus
   include Mongoid::Document
@@ -61,6 +43,8 @@ class BanStatus
   field :firstBan, type: DateTime
   field :prevBan, type: DateTime
   field :totalBans, type: Integer
+  field :banEvents, type: Hash
+  field :banDates, type: Array
   #field :banLocality, type: String
  # field :banevents, type: Hash
  belongs_to :globalIP
@@ -86,9 +70,6 @@ class Attack
   field :repWeighting, type: Float
   field :targetNation
   field :sourceNation
-
-
-
 
   embedded_in :ban
 end
@@ -121,6 +102,7 @@ class Reputation
   include Mongoid::Document
   include Redis::Objects
 
+  field :address
 
   #value :reputation
 
