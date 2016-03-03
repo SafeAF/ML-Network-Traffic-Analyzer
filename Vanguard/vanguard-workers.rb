@@ -14,7 +14,7 @@ class TitanCommander
 
   def perform(cmd = 'who', host = 'all', user = 'vishnu', ryeset=nil)
     rbox = Rye::Box.new(host, {user: user})
-    rbox.disable_safe_mode
+    rbox.disable_safe_mode = true
     ret = rbox.execute cmd
     Sidekiq.redis {|conn| ret.stdout}
     ret.stderr
