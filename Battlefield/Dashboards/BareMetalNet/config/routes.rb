@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  https://github.com/BlackrockDigital/startbootstrap-heroic-features/archive/v1.0.4.zip
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

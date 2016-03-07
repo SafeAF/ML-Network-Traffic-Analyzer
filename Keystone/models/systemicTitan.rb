@@ -1,9 +1,3 @@
-# require 'mongoid'
-# require 'redis-objects'
-# require 'rye'
-#
-# require 'sidekiq'
-# require 'mongoid'
 
 #require_relative 'user'
 # require 'acts_as_api'
@@ -11,72 +5,6 @@
 # Datetime Array BigDecimal Boolean Date DateTime Float Hash Integer
 # BSON::Binary BSON::OBjectId Range Regexp String Symbol Time TimeWithZone
 
-# gem install ruby-nmap
-# $options = {};$options[:redhost] = ARGV[0] || '10.0.1.75' ;$options[:redport] = '6379'
-# $options[:redtable] = 5
-# $options[:mongodb] = 'attrition'
-# $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
-#
-# Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
-#   Redis.new({host: $options[:redhost], port: $options[:redport], db: $options[:redtable]})}
-#
-# Mongoid.load!('mongoid.yml', :development)
-# $MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
-#
-# $logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
-#
-# $logger.info  "Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
-#
-# $logger.info "Connecting to Redis @ #{$options[:redhost]}, using database: #{$options[:redtable]}"
-
-# Attach ourselves to Mongoid
-# if defined?(Mongoid::Document)
-#   Mongoid::Document.send :include, ActsAsApi::Adapters::Mongoid
-# end
-
-
-#
-# module Mongoid
-#   module Config
-#     def load_configuration_hash(settings)
-#       load_configuration(settings)
-#     end
-#   end
-# end
-#
-# Mongoid.load!('mongoid.yml', :development)
-
-#  thin -C production-thin.yml -R config.ru start
-# bundle exec sidekiq -r ./reserver.rb
-#### Installation
-# class Diskdrive
-#   include Mongoid::Document
-#
-#   field :storage, type: Hash
-#   field :totalDisk, type: Integer, default: 1
-#   field :availDisk, type: Integer, default: 1
-#   field :percentageUsed, type: Float, default: 100
-#   field :mountpoint, type: String
-#
-#   embedded_in :vserver
-# end
-#
-# class User
-#   include Mongoid::Document
-#
-#   field :first_name, :type => String
-#   field :last_name, :type => String
-#   field :age, :type => Integer
-#   field :active, :type => Boolean
-#
-#   acts_as_api
-#
-#   api_accessible :name_only do |template|
-#     template.add :first_name
-#     template.add :last_name
-#   end
-#
-# end
 
 class Supercluster
   include Mongoid::Document
@@ -86,6 +14,7 @@ class Supercluster
   field :public_ip, type: String
   field :ip, type: String
   field :version, type: String
+  field :superSSHKey, type: String
 
   field :services, type: Hash
   field :processes, type: Hash
@@ -209,3 +138,72 @@ end
 # require 'ipaddr'
 #
 # ips = IPAddr.new("10.0.1.0/24").to_range
+
+########### END ##########
+
+# gem install ruby-nmap
+# $options = {};$options[:redhost] = ARGV[0] || '10.0.1.75' ;$options[:redport] = '6379'
+# $options[:redtable] = 5
+# $options[:mongodb] = 'attrition'
+# $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
+#
+# Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
+#   Redis.new({host: $options[:redhost], port: $options[:redport], db: $options[:redtable]})}
+#
+# Mongoid.load!('mongoid.yml', :development)
+# $MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
+#
+# $logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
+#
+# $logger.info  "Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
+#
+# $logger.info "Connecting to Redis @ #{$options[:redhost]}, using database: #{$options[:redtable]}"
+
+# Attach ourselves to Mongoid
+# if defined?(Mongoid::Document)
+#   Mongoid::Document.send :include, ActsAsApi::Adapters::Mongoid
+# end
+
+
+#
+# module Mongoid
+#   module Config
+#     def load_configuration_hash(settings)
+#       load_configuration(settings)
+#     end
+#   end
+# end
+#
+# Mongoid.load!('mongoid.yml', :development)
+
+#  thin -C production-thin.yml -R config.ru start
+# bundle exec sidekiq -r ./reserver.rb
+#### Installation
+# class Diskdrive
+#   include Mongoid::Document
+#
+#   field :storage, type: Hash
+#   field :totalDisk, type: Integer, default: 1
+#   field :availDisk, type: Integer, default: 1
+#   field :percentageUsed, type: Float, default: 100
+#   field :mountpoint, type: String
+#
+#   embedded_in :vserver
+# end
+#
+# class User
+#   include Mongoid::Document
+#
+#   field :first_name, :type => String
+#   field :last_name, :type => String
+#   field :age, :type => Integer
+#   field :active, :type => Boolean
+#
+#   acts_as_api
+#
+#   api_accessible :name_only do |template|
+#     template.add :first_name
+#     template.add :last_name
+#   end
+#
+# end
