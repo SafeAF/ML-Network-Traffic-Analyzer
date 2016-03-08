@@ -2,145 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9722713f-c33d-41e9-adee-82755a12f8d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/images/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/controllers/concerns/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/mailers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/models/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/models/concerns/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/lib/assets/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/lib/tasks/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/log/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/controllers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/fixtures/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/helpers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/integration/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/mailers/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/models/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/vendor/assets/javascripts/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/vendor/assets/stylesheets/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/public/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/public/422.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/public/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/README.rdoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/application.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/views/layouts/application.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/application.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/controllers/application_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/helpers/application_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/assets.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/backtrace_silencers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/boot.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/stylesheets/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/javascripts/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/stylesheets/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/javascripts/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/bin/bundle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config.ru" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/javascripts/contact_me.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/contact_me.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/cookies_serializer.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/database.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/environments/development.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/locales/en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/environment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/filter_parameter_logging.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/views/main/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/inflections.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/javascripts/jqBootstrapValidation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/jqBootstrapValidation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/javascripts/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/mime_types.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/stylesheets/modern-business.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/modern-business.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/mongoid.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/environments/production.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/bin/rails" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/bin/rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/public/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/secrets.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/db/seeds.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/session_store.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/bin/setup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/bin/spring" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/environments/test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/test_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/config/initializers/wrap_parameters.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/Gemfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/Gemfile.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/README.rdoc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/assets/images/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/assets/javascripts/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/assets/stylesheets/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/controllers/application_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/controllers/concerns/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/helpers/application_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/mailers/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/models/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/models/concerns/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/app/views/layouts/application.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/bin/bundle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/bin/rails" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/bin/rake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/bin/setup" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/bin/spring" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config.ru" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/application.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/boot.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/database.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/environment.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/environments/development.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/environments/production.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/environments/test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/assets.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/backtrace_silencers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/cookies_serializer.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/filter_parameter_logging.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/inflections.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/mime_types.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/session_store.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/initializers/wrap_parameters.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/locales/en.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/routes.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/config/secrets.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/db/seeds.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/lib/assets/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/lib/tasks/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/log/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/public/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/public/422.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/public/500.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/public/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/test/controllers/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/test/fixtures/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/test/helpers/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/test/integration/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/test/mailers/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/test/models/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/test/test_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/vendor/assets/javascripts/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/attritionIO/vendor/assets/stylesheets/.keep" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Development.iml" afterPath="$PROJECT_DIR$/.idea/Development.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile" afterPath="$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/stylesheets/application.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/application.css.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/application.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/attritionsubs.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/attritionsubs.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/attritionsubs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/attritionsubs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/controllers/attritionsubs_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/controllers/attritionsubs_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/helpers/attritionsubs_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/views/attritionsubs/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/javascripts/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/main.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/assets/stylesheets/main.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/controllers/main_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/test/controllers/main_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pubsites/attritionIO/app/helpers/main_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" afterPath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/config/routes.rb" afterPath="$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Keystone/models/systemicTitan.rb" afterPath="$PROJECT_DIR$/Keystone/models/systemicTitan.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2649d613-33fa-42eb-bcf2-ea4596f998b4" name="Failed commit: Default" comment="f" />
@@ -230,7 +109,7 @@
                   <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.38255033">
+                        <state vertical-scroll-proportion="0.35669586">
                           <caret line="24" column="528" selection-start-line="24" selection-start-column="528" selection-end-line="24" selection-end-column="528" />
                           <folding />
                         </state>
@@ -254,7 +133,7 @@
                   <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/config/routes.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.36565098">
+                        <state vertical-scroll-proportion="0.34020618">
                           <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
                           <folding />
                         </state>
@@ -352,7 +231,7 @@
               <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Pubsites/attritionIO/app/views/main/index.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.02638889">
+                    <state vertical-scroll-proportion="0.024547804">
                       <caret line="166" column="33" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
                       <folding />
                     </state>
@@ -398,7 +277,7 @@
           <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Pubsites/attritionIO/app/views/layouts/application.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5013889">
+                <state vertical-scroll-proportion="0.46640828">
                   <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
                 </state>
@@ -1508,19 +1387,20 @@
     <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15256009" sideWeight="0.49127445" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.5095188" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14002089" sideWeight="0.51163405" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Serial Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28213167" sideWeight="0.4868213" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05595855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14002089" sideWeight="0.48836595" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.052659295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07350608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="385" y="37" width="258" height="995" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19644724" sideWeight="0.49048123" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19644724" sideWeight="0.49048123" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027660696" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1534,7 +1414,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14002089" sideWeight="0.48946813" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1833,6 +1712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6315789">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1840,6 +1720,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1943,6 +1824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1950,6 +1832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18421052">
           <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1963,7 +1846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pubsites/attritionIO/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5013889">
+        <state vertical-scroll-proportion="0.46640828">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
@@ -1971,7 +1854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36565098">
+        <state vertical-scroll-proportion="0.34020618">
           <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
           <folding />
         </state>
@@ -1979,7 +1862,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pubsites/attritionIO/app/views/main/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02638889">
+        <state vertical-scroll-proportion="0.024547804">
           <caret line="166" column="33" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
           <folding />
         </state>
@@ -1987,7 +1870,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Keystone/keystoneAPI/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38255033">
+        <state vertical-scroll-proportion="0.35669586">
           <caret line="24" column="528" selection-start-line="24" selection-start-column="528" selection-end-line="24" selection-end-column="528" />
           <folding />
         </state>
