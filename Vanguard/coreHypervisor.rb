@@ -102,7 +102,9 @@ end
 $logger.info "Sidekiq Redis Namespace  #{$options[:sknamespace]}"
 Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
 
+#################
 
+$logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"
 ##############
 
 ## load in a 'cron' type dealio of scheduled jobs, maybe use sidekiq extension to do this

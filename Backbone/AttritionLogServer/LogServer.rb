@@ -5,7 +5,7 @@ require 'bson'
 require 'sinatra'
 require 'redis-objects'
 require 'connection_pool'
-#require 'sidekiq'
+require 'sidekiq'
 #require 'sidekiq/web'
 
 
@@ -73,6 +73,40 @@ class LogServ < Sinatra::Base
 #   end
 #
 
+  post "/clutchlogs" do
+    @log = params[:logfile]
+    @instanceType = params[:instanceType]
+    @instanceID = params[:instanceID]
+    @machineID = params[:machineID]
+    apiKey = params[:apikey]
+    apiuuid = params[:apiuuid] # SecureRandom.uuid(40)
+
+    ClutchLogPreProcessor.perform_async(params)
+  end
+
+  post "/sysloglogs" do
+    @log = params[:logfile]
+    @instanceType = params[:instanceType]
+    @instanceID = params[:instanceID]
+    @machineID = params[:machineID]
+    apiKey = params[:apikey]
+    apiuuid = params[:apiuuid] # SecureRandom.uuid(40)
+
+    SyslogLogPreProcessor.perform_async(params)
+  end
+
+
+  post "/sshlogs" do
+    @log = params[:logfile]
+    @instanceType = params[:instanceType]
+    @instanceID = params[:instanceID]
+    @machineID = params[:machineID]
+    apiKey = params[:apikey]
+    apiuuid = params[:apiuuid] # SecureRandom.uuid(40)
+
+    SshLogPreProcessor.perform_async(params)
+  end
+
   post "/apachelogs" do
     @log = params[:logfile]
     @instanceType = params[:instanceType]
@@ -81,8 +115,7 @@ class LogServ < Sinatra::Base
     apiKey = params[:apikey]
     apiuuid = params[:apiuuid] # SecureRandom.uuid(40)
 
-    ApacheLogUndertaker.perform_async
-
+    ApacheLogPreProcessor.perform_async(params)
   end
 
   post "/logs" do # add version to url ie /api/v1/logs

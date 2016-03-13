@@ -40,7 +40,19 @@ module Systemic
     include Redis::Objects
     include Mongoid::Timestamps
 
+# sure should inherit from common class but that means special options enabled in mongoid config
+    field :id
+    field :created
+    field :updated
+    field :logged, type: DateTime
+    field :logfileID, type: Integer
     field :name
+    field :message
+    field :facility
+    field :priority, type: Integer
+    field :service
+    field :serviceID, type: Integer
+    field :logentryID, type: Integer
     field :type
 
   end

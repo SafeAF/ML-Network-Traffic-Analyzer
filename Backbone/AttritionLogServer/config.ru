@@ -72,7 +72,7 @@ require 'mongoid'
 require 'json'
 require 'msgpack'
 require 'pp'
-# require 'sidekiq'
+ require 'sidekiq'
 # require 'sidekiq/web'
 # require 'sidekiq/api'
 
@@ -95,7 +95,7 @@ $options[:mongoDBCollection] = 'dev_logserver'
 #### Installation
 ## apt-get install libmyslclient18 libmysqlclient18-dev
 ## Gem install mysql2 hiredis rspec rspec-core shoulda-matchers shoulda mongoid mongo redis
-# gem install sidekiq
+# gem install sidekiq sidekiq-superworker sidekiq-status
 
 p "#{Time.now}:#{self.class}:IP##{__LINE__}: Booting Switchyard Middleware: #{File.basename(__FILE__)}"
 # Use jruby with threaded servers, possible even not because its great at long running apps
