@@ -1,8 +1,12 @@
 # Development
-Projects underway either by a solo developer or a team using a semi formalized agilesque development methodolgy. BareMetal Management and Team goals include Fostering open communication, ownership and pride in work, self organization, happy people, high productivity and code quality
+Projects underway using our inhouse semi formalized agilesque development methodolgy "Dexterity". BareMetal Management and Team goals include Fostering open communication, ownership and pride in work, self organization, happy people, high productivity and code quality
 
 
-Detecting intrusions requires three elements:
+## Attrition.IO Top Tier Project 
+
+### Distributed and Aggregated IPS
+
+__Detecting intrusions requires three elements:__
 
 the capability to log security-relevant events
 procedures to ensure the logs are monitored regularly
