@@ -43,6 +43,8 @@ end
 Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
 $PSHM = Redis::List.new('yard:connector')
 
+
+# gem install RubyInline
 #require 'rubygems'
 require 'inline'
 
@@ -169,6 +171,12 @@ module Preprocessor
 end
 
 
+
+class LogPreprocessor
+	include Sidekiq::Worker
+	include Redis::Objects
+
+end
 
 
 class RedisExcersizerWorker
