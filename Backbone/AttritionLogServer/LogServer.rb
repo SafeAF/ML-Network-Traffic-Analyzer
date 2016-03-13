@@ -72,6 +72,19 @@ class LogServ < Sinatra::Base
 #
 #   end
 #
+
+  post "/apachelogs" do
+    @log = params[:logfile]
+    @instanceType = params[:instanceType]
+    @instanceID = params[:instanceID]
+    @machineID = params[:machineID]
+    apiKey = params[:apikey]
+    apiuuid = params[:apiuuid] # SecureRandom.uuid(40)
+
+    ApacheLogUndertaker.perform_async
+
+  end
+
   post "/logs" do # add version to url ie /api/v1/logs
 
     begin

@@ -21,8 +21,8 @@ class TitanCommander
     ret.exit_status
   end
 
-  def cnacelled?
-    Sidekiq.redis {|c| c.exists("canceled-#{jid}")}
+  def cancelled?
+    Sidekiq.redis {|c| c.exists("cancelled-#{jid}")}
   end
 
   def cancel!(jid)
