@@ -59,4 +59,47 @@ def submit_logfile(url, gucid, logfile=nil, pcapfile=nil)
   end
 end
 
+def monitor_logfile(filename)
+  begin
+    open(filename) do |file|
+      file.read
+      queue = INotify::Notifier.new
+      queue.watch(filename, :modify) do
+        yield file.read
+      end
+      queue.run
+    end
+
+  rescue => err
+    $logger.error "[#{Time.now}]: Error #{err}"
+  ensure
+   sleep 5
+    exit(1)
+  end
+end
+
+
+filename = ARGV[0] || '/var/log/auth.log'
+instanceLogfile = StringIO.new
+
+monitor_logfile filename do |data|
+
+#  p data
+  begin
+ instanceLogfile << data
+  if (instanceLogfile.size > 1000) || (lastLogSubmit > 30)
+   #if submit_logfile
+       instanceLogfile.truncate(0)
+  # end
+  end
+
+
+  rescue => err
+    $logger.error "[#{Time.now}]: Error #{err}"
+    sleep $options[:retry]
+    retry
+  ensure
+    #  File.close
+  end
+end
 

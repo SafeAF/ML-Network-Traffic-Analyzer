@@ -21,6 +21,7 @@ class SshLogPreProcessor
 
   def perform(params)
     @logs = params[:logfile]
+    `echo 'foo' > foo.txt`
   end
 end
 

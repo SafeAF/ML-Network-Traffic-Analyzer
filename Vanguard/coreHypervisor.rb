@@ -13,6 +13,7 @@ require_relative '../Keystone/models/systemicAttrition'
 require_relative '../Keystone/models/systemicTitan'
 require_relative '../Universe/Gathering/scanning'
 require_relative './Keystone/models/user'
+require_relative '../preprocessors'
 p "############################### Vanguard ###################################"
 $logger.info "########## VANGUARD ##########"
 
@@ -108,7 +109,6 @@ $logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"
 ##############
 
 ## load in a 'cron' type dealio of scheduled jobs, maybe use sidekiq extension to do this
-
 ###
 
 #########################################################################################
