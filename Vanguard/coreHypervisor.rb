@@ -5,15 +5,19 @@ require 'redis-objects'
 require 'mongoid'
 require 'mongo'
 require 'net/ssh'
-
+require 'logger'
 require 'rye'
 #require_relative 'initialization-routines'
 require_relative 'vanguard-workers'
 require_relative '../Keystone/models/systemicAttrition'
 require_relative '../Keystone/models/systemicTitan'
 require_relative '../Universe/Gathering/scanning'
-require_relative './Keystone/models/user'
-require_relative '../preprocessors'
+require_relative '../Keystone/models/user'
+require_relative './preprocessors'
+
+$logger = Logger.new File.new('hypervisor.log', 'w')
+
+
 p "############################### Vanguard ###################################"
 $logger.info "########## VANGUARD ##########"
 
@@ -43,6 +47,9 @@ module Mongoid
     end
   end
 end
+#########################################################################################
+$options = Hash.new
+$options[:namespace] = 'corehypervisor'
 #########################################################################################
 $ATTRITIONDB = '5'
 $SYSTEMSTACK0 = '10.0.1.75'
@@ -91,21 +98,21 @@ Sidekiq.configure_server do |config|
   end
 
   #config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
-  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:sknamespace] }
+  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:namespace] }
   #  config.redis = { url: $SYSTEMSTACK0 }
 end
 
 Sidekiq.configure_client do |config|
 #  config.redis = ConnectionPool.new(size: 5, &redis_conn)
-  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:sknamespace] }
+  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:namespace] }
 end
 
-$logger.info "Sidekiq Redis Namespace  #{$options[:sknamespace]}"
+$logger.info "Sidekiq Redis Namespace  #{$options[:namespace]}"
 Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
 
 #################
 
-$logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"
+#$logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"
 ##############
 
 ## load in a 'cron' type dealio of scheduled jobs, maybe use sidekiq extension to do this
@@ -114,7 +121,7 @@ $logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"
 #########################################################################################
 p "END INITIALIZATION SECTION"
 $logger.info "End Initialization"
-#########################################################################################
+##################"stack"#######################################################################
 
 ######################################################################################
 ## Powerplant Workers Akashic
