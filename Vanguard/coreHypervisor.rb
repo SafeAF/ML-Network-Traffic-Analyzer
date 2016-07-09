@@ -49,7 +49,7 @@ module Mongoid
 end
 #########################################################################################
 $options = Hash.new
-$options[:namespace] = 'corehypervisor'
+$options[:namespace] = 'vanguardcore'
 #########################################################################################
 $ATTRITIONDB = '5'
 $SYSTEMSTACK0 = '10.0.1.75'
