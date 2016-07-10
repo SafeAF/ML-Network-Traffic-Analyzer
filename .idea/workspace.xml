@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9722713f-c33d-41e9-adee-82755a12f8d5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Agents/sirbansalot.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Agents/sirbansalot.rb" afterPath="$PROJECT_DIR$/Agents/libsystemban.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" afterPath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Gems/libsupermodels/supermodels.gemspec" afterPath="$PROJECT_DIR$/../Gems/libsupermodels/supermodels.gemspec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2649d613-33fa-42eb-bcf2-ea4596f998b4" name="Failed commit: Default" comment="f" />
@@ -22,20 +21,21 @@
   </component>
   <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/D2@LogServer.coverage" NAME="LogServer Coverage Results" MODIFIED="1466464456792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard/AttritionLogServer" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@titanvservers.coverage" NAME="titanvservers Coverage Results" MODIFIED="1455642698067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keystone" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/D2@coreHypervisor.coverage" NAME="coreHypervisor Coverage Results" MODIFIED="1467208654932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Dev@messagehub.coverage" NAME="messagehub Coverage Results" MODIFIED="1456183995197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backbone/MessageHub" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Dev@coreHypervisor.coverage" NAME="coreHypervisor Coverage Results" MODIFIED="1457814732396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Dev@SshLogMonitor.coverage" NAME="SshLogMonitor Coverage Results" MODIFIED="1457950541684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Agents" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Dev@vanguard.coverage" NAME="vanguard Coverage Results" MODIFIED="1455625327255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/D2@LogServer.coverage" NAME="LogServer Coverage Results" MODIFIED="1466464456792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard/AttritionLogServer" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Development@quoteserv_api.coverage" NAME="quoteserv.api Coverage Results" MODIFIED="1452111404321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QuoteServ" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@LogServer.coverage" NAME="LogServer Coverage Results" MODIFIED="1458436695935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard/AttritionLogServer" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/D2@coreHypervisor.coverage" NAME="coreHypervisor Coverage Results" MODIFIED="1467208654932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@harness_vanguard.coverage" NAME="harness-vanguard Coverage Results" MODIFIED="1455642766553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/Dev@check_redis_for_results.coverage" NAME="check_redis_for_results Coverage Results" MODIFIED="1456598087720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Development@server.coverage" NAME="server Coverage Results" MODIFIED="1452099151096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bloodlust" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Dev@check_redis_for_results.coverage" NAME="check_redis_for_results Coverage Results" MODIFIED="1456598087720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/D3@AttritionSniffer.coverage" NAME="AttritionSniffer Coverage Results" MODIFIED="1468134938449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Agents" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@messageserv.coverage" NAME="messageserv Coverage Results" MODIFIED="1456194225323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backbone/MessageHub" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/Dev@messagehub.coverage" NAME="messagehub Coverage Results" MODIFIED="1456183995197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backbone/MessageHub" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@vanguard_standalone.coverage" NAME="vanguard-standalone Coverage Results" MODIFIED="1456601606064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/Dev@coreHypervisor.coverage" NAME="coreHypervisor Coverage Results" MODIFIED="1457814732396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/Dev@vanguard.coverage" NAME="vanguard Coverage Results" MODIFIED="1455625327255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/Dev@SshLogMonitor.coverage" NAME="SshLogMonitor Coverage Results" MODIFIED="1457950541684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Agents" MODULE_NAME="Development" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -58,8 +58,8 @@
                   <file leaf-file-name="user.rb" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/Keystone/models/user.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.0">
-                          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+                        <state vertical-scroll-proportion="-1.6393211">
+                          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
                           <folding />
                         </state>
                       </provider>
@@ -89,21 +89,31 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="SshLogMonitor.rb" pinned="false" current-in-tab="true">
+                  <file leaf-file-name="SshLogMonitor.rb" pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/Agents/SshLogMonitor.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="0.32717678">
+                        <state vertical-scroll-proportion="0.0">
                           <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="supermodels.gemspec" pinned="false" current-in-tab="false">
+                  <file leaf-file-name="supermodels.gemspec" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/../Gems/libsupermodels/supermodels.gemspec">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="-0.0">
-                          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                        <state vertical-scroll-proportion="0.4473684">
+                          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="AttritionSniffer.rb" pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/Agents/AttritionSniffer.rb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state vertical-scroll-proportion="0.0">
+                          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
                           <folding />
                         </state>
                       </provider>
@@ -194,8 +204,8 @@
               <file leaf-file-name="mongoid.yml" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Vanguard/mongoid.yml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                    <state vertical-scroll-proportion="0.7934936">
+                      <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="56" selection-end-column="8" />
                       <folding />
                     </state>
                   </provider>
@@ -260,7 +270,7 @@
           <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6728232">
+                <state vertical-scroll-proportion="0.7213578">
                   <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
                   <folding />
                 </state>
@@ -274,13 +284,11 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Gems" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Keystone/user.rb" />
-        <option value="$PROJECT_DIR$/Keystone/models/CredibilityIntel.rb" />
         <option value="$PROJECT_DIR$/Vanguard/workers/Attrition/Preprocessors.rb" />
         <option value="$PROJECT_DIR$/Backbone/MessageHub/messagehub.rb" />
         <option value="$PROJECT_DIR$/Universe/Gathering/scanning.rb" />
@@ -330,6 +338,8 @@
         <option value="$PROJECT_DIR$/Vanguard/preprocessors.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" />
+        <option value="$PROJECT_DIR$/Keystone/models/user.rb" />
+        <option value="$PROJECT_DIR$/../Gems/libsupermodels/supermodels.gemspec" />
       </list>
     </option>
   </component>
@@ -677,27 +687,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Ruby.coreHypervisor">
-    <configuration default="false" name="messageserv" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="Development" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/Backbone/MessageHub" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/Backbone/MessageHub/messageserv.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Ruby.AttritionSniffer">
     <configuration default="false" name="vrepl" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="Development" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -775,6 +765,26 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/Vanguard/coreHypervisor.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AttritionSniffer" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="Development" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/Agents" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/Agents/AttritionSniffer.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
     </configuration>
@@ -1020,19 +1030,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Ruby.messageserv" />
-      <item index="1" class="java.lang.String" itemvalue="Ruby.vrepl" />
-      <item index="2" class="java.lang.String" itemvalue="Ruby.SshLogMonitor" />
-      <item index="3" class="java.lang.String" itemvalue="Ruby.LogServer" />
-      <item index="4" class="java.lang.String" itemvalue="Ruby.coreHypervisor" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.vrepl" />
+      <item index="1" class="java.lang.String" itemvalue="Ruby.SshLogMonitor" />
+      <item index="2" class="java.lang.String" itemvalue="Ruby.LogServer" />
+      <item index="3" class="java.lang.String" itemvalue="Ruby.coreHypervisor" />
+      <item index="4" class="java.lang.String" itemvalue="Ruby.AttritionSniffer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.coreHypervisor" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.LogServer" />
-        <item index="2" class="java.lang.String" itemvalue="Ruby.SshLogMonitor" />
-        <item index="3" class="java.lang.String" itemvalue="Ruby.vrepl" />
-        <item index="4" class="java.lang.String" itemvalue="Ruby.messageserv" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.AttritionSniffer" />
+        <item index="1" class="java.lang.String" itemvalue="Ruby.coreHypervisor" />
+        <item index="2" class="java.lang.String" itemvalue="Ruby.LogServer" />
+        <item index="3" class="java.lang.String" itemvalue="Ruby.SshLogMonitor" />
+        <item index="4" class="java.lang.String" itemvalue="Ruby.vrepl" />
       </list>
     </recent_temporary>
   </component>
@@ -1079,23 +1089,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3802" height="999" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15621562" sideWeight="0.4837766" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13971397" sideWeight="0.51675534" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19581959" sideWeight="0.5175532" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Serial Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28213167" sideWeight="0.4868213" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0553814" sideWeight="0.49605057" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13971397" sideWeight="0.4832447" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13971397" sideWeight="0.4832447" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.052659295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07154255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="385" y="37" width="258" height="995" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07154255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="385" y="37" width="258" height="995" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298181" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19581959" sideWeight="0.48351064" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19581959" sideWeight="0.48244682" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027660696" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.49894682" order="7" side_tool="false" content_ui="tabs" />
@@ -1180,16 +1190,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Fixins/startbootstrap-modern-business/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.14490674">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="Gfm">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Battlefield/Dashboards/BareMetalNet/app/assets/javascripts/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6315789">
@@ -1489,14 +1489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Keystone/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/AttritionLogServer/LogServer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1504,14 +1496,6 @@
           <folding>
             <element signature="e#5294#5785#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/mongoid.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,7 +1517,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6728232">
+        <state vertical-scroll-proportion="0.7213578">
           <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
           <folding />
         </state>
@@ -1555,18 +1539,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Gems/libsupermodels/supermodels.gemspec">
+    <entry file="file://$PROJECT_DIR$/Agents/SshLogMonitor.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Agents/SshLogMonitor.rb">
+    <entry file="file://$PROJECT_DIR$/Vanguard/mongoid.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32717678">
-          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.7934936">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="56" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keystone/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6393211">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agents/AttritionSniffer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gems/libsupermodels/supermodels.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4473684">
+          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
           <folding />
         </state>
       </provider>
