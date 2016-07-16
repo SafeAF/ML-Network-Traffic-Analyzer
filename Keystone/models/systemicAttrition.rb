@@ -1,7 +1,7 @@
 require 'mongoid'
 
 module Systemic
-
+# Systemic refers to something that is spread throughout, system-wide, affecting a group or system, such as a body, economy, market or society as a whole.
   module Attrition
 
     class BloodlustMachineLearning
