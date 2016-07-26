@@ -17,7 +17,6 @@ require_relative './preprocessors'
 
 $logger = Logger.new File.new('hypervisor.log', 'w')
 
-
 p "############################### Vanguard ###################################"
 $logger.info "########## VANGUARD ##########"
 
