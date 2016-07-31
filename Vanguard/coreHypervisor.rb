@@ -32,6 +32,7 @@ require_relative '../Keystone/models/user'
 require_relative './preprocessors'
 
 require 'vCore'
+autoload 'vOptional'
 
 $VERSION = '1.0.1'
 $DATE = '12/15/15'
