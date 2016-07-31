@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9722713f-c33d-41e9-adee-82755a12f8d5" name="Default" comment="moved files for logsrev to own directory under backbone">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/Gemfile" afterPath="$PROJECT_DIR$/AttritionLogServer/Gemfile" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/Gemfile.lock" afterPath="$PROJECT_DIR$/AttritionLogServer/Gemfile.lock" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/LogServer.rb" afterPath="$PROJECT_DIR$/AttritionLogServer/LogServer.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/README.md" afterPath="$PROJECT_DIR$/AttritionLogServer/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/config.ru" afterPath="$PROJECT_DIR$/AttritionLogServer/config.ru" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/logserver.log" afterPath="$PROJECT_DIR$/AttritionLogServer/logserver.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/parse-apache-log.rb" afterPath="$PROJECT_DIR$/AttritionLogServer/parse-apache-log.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/postserv.init" afterPath="$PROJECT_DIR$/AttritionLogServer/postserv.init" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/production-thin.yml" afterPath="$PROJECT_DIR$/AttritionLogServer/production-thin.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/rsyslogconfig.conf" afterPath="$PROJECT_DIR$/AttritionLogServer/rsyslogconfig.conf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/AttritionLogServer/switchkiqworkers.rb" afterPath="$PROJECT_DIR$/AttritionLogServer/switchkiqworkers.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/Gemfile" afterPath="$PROJECT_DIR$/Bloodlust/Gemfile" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/Gemfile.lock" afterPath="$PROJECT_DIR$/Bloodlust/Gemfile.lock" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust.train" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust.train" />
+    <list default="true" id="9722713f-c33d-41e9-adee-82755a12f8d5" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/.svn/entries" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/.svn/entries" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/.svn/format" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/.svn/format" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/.svn/pristine/17/172d357bff11fbfaa8547bedf9884dced5752e4a.svn-base" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/.svn/pristine/17/172d357bff11fbfaa8547bedf9884dced5752e4a.svn-base" />
@@ -25,31 +11,16 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/.svn/pristine/79/79b49c4f96ab4ebe0f0dddcd309153cd657b233c.svn-base" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/.svn/pristine/79/79b49c4f96ab4ebe0f0dddcd309153cd657b233c.svn-base" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/.svn/pristine/ea/ea1cff45cb5999e877865946905051974599ae6d.svn-base" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/.svn/pristine/ea/ea1cff45cb5999e877865946905051974599ae6d.svn-base" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/.svn/wc.db" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/.svn/wc.db" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/bloodlust.m" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/bloodlust.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/bloodlust.rb" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/bloodlust.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/exploit.py" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/exploit.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/foo.txt" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/foo.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/libenum.rb" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/libenum.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/liblust.rb" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/liblust.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/server.rb" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/server.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/bloodlust/test/test_liblust.rb" afterPath="$PROJECT_DIR$/Bloodlust/bloodlust/test/test_liblust.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/libenum.rb" afterPath="$PROJECT_DIR$/Bloodlust/libenum.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/liblust.rb" afterPath="$PROJECT_DIR$/Bloodlust/liblust.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/Bloodlust/server.rb" afterPath="$PROJECT_DIR$/Bloodlust/server.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/Gemfile" afterPath="$PROJECT_DIR$/MessageHub/Gemfile" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/Gemfile.lock" afterPath="$PROJECT_DIR$/MessageHub/Gemfile.lock" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/config.ru" afterPath="$PROJECT_DIR$/MessageHub/config.ru" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/create_alias_for_thin.sh" afterPath="$PROJECT_DIR$/MessageHub/create_alias_for_thin.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/messagehub.rb" afterPath="$PROJECT_DIR$/MessageHub/messagehub.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/messageserv.rb" afterPath="$PROJECT_DIR$/MessageHub/messageserv.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/production-thin.yml" afterPath="$PROJECT_DIR$/MessageHub/production-thin.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backbone/MessageHub/test_messagehub.rb" afterPath="$PROJECT_DIR$/MessageHub/test_messagehub.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Development.iml" afterPath="$PROJECT_DIR$/.idea/Development.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" afterPath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/lib/liboptional.rb" afterPath="$PROJECT_DIR$/lib/liboptional.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/preprocessors.rb" afterPath="$PROJECT_DIR$/lib/preprocessors.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AttritionLogServer/LogServer.rb" afterPath="$PROJECT_DIR$/AttritionLogServer/LogServer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2649d613-33fa-42eb-bcf2-ea4596f998b4" name="Failed commit: Default" comment="f" />
     <list id="3b113075-fd9d-46c4-9210-be43c79e5b9b" name="Failed commit: Default (2)" comment="f" />
+    <list id="8c770df2-ac99-4316-85d3-4bb8b3aa393b" name="Failed commit: Default (3)" comment="removing backbone directory">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" afterPath="$PROJECT_DIR$/../Gems/libatlas/.idea/libatlas.iml" />
+    </list>
     <ignored path="Development.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
@@ -66,7 +37,7 @@
     <SUITE FILE_PATH="coverage/Dev@titanvservers.coverage" NAME="titanvservers Coverage Results" MODIFIED="1455642698067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keystone" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/D2@coreHypervisor.coverage" NAME="coreHypervisor Coverage Results" MODIFIED="1467208654932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@messagehub.coverage" NAME="messagehub Coverage Results" MODIFIED="1456183995197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backbone/MessageHub" MODULE_NAME="Development" />
-    <SUITE FILE_PATH="coverage/Development4@LogServer.coverage" NAME="LogServer Coverage Results" MODIFIED="1469936376104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backbone/AttritionLogServer" MODULE_NAME="Development" />
+    <SUITE FILE_PATH="coverage/Development4@LogServer.coverage" NAME="LogServer Coverage Results" MODIFIED="1469937849356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AttritionLogServer" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@coreHypervisor.coverage" NAME="coreHypervisor Coverage Results" MODIFIED="1457814732396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@SshLogMonitor.coverage" NAME="SshLogMonitor Coverage Results" MODIFIED="1457950541684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Agents" MODULE_NAME="Development" />
     <SUITE FILE_PATH="coverage/Dev@vanguard.coverage" NAME="vanguard Coverage Results" MODIFIED="1455625327255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vanguard" MODULE_NAME="Development" />
@@ -152,8 +123,8 @@
                   <file leaf-file-name="LogServer.rb" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/AttritionLogServer/LogServer.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state vertical-scroll-proportion="2.9059474">
-                          <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
+                        <state vertical-scroll-proportion="0.7053942">
+                          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
                           <folding />
                         </state>
                       </provider>
@@ -231,30 +202,20 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="systemicAttrition.rb" pinned="false" current-in-tab="false">
+              <file leaf-file-name="systemicAttrition.rb" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Keystone/models/systemicAttrition.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
+                    <state vertical-scroll-proportion="0.22406639">
                       <caret line="42" column="96" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="96" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="vrepl.rb" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/Vanguard/vrepl.rb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="45" column="87" selection-start-line="45" selection-start-column="87" selection-end-line="45" selection-end-column="87" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="vanguard-workers.rb" pinned="false" current-in-tab="true">
+              <file leaf-file-name="vanguard-workers.rb" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Vanguard/vanguard-workers.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.8934993">
+                    <state vertical-scroll-proportion="-28.086956">
                       <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
                       <folding />
                     </state>
@@ -272,7 +233,7 @@
                 </entry>
               </file>
               <file leaf-file-name="preprocessors.rb" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/Vanguard/preprocessors.rb">
+                <entry file="file://$PROJECT_DIR$/lib/preprocessors.rb">
                   <provider selected="true" editor-type-id="text-editor">
                     <state vertical-scroll-proportion="0.0">
                       <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
@@ -359,7 +320,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Production/Deployment/Installers/vServerHostInstaller.rb" />
         <option value="$PROJECT_DIR$/Vanguard/vanguard-standalone.rb" />
         <option value="$PROJECT_DIR$/Battlefield/schema.rb" />
         <option value="$PROJECT_DIR$/application-servers/unicorn.rb" />
@@ -410,6 +370,7 @@
         <option value="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" />
         <option value="$PROJECT_DIR$/Vanguard/vOptional.rb" />
         <option value="$PROJECT_DIR$/Vanguard/lib/liboptional.rb" />
+        <option value="$PROJECT_DIR$/AttritionLogServer/LogServer.rb" />
       </list>
     </option>
   </component>
@@ -661,24 +622,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Vanguard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vanguard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -693,35 +636,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Vanguard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Development4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Development4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AttritionLogServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agents" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -752,10 +681,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Vanguard/lib" />
       <recent name="$PROJECT_DIR$/Backbone" />
       <recent name="$PROJECT_DIR$/Vanguard" />
       <recent name="$PROJECT_DIR$/Keystone/models" />
-      <recent name="$PROJECT_DIR$/Keystone/Credibility" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -1223,7 +1152,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="33" width="3831" height="1047" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15569489" sideWeight="0.48192134" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15569489" sideWeight="0.5180786" order="7" side_tool="true" content_ui="tabs" />
@@ -1236,8 +1165,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.052659295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07284244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="385" y="37" width="258" height="995" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1954023" sideWeight="0.48139352" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07284244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="385" y="37" width="258" height="995" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1954023" sideWeight="0.48139352" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027660696" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.49894682" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TagMyCode" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1311,7 +1240,8 @@
     <MESSAGE value="foo" />
     <MESSAGE value="added files" />
     <MESSAGE value="moved files for logsrev to own directory under backbone" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved files for logsrev to own directory under backbone" />
+    <MESSAGE value="removing backbone directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing backbone directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1326,21 +1256,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AttritionLogServer/config.ru">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/workers/Attrition/signatureDocs.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8381295">
-          <caret line="50" column="84" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/workers/Attrition/auth-log-processor.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1366,7 +1281,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/preprocessors.rb">
+    <entry file="file://$PROJECT_DIR$/lib/preprocessors.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
@@ -1627,7 +1542,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/lib/liboptional.rb">
+    <entry file="file://$PROJECT_DIR$/lib/liboptional.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.043758042">
           <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
@@ -1701,7 +1616,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/vanguard-workers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8934993">
+        <state vertical-scroll-proportion="-28.086956">
           <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
           <folding />
         </state>
@@ -1723,10 +1638,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vanguard/vrepl.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.98455596">
+          <caret line="45" column="87" selection-start-line="45" selection-start-column="87" selection-end-line="45" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keystone/models/systemicAttrition.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22406639">
+          <caret line="42" column="96" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AttritionLogServer/LogServer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.9059474">
-          <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.7053942">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
           <folding />
         </state>
       </provider>

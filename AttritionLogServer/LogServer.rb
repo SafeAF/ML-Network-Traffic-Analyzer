@@ -6,7 +6,7 @@ require 'sinatra'
 require 'redis-objects'
 require 'connection_pool'
 require 'sidekiq'
-require_relative '../preprocessors'
+require_relative '../lib/preprocessors'
 #require 'sidekiq/web'
 
 
