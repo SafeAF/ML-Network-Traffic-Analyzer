@@ -22,7 +22,7 @@ class TitanCommander
   end
 
   def cancelled?
-    Sidekiq.redis {|c| c.exists("cancelled-#{jid}")}
+    Sidekiq.redis {|c| c..rexists("cancelled-#{jid}")}
   end
 
   def cancel!(jid)

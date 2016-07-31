@@ -1,3 +1,18 @@
+## Add this directory to path
+$:.unshift File.join(File.dirname(__FILE__))
+ROOT = File.join(File.dirname(__FILE__), '..')
+
+['../app/models/' '../lib', '../db'].each do |folder|
+  $:.unshift File.join(ROOT, folder)
+end
+
+BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
+$:.unshift File.join(BASE_PATH, 'lib')
+
+Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
+  require File.basename(file, File.extname(file))
+end
+
 require 'sidekiq'
 require 'sidekiq-superworker'
 require 'connection_pool'
@@ -8,6 +23,7 @@ require 'net/ssh'
 require 'logger'
 require 'rye'
 #require_relative 'initialization-routines'
+### make these autoloads?
 require_relative 'vanguard-workers'
 require_relative '../Keystone/models/systemicAttrition'
 require_relative '../Keystone/models/systemicTitan'
@@ -15,6 +31,10 @@ require_relative '../Universe/Gathering/scanning'
 require_relative '../Keystone/models/user'
 require_relative './preprocessors'
 
+require 'vCore'
+
+$VERSION = '1.0.1'
+$DATE = '12/15/15'
 $logger = Logger.new File.new('hypervisor.log', 'w')
 
 p "############################### Vanguard ###################################"
