@@ -13,9 +13,11 @@ require_relative '../lib/preprocessors'
 #require File.expand_path(File.dirname(__FILE__) + '/libmongols')
 #$redis = Redis.current
 
+## Route logs to logserv table, have bloodlust or other workers
+## pickup from there?
 
 $options = Hash.new
-$options[:host] = '10.0.1.75'# '10.0.1.17'
+$options[:host] = ARGV[0] || '10.0.1.75'# '10.0.1.17'
 $options[:port] = '6379'
 $options[:table] = 5
 
@@ -33,8 +35,8 @@ $AUTHTABLE = Redis::List.new($redisAttritionAuthTable, :marshal => true)
 
 
 $logger = Logger.new('logserver.log')
-$TITLE = 'EMERGENT ATTRITION LOG POSTING INFRASTRUCTURE'
-$STATUS = true
+$TITLE = 'EMERGENT ATTRITION API LOG ROUTING INFRASTRUCTURE'
+$DBG = true
 #########################################################################
 # Main App
 #########################################################################
@@ -55,11 +57,11 @@ class LogServ < Sinatra::Base
   ## and return a health value based on it, a lower health value should be used by
   ## clients to downthrottle their pushing logdata to the server to reduce load
   get '/status' do
-    if $STATUS
+    if $DBG
     {status: 'up', version: $VERSION, title: $TITLE, bl: $redisBloodlustConnector, logserv: $redisLogservTable,
      date: Time.now}.to_json
-    else
-      {status: 'down', version: $VERSION, title: $TITLE, date: Time.now}.to_json
+    # else
+    #   {status: 'down', version: $VERSION, title: $TITLE, date: Time.now}.to_json
     end
 
   end

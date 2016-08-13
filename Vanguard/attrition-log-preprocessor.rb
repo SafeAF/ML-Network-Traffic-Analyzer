@@ -187,7 +187,7 @@ class RedisExcersizerWorker
   counter :jobcount
   value :latency
   def perform(how_hard="super hard", how_long=1)
-
+		magnet:?xt=urn:btih:c9cd77928465e193fb20bc812b59ac1ab8c23bf1&dn=The.Iceman.2012.BRRip+XViD+juggs&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969
     puts "Workin' #{how_hard}"
 
     redinfo = ""
