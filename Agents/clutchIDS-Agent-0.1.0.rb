@@ -3,17 +3,8 @@ require 'redis'
 require 'redis-objects'
 require 'connection_pool'
 require 'logger'
-require 'thread'
-require 'rb-inotify'
-require 'drb'
-#require 'rinda'
-
-$hostname = `hostname`.chomp!
-$options = {}
-
-$options[:host] = '10.0.1.17'
-$options[:db] = 1
-$options[:port] = '6379'
+require 'tns'
+[:port] = '6379'
 $options[:table] = 'system:log'
 $options[:hookLog] = '/var/log/syslog'
 $options[:email] = false
