@@ -1,5 +1,10 @@
 require 'rake'
+require 'bundler'
 
+#Bundler::GemHelper.install_tasks
+task :default do
+  system "rake --tasks"
+end
 
 task :monitor do
   # optional: Process.daemon (and take care of Process.pid to kill process later on)
