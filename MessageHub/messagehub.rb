@@ -54,7 +54,10 @@ end
 
 BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
 $:.unshift File.join(BASE_PATH, 'lib')
-$VERSION = '1.0.1'
+  require 'libstats'
+
+
+$VERSION = '0.1.1'
 $DATE = '12/15/15'
 
 #  require File.expand_path(File.dirname(__FILE__) + '/liblust')
@@ -100,56 +103,6 @@ $messages = Redis::List.new($messagehub, :marshall => true)
 $notifications = Redis::List.new($notifyhub, :marshall => true)
 $alerts =  Redis::List.new($alerthub, :marshall => true)
 $email =  Redis::List.new($emailhub, :marshall => true)
-
-module Statistics
- class Messages
-   def self.total
-     @@total = 0 if @@total.nil?
-     @@total
-   end
-
-   def self.total=(val)
-     @@total = val
-   end
-
- end
-
- class Notifications
-   def self.total
-     @@total = 0 if @@total.nil?
-     @@total
-   end
-
-   def self.total=(val)
-     @@total = val
-   end
-
- end
-
- class Alerts
-   def self.total
-     @@total = 0 if @@total.nil?
-     @@total
-   end
-
-   def self.total=(val)
-     @@total = val
-   end
-
- end
-
- class Emails
-   def self.total
-     @@total = 0 if @@total.nil?
-     @@total
-   end
-
-   def self.total=(val)
-     @@total = val
-   end
-
- end
-end
 
  def send_desktop_notification(header, body)
 
