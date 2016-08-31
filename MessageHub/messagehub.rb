@@ -54,6 +54,9 @@ end
 
 BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
 $:.unshift File.join(BASE_PATH, 'lib')
+  Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
+    require File.basename(file, File.extname(file))
+  end
   require 'libstats'
 
 
@@ -62,9 +65,7 @@ $DATE = '12/15/15'
 
 #  require File.expand_path(File.dirname(__FILE__) + '/liblust')
 
-Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
-  require File.basename(file, File.extname(file))
-end
+
 $operatorWorkstationURI = ' vishnu@10.0.1.8 '
 $notifySend = true
 $options = {}
@@ -104,11 +105,6 @@ $notifications = Redis::List.new($notifyhub, :marshall => true)
 $alerts =  Redis::List.new($alerthub, :marshall => true)
 $email =  Redis::List.new($emailhub, :marshall => true)
 
- def send_desktop_notification(header, body)
-
-   `ssh #{$operatorWorkstationURI} notifysend  "#{body}"`
-
- end
 
 
 module Parser
@@ -125,6 +121,16 @@ module Parser
   end
 end
 
+  class MsgQueue
+    attr_accessor :que
+
+    def initialize
+      @que = Array.new
+    end
+
+  end
+
+
 begin
   class MessageHub < Sinatra::Base
     # common extensions
@@ -132,18 +138,19 @@ begin
     #all extension
     # ge the same line  here but 1 line diff in require -> 'sinatra/contrib/all'
     attr_accessor :user_obj
-    set :server, :thin
-    set :port, 5555
-    set :environment, :production
+    # set :server, :thin
+    # set :port, 5555
+    # set :environment, :production
     #before do ; expires 300, :public, :must_revalidate ;end # before filter use instead of in method, protip
 
     def initialize
-      $logger.info "#{Time.now}:#{self.class}:IP##{__LINE__}: Received request"
+      $logger.info "#{Time.now}:#{self.class}:IP##{__LINE__}: Initializedt"
     end
 
     get '/' do
-      "MessageHub v#{$VERSION}. MessageHub Needs a minimal dashboard, include bootstrappus-maxiumus<br/>" +
+      "MessageHub v#{$VERSION}<br/>" +
       "Notifications#{Statistics::Notifications.total}"
+
        "<br/>Dashboard should show messages sitting in their redis lists and msgs waiting to process." +
       "<br/>Also show graphs or something of shit thats been processed. This should easily fork into a dash for powersaw".to_json
     end
@@ -177,37 +184,24 @@ begin
       msg[:header] = JSON.parse(request.params[:header])
       msg[:body] = request.params[:body]
       msg[:date] = Time.now
-      $notification.push(msg.to_json)
+    #  $notification.push(msg.to_json)
       Statistics::Notifications.total += 1
       send_desktop_notification(msg) if $notifySend
       ret[:body] = "#{msg[:date]} Your notification was received, we hope. Maybe. Keep sending them this is /dev/null baby"
     end
 
-    post '/message.json' do
-      $DBG = false
-      pp env if $DBG
-      ret = {}
 
-      msg = {}
-      # msg[:header] = request.params[:header]
-      # msg[:body] = request.params[:body]
-      # msg[:date] = Time.now
-      # $message.push(msg.to_json)
-      ret[:body] = "Thank you for your submission".to_json
-    end
-
-    post '/message' do
-      $DBG = false
-      pp env if $DBG
+    post '/log' do
+      hubReceivedAt = Time.now
       ret = {}
       q = request.params
       msg = {}
       msg[:id] = q[:id] if !q[:id].nil?
       ### Syslog message format ###
-      msg[:FromHost] = q[:fromhost] if !q[:facility].nil?
+      msg[:FromHost] = q[:fromhost]
       msg[:Priority] = q[:priority]  ### TODO throw errorif no have mandatory
-      msg[:Facility] = q[:facility] if !q[:facility].nil?
-      msg[:DeviceReportedTime] = q[:DeviceReportedTime] if !q[:DeviceReportedTime].nil?
+      msg[:Facility] = q[:facility]
+      msg[:DeviceReportedTime] = q[:DeviceReportedTime]
       msg[:ReceivedAt] = q[:receivedat]
       msg[:Message] = q[:message]
       msg[:SysLogTag] = q[:syslogtag] if !q[:syslogtag].nil?
@@ -220,14 +214,15 @@ begin
       parser = MessageParser.new
      actioned = parser.parse(msg).map{ |actionable| if actionable.action.include? 'email'; send_email(actionable); end}
       send_desktop_notification(msg) if $notifysend
-      elapsed = "#{msg[:hubReceivedAt] - Time.now}"
-      p "#{Time.now} Processed #{msg[:Message]} in #{elapsed}s"
-      ret[:body] = "#{elapsed}s elapsed processing your crummy message. Your notification was received, we hope." # Syslog doesn't listen so it probalby doesnt matter
+      elapsed = hubReceivedAt - Time.now
+      p "#{Time.now} Processed #{msg[:Message]} from #{msg[:FromHost]} in #{elapsed}s"
+      ret[:body] = "#{elapsed}s elapsed processing your crummy message. Your log message was received, you hope." # Syslog doesn't listen so it probalby doesnt matter
     end
 
     post '/pubsys' do
      $redis.publish 'system', request.params[:message].to_json
     end
+
 
 
     # def self.new(*)

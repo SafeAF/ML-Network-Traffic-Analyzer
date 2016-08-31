@@ -34,7 +34,7 @@ class TestServer
     @options[:processes] ||= 2
     @forward = @options[:forward]
     @forward_transport = @options[:forward_transport]
-    @forward_file = @options[:forward_file]
+    @forward_file = @options[: forward_file]
     @forward_port = @options[:forward_port]
     @forward_keep_alive = @options[:forward_keep_alive]
   end
