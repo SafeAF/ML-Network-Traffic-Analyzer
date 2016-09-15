@@ -1,0 +1,3 @@
+I, [2016-07-30T18:05:14.358020 #30221]  INFO -- : ########## VANGUARD ##########
+I, [2016-07-30T18:05:14.358983 #30221]  INFO -- : Sidekiq Redis Namespace  vanguardcore
+I, [2016-07-30T18:05:14.359066 #30221]  INFO -- : End Initialization

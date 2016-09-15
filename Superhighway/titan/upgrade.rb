@@ -2,7 +2,7 @@
 # @Author: Samuel Kerr
 # @Date:   2016-09-01 19:46:43
 # @Last Modified by:   Samuel Kerr
-# @Last Modified time: 2016-09-01 20:00:42
+# @Last Modified time: 2016-09-12 19:01:52
 
 $VERSION = '0.1.0'
 
@@ -32,7 +32,7 @@ Mongoid.load!('mongoid.yml', :development)
 
 $ATTRITIONDB = '5'
 $SYSTEMSTACK0 = '10.0.1.75'
-#$SYSTEMSTACK0 = 'redis://10.0.1.75:6379' + $ATTRITIONDB
+# $SYSTEMSTACK0 = 'redis://10.0.1.75:6379' + $ATTRITIONDB
 $SYSTEMSTACK1 = 'redis://10.0.1.150:6379' + $ATTRITIONDB
 $SYSTEMSTACK2 = 'redis://10.0.1.151:6379' + $ATTRITIONDB
 $SERVER_CONCURRENCY = 25
