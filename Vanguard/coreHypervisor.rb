@@ -21,7 +21,9 @@ require 'mongoid'
 require 'mongo'
 require 'net/ssh'
 require 'logger'
-require 'rye'
+#require 'rye'
+#require 'sidekiq-encryptor'
+
 #require_relative 'initialization-routines'
 ### make these autoloads?
 require_relative 'vanguard-workers'
@@ -29,10 +31,10 @@ require_relative '../Keystone/models/systemicAttrition'
 require_relative '../Keystone/models/systemicTitan'
 require_relative '../Universe/Gathering/scanning'
 require_relative '../Keystone/models/user'
-require_relative './preprocessors'
+#require_relative './preprocessors'
 
 require 'vCore'
-autoload 'vOptional'
+#autoload 'vOptional'
 
 $VERSION = '1.0.1'
 $DATE = '12/15/15'
@@ -87,7 +89,15 @@ $SM = Redis::List.new('system:sharedmem')
 #########################################################################################
 #redis_conn = proc {Redis.new(host: $SYSTEMSTACK0, port: 6379, db: 5)}
 Sidekiq.configure_server do |config|
-  # runs after your app has finished initializing but before any jobs are dispatched.
+  # config.server_middleware do |chain|
+  #   chain.add Sidekiq::Encryptor::Server, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
+  # end
+  # config.client_middleware do |chain|
+  #   chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
+  # end
+
+  # runs after your app has finished initializing but before any jobs are dispatched
+
   config.on(:startup) do
     # make_some_singleton
   end
@@ -101,7 +111,7 @@ Sidekiq.configure_server do |config|
   $options[:mongodb] = 'attrition'
   $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
   $options[:sknamespace] = 'vanguard'
-  Redis::Objects.redis = Sidekiq.redis
+  #Redis::Objects.redis = Sidekiq.redis
   Mongoid.load!('mongoid.yml', :development)
   $MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
 
@@ -125,6 +135,9 @@ end
 Sidekiq.configure_client do |config|
 #  config.redis = ConnectionPool.new(size: 5, &redis_conn)
   config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:namespace] }
+ #   config.client_middleware do |chain|
+  #  chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
+  #end
 end
 
 $logger.info "Sidekiq Redis Namespace  #{$options[:namespace]}"
