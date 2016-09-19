@@ -36,12 +36,10 @@ require_relative '../Keystone/models/user'
 require 'vCore'
 #autoload 'vOptional'
 
-$VERSION = '1.0.1'
+$VERSION = '0.4.1'
 $DATE = '12/15/15'
 $logger = Logger.new File.new('hypervisor.log', 'w')
-
-p "############################### Vanguard ###################################"
-$logger.info "########## VANGUARD ##########"
+$logger.info "############################### Vanguard ###################################"
 
 #########################################################################################
 # Notes
@@ -130,11 +128,13 @@ Sidekiq.configure_server do |config|
   #config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
   config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:namespace] }
   #  config.redis = { url: $SYSTEMSTACK0 }
+  $logger.info "Server Middleware connected to #{$SYSTEMSTACK0}"
 end
 
 Sidekiq.configure_client do |config|
 #  config.redis = ConnectionPool.new(size: 5, &redis_conn)
   config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:namespace] }
+  $logger.info "Client Middleware connected to #{$SYSTEMSTACK0}"
  #   config.client_middleware do |chain|
   #  chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
   #end
@@ -142,7 +142,7 @@ end
 
 $logger.info "Sidekiq Redis Namespace  #{$options[:namespace]}"
 Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
-
+$logger.info "Sidekiq Default Worker Options: backtrace: true, dead:'false"
 #################
 
 #$logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"
@@ -152,12 +152,15 @@ Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
 ###
 
 #########################################################################################
-p "END INITIALIZATION SECTION"
-$logger.info "End Initialization"
+
+$logger.info "END INIT"
 ##################"stack"#######################################################################
 
+
+################################
+
 ######################################################################################
-## Powerplant Workers Akashic
+## Powerplant Workers 
 ## Sidekiq.redis is an exposed redis handle, yay!
 ##   Sidekiq.redis { |conn| conn.del(lock) }
 ## Sidekiq.logger exposes logging functionality
