@@ -33,7 +33,7 @@ require_relative './lib/workers/keystone/persistance'
 require_relative './lib/workers/credibility/reputation'
 require_relative './lib/workers/grid/node/monitoring'
 
-require_relative './lib/superworkers/fullonattrition'
+require_relative './lib/superworkers/overlord'
 
 
 $VERSION = '0.4.2'
@@ -138,9 +138,9 @@ $logger.info "Sidekiq Default Worker Options: #{Sidekiq.default_worker_options.i
 ###
 
 #########################################################################################
-
+#WNS INI%$ QA
 $logger.info "END INIT"
-##################"stack"#######################################################################
+######################################################################################
 
 
 ################################
