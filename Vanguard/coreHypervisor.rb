@@ -70,7 +70,7 @@ Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
   Redis.new({host: ENV['SYSTEMSTACK'], port: 6379, db: $options[:redAttritionDB]})}
 
  $HEAP = Redis::HashKey.new('system:heap') ## Depracated ## slated for removal in next major release v0.5
- $STACK = Redis::List.new('system:stack')  ## Depracated ## "" ""
+ $STACK = Redis::List.new('system:stack')  ## Depracated ## and instead refocus on shared nothing model
 #########################################################################################
 
 # after initializing but before any jobs are dispatched, encrypt
