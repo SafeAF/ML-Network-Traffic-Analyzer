@@ -53,7 +53,8 @@ class LogServ < Sinatra::Base
  "
   end
 
-  ### Status should actually check the status of sidekiq preprocessinga nd bl jobs
+  ### TODO ###
+  ### Status should actually check on Vanguard nd bl jobs
   ## and return a health value based on it, a lower health value should be used by
   ## clients to downthrottle their pushing logdata to the server to reduce load
   get '/status' do

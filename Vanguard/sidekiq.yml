@@ -10,5 +10,5 @@ production:
   - [high, 3]
   - [low, 1]
   - [bloodlust, 5]
-  - [switchyard, 5]
+  - [switchyard,3]
   - [database, 4]

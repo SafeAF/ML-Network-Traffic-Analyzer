@@ -59,9 +59,6 @@ $options[:mainspace] = 'vanguardcore'
 #########################################################################################
 $ATTRITIONDB = '5'
 
-$ProdStackHost = '10.0.1.75'
-$SYSTEMSTACK0 = '10.0.1.75'
-$CLIENT_CONCURRENCY = 5
 #########################################################################################
 Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
   Redis.new({host: $SYSTEMSTACK0, port: 6379, db: 10})}
