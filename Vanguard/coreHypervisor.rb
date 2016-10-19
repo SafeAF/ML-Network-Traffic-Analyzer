@@ -15,13 +15,17 @@ require_relative '../Keystone/models/attritioncore'
 require_relative '../Keystone/models/gridcore'
 require_relative '../Keystone/models/user'
 require_relative '../Keystone/models/attackers'
-require_relative '../Keystone/models/reputation'
+require_relative '../Keystone/models/credibility'
 
 require_relative './lib/workers/bloodlust/optimized/preprocessors'
-require_relative './lib/workers/bloodlust/optimized/fastml'
-require_relative './lib/workers/bloodlust/optimized/postprocessors'
-require_relative './lib/workers/credibility/repprocessors'
+require_relative './lib/workers/bloodlust/optimized/machinelearners'
+require_relative './lib/workers/bloodlust/optimized/postprocess'
+
+require_relative './lib/workers/keystone/persistance'
+require_relative './lib/workers/credibility/reputation'
 require_relative './lib/workers/grid/node/monitoring'
+
+require_relative './lib/superworkers/fullattrition'
 
 
 $VERSION = '0.4.2'
