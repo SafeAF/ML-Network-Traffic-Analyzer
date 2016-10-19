@@ -3,10 +3,11 @@ require 'redis-objects'
 require 'mongoid'
 require 'sidekiq'
 require 'mongo'
+require 'mysql2'
 require 'connection_pool'
 
 redis_conn = proc {
-  Redis.current = Redis.new(:host => '10.0.1.75', :port => 6379, :db => 5)
+  Redis.current = Redis.new(:host => ENV['SYS_STACK'], :port => 6379, :db => 5)
 }
 Sidekiq.configure_client do |config|
   config.redis = ConnectionPool.new(size: 15, &redis_conn)
@@ -32,9 +33,7 @@ Sidekiq.configure_server do |config|
 
     Mongoid.load!('mongoid.yml', :development)
 
-    # Note that as of Rails 4.1 the `establish_connection` method requires
-    # the database_url be passed in as an argument. Like this:
-    # ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+
   end
 
   config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
@@ -187,7 +186,6 @@ class RedisExcersizerWorker
   counter :jobcount
   value :latency
   def perform(how_hard="super hard", how_long=1)
-		magnet:?xt=urn:btih:c9cd77928465e193fb20bc812b59ac1ab8c23bf1&dn=The.Iceman.2012.BRRip+XViD+juggs&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969
     puts "Workin' #{how_hard}"
 
     redinfo = ""

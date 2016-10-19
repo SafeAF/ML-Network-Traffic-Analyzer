@@ -1,61 +1,43 @@
-## Add this directory to path
-$:.unshift File.join(File.dirname(__FILE__))
-ROOT = File.join(File.dirname(__FILE__), '..')
-
-['../app/models/' '../lib', '../db'].each do |folder|
-  $:.unshift File.join(ROOT, folder)
-end
-
-BASE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..')
-$:.unshift File.join(BASE_PATH, 'lib')
-
 Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
   require File.basename(file, File.extname(file))
 end
 
-require 'sidekiq'
-require 'sidekiq-superworker'
-require 'connection_pool'
-require 'redis-objects'
-require 'mongoid'
-require 'mongo'
-require 'net/ssh'
-require 'logger'
-#require 'rye'
-#require 'sidekiq-encryptor'
+# External deps
+require 'sidekiq' ; require 'sidekiq-superworker' ; require 'connection_pool'
+require 'redis-objects' ; require 'mongoid' ; require 'mongo' ; require 'net/ssh'
+require 'logger' ; require 'rye' ; require 'sidekiq-encryptor'
 
-#require_relative 'initialization-routines'
-### make these autoloads?
-require_relative 'vanguard-workers'
-require_relative '../Keystone/models/systemicAttrition'
-require_relative '../Keystone/models/systemicTitan'
-require_relative '../Universe/Gathering/scanning'
+# Internal deps
+require 'guardcorelib'
+
+### autoload?
+require_relative '../Keystone/models/attritioncore'
+require_relative '../Keystone/models/gridcore'
 require_relative '../Keystone/models/user'
-#require_relative './preprocessors'
+require_relative '../Keystone/models/attackers'
+require_relative '../Keystone/models/reputation'
 
-require 'vCore'
-#autoload 'vOptional'
+require_relative './lib/workers/bloodlust/optimized/preprocessors'
+require_relative './lib/workers/bloodlust/optimized/fastml'
+require_relative './lib/workers/bloodlust/optimized/postprocessors'
+require_relative './lib/workers/credibility/repprocessors'
+require_relative './lib/workers/grid/node/monitoring'
 
-$VERSION = '0.4.1'
-$DATE = '12/15/15'
-$logger = Logger.new File.new('hypervisor.log', 'w')
-$logger.info "############################### Vanguard ###################################"
 
+$VERSION = '0.4.2'
+$DATE = '10/19/16'
+$logger = Logger.new File.new('vcore.log', 'w')
+$logger.info "############################ Vanguard Core ################################"
+$logger.info "Initialization commencing"
 #########################################################################################
 # Notes
 #########################################################################################
-# Clients push job onto queque, server does actual processing.
-# Use sidekiq for high latency io like network requests
-# use delayed job for cpu intensive jobs
+# Sidekiq: 'Clients' push job onto queue, 'servers' retrieves do actual processing.
 #
-# Sidekiq.configure_server do |config|
-#   config.redis = { url: 'redis://redis.example.com:7372/12' }
-# end
-#
-# Sidekiq.configure_client do |config|
-#   config.redis = { url: 'redis://redis.example.com:7372/12' }
-# end#
-# thin -C production-thin.yml -R config.ru start
+# To start Vanguard Core you should have one of the callers online like log reception api
+# Start AttritionLogAPI cluster:
+# thin -C attr-api.yml -R config.ru start
+# Then launch at least one instance of sidekiq with guardcore required
 # bundle exec sidekiq -r ./reserver.rb
 #########################################################################################
 # BEGIN INITIALIZATION SECTION -> DO NOT MODIFY UNLESS GOOD REASON
@@ -72,18 +54,16 @@ $options = Hash.new
 $options[:mainspace] = 'vanguardcore'
 #########################################################################################
 $ATTRITIONDB = '5'
+
+$ProdStackHost = '10.0.1.75'
 $SYSTEMSTACK0 = '10.0.1.75'
-#$SYSTEMSTACK0 = 'redis://10.0.1.75:6379' + $ATTRITIONDB
-$SYSTEMSTACK1 = 'redis://10.0.1.150:6379' + $ATTRITIONDB
-$SYSTEMSTACK2 = 'redis://10.0.1.151:6379' + $ATTRITIONDB
-$SERVER_CONCURRENCY = 25
 $CLIENT_CONCURRENCY = 5
 #########################################################################################
 Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
   Redis.new({host: $SYSTEMSTACK0, port: 6379, db: 10})}
 #########################################################################################
-$SHM = Redis::HashKey.new('system:sharedmem')
-$SM = Redis::List.new('system:sharedmem')
+$HEAP = Redis::HashKey.new('system:heap')
+$STACK = Redis::List.new('system:stack')
 #########################################################################################
 #redis_conn = proc {Redis.new(host: $SYSTEMSTACK0, port: 6379, db: 5)}
 Sidekiq.configure_server do |config|
