@@ -69,7 +69,7 @@ module Mongoid
 end
 #########################################################################################
 $options = Hash.new
-$options[:namespace] = 'vanguardcore'
+$options[:mainspace] = 'vanguardcore'
 #########################################################################################
 $ATTRITIONDB = '5'
 $SYSTEMSTACK0 = '10.0.1.75'
@@ -126,23 +126,23 @@ Sidekiq.configure_server do |config|
   end
 
   #config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
-  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:namespace] }
+  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:mainspace] }
   #  config.redis = { url: $SYSTEMSTACK0 }
   $logger.info "Server Middleware connected to #{$SYSTEMSTACK0}"
 end
 
 Sidekiq.configure_client do |config|
 #  config.redis = ConnectionPool.new(size: 5, &redis_conn)
-  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:namespace] }
+  config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:mainspace] }
   $logger.info "Client Middleware connected to #{$SYSTEMSTACK0}"
- #   config.client_middleware do |chain|
-  #  chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
-  #end
+    config.client_middleware do |chain|
+    chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
+  end
 end
 
-$logger.info "Sidekiq Redis Namespace  #{$options[:namespace]}"
+$logger.info "Sidekiq Redis Namespace  #{$options[:mainspace]}"
 Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
-$logger.info "Sidekiq Default Worker Options: backtrace: true, dead:'false"
+$logger.info "Sidekiq Default Worker Options: #{Sidekiq.default_worker_options.inspect}"
 #################
 
 #$logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"

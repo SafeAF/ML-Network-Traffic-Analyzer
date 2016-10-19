@@ -96,7 +96,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Client/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/Switchyard/vendor" />
     </content>
-    <orderEntry type="jdk" jdkName="RVM: ruby-2.2.1" jdkType="RUBY_SDK" />
+    <orderEntry type="jdk" jdkName="RVM: ruby-2.3.1" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="RModuleSettingsStorage">
