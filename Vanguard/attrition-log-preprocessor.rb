@@ -7,7 +7,7 @@ require 'mysql2'
 require 'connection_pool'
 
 redis_conn = proc {
-  Redis.current = Redis.new(:host => ENV['SYS_STACK'], :port => 6379, :db => 5)
+  Redis.current = Redis.new(:host => ENV['SYSTEMSTACK'], :port => 6379, :db => 5)
 }
 Sidekiq.configure_client do |config|
   config.redis = ConnectionPool.new(size: 15, &redis_conn)

@@ -4,8 +4,16 @@ end
 
 # External deps
 require 'sidekiq' ; require 'sidekiq-superworker' ; require 'connection_pool'
-require 'redis-objects' ; require 'mongoid' ; require 'mongo' ; require 'net/ssh'
+require 'redis-objects' ; require 'mongoid' ; require 'mongo';
 require 'logger' ; require 'rye' ; require 'sidekiq-encryptor'
+
+module Mongoid
+  module Config
+    def load_configuration_hash(settings)
+      load_configuration(settings)
+    end
+  end
+end
 
 # Internal deps
 require 'guardcorelib'
@@ -25,14 +33,16 @@ require_relative './lib/workers/keystone/persistance'
 require_relative './lib/workers/credibility/reputation'
 require_relative './lib/workers/grid/node/monitoring'
 
-require_relative './lib/superworkers/fullattrition'
+require_relative './lib/superworkers/fullonattrition'
 
 
 $VERSION = '0.4.2'
 $DATE = '10/19/16'
-$logger = Logger.new File.new('vcore.log', 'w')
-$logger.info "############################ Vanguard Core ################################"
+$logger = Logger.new File.new('guardcore.log', 'w')
+$logger.info "######################## Vanguard GuardCore ###########################"
 $logger.info "Initialization commencing"
+
+
 #########################################################################################
 # Notes
 #########################################################################################
@@ -43,39 +53,36 @@ $logger.info "Initialization commencing"
 # thin -C attr-api.yml -R config.ru start
 # Then launch at least one instance of sidekiq with guardcore required
 # bundle exec sidekiq -r ./reserver.rb
-#########################################################################################
-# BEGIN INITIALIZATION SECTION -> DO NOT MODIFY UNLESS GOOD REASON
-#########################################################################################
-module Mongoid
-  module Config
-    def load_configuration_hash(settings)
-      load_configuration(settings)
-    end
-  end
-end
-#########################################################################################
+
+################################
+# BEGIN INITIALIZATION SECTION #
+################################
+
 $options = Hash.new
-$options[:mainspace] = 'vanguardcore'
-#########################################################################################
-$ATTRITIONDB = '5'
+$options[:mainspace] = 'guardcore'
+$options[:redAttritionDB] = '5'
+$options[:mongodb] = 'attrition'
+$options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
+$options[:sknamespace] = 'vanGuardOnSidekiq'
 
-#########################################################################################
+
 Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
-  Redis.new({host: $SYSTEMSTACK0, port: 6379, db: 10})}
-#########################################################################################
-$HEAP = Redis::HashKey.new('system:heap')
-$STACK = Redis::List.new('system:stack')
-#########################################################################################
-#redis_conn = proc {Redis.new(host: $SYSTEMSTACK0, port: 6379, db: 5)}
-Sidekiq.configure_server do |config|
-  # config.server_middleware do |chain|
-  #   chain.add Sidekiq::Encryptor::Server, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
-  # end
-  # config.client_middleware do |chain|
-  #   chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
-  # end
+  Redis.new({host: ENV['SYSTEMSTACK'], port: 6379, db: $options[:redAttritionDB]})}
 
-  # runs after your app has finished initializing but before any jobs are dispatched
+ $HEAP = Redis::HashKey.new('system:heap') ## Depracated ## slated for removal in next major release v0.5
+ $STACK = Redis::List.new('system:stack')  ## Depracated ## "" ""
+#########################################################################################
+
+# after initializing but before any jobs are dispatched, encrypt
+Sidekiq.configure_server do |config|
+  config.server_middleware do |chain|
+    chain.add Sidekiq::Encryptor::Server, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
+  end
+  config.client_middleware do |chain|
+    chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
+  end
+
+  # runs after app has finished
 
   config.on(:startup) do
     # make_some_singleton
@@ -87,9 +94,7 @@ Sidekiq.configure_server do |config|
     puts "Got TERM, shutting down process..."
     # stop_the_world
   end
-  $options[:mongodb] = 'attrition'
-  $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
-  $options[:sknamespace] = 'vanguard'
+
   #Redis::Objects.redis = Sidekiq.redis
   Mongoid.load!('mongoid.yml', :development)
   $MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
