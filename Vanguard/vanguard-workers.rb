@@ -7,7 +7,20 @@ def check_server_availability(ip, service='ssh')
 end
 
 
+module Vanguard
 
+  class Worker
+
+    class Taster
+      include Sidekiq::Worker
+
+      def perform(ip, service='ssh')
+        res = check_server_availability(ip, service)
+      end
+
+    end
+  end
+end
 
 class TitanCommander
   include Sidekiq::Worker
