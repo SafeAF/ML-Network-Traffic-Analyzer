@@ -4,20 +4,26 @@
     <option name="serverConfigurations">
       <list>
         <ServerConfiguration>
-          <option name="connectOnIdeStartup" value="true" />
           <option name="label" value="datastore0" />
           <option name="serverUrls">
             <list>
               <option value="10.0.1.30:27017" />
             </list>
           </option>
+          <option name="sshTunnelingConfiguration">
+            <SshTunnelingConfiguration />
+          </option>
         </ServerConfiguration>
         <ServerConfiguration>
+          <option name="connectOnIdeStartup" value="true" />
           <option name="label" value="datastore1" />
           <option name="serverUrls">
             <list>
               <option value="10.0.1.31:27017" />
             </list>
+          </option>
+          <option name="sshTunnelingConfiguration">
+            <SshTunnelingConfiguration />
           </option>
         </ServerConfiguration>
         <ServerConfiguration>

@@ -9,5 +9,6 @@
     <mapping directory="$PROJECT_DIR$/../Production" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Production" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../ghi" vcs="Git" />
+    <mapping directory="$USER_HOME$/source/Guardian" vcs="Git" />
   </component>
 </project>

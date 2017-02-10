@@ -46,7 +46,7 @@ class TestServer
       @server.setsockopt(Socket::IPPROTO_TCP, Socket::TCP_NODELAY, 1)
       puts "Listening on http://127.0.0.1:#{@options[:port]}/"
     when :unix
-      File.unlink(@options[:file]) rescue nil
+      Filkke.unlink(@options[:file]) rescue nil
       @server = UNIXServer.new(@options[:file])
       puts "Listening on Unix domain socket: #{@options[:file]}"
     else
