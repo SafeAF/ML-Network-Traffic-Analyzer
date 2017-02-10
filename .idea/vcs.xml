@@ -10,5 +10,7 @@
     <mapping directory="$PROJECT_DIR$/../Production" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../ghi" vcs="Git" />
     <mapping directory="$USER_HOME$/source/Guardian" vcs="Git" />
+    <mapping directory="$USER_HOME$/source/HellaStacked" vcs="Git" />
+    <mapping directory="$USER_HOME$/source/MessageHub" vcs="Git" />
   </component>
 </project>
