@@ -1,7 +1,9 @@
 # Development
 Projects underway using our inhouse semi formalized agilesque development methodolgy "Dexterity". BareMetal Management and Team goals include Fostering open communication, ownership and pride in work, self organization, happy people, high productivity and code quality
 
-
+NOTIFY_ARGS=(--session
+             --dest org.freedesktop.Notifications
+             --object-path /org/freedesktop/Notifications)
 ## Attrition.IO Top Tier Project 
 
 ### Distributed and Aggregated IPS
