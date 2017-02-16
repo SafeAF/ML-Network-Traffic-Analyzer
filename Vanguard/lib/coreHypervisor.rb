@@ -1,11 +1,22 @@
+###########################################################################
+#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$
+#         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm       #
+#                                                                         #
+#                                                                         #
+###########################################################################
+
 Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
   require File.basename(file, File.extname(file))
 end
 
 # External deps
-require 'sidekiq' ; require 'sidekiq-superworker' ; require 'connection_pool'
+require 'sidekiq'  ; require 'connection_pool'; require 'redis';
 require 'redis-objects' ; require 'mongoid' ; require 'mongo';
-require 'logger' ; require 'rye' ; require 'sidekiq-encryptor'
+require 'logger' ;
+
+require 'sidekiq-encryptor'
+require 'sidekiq-superworker'
+
 
 module Mongoid
   module Config
@@ -16,7 +27,7 @@ module Mongoid
 end
 
 # Internal deps
-require 'guardcorelib'
+#require 'gridcore'
 
 ### autoload?
 require_relative '../Keystone/models/attritioncore'
