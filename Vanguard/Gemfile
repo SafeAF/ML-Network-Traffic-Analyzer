@@ -6,3 +6,11 @@ gem 'redis-objects'
 gem 'redis'
 gem 'mongoid'
 gem 'sidekiq'
+
+gem 'connection_pool'
+gem 'mongo'
+
+#gem 'sidekiq-encryptor'
+gem 'sidekiq-superworker'
+gem 'net-ping'
+gem 'redis-namespace'

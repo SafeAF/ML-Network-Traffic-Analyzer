@@ -10,11 +10,13 @@ Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
 end
 
 # External deps
-require 'sidekiq'  ; require 'connection_pool'; require 'redis';
+require 'connection_pool'; require 'redis';
 require 'redis-objects' ; require 'mongoid' ; require 'mongo';
 require 'logger' ;
 
-require 'sidekiq-encryptor'
+require 'sidekiq'
+
+#require 'sidekiq-encryptor'
 require 'sidekiq-superworker'
 
 
@@ -30,22 +32,22 @@ end
 #require 'gridcore'
 
 ### autoload?
-require_relative '../Keystone/models/attritioncore'
-require_relative '../Keystone/models/gridcore'
-require_relative '../Keystone/models/user'
-require_relative '../Keystone/models/attackers'
-require_relative '../Keystone/models/credibility'
+#require_relative '../Keystone/models/attritioncore'
+#require_relative '../Keystone/models/gridcore'
+#require_relative '../Keystone/models/user'
+#require_relative '../Keystone/models/attackers'
+#require_relative '../Keystone/models/credibility'
 
-require_relative './lib/workers/bloodlust/optimized/preprocessors'
-require_relative './lib/workers/bloodlust/optimized/machinelearners'
-require_relative './lib/workers/bloodlust/optimized/postprocess'
+#require_relative './lib/workers/bloodlust/optimized/preprocessors'
+#require_relative './lib/workers/bloodlust/optimized/machinelearners'
+#require_relative './lib/workers/bloodlust/optimized/postprocess'
 
-require_relative './lib/workers/keystone/persistance'
-require_relative './lib/workers/credibility/reputation'
-require_relative './lib/workers/grid/node/monitoring'
+#require_relative './lib/workers/keystone/persistance'
+#require_relative './lib/workers/credibility/reputation'
+#require_relative './lib/workers/grid/node/monitoring'
 
-require_relative './lib/superworkers/overlord'
-
+#require_relative './lib/superworkers/overlord'
+require_relative('./lib/vanguard-workers')
 
 $VERSION = '0.4.2'
 $DATE = '10/19/16'
@@ -71,14 +73,14 @@ $logger.info "Initialization commencing"
 
 $options = Hash.new
 $options[:mainspace] = 'guardcore'
-$options[:redAttritionDB] = '5'
-$options[:mongodb] = 'attrition'
+$options[:redAttritionDB] = '10'
+$options[:mongodb] = 'vanguard'
 $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
-$options[:sknamespace] = 'vanGuardOnSidekiq'
-
+$options[:sknamespace] = 'vanguard'
+$options[:redisHost] = ENV['SYSTEMSTACK'] || '10.0.1.75'
 
 Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
-	Redis.new({host: ENV['SYSTEMSTACK'], port: 6379, db: $options[:redAttritionDB]})}
+	Redis.new({host: $options[:redisHost], port: 6379, db: $options[:redAttritionDB]})}
 
 $HEAP = Redis::HashKey.new('system:heap') ## Depracated ## slated for removal in next major release v0.5
 $STACK = Redis::List.new('system:stack')  ## Depracated ## and instead refocus on shared nothing model
@@ -86,14 +88,6 @@ $STACK = Redis::List.new('system:stack')  ## Depracated ## and instead refocus o
 
 # after initializing but before any jobs are dispatched, encrypt
 Sidekiq.configure_server do |config|
-	config.server_middleware do |chain|
-		chain.add Sidekiq::Encryptor::Server, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
-	end
-	config.client_middleware do |chain|
-		chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
-	end
-
-	# runs after app has finished
 
 	config.on(:startup) do
 		# make_some_singleton
@@ -132,9 +126,6 @@ Sidekiq.configure_client do |config|
 #  config.redis = ConnectionPool.new(size: 5, &redis_conn)
 	config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:mainspace] }
 	$logger.info "Client Middleware connected to #{$SYSTEMSTACK0}"
-	config.client_middleware do |chain|
-		chain.add Sidekiq::Encryptor::Client, key: ENV['SIDEKIQ_ENCRYPTION_KEY']
-	end
 end
 
 $logger.info "Sidekiq Redis Namespace  #{$options[:mainspace]}"
