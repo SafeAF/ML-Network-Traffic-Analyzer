@@ -7,7 +7,7 @@ require 'mongo'
 require 'net/ssh'
 require 'net/ping'
 require 'rye'
-require_relative 'vanguard-workers'
+require_relative 'lib/vanguard-workers'
 #require_relative './Credibility/user'
 p "############################### Vanguard ##########################"
 

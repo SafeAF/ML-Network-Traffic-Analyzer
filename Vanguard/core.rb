@@ -1,6 +1,6 @@
 ###########################################################################
-#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$
-#         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm       #
+#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$           #
+#         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm      #
 #                                                                         #
 #                                                                         #
 ###########################################################################
@@ -49,8 +49,8 @@ end
 #require_relative './lib/superworkers/overlord'
 require_relative('./lib/vanguard-workers')
 
-$VERSION = '0.4.2'
-$DATE = '10/19/16'
+$VERSION = '0.5.0'
+$DATE = '02/17/17'
 $logger = Logger.new File.new('guardcore.log', 'w')
 $logger.info "######################## Vanguard GuardCore ###########################"
 $logger.info "Initialization commencing"
@@ -64,8 +64,8 @@ $logger.info "Initialization commencing"
 # To start Vanguard Core you should have one of the callers online like log reception api
 # Start AttritionLogAPI cluster:
 # thin -C attr-api.yml -R config.ru start
-# Then launch at least one instance of sidekiq with guardcore required
-# bundle exec sidekiq -r ./reserver.rb
+# Then launch at least one instance of sidekiq with core.rb required
+# bundle exec sidekiq -r ./core.rb
 
 ################################
 # BEGIN INITIALIZATION SECTION #
@@ -77,7 +77,7 @@ $options[:redAttritionDB] = '10'
 $options[:mongodb] = 'vanguard'
 $options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
 $options[:sknamespace] = 'vanguard'
-$options[:redisHost] = ENV['SYSTEMSTACK'] || '10.0.1.75'
+$options[:redisHost] =  '10.0.1.34'
 
 Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
 	Redis.new({host: $options[:redisHost], port: 6379, db: $options[:redAttritionDB]})}
@@ -86,7 +86,7 @@ $HEAP = Redis::HashKey.new('system:heap') ## Depracated ## slated for removal in
 $STACK = Redis::List.new('system:stack')  ## Depracated ## and instead refocus on shared nothing model
 #########################################################################################
 
-# after initializing but before any jobs are dispatched, encrypt
+############# CONFIGURE SQ SERVER ################
 Sidekiq.configure_server do |config|
 
 	config.on(:startup) do
@@ -99,7 +99,6 @@ Sidekiq.configure_server do |config|
 		puts "Got TERM, shutting down process..."
 		# stop_the_world
 	end
-
 	#Redis::Objects.redis = Sidekiq.redis
 	Mongoid.load!('mongoid.yml', :development)
 	$MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
@@ -117,15 +116,15 @@ Sidekiq.configure_server do |config|
 	end
 
 	#config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
-	config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:mainspace] }
+	config.redis = { url: "redis://#{$options[:redisHost]}:6379/10", namespace: $options[:mainspace] }
 	#  config.redis = { url: $SYSTEMSTACK0 }
-	$logger.info "Server Middleware connected to #{$SYSTEMSTACK0}"
+	$logger.info "Server Middleware connected to #{$options[:redisHost]}"
 end
-
+############# CONFIGURE CLIENT ##################
 Sidekiq.configure_client do |config|
 #  config.redis = ConnectionPool.new(size: 5, &redis_conn)
-	config.redis = { url: "redis://#{$SYSTEMSTACK0}:6379/10", namespace: $options[:mainspace] }
-	$logger.info "Client Middleware connected to #{$SYSTEMSTACK0}"
+	config.redis = { url: "redis://#{$options[:redisHost]}:6379/10", namespace: $options[:mainspace] }
+	$logger.info "Client Middleware connected to #{$options[:redisHost]}"
 end
 
 $logger.info "Sidekiq Redis Namespace  #{$options[:mainspace]}"

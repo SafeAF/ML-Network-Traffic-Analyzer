@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="524f230f-1b77-4eb7-8c1f-ca4025e430bc" name="Default" comment="added $DBG and modified logger to print to file or to stdout">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vanguard/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Development.iml" afterPath="$PROJECT_DIR$/.idea/Development.iml" />
+    <list default="true" id="524f230f-1b77-4eb7-8c1f-ca4025e430bc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/Gemfile" afterPath="$PROJECT_DIR$/Vanguard/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/core.rb" afterPath="$PROJECT_DIR$/Vanguard/core.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/harness-vanguard.rb" afterPath="$PROJECT_DIR$/Vanguard/harness-vanguard.rb" />
     </list>
     <list id="b7fa7525-5146-423c-a7c8-a94efe059b5f" name="Failed commit: Default" comment="cleaned up" />
     <ignored path="Development4.iws" />
@@ -72,8 +70,8 @@
           <file leaf-file-name="core.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Vanguard/core.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="546">
-                  <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+                <state relative-caret-position="1232">
+                  <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -111,7 +109,7 @@
               <file leaf-file-name="vanguard-workers.rb" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="14">
+                    <state relative-caret-position="126">
                       <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
                       <folding />
                     </state>
@@ -121,8 +119,8 @@
               <file leaf-file-name="harness-vanguard.rb" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Vanguard/harness-vanguard.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="296">
-                      <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+                    <state relative-caret-position="126">
+                      <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
                       <folding />
                     </state>
                   </provider>
@@ -132,7 +130,7 @@
                 <entry file="file://$PROJECT_DIR$/Vanguard/Gemfile">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="210">
-                      <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+                      <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
                       <folding />
                     </state>
                   </provider>
@@ -283,7 +281,7 @@
     </splitter>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/source/Guardian" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -547,7 +545,7 @@
     <property name="recentsLimit" value="5" />
     <property name="project.settings.patched" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyModuleStructureConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="byebug.present.asked" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2596525" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -866,7 +864,7 @@
       <workItem from="1486747941534" duration="30024000" />
       <workItem from="1486949872225" duration="7075000" />
       <workItem from="1486996520915" duration="25560000" />
-      <workItem from="1487070111642" duration="31958000" />
+      <workItem from="1487070111642" duration="34750000" />
     </task>
     <task id="LOCAL-00001" summary="clutch module and log server prepping for launch">
       <created>1471809535469</created>
@@ -1043,7 +1041,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487338543854</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="removed osme dependencies, made some vars more consistently named">
+      <created>1487341335859</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1487341335859</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -1065,11 +1070,11 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="144949000" />
+    <option name="totallyTimeSpent" value="147741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="46" width="3830" height="1033" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20615384" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16197975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1163,7 +1168,8 @@
     <MESSAGE value="added datastore0 node" />
     <MESSAGE value="added $DBG and modified logger to print to file or to stdout" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="removed osme dependencies, made some vars more consistently named" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed osme dependencies, made some vars more consistently named" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1432,8 +1438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/harness-vanguard.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="126">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1528,8 +1534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/core.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+        <state relative-caret-position="1232">
+          <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1537,7 +1543,7 @@
     <entry file="file://$PROJECT_DIR$/Vanguard/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1558,18 +1564,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/source/Guardian/lib/guardian.rb">
+    <entry file="file://$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb">
+    <entry file="file://$USER_HOME$/source/Guardian/lib/guardian.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="112">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
