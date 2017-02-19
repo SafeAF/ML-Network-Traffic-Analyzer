@@ -1,24 +1,21 @@
-###########################################################################
-#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$           #
-#         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm      #
-#                                                                         #
-#                                                                         #
-###########################################################################
+p "#################################################################################"
+p '#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$                 #'
+p '         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm             #'
+p '      Background processing with Sidekiq for Attrition and Other Services       #'
+p 'r#################################################################################'
 
 Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
 	require File.basename(file, File.extname(file))
 end
+require 'bundler'
+Bundler.setup(:default)
+Bundler.require(:default)
 
 # External deps
-require 'connection_pool'; require 'redis';
+require 'connection_pool'; require 'redis'; require 'logger' ;
 require 'redis-objects' ; require 'mongoid' ; require 'mongo';
-require 'logger' ;
-
 require 'sidekiq'
-
-#require 'sidekiq-encryptor'
 require 'sidekiq-superworker'
-
 
 module Mongoid
 	module Config
@@ -75,7 +72,7 @@ $options = Hash.new
 $options[:mainspace] = 'guardcore'
 $options[:redAttritionDB] = '10'
 $options[:mongodb] = 'vanguard'
-$options[:mongoconnector] = ARGV[1] || '10.0.1.30:27017'
+$options[:mongoconnector] = ARGV[1] || '10.0.1.34:27017'
 $options[:sknamespace] = 'vanguard'
 $options[:redisHost] =  '10.0.1.34'
 
@@ -83,12 +80,12 @@ Redis::Objects.redis = ConnectionPool.new(size: 15, timeout: 5) {
 	Redis.new({host: $options[:redisHost], port: 6379, db: $options[:redAttritionDB]})}
 
 $HEAP = Redis::HashKey.new('system:heap') ## Depracated ## slated for removal in next major release v0.5
+$logger.info '[+] Distributed Heap at $HEAP'
 $STACK = Redis::List.new('system:stack')  ## Depracated ## and instead refocus on shared nothing model
 #########################################################################################
 
 ############# CONFIGURE SQ SERVER ################
 Sidekiq.configure_server do |config|
-
 	config.on(:startup) do
 		# make_some_singleton
 	end
@@ -97,10 +94,8 @@ Sidekiq.configure_server do |config|
 	end
 	config.on(:shutdown) do
 		puts "Got TERM, shutting down process..."
-		# stop_the_world
 	end
-	#Redis::Objects.redis = Sidekiq.redis
-	Mongoid.load!('mongoid.yml', :development)
+
 	$MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
 
 	$logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
@@ -118,18 +113,18 @@ Sidekiq.configure_server do |config|
 	#config.redis = ConnectionPool.new(size: 27, &redis_conn) # must be concur+2
 	config.redis = { url: "redis://#{$options[:redisHost]}:6379/10", namespace: $options[:mainspace] }
 	#  config.redis = { url: $SYSTEMSTACK0 }
-	$logger.info "Server Middleware connected to #{$options[:redisHost]}"
+	$logger.info "[+] Server Middleware connected to #{$options[:redisHost]}"
 end
 ############# CONFIGURE CLIENT ##################
 Sidekiq.configure_client do |config|
 #  config.redis = ConnectionPool.new(size: 5, &redis_conn)
 	config.redis = { url: "redis://#{$options[:redisHost]}:6379/10", namespace: $options[:mainspace] }
-	$logger.info "Client Middleware connected to #{$options[:redisHost]}"
+	$logger.info "[+] Client Middleware connected to #{$options[:redisHost]}"
 end
 
-$logger.info "Sidekiq Redis Namespace  #{$options[:mainspace]}"
+$logger.info "[+] Sidekiq Redis Namespace  #{$options[:mainspace]}"
 Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
-$logger.info "Sidekiq Default Worker Options: #{Sidekiq.default_worker_options.inspect}"
+$logger.info "[+] Sidekiq Default Worker Options: #{Sidekiq.default_worker_options.inspect}"
 #################
 
 #$logger.info "Standalone mongo: #{$MONGO.cluster.servers.first.standalone?}"
@@ -140,7 +135,11 @@ $logger.info "Sidekiq Default Worker Options: #{Sidekiq.default_worker_options.i
 
 #########################################################################################
 #WNS INI%$ QA
-$logger.info "END INIT"
+
+$logger.info '[+] Redis handle available at Sidekiq.redis'
+$logger.info '[+] End initialization
+$logger.info '############### VANGUARD OPERATIONAL ###############'
+$logger.info '####################################################'
 ######################################################################################
 
 

@@ -29,10 +29,10 @@ p "############################### Vanguard ##########################"
 #########################################################################################
 #########################################################################################
 $ATTRITIONDB = '5'
-$SYSTEMSTACK0 = '10.0.1.75'
-$SYSTEMSTACK0 = 'redis://10.0.1.75:6379' + $ATTRITIONDB
-$SYSTEMSTACK1 = 'redis://10.0.1.150:6379' + $ATTRITI0NDB
-$SYSTEMSTACK2 = 'redis://10.0.1.151:6379' + $ATTRITIONDB
+$SYSTEMSTACK0 = '10.0.1.34'
+#$SYSTEMSTACK0 = 'redis://10.0.1.75:6379' + $ATTRITIONDB
+#$SYSTEMSTACK1 = 'redis://10.0.1.150:6379' + $ATTRITI0NDB
+#$SYSTEMSTACK2 = 'redis://10.0.1.151:6379' + $ATTRITIONDB
 $SERVER_CONCURRENCY = 25
 $CLIENT_CONCURRENCY = 5
 #########################################################################################
@@ -81,6 +81,7 @@ Sidekiq.default_worker_options = { 'backtrace' => true , :dead => false}
 require 'ipaddr'
 
 ips = IPAddr.new("10.0.1.0/24").to_range
+p ips
 ips.each {|ip|
 TitanStatusSpy.perform_async(ip)
 }
