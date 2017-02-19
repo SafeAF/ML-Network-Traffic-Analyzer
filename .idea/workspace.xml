@@ -4,11 +4,8 @@
     <list default="true" id="524f230f-1b77-4eb7-8c1f-ca4025e430bc" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fixins/dispatch_table.rb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fixins/tokenizer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vagrant.xml" afterPath="$PROJECT_DIR$/.idea/vagrant.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/core.rb" afterPath="$PROJECT_DIR$/Vanguard/core.rb" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/source/HellaStacked/Cheffile" afterPath="$USER_HOME$/source/HellaStacked/Cheffile" />
     </list>
     <list id="b7fa7525-5146-423c-a7c8-a94efe059b5f" name="Failed commit: Default" comment="cleaned up" />
     <ignored path="Development4.iws" />
@@ -984,7 +981,7 @@
       <workItem from="1486747941534" duration="30024000" />
       <workItem from="1486949872225" duration="7075000" />
       <workItem from="1486996520915" duration="25560000" />
-      <workItem from="1487070111642" duration="58897000" />
+      <workItem from="1487070111642" duration="58913000" />
     </task>
     <task id="LOCAL-00001" summary="clutch module and log server prepping for launch">
       <created>1471809535469</created>
@@ -1196,7 +1193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487486588420</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="updated cheffile">
+      <created>1487501052592</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1487501052592</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -1218,7 +1222,7 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="171888000" />
+    <option name="totallyTimeSpent" value="171904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="46" width="3830" height="1033" extended-state="0" />
@@ -1321,7 +1325,8 @@
     <MESSAGE value="vagrantfile and datastore4 node added" />
     <MESSAGE value="made data4 the primary for now" />
     <MESSAGE value="vagrantfile updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="vagrantfile updates" />
+    <MESSAGE value="updated cheffile" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated cheffile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

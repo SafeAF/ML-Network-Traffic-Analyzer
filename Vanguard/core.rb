@@ -62,7 +62,7 @@ $logger.info "Initialization commencing"
 # Start AttritionLogAPI cluster:
 # thin -C attr-api.yml -R config.ru start
 # Then launch at least one instance of sidekiq with core.rb required
-# bundle exec sidekiq -r ./core.rb
+# export REDISHOST=10.0.1.150 ; bundle exec sidekiq -r ./core.rb
 
 ################################
 # BEGIN INITIALIZATION SECTION #
@@ -100,7 +100,7 @@ Sidekiq.configure_server do |config|
 
 	$logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
 
-	$logger.info  "Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
+	$logger.info  "[+] Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
 
 	Mongoid.load!('mongoid.yml', :development)
 
