@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="524f230f-1b77-4eb7-8c1f-ca4025e430bc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fixins/dispatch_table.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fixins/tokenizer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vagrant.xml" afterPath="$PROJECT_DIR$/.idea/vagrant.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/core.rb" afterPath="$PROJECT_DIR$/Vanguard/core.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/harness-vanguard.rb" afterPath="$PROJECT_DIR$/Vanguard/harness-vanguard.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb" afterPath="$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/source/HellaStacked/Vagrantfile" afterPath="$USER_HOME$/source/HellaStacked/Vagrantfile" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/source/HellaStacked/Cheffile" afterPath="$USER_HOME$/source/HellaStacked/Cheffile" />
     </list>
     <list id="b7fa7525-5146-423c-a7c8-a94efe059b5f" name="Failed commit: Default" comment="cleaned up" />
     <ignored path="Development4.iws" />
@@ -72,8 +74,8 @@
           <file leaf-file-name="core.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Vanguard/core.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+                <state relative-caret-position="-166">
+                  <caret line="120" column="56" selection-start-line="120" selection-start-column="56" selection-end-line="120" selection-end-column="56" />
                   <folding />
                 </state>
               </provider>
@@ -84,6 +86,16 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.ru" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sidekiq/config.ru">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="84">
+                  <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -121,7 +133,7 @@
               <file leaf-file-name="vanguard-workers.rb" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="518">
+                    <state relative-caret-position="338">
                       <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
                       <folding />
                     </state>
@@ -151,7 +163,7 @@
             </leaf>
           </split-first>
           <split-second>
-            <splitter split-orientation="horizontal" split-proportion="0.7146185">
+            <splitter split-orientation="horizontal" split-proportion="0.78688526">
               <split-first>
                 <splitter split-orientation="horizontal" split-proportion="0.5">
                   <split-first>
@@ -203,8 +215,8 @@
                       <file leaf-file-name="Cheffile" pinned="false" current-in-tab="false">
                         <entry file="file://$USER_HOME$/source/HellaStacked/Cheffile">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state relative-caret-position="266">
-                              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+                            <state relative-caret-position="238">
+                              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                               <folding />
                             </state>
                           </provider>
@@ -230,6 +242,36 @@
                           </provider>
                         </entry>
                       </file>
+                      <file leaf-file-name="tokenizer.rb" pinned="false" current-in-tab="false">
+                        <entry file="file://$PROJECT_DIR$/Fixins/tokenizer.rb">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state relative-caret-position="70">
+                              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="generic-threaded-thin-sinatra.rb" pinned="false" current-in-tab="false">
+                        <entry file="file://$PROJECT_DIR$/Fixins/generic-threaded-thin-sinatra.rb">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state relative-caret-position="266">
+                              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="dispatch_table.rb" pinned="false" current-in-tab="false">
+                        <entry file="file://$PROJECT_DIR$/Fixins/dispatch_table.rb">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state relative-caret-position="196">
+                              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
                     </leaf>
                   </split-second>
                 </splitter>
@@ -249,7 +291,7 @@
                   <file leaf-file-name="knife.rb" pinned="false" current-in-tab="false">
                     <entry file="file://$USER_HOME$/source/HellaStacked/.chef/knife.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="140">
+                        <state relative-caret-position="168">
                           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                           <folding />
                         </state>
@@ -303,7 +345,7 @@
     </splitter>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/source/HellaStacked" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -548,6 +590,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sidekiq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Development" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Development" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -581,6 +637,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Development" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Development" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fixins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,7 +665,7 @@
     <property name="recentsLimit" value="5" />
     <property name="project.settings.patched" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Ruby" />
+    <property name="settings.editor.selected.configurable" value="net.intellij.plugins.sexyeditor.SexyEditorConfigurable" />
     <property name="byebug.present.asked" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2596525" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -890,6 +960,11 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="DEPLOYMENT_SERVER" />
+    <option name="myConnectionId" value="ba7e42c9-7fdd-40c9-afc0-f749fe7c5019" />
+  </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -909,7 +984,7 @@
       <workItem from="1486747941534" duration="30024000" />
       <workItem from="1486949872225" duration="7075000" />
       <workItem from="1486996520915" duration="25560000" />
-      <workItem from="1487070111642" duration="53850000" />
+      <workItem from="1487070111642" duration="58897000" />
     </task>
     <task id="LOCAL-00001" summary="clutch module and log server prepping for launch">
       <created>1471809535469</created>
@@ -1114,7 +1189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487447411983</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="vagrantfile updates">
+      <created>1487486588420</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1487486588420</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -1136,7 +1218,7 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="166841000" />
+    <option name="totallyTimeSpent" value="171888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="46" width="3830" height="1033" extended-state="0" />
@@ -1152,6 +1234,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06496273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.065469906" sideWeight="0.49543676" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1948718" sideWeight="0.4978701" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Time Tracking" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0857295" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0015826959" sideWeight="0.5071708" order="6" side_tool="true" content_ui="tabs" x="3568" y="276" width="272" height="380" />
@@ -1170,7 +1253,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20820513" sideWeight="0.4978701" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Serial Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Translations" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1238,7 +1320,8 @@
     <MESSAGE value="core ready for new features" />
     <MESSAGE value="vagrantfile and datastore4 node added" />
     <MESSAGE value="made data4 the primary for now" />
-    <option name="LAST_COMMIT_MESSAGE" value="made data4 the primary for now" />
+    <MESSAGE value="vagrantfile updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="vagrantfile updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1253,30 +1336,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Docs/HeavyWeapons/Parallel-processing.md" />
-    <entry file="file://$USER_HOME$/source/Guardian/lib/guardian/libclu.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/source/Guardian/lib/guardian/libinit.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MessageHub/messagehub.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1068">
-          <caret line="193" column="18" selection-start-line="193" selection-start-column="18" selection-end-line="193" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AllAboutIt/local-notification-desktop.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1409,7 +1468,7 @@
     </entry>
     <entry file="file://$USER_HOME$/source/HellaStacked/.chef/knife.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="168">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
@@ -1576,8 +1635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/core.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+        <state relative-caret-position="-166">
+          <caret line="120" column="56" selection-start-line="120" selection-start-column="56" selection-end-line="120" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1626,16 +1685,8 @@
     </entry>
     <entry file="file://$USER_HOME$/source/HellaStacked/Cheffile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/source/HellaStacked/nodes/datastore0.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1650,8 +1701,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
+        <state relative-caret-position="338">
           <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidekiq/config.ru">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/source/HellaStacked/nodes/datastore0.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fixins/tokenizer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fixins/generic-threaded-thin-sinatra.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fixins/dispatch_table.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
