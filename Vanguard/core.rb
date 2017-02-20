@@ -137,7 +137,7 @@ $logger.info "[+] Sidekiq Default Worker Options: #{Sidekiq.default_worker_optio
 #WNS INI%$ QA
 
 $logger.info '[+] Redis handle available at Sidekiq.redis'
-$logger.info '[+] End initialization
+$logger.info '[+] End initialization'
 $logger.info '############### VANGUARD OPERATIONAL ###############'
 $logger.info '####################################################'
 ######################################################################################
