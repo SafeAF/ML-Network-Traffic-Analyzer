@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="524f230f-1b77-4eb7-8c1f-ca4025e430bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fixins/sidekiq-subscribe-confirmations.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/core.rb" afterPath="$PROJECT_DIR$/Vanguard/core.rb" />
     </list>
@@ -70,8 +69,8 @@
           <file leaf-file-name="core.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Vanguard/core.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="884">
-                  <caret line="139" column="37" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+                <state relative-caret-position="140">
+                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -252,6 +251,16 @@
                         <entry file="file://$PROJECT_DIR$/Fixins/gridfs-titanVFS.rb">
                           <provider selected="true" editor-type-id="text-editor">
                             <state relative-caret-position="-124">
+                              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="hypervisor.log" pinned="false" current-in-tab="false">
+                        <entry file="file://$PROJECT_DIR$/Vanguard/hypervisor.log">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state relative-caret-position="0">
                               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                               <folding />
                             </state>
@@ -623,20 +632,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Development" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fixins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1158,7 +1153,7 @@
       <workItem from="1486747941534" duration="30024000" />
       <workItem from="1486949872225" duration="7075000" />
       <workItem from="1486996520915" duration="25560000" />
-      <workItem from="1487070111642" duration="64038000" />
+      <workItem from="1487070111642" duration="64761000" />
     </task>
     <task id="LOCAL-00001" summary="clutch module and log server prepping for launch">
       <created>1471809535469</created>
@@ -1384,7 +1379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487501087380</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="added more messaging to core and added a couple fixins">
+      <created>1487566314805</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1487566314805</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -1406,7 +1408,7 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="177029000" />
+    <option name="totallyTimeSpent" value="177752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="46" width="3830" height="1033" extended-state="0" />
@@ -1539,13 +1541,6 @@
     <entry file="file://$PROJECT_DIR$/lib/tasks/ex-production.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1200">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/hypervisor.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1797,8 +1792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vanguard/core.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="139" column="37" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+        <state relative-caret-position="140">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1909,14 +1904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Fixins/gridfs-titanVFS.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-124">
@@ -1937,6 +1924,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vanguard/hypervisor.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vanguard/lib/vanguard-workers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
           <folding />
         </state>
       </provider>

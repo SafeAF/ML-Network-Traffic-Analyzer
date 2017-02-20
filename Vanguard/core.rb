@@ -1,8 +1,4 @@
-p "#################################################################################"
-p '#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$                 #'
-p '         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm             #'
-p '      Background processing with Sidekiq for Attrition and Other Services       #'
-p 'r#################################################################################'
+
 
 Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
 	require File.basename(file, File.extname(file))
@@ -16,6 +12,18 @@ require 'connection_pool'; require 'redis'; require 'logger' ;
 require 'redis-objects' ; require 'mongoid' ; require 'mongo';
 require 'sidekiq'
 require 'sidekiq-superworker'
+
+
+$VERSION = '0.5.0'
+$DATE = '02/17/17'
+
+$logger = Logger.new File.new('guardcore.log', 'w')
+p "#################################################################################"
+p '#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$                 #'
+p '         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm             #'
+p '      Background processing with Sidekiq for Attrition and Other Services       #'
+p 'r#################################################################################'
+
 
 module Mongoid
 	module Config
@@ -46,9 +54,7 @@ end
 #require_relative './lib/superworkers/overlord'
 require_relative('./lib/vanguard-workers')
 
-$VERSION = '0.5.0'
-$DATE = '02/17/17'
-$logger = Logger.new File.new('guardcore.log', 'w')
+
 $logger.info "######################## Vanguard GuardCore ###########################"
 $logger.info "Initialization commencing"
 
