@@ -22,6 +22,10 @@ module Vanguard
   end
 end
 
+#Vanguard::Worker
+
+
+
 class TitanCommander
   include Sidekiq::Worker
 
@@ -35,7 +39,7 @@ class TitanCommander
   end
 
   def cancelled?
-    Sidekiq.redis {|c| c.rexists("cancelled-#{jid}")}
+    Sidekiq.redis {|c| c.rexists("cancelled-#{jid}")}prettysweet
   end
 
   def cancel!(jid)
@@ -67,6 +71,23 @@ class TitanStatusSpy
   end
 end
 
+
+# Different kinds of workers i need for TitanV
+
+# 1) Test server availability based on ping test
+# 2) Check services availability on said server,
+#      services monitored should be based on its chef role/spec
+# 3) Run stats gathering? Parse logfiles for actionable events and send
+#     corresponding emails or texts.
+# 4) Run rootkit hunter etc, do apt get cleans and autoremoves
+#
+
+
+
+
+# Attrition Workers Needed
+
+# Other assorted workers
 
 
 
