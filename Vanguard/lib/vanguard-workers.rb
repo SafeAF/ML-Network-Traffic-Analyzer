@@ -22,7 +22,7 @@ module Vanguard
   end
 end
 
-#Vanguard::Worker
+#ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttVanguard::Worker
 
 
 

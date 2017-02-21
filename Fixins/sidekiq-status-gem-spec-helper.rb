@@ -51,11 +51,14 @@ def capture_status_updates(n, &block)
   confirmations_thread(n, "status_updates", &block).value
 end
 
+
+
 def start_server(server_middleware_options={})
   pid = Process.fork do
     $stdout.reopen File::NULL, 'w'
     $stderr.reopen File::NULL, 'w'
     require 'sidekiq/cli'
+
     Sidekiq.options[:queues] << 'default'
     Sidekiq.options[:require] =  File.expand_path('../support/test_jobs.rb', __FILE__)
     Sidekiq.configure_server do |config|
