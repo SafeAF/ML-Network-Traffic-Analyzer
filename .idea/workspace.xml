@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="524f230f-1b77-4eb7-8c1f-ca4025e430bc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/source/Guardian/guardian.rb" afterPath="$USER_HOME$/source/Guardian/guardian.rb" />
     </list>
     <list id="b7fa7525-5146-423c-a7c8-a94efe059b5f" name="Failed commit: Default" comment="cleaned up" />
     <ignored path="Development4.iws" />
@@ -49,11 +49,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.23678772">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="messagehub.rb" pinned="true" current-in-tab="false">
+          <file leaf-file-name="messagehub.rb" pinned="true" current-in-tab="true">
             <entry file="file://$USER_HOME$/source/MessageHub/messagehub.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                <state relative-caret-position="294">
+                  <caret line="74" column="6" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -69,11 +69,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="coreHypervisor.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="coreHypervisor.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Vanguard/coreHypervisor.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1120">
-                  <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+                <state relative-caret-position="252">
+                  <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -88,11 +88,11 @@
               <file leaf-file-name="guardian.rb" pinned="false" current-in-tab="true">
                 <entry file="file://$USER_HOME$/source/Guardian/guardian.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="224">
-                      <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+                    <state relative-caret-position="280">
+                      <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
                       <folding>
-                        <element signature="e#1031#2395#0" expanded="true" />
-                        <marker date="1487730461199" expanded="false" signature="1031:2178" ph="__END__" />
+                        <element signature="e#1061#2425#0" expanded="true" />
+                        <marker date="1487736433629" expanded="false" signature="1061:2208" ph="__END__" />
                       </folding>
                     </state>
                   </provider>
@@ -230,7 +230,7 @@
     </splitter>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/source/HellaStacked" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/source/Guardian" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -259,10 +259,10 @@
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/Vanguard/mongoid.yml" />
         <option value="$USER_HOME$/source/Guardian/bin/guardianD" />
-        <option value="$USER_HOME$/source/Guardian/guardian.rb" />
         <option value="$USER_HOME$/source/HellaStacked/to-include.md" />
         <option value="$PROJECT_DIR$/AllAboutIt/local-notification-desktop.rb" />
         <option value="$PROJECT_DIR$/Trap/logtrap.rb" />
+        <option value="$USER_HOME$/source/Guardian/guardian.rb" />
       </list>
     </option>
   </component>
@@ -1385,7 +1385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487735899836</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="added owasp content for review to readme">
+      <created>1487736157212</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1487736157212</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -1494,7 +1501,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="added skeleton of datastore" />
     <MESSAGE value="more cleanup" />
     <MESSAGE value="added datastore0 node" />
@@ -1519,7 +1525,8 @@
     <MESSAGE value="modding to watch multiple dirs" />
     <MESSAGE value="modding to watch multiple dirs, not fully implemented. but this release should be good to enter into 'real world' testing" />
     <MESSAGE value="cleaned up for release" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up for release" />
+    <MESSAGE value="added owasp content for review to readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="added owasp content for review to readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1703,14 +1710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/source/MessageHub/messagehub.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/source/HellaStacked/Berksfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1828,25 +1827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/coreHypervisor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/source/Guardian/guardian.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#1031#2395#0" expanded="true" />
-            <marker date="1487730461199" expanded="false" signature="1031:2178" ph="__END__" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/source/Guardian/lib/guardian/libinit.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1941,6 +1921,33 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vanguard/coreHypervisor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/source/MessageHub/messagehub.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="74" column="6" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/source/Guardian/guardian.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#1061#2425#0" expanded="true" />
+            <marker date="1487736433629" expanded="false" signature="1061:2208" ph="__END__" />
+          </folding>
         </state>
       </provider>
     </entry>
