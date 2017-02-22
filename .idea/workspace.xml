@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="524f230f-1b77-4eb7-8c1f-ca4025e430bc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Vanguard/hypervisor.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Vanguard/lib/coreHypervisor.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Vanguard/vOptional.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/attrition-log-preprocessor.rb" afterPath="$PROJECT_DIR$/Vanguard/workers/Attrition/attrition-log-preprocessor.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/check_redis_for_results.rb" afterPath="$PROJECT_DIR$/Vanguard/test/check_redis_for_results.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/core.rb" afterPath="$PROJECT_DIR$/Vanguard/coreHypervisor.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/dashboard.rb" afterPath="$PROJECT_DIR$/Vanguard/bin/dashboard.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/harness-vanguard.rb" afterPath="$PROJECT_DIR$/Vanguard/bin/harness-vanguard.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/vCore.rb" afterPath="$PROJECT_DIR$/Vanguard/lib/vCore.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Vanguard/vrepl.rb" afterPath="$PROJECT_DIR$/Vanguard/lib/vrepl.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vanguard/mongoid.yml" afterPath="$PROJECT_DIR$/Vanguard/mongoid.yml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/source/HellaStacked/README.md" afterPath="$USER_HOME$/source/HellaStacked/README.md" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/source/MessageHub/messagehub.rb" afterPath="$USER_HOME$/source/MessageHub/messagehub.rb" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/source/Guardian/bin/guardianD" afterPath="$USER_HOME$/source/Guardian/bin/guardianD" />
     </list>
     <list id="b7fa7525-5146-423c-a7c8-a94efe059b5f" name="Failed commit: Default" comment="cleaned up" />
     <ignored path="Development4.iws" />
@@ -86,8 +72,8 @@
           <file leaf-file-name="coreHypervisor.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Vanguard/coreHypervisor.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="490">
-                  <caret line="105" column="84" selection-start-line="105" selection-start-column="84" selection-end-line="105" selection-end-column="84" />
+                <state relative-caret-position="1120">
+                  <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -102,11 +88,11 @@
               <file leaf-file-name="guardianD" pinned="false" current-in-tab="true">
                 <entry file="file://$USER_HOME$/source/Guardian/bin/guardianD">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="392">
-                      <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+                    <state relative-caret-position="238">
+                      <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
                       <folding>
-                        <element signature="e#1229#2377#0" expanded="true" />
-                        <marker date="1487673271404" expanded="false" signature="1229:2376" ph="__END__" />
+                        <element signature="e#1212#2360#0" expanded="true" />
+                        <marker date="1487729292775" expanded="false" signature="1212:2359" ph="__END__" />
                       </folding>
                     </state>
                   </provider>
@@ -135,7 +121,7 @@
               <file leaf-file-name="harness-vanguard.rb" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Vanguard/bin/harness-vanguard.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="210">
+                    <state relative-caret-position="196">
                       <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
                       <folding />
                     </state>
@@ -294,7 +280,7 @@
     </splitter>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/source/Guardian" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -318,12 +304,12 @@
         <option value="$USER_HOME$/source/HellaStacked/nodes/stack0.json" />
         <option value="$USER_HOME$/source/HellaStacked/Cheffile" />
         <option value="$USER_HOME$/source/Guardian/lib/guardian.rb" />
-        <option value="$USER_HOME$/source/Guardian/bin/guardianD" />
         <option value="$USER_HOME$/source/MessageHub/messagehub.rb" />
         <option value="$PROJECT_DIR$/Vanguard/core.rb" />
         <option value="$USER_HOME$/source/HellaStacked/README.md" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/Vanguard/mongoid.yml" />
+        <option value="$USER_HOME$/source/Guardian/bin/guardianD" />
       </list>
     </option>
   </component>
@@ -1528,7 +1514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487724946112</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="moved stuff around">
+      <created>1487727471200</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1487727471200</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -1555,7 +1548,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="46" width="3836" height="1033" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20615384" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16197975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1565,7 +1558,7 @@
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.044614572" sideWeight="0.4928292" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1991001" sideWeight="0.51480365" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06496273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06035846" sideWeight="0.49543676" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06035846" sideWeight="0.49543676" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1948718" sideWeight="0.4978701" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Time Tracking" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04217185" sideWeight="0.49573562" order="5" side_tool="false" content_ui="tabs" />
@@ -1636,7 +1629,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
-    <MESSAGE value="added vanguard class to vanguard workers. meant to be invoked from messagehub etc" />
     <MESSAGE value="simplified in prep for change in transport" />
     <MESSAGE value="initial role and node entries, systemstack and stack0" />
     <MESSAGE value="more refactoring" />
@@ -1661,7 +1653,8 @@
     <MESSAGE value="gitconfig" />
     <MESSAGE value="prompts" />
     <MESSAGE value="added notes to the top of file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added notes to the top of file" />
+    <MESSAGE value="moved stuff around" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved stuff around" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1907,17 +1900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/source/Guardian/bin/guardianD">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="e#1229#2377#0" expanded="true" />
-            <marker date="1487673271404" expanded="false" signature="1229:2376" ph="__END__" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/source/Configs/gitconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2926">
@@ -1938,14 +1920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vanguard/coreHypervisor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="105" column="84" selection-start-line="105" selection-start-column="84" selection-end-line="105" selection-end-column="84" />
           <folding />
         </state>
       </provider>
@@ -2083,6 +2057,25 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vanguard/coreHypervisor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/source/Guardian/bin/guardianD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#1212#2360#0" expanded="true" />
+            <marker date="1487729292775" expanded="false" signature="1212:2359" ph="__END__" />
+          </folding>
         </state>
       </provider>
     </entry>
