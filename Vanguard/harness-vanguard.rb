@@ -9,7 +9,7 @@ require 'net/ping'
 require 'rye'
 require_relative 'lib/vanguard-workers'
 #require_relative './Credibility/user'
-p "############################### Vanguard ##########################"
+p "############################### Vanguard Harness ##########################"
 
 #########################################################################################
 # Notes

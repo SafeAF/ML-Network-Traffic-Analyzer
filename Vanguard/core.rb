@@ -1,4 +1,10 @@
 
+#!/usr/bin/env ruby
+# Author: SJK 2016 2017 (C) BareMetal Networks Corp.
+# Last Mod Date: 02-21-2017
+# Name:  CoreHypervisor.rb
+# System: Vanguard
+# Subsystem: Background Processing Hypervisor
 
 Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
 	require File.basename(file, File.extname(file))
