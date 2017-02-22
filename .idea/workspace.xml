@@ -88,11 +88,10 @@
               <file leaf-file-name="guardianD" pinned="false" current-in-tab="true">
                 <entry file="file://$USER_HOME$/source/Guardian/bin/guardianD">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="238">
-                      <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+                    <state relative-caret-position="588">
+                      <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
                       <folding>
-                        <element signature="e#1212#2360#0" expanded="true" />
-                        <marker date="1487729292775" expanded="false" signature="1212:2359" ph="__END__" />
+                        <marker date="1487729557143" expanded="false" signature="948:2095" ph="__END__" />
                       </folding>
                     </state>
                   </provider>
@@ -1521,7 +1520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487727471200</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="modding to watch multiple dirs">
+      <created>1487729309970</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1487729309970</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -1629,8 +1635,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
-    <MESSAGE value="simplified in prep for change in transport" />
-    <MESSAGE value="initial role and node entries, systemstack and stack0" />
     <MESSAGE value="more refactoring" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="added skeleton of datastore" />
@@ -1654,7 +1658,9 @@
     <MESSAGE value="prompts" />
     <MESSAGE value="added notes to the top of file" />
     <MESSAGE value="moved stuff around" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved stuff around" />
+    <MESSAGE value="modding to watch multiple dirs" />
+    <MESSAGE value="modding to watch multiple dirs, not fully implemented. but this release should be good to enter into 'real world' testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="modding to watch multiple dirs, not fully implemented. but this release should be good to enter into 'real world' testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2070,11 +2076,10 @@
     </entry>
     <entry file="file://$USER_HOME$/source/Guardian/bin/guardianD">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="588">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding>
-            <element signature="e#1212#2360#0" expanded="true" />
-            <marker date="1487729292775" expanded="false" signature="1212:2359" ph="__END__" />
+            <marker date="1487729557143" expanded="false" signature="948:2095" ph="__END__" />
           </folding>
         </state>
       </provider>
