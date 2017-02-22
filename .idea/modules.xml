@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/source/Configs/.idea/Configs.iml" filepath="$USER_HOME$/source/Configs/.idea/Configs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Development.iml" filepath="$PROJECT_DIR$/.idea/Development.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Gems/.idea/Gems.iml" filepath="$PROJECT_DIR$/../Gems/.idea/Gems.iml" />
       <module fileurl="file://$USER_HOME$/source/Guardian/.idea/Guardian.iml" filepath="$USER_HOME$/source/Guardian/.idea/Guardian.iml" />

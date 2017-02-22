@@ -2,9 +2,9 @@
 #!/usr/bin/env ruby
 # Author: SJK 2016 2017 (C) BareMetal Networks Corp.
 # Last Mod Date: 02-21-2017
-# Name:  CoreHypervisor.rb
+# Name:  CoreHypervisor.rb v0.5
 # System: Vanguard
-# Subsystem: Background Processing Hypervisor
+# Subsystem: Background Processing Hypervisor for Attrition et al.
 
 Dir[File.dirname(__FILE__) + '../lib*.rb'].each do |file|
 	require File.basename(file, File.extname(file))
@@ -22,13 +22,8 @@ require 'sidekiq-superworker'
 
 $VERSION = '0.5.0'
 $DATE = '02/17/17'
-
-$logger = Logger.new File.new('guardcore.log', 'w')
-p "#################################################################################"
-p '#          $$    [GRIDCORE] $$ {Vanguard} [Core*Hypervisor]  $$                 #'
-p '         Hypervisor for TiTAN V Perpetual Asynchronous Worker Swarm             #'
-p '      Background processing with Sidekiq for Attrition and Other Services       #'
-p 'r#################################################################################'
+$DBG = true
+$DBG ? $logger = Logger.new File.new('hypervisor.log', 'w') : $logger = STDOUT
 
 
 module Mongoid
@@ -60,10 +55,8 @@ end
 #require_relative './lib/superworkers/overlord'
 require_relative('./lib/vanguard-workers')
 
-
-$logger.info "######################## Vanguard GuardCore ###########################"
-$logger.info "Initialization commencing"
-
+$logger.info "[+V] #{Time.now} Vanguard CoreHypervisor v#{$VERSION}"
+$logger.info "[+V] #{Time.now} Initialization commencing"
 
 #########################################################################################
 # Notes
@@ -110,9 +103,9 @@ Sidekiq.configure_server do |config|
 
 	$MONGO = Mongo::Client.new([$options[:mongoconnector]], :database => $options[:mongodb])
 
-	$logger = Mongo::Logger.logger = Logger.new($stdout);Mongo::Logger.logger.level = Logger::INFO
+	$mongologger = Mongo::Logger.logger = Logger.new(File.new('hypervisor.log', 'w'));Mongo::Logger.logger.level = Logger::INFO
 
-	$logger.info  "[+] Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
+	$mongologger.info  "[+] Connecting to MongoDB @ #{$options[:mongoconnector]}, using database: #{$options[:mongodb]}"
 
 	Mongoid.load!('mongoid.yml', :development)
 
@@ -146,10 +139,9 @@ $logger.info "[+] Sidekiq Default Worker Options: #{Sidekiq.default_worker_optio
 ###
 
 #########################################################################################
-#WNS INI%$ QA
+$REDIS = Sidekiq.redis
 
-$logger.info '[+] Redis handle available at Sidekiq.redis'
-$logger.info '[+] End initialization'
+$logger.info '[+V] End initialization'
 $logger.info '############### VANGUARD OPERATIONAL ###############'
 $logger.info '####################################################'
 ######################################################################################

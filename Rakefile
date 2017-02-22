@@ -6,6 +6,8 @@ require 'bundler'
 require 'bundler/setup'
 require 'bundler/dsl'
 
+Dir.glob('*.rake').each {|r| import r}
+
 CLEAN.include('**/gem', '**/*.rbc', '**/*.rbx')
 
 Rake::TestTask.new("test") do |t|
