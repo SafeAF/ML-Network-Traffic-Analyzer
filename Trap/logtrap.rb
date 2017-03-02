@@ -1,7 +1,41 @@
 require 'socket'
 
 
-def run
+class Metrics
+	attr_accessor :count, :frequency, :errors
+
+	def initialize()
+		@count = 0
+		@frequency = 0.0
+		@errors = 0
+	end
+end
+
+
+
+class LogTrap
+attr_accessor :file, :metrics
+
+def initialize(file = "/dev/log", metrics = Metrics.new)
+	@file = file
+	@metrics = metrics
+end
+
+def debug
+
+end
+
+def process_message
+
+end
+
+def relay_message
+
+
+end
+
+
+def hook_syslog_socket
 
 	begin
 		socket = Socket.new(Socket::AF_UNIX, Socket::SOCK_DGRAM, 0)
@@ -32,4 +66,3 @@ def run
 	end
 end
 
-run
