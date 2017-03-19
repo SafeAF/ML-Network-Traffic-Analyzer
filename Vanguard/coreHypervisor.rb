@@ -23,7 +23,7 @@ require 'sidekiq-superworker'
 $VERSION = '0.5.0'
 $DATE = '02/17/17'
 $DBG = true
-$DBG ? $logger = Logger.new File.new('hypervisor.log', 'w') : $logger = STDOUT
+$DBG ? $logger = Logger.new(File.new('hypervisor.log', 'w')) : $logger = STDOUT
 
 
 module Mongoid
@@ -53,10 +53,13 @@ end
 #require_relative './lib/workers/grid/node/monitoring'
 
 #require_relative './lib/superworkers/overlord'
-require_relative('./lib/vanguard-workers')
+
 
 $logger.info "[+V] #{Time.now} Vanguard CoreHypervisor v#{$VERSION}"
 $logger.info "[+V] #{Time.now} Initialization commencing"
+$logger.info "[+V] #{Time.now} Loading Workers.."
+require_relative('./lib/vanguard-workers')
+$logger.info "[+V] #{Time.now} Workers available"
 
 #########################################################################################
 # Notes
@@ -147,14 +150,6 @@ $logger.info '####################################################'
 ######################################################################################
 
 
-################################
-
-######################################################################################
-## Powerplant Workers
-## Sidekiq.redis is an exposed redis handle, yay!
-##   Sidekiq.redis { |conn| conn.del(lock) }
-## Sidekiq.logger exposes logging functionality
-##  Sidekiq.logger.warm "foo bar"
 
 ### Calling Workers
 

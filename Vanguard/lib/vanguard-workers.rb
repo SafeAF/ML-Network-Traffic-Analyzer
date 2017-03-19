@@ -3,17 +3,17 @@ require 'net/ping'
 
 # Mixin to worker classes, avoids duplication of the include and provides
 # cancel methods at the same time.
-module VanguardWorker
+class Titan
 	include Sidekiq::Worker
 
 	def cancelled?
-		Sidekiq.redis {|c| c.rexists("cancelled-#{jid}")}prettysweet
+		Sidekiq.redis {|c| c.rexists("cancelled-#{jid}")}
 	end
 
 	def cancel!(jid)
 		Sidekiq.redis{|c| c.setex("cancelled-#{jid}", 86400, 1)}
 	end
-end
+
 
 
 
@@ -23,10 +23,10 @@ def check_server_availability(ip, service='ssh')
 end
 
 
-class Titan
-	class Pinga
 
-    include VanguardWorker
+	class Ping
+
+
 
       def perform(ip, service='ssh')
         res = check_server_availability(ip, service)
